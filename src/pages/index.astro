@@ -1,11 +1,884 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Zcompress — Private, Client-Side PDF Compressor">
+  <!-- CDNs for pdf.js, pdf-lib, and jszip -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+  <script is:inline src="https://unpkg.com/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+  <script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+
+  <!-- Navigation Bar -->
+  <nav class="sticky top-0 z-50 h-[64px] border-b border-hairline bg-canvas/80 backdrop-blur-md px-6 py-2 transition-all">
+    <div class="max-w-[1200px] mx-auto h-full flex items-center justify-between">
+      <!-- Logo -->
+      <a href="#" class="flex items-center gap-2 group">
+        <span class="w-8 h-8 rounded-sm bg-primary text-on-primary flex items-center justify-center font-mono font-bold text-lg select-none group-hover:scale-105 transition-transform duration-200">Z</span>
+        <span class="font-sans font-semibold text-lg text-ink tracking-[-0.6px]">Zcompress</span>
+      </a>
+
+      <!-- Navigation Links -->
+      <div class="hidden md:flex items-center gap-6">
+        <a href="#compressor" class="text-body-sm text-body hover:text-ink transition-colors px-3 py-1.5 rounded-full hover:bg-canvas-soft-2/50">Compressor</a>
+        <a href="#features" class="text-body-sm text-body hover:text-ink transition-colors px-3 py-1.5 rounded-full hover:bg-canvas-soft-2/50">Features</a>
+        <a href="#faq" class="text-body-sm text-body hover:text-ink transition-colors px-3 py-1.5 rounded-full hover:bg-canvas-soft-2/50">FAQ</a>
+      </div>
+
+      <!-- Action Button -->
+      <div class="flex items-center gap-3">
+        <span class="hidden sm:inline-flex items-center gap-1.5 px-2.5 py-1 text-[11px] font-mono border border-hairline rounded bg-canvas-soft text-body">
+          <span class="w-1.5 h-1.5 rounded-full bg-cyan animate-pulse"></span>
+          100% Client-Side
+        </span>
+        <a href="#compressor" class="px-3.5 h-[28px] bg-primary text-on-primary text-body-sm-strong rounded-sm hover:bg-black transition-colors inline-flex items-center justify-center select-none shadow-level-1">
+          Start Compressing
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section with Mesh Gradient -->
+  <section class="relative bg-mesh-gradient overflow-hidden py-24 px-6 border-b border-hairline">
+    <div class="max-w-[800px] mx-auto text-center relative z-10">
+      <!-- Eyebrow Badge -->
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-link-bg-soft border border-link-deep/10 text-link-deep mb-6 animate-fade-in">
+        <span class="text-caption font-mono font-medium tracking-wide uppercase">Zero Server Uploads</span>
+      </div>
+
+      <!-- Headline -->
+      <h1 class="text-display-xl text-ink font-semibold tracking-[-2.4px] mb-6 leading-tight">
+        Compress PDFs with absolute privacy.
+      </h1>
+
+      <!-- Description -->
+      <p class="text-body-lg text-body mb-8 max-w-[600px] mx-auto">
+        Run state-of-the-art compression entirely inside your browser. Your files never touch any servers. Fast, secure, and completely free.
+      </p>
+
+      <!-- Action Button -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="#compressor" class="px-6 h-[48px] bg-primary text-on-primary text-button-lg rounded-pill hover:bg-black transition-all flex items-center justify-center select-none shadow-level-3 hover:scale-[1.02] duration-200">
+          Open Compressor
+        </a>
+        <a href="#features" class="px-6 h-[48px] bg-canvas text-ink border border-hairline text-button-lg rounded-pill hover:bg-canvas-soft transition-all flex items-center justify-center select-none shadow-level-2 hover:scale-[1.02] duration-200">
+          Learn How It Works
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Compressor Tool Dashboard -->
+  <section id="compressor" class="py-16 px-6 max-w-[1200px] mx-auto scroll-mt-[64px]">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <!-- Main Compressor Card -->
+      <div class="lg:col-span-2 space-y-6">
+        <!-- Drag & Drop Zone -->
+        <div id="dropzone" class="relative group border-2 border-dashed border-hairline-strong/60 rounded-lg bg-canvas p-12 text-center hover:border-primary/50 hover:bg-canvas-soft transition-all duration-300 shadow-level-3">
+          <input type="file" id="file-input" multiple accept=".pdf" class="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10" />
+          
+          <div class="space-y-4">
+            <div class="w-16 h-16 mx-auto rounded-full bg-canvas-soft border border-hairline flex items-center justify-center group-hover:scale-110 group-hover:border-primary/30 transition-all duration-300 shadow-level-2">
+              <i class="fa-regular fa-file-pdf text-3xl text-body group-hover:text-primary transition-colors"></i>
+            </div>
+            <div>
+              <p class="text-body-md-strong text-ink mb-1">Drag and drop your PDF files here</p>
+              <p class="text-body-sm text-body">or click to browse from your computer</p>
+            </div>
+            <div class="pt-2 flex justify-center gap-3 text-caption text-mute font-mono">
+              <span><i class="fa-solid fa-lock text-cyan-deep mr-1"></i> End-to-end Local</span>
+              <span>•</span>
+              <span><i class="fa-solid fa-bolt text-warning-deep mr-1"></i> Multi-file Batch</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- File List / Queue -->
+        <div id="queue-container" class="hidden rounded-lg bg-canvas border border-hairline p-6 shadow-level-3 space-y-4">
+          <div class="flex items-center justify-between border-b border-hairline pb-4">
+            <h3 class="text-display-sm text-ink font-semibold tracking-[-0.6px] flex items-center gap-2">
+              <span>Files Queue</span>
+              <span id="queue-badge" class="px-2 py-0.5 text-caption font-mono border border-hairline rounded bg-canvas-soft">0</span>
+            </h3>
+            <div class="flex gap-2">
+              <button id="clear-queue-btn" class="px-3 py-1.5 border border-hairline hover:border-error-deep/30 hover:bg-error-soft text-body hover:text-error-deep rounded-sm text-body-sm transition-all flex items-center gap-1.5">
+                <i class="fa-regular fa-trash-can text-xs"></i>
+                Clear Queue
+              </button>
+            </div>
+          </div>
+
+          <!-- Queue List -->
+          <div id="queue-list" class="divide-y divide-hairline max-h-[350px] overflow-y-auto pr-1">
+            <!-- Dynamic File Rows -->
+          </div>
+
+          <!-- Batch Action Bar -->
+          <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-4 border-t border-hairline">
+            <div class="text-body-sm text-body">
+              Total input size: <span id="total-input-size" class="font-mono font-medium text-ink">0 KB</span>
+              <span id="total-savings-container" class="hidden">
+                | New size: <span id="total-output-size" class="font-mono font-medium text-success">0 KB</span> 
+                (<span id="total-savings-pct" class="font-mono font-semibold text-success">-0%</span>)
+              </span>
+            </div>
+            <div class="flex gap-3 w-full sm:w-auto">
+              <button id="compress-btn" class="flex-1 sm:flex-none px-6 h-[40px] bg-primary text-on-primary text-button-md rounded-pill hover:bg-black transition-all flex items-center justify-center gap-2 shadow-level-3">
+                <i class="fa-solid fa-compress"></i>
+                Compress All Files
+              </button>
+              <button id="download-zip-btn" class="hidden flex-1 sm:flex-none px-6 h-[40px] bg-canvas text-ink border border-hairline text-button-md rounded-pill hover:bg-canvas-soft transition-all flex items-center justify-center gap-2 shadow-level-2">
+                <i class="fa-regular fa-file-archive"></i>
+                Download ZIP
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Terminal Output Log Panel -->
+        <div class="rounded-lg bg-primary text-on-primary shadow-level-4 overflow-hidden border border-primary">
+          <div class="bg-primary/95 border-b border-primary/20 px-4 py-2.5 flex items-center justify-between select-none">
+            <div class="flex items-center gap-2">
+              <span class="w-3 h-3 rounded-full bg-error-deep"></span>
+              <span class="w-3 h-3 rounded-full bg-warning"></span>
+              <span class="w-3 h-3 rounded-full bg-cyan-deep"></span>
+              <span class="text-caption-mono text-mute/80 ml-2 font-mono">zcompress-engine-console</span>
+            </div>
+            <button id="clear-logs-btn" class="text-mute hover:text-on-primary transition-colors text-caption-mono font-mono flex items-center gap-1">
+              <i class="fa-solid fa-terminal text-[10px]"></i>
+              Clear
+            </button>
+          </div>
+          <div id="terminal-logs" class="p-4 h-[180px] overflow-y-auto font-mono text-code text-left space-y-1.5 scrollbar-thin scrollbar-thumb-primary/50 scrollbar-track-transparent">
+            <div class="text-mute">[SYS] Console ready. Waiting for files to compress...</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Settings & Controls Panel -->
+      <div class="space-y-6">
+        <div class="rounded-lg bg-canvas border border-hairline p-6 shadow-level-3 space-y-6 text-left">
+          <h3 class="text-display-sm text-ink font-semibold tracking-[-0.6px] flex items-center gap-2 pb-4 border-b border-hairline">
+            <i class="fa-solid fa-sliders text-body text-base"></i>
+            Compression Settings
+          </h3>
+
+          <!-- Presets -->
+          <div class="space-y-3">
+            <label class="text-body-sm-strong text-ink">Presets</label>
+            <div class="grid grid-cols-1 gap-2">
+              <!-- Preset High -->
+              <button data-preset="high" class="preset-btn text-left p-3 rounded border border-hairline hover:border-hairline-strong transition-all flex items-start justify-between group">
+                <div>
+                  <div class="text-body-sm-strong text-ink group-hover:text-primary transition-colors">High Compression</div>
+                  <div class="text-caption text-body">Low resolution. Ideal for emails.</div>
+                </div>
+                <span class="px-2 py-0.5 text-[10px] font-mono border border-hairline rounded bg-canvas-soft text-body mt-0.5">72 DPI</span>
+              </button>
+              
+              <!-- Preset Recommended -->
+              <button data-preset="recommended" class="preset-btn active text-left p-3 rounded border-2 border-primary bg-canvas-soft transition-all flex items-start justify-between group">
+                <div>
+                  <div class="text-body-sm-strong text-ink flex items-center gap-1.5">
+                    Recommended
+                    <span class="px-1.5 py-0.2 text-[9px] font-sans font-semibold rounded-full bg-link-bg-soft text-link-deep">Best</span>
+                  </div>
+                  <div class="text-caption text-body">Balanced visual quality & file size.</div>
+                </div>
+                <span class="px-2 py-0.5 text-[10px] font-mono border border-hairline rounded bg-canvas-soft text-body mt-0.5">150 DPI</span>
+              </button>
+
+              <!-- Preset Low -->
+              <button data-preset="low" class="preset-btn text-left p-3 rounded border border-hairline hover:border-hairline-strong transition-all flex items-start justify-between group">
+                <div>
+                  <div class="text-body-sm-strong text-ink group-hover:text-primary transition-colors">Low Compression</div>
+                  <div class="text-caption text-body">High resolution. Keeps images sharp.</div>
+                </div>
+                <span class="px-2 py-0.5 text-[10px] font-mono border border-hairline rounded bg-canvas-soft text-body mt-0.5">220 DPI</span>
+              </button>
+
+              <!-- Preset Custom -->
+              <button data-preset="custom" class="preset-btn text-left p-3 rounded border border-hairline hover:border-hairline-strong transition-all flex items-start justify-between group">
+                <div>
+                  <div class="text-body-sm-strong text-ink group-hover:text-primary transition-colors">Custom Configuration</div>
+                  <div class="text-caption text-body">Fine-tune DPI and image quality.</div>
+                </div>
+                <span class="px-2 py-0.5 text-[10px] font-mono border border-hairline rounded bg-canvas-soft text-body mt-0.5">Manual</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Custom Settings Controls -->
+          <div id="custom-sliders" class="hidden space-y-4 pt-4 border-t border-hairline animate-fade-in">
+            <!-- DPI Slider -->
+            <div class="space-y-2">
+              <div class="flex justify-between items-center text-body-sm">
+                <span class="text-body-sm-strong text-ink">Resolution (DPI)</span>
+                <span id="dpi-val" class="font-mono text-mute">150 DPI</span>
+              </div>
+              <input type="range" id="dpi-slider" min="72" max="300" step="10" value="150" class="w-full accent-primary h-1 bg-hairline rounded-lg appearance-none cursor-pointer" />
+              <div class="flex justify-between text-[10px] text-mute font-mono">
+                <span>72 (Low)</span>
+                <span>150 (Med)</span>
+                <span>300 (High)</span>
+              </div>
+            </div>
+
+            <!-- Quality Slider -->
+            <div class="space-y-2">
+              <div class="flex justify-between items-center text-body-sm">
+                <span class="text-body-sm-strong text-ink">JPEG Quality</span>
+                <span id="quality-val" class="font-mono text-mute">60%</span>
+              </div>
+              <input type="range" id="quality-slider" min="10" max="100" step="5" value="60" class="w-full accent-primary h-1 bg-hairline rounded-lg appearance-none cursor-pointer" />
+              <div class="flex justify-between text-[10px] text-mute font-mono">
+                <span>10% (Small)</span>
+                <span>60% (Rec)</span>
+                <span>100% (High)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Help Info Callout -->
+          <div class="rounded p-4 bg-canvas-soft border border-hairline text-body-sm text-body space-y-2 shadow-level-1">
+            <div class="font-medium text-ink flex items-center gap-1.5">
+              <i class="fa-solid fa-circle-info text-link"></i>
+              Visual Compression
+            </div>
+            <p>
+              This tool compresses PDFs by downsampling and re-encoding embedded images. It works exceptionally well on <strong>scanned PDFs, presentations, and picture-heavy documents</strong>.
+            </p>
+            <p class="text-caption text-mute">
+              Note: Text in compressed PDFs will be rasterized to ensure maximum compression. Original searchable text layer will not be preserved in this version.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Features Section -->
+  <section id="features" class="py-20 px-6 border-t border-b border-hairline bg-canvas-soft-2/50 scroll-mt-[64px]">
+    <div class="max-w-[1200px] mx-auto text-left">
+      <div class="max-w-[600px] mb-12">
+        <span class="text-caption-mono font-mono text-mute uppercase tracking-widest">Architected for Privacy</span>
+        <h2 class="text-display-lg text-ink font-semibold tracking-[-1.28px] mt-2 mb-4 leading-tight">
+          Engineered to be completely local.
+        </h2>
+        <p class="text-body-md text-body">
+          Traditional PDF tools upload files to remote servers, putting sensitive documents at risk. Zcompress runs all processes locally in your browser context.
+        </p>
+      </div>
+
+      <!-- Features Cards 3-up -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Feature 1 -->
+        <div class="rounded-lg bg-canvas border border-hairline p-6 shadow-level-3 hover:scale-[1.02] transition-transform duration-300">
+          <div class="w-10 h-10 rounded bg-canvas-soft border border-hairline flex items-center justify-center mb-6">
+            <i class="fa-solid fa-shield-halved text-success"></i>
+          </div>
+          <h3 class="text-display-sm text-ink font-semibold tracking-[-0.6px] mb-3">100% Client-Side</h3>
+          <p class="text-body-sm text-body leading-relaxed">
+            Your documents are read and processed entirely in-memory using JavaScript and Web APIs. Nothing is transmitted over the internet.
+          </p>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="rounded-lg bg-canvas border border-hairline p-6 shadow-level-3 hover:scale-[1.02] transition-transform duration-300">
+          <div class="w-10 h-10 rounded bg-canvas-soft border border-hairline flex items-center justify-center mb-6">
+            <i class="fa-solid fa-layer-group text-violet"></i>
+          </div>
+          <h3 class="text-display-sm text-ink font-semibold tracking-[-0.6px] mb-3">Batch Processing</h3>
+          <p class="text-body-sm text-body leading-relaxed">
+            Queue multiple PDFs at once. The engine will sequentially process each file and let you download them in a single batch ZIP file.
+          </p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="rounded-lg bg-canvas border border-hairline p-6 shadow-level-3 hover:scale-[1.02] transition-transform duration-300">
+          <div class="w-10 h-10 rounded bg-canvas-soft border border-hairline flex items-center justify-center mb-6">
+            <i class="fa-solid fa-chart-pie text-cyan-deep"></i>
+          </div>
+          <h3 class="text-display-sm text-ink font-semibold tracking-[-0.6px] mb-3">Granular Control</h3>
+          <p class="text-body-sm text-body leading-relaxed">
+            Choose from quick presets or fine-tune exact target DPI and image quality parameters to achieve optimal output file size.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Accordion FAQ Section -->
+  <section id="faq" class="py-20 px-6 max-w-[800px] mx-auto text-left scroll-mt-[64px]">
+    <div class="text-center mb-12">
+      <span class="text-caption-mono font-mono text-mute uppercase tracking-widest">Frequently Asked Questions</span>
+      <h2 class="text-display-lg text-ink font-semibold tracking-[-1.28px] mt-2 mb-4">
+        Questions & Answers.
+      </h2>
+    </div>
+
+    <!-- Accordion Items -->
+    <div class="space-y-4">
+      <div class="border border-hairline rounded-lg bg-canvas overflow-hidden shadow-level-2 faq-item">
+        <button class="w-full flex items-center justify-between p-5 text-left text-body-md-strong text-ink hover:bg-canvas-soft transition-colors select-none">
+          <span>Are my PDF files sent to a server?</span>
+          <i class="fa-solid fa-chevron-down text-mute text-sm transition-transform duration-200"></i>
+        </button>
+        <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out faq-answer">
+          <div class="p-5 pt-0 text-body-sm text-body border-t border-hairline/50 mt-4 leading-relaxed">
+            No, never. Zcompress executes 100% inside your web browser. We use local libraries like pdf.js and pdf-lib to read, optimize, and write PDFs in browser memory. Even if you turn off your internet, the compression engine will still work.
+          </div>
+        </div>
+      </div>
+
+      <div class="border border-hairline rounded-lg bg-canvas overflow-hidden shadow-level-2 faq-item">
+        <button class="w-full flex items-center justify-between p-5 text-left text-body-md-strong text-ink hover:bg-canvas-soft transition-colors select-none">
+          <span>Why is text-only PDF compression not very active?</span>
+          <i class="fa-solid fa-chevron-down text-mute text-sm transition-transform duration-200"></i>
+        </button>
+        <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out faq-answer">
+          <div class="p-5 pt-0 text-body-sm text-body border-t border-hairline/50 mt-4 leading-relaxed">
+            Our compression engine works by rasterizing document pages into compressed JPEG images. PDFs containing only text take very little space, and converting them to images can actually increase the file size. Zcompress is highly optimized for <strong>images, scans, slide decks, and photography documents</strong>.
+          </div>
+        </div>
+      </div>
+
+      <div class="border border-hairline rounded-lg bg-canvas overflow-hidden shadow-level-2 faq-item">
+        <button class="w-full flex items-center justify-between p-5 text-left text-body-md-strong text-ink hover:bg-canvas-soft transition-colors select-none">
+          <span>What is the maximum file size I can upload?</span>
+          <i class="fa-solid fa-chevron-down text-mute text-sm transition-transform duration-200"></i>
+        </button>
+        <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out faq-answer">
+          <div class="p-5 pt-0 text-body-sm text-body border-t border-hairline/50 mt-4 leading-relaxed">
+            Because processing is done in the browser memory, the maximum file size is limited only by your computer's RAM and browser environment. We recommend processing files under 100MB to prevent browser tab restarts, especially on mobile devices.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="bg-canvas border-t border-hairline py-16 px-6">
+    <div class="max-w-[1200px] mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+      <!-- Col 1 -->
+      <div class="space-y-4">
+        <div class="flex items-center gap-2">
+          <span class="w-6 h-6 rounded-sm bg-primary text-on-primary flex items-center justify-center font-mono font-bold text-sm">Z</span>
+          <span class="font-sans font-semibold text-base text-ink tracking-[-0.4px]">Zcompress</span>
+        </div>
+        <p class="text-caption text-body">
+          A premium, high-security developer-grade utility to compress PDFs locally in your browser.
+        </p>
+      </div>
+      <!-- Col 2 -->
+      <div>
+        <h4 class="text-caption-mono font-mono text-mute uppercase tracking-wider mb-4">Product</h4>
+        <ul class="space-y-2">
+          <li><a href="#compressor" class="text-body-sm text-body hover:text-ink transition-colors">Compressor</a></li>
+          <li><a href="#features" class="text-body-sm text-body hover:text-ink transition-colors">Features</a></li>
+        </ul>
+      </div>
+      <!-- Col 3 -->
+      <div>
+        <h4 class="text-caption-mono font-mono text-mute uppercase tracking-wider mb-4">Resources</h4>
+        <ul class="space-y-2">
+          <li><a href="https://pdf-lib.js.org/" target="_blank" rel="noopener noreferrer" class="text-body-sm text-body hover:text-ink transition-colors">pdf-lib docs</a></li>
+          <li><a href="https://mozilla.github.io/pdf.js/" target="_blank" rel="noopener noreferrer" class="text-body-sm text-body hover:text-ink transition-colors">pdf.js docs</a></li>
+        </ul>
+      </div>
+      <!-- Col 4 -->
+      <div>
+        <h4 class="text-caption-mono font-mono text-mute uppercase tracking-wider mb-4">Security</h4>
+        <ul class="space-y-2">
+          <li><span class="text-body-sm text-body flex items-center gap-1.5"><i class="fa-solid fa-lock text-xs text-cyan-deep"></i> 100% Local Sandbox</span></li>
+          <li><span class="text-body-sm text-body flex items-center gap-1.5"><i class="fa-solid fa-network-wired text-xs text-mute"></i> No telemetry / logs sent</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="max-w-[1200px] mx-auto mt-12 pt-8 border-t border-hairline/60 flex flex-col sm:flex-row justify-between items-center gap-4">
+      <span class="text-caption text-mute">
+        © 2026 Zcompress. Open Source under MIT License.
+      </span>
+      <div class="flex gap-4">
+        <a href="#" class="text-caption text-mute hover:text-ink transition-colors">Terms of Service</a>
+        <a href="#" class="text-caption text-mute hover:text-ink transition-colors">Privacy Policy</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Core Javascript Compression Logic -->
+  <script>
+    // Initialize PDF.js Worker
+    if (window.pdfjsLib) {
+      window.pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+    }
+
+    // Program State
+    let queue = [];
+    let isProcessing = false;
+    let selectedPreset = 'recommended';
+    let customDpi = 150;
+    let customQuality = 60; // scale 0-100
+
+    // DOM Elements
+    const dropzone = document.getElementById('dropzone');
+    const fileInput = document.getElementById('file-input');
+    const queueContainer = document.getElementById('queue-container');
+    const queueList = document.getElementById('queue-list');
+    const queueBadge = document.getElementById('queue-badge');
+    const totalInputSizeEl = document.getElementById('total-input-size');
+    const totalSavingsContainer = document.getElementById('total-savings-container');
+    const totalOutputSizeEl = document.getElementById('total-output-size');
+    const totalSavingsPctEl = document.getElementById('total-savings-pct');
+    const compressBtn = document.getElementById('compress-btn');
+    const downloadZipBtn = document.getElementById('download-zip-btn');
+    const clearQueueBtn = document.getElementById('clear-queue-btn');
+    const terminalLogs = document.getElementById('terminal-logs');
+    const clearLogsBtn = document.getElementById('clear-logs-btn');
+    const presetButtons = document.querySelectorAll('.preset-btn');
+    const customSliders = document.getElementById('custom-sliders');
+    const dpiSlider = document.getElementById('dpi-slider');
+    const dpiVal = document.getElementById('dpi-val');
+    const qualitySlider = document.getElementById('quality-slider');
+    const qualityVal = document.getElementById('quality-val');
+
+    // Terminal Logger
+    function logToConsole(message, type = 'info') {
+      const timestamp = new Date().toTimeString().split(' ')[0];
+      const div = document.createElement('div');
+      
+      let prefix = '[INFO]';
+      let colorClass = 'text-on-primary';
+      
+      if (type === 'sys') {
+        prefix = '[SYS]';
+        colorClass = 'text-mute';
+      } else if (type === 'success') {
+        prefix = '[OK]';
+        colorClass = 'text-cyan-soft';
+      } else if (type === 'error') {
+        prefix = '[ERR]';
+        colorClass = 'text-highlight-pink font-semibold';
+      } else if (type === 'progress') {
+        prefix = '[COMPRESS]';
+        colorClass = 'text-warning-soft';
+      }
+      
+      div.className = colorClass;
+      div.innerHTML = `<span class="opacity-60">${timestamp}</span> ${prefix} ${message}`;
+      terminalLogs.appendChild(div);
+      terminalLogs.scrollTop = terminalLogs.scrollHeight;
+    }
+
+    // Size Formatter
+    function formatBytes(bytes, decimals = 2) {
+      if (bytes === 0) return '0 Bytes';
+      const k = 1024;
+      const dm = decimals < 0 ? 0 : decimals;
+      const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+      const i = Math.floor(Math.log(bytes) / Math.log(k));
+      return parseFloat((bytes / Math.pow(k, i)).toFixed(dm)) + ' ' + sizes[i];
+    }
+
+    // Setup Presets Configuration
+    function getCompressionParams() {
+      if (selectedPreset === 'high') {
+        return { dpi: 72, quality: 0.4 };
+      } else if (selectedPreset === 'recommended') {
+        return { dpi: 150, quality: 0.6 };
+      } else if (selectedPreset === 'low') {
+        return { dpi: 220, quality: 0.85 };
+      } else {
+        return { dpi: customDpi, quality: customQuality / 100 };
+      }
+    }
+
+    // Event Listeners for Preset buttons
+    presetButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        presetButtons.forEach(b => {
+          b.classList.remove('active', 'border-2', 'border-primary', 'bg-canvas-soft');
+          b.classList.add('border', 'border-hairline');
+        });
+        
+        btn.classList.remove('border', 'border-hairline');
+        btn.classList.add('active', 'border-2', 'border-primary', 'bg-canvas-soft');
+        
+        selectedPreset = btn.getAttribute('data-preset');
+        
+        if (selectedPreset === 'custom') {
+          customSliders.classList.remove('hidden');
+        } else {
+          customSliders.classList.add('hidden');
+        }
+        
+        const params = getCompressionParams();
+        logToConsole(`Preset changed to: ${selectedPreset.toUpperCase()} (Target DPI: ${params.dpi}, Quality: ${Math.round(params.quality * 100)}%)`, 'sys');
+      });
+    });
+
+    // Custom Sliders Input Listeners
+    dpiSlider.addEventListener('input', (e) => {
+      customDpi = parseInt(e.target.value);
+      dpiVal.textContent = `${customDpi} DPI`;
+    });
+
+    qualitySlider.addEventListener('input', (e) => {
+      customQuality = parseInt(e.target.value);
+      qualityVal.textContent = `${customQuality}%`;
+    });
+
+    // FAQ Accordion Handler
+    document.querySelectorAll('.faq-item button').forEach(button => {
+      button.addEventListener('click', () => {
+        const item = button.parentElement;
+        const answer = item.querySelector('.faq-answer');
+        const icon = button.querySelector('i');
+        
+        if (answer.style.maxHeight) {
+          answer.style.maxHeight = null;
+          icon.style.transform = 'rotate(0deg)';
+        } else {
+          // close other open accordions
+          document.querySelectorAll('.faq-answer').forEach(ans => {
+            ans.style.maxHeight = null;
+            ans.parentElement.querySelector('i').style.transform = 'rotate(0deg)';
+          });
+          answer.style.maxHeight = answer.scrollHeight + 'px';
+          icon.style.transform = 'rotate(180deg)';
+        }
+      });
+    });
+
+    // Clear Console Logs
+    clearLogsBtn.addEventListener('click', () => {
+      terminalLogs.innerHTML = `<div class="text-mute">[SYS] Console cleared. ready.</div>`;
+    });
+
+    // Handling Drag and Drop / Selection
+    function addFilesToQueue(files) {
+      if (isProcessing) {
+        logToConsole("Cannot add files while compression is running.", "error");
+        return;
+      }
+
+      let addedCount = 0;
+      for (const file of files) {
+        if (file.type !== 'application/pdf') {
+          logToConsole(`Skipped non-PDF file: ${file.name}`, 'error');
+          continue;
+        }
+        
+        // Prevent duplicate loads
+        if (queue.some(item => item.file.name === file.name && item.file.size === file.size)) {
+          continue;
+        }
+
+        const id = 'file-' + Math.random().toString(36).substr(2, 9);
+        queue.push({
+          id,
+          file,
+          status: 'pending',
+          progress: 0,
+          compressedSize: null,
+          compressedBlob: null
+        });
+        addedCount++;
+        logToConsole(`Added file to queue: ${file.name} (${formatBytes(file.size)})`, 'sys');
+      }
+
+      if (addedCount > 0) {
+        updateQueueUI();
+      }
+    }
+
+    fileInput.addEventListener('change', (e) => {
+      addFilesToQueue(e.target.files);
+      fileInput.value = ''; // Reset input to allow choosing the same file again
+    });
+
+    // Drag-over styling
+    ['dragenter', 'dragover'].forEach(eventName => {
+      dropzone.addEventListener(eventName, (e) => {
+        e.preventDefault();
+        dropzone.classList.add('border-primary', 'bg-canvas-soft-2');
+      }, false);
+    });
+
+    ['dragleave', 'drop'].forEach(eventName => {
+      dropzone.addEventListener(eventName, (e) => {
+        e.preventDefault();
+        dropzone.classList.remove('border-primary', 'bg-canvas-soft-2');
+      }, false);
+    });
+
+    dropzone.addEventListener('drop', (e) => {
+      const dt = e.dataTransfer;
+      const files = dt.files;
+      addFilesToQueue(files);
+    });
+
+    // Update the Queue UI Elements
+    function updateQueueUI() {
+      if (queue.length === 0) {
+        queueContainer.classList.add('hidden');
+        return;
+      }
+      
+      queueContainer.classList.remove('hidden');
+      queueBadge.textContent = queue.length;
+      
+      queueList.innerHTML = '';
+      let totalInputSize = 0;
+      let totalOutputSize = 0;
+      let completedCount = 0;
+
+      queue.forEach(item => {
+        totalInputSize += item.file.size;
+        
+        const row = document.createElement('div');
+        row.className = 'py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3';
+        row.id = item.id;
+        
+        let statusBadge = `<span class="px-2 py-0.5 text-[11px] rounded bg-canvas-soft text-body border border-hairline font-mono">Pending</span>`;
+        let progressSection = '';
+        let statsSection = `<span class="text-body-sm font-mono text-body">${formatBytes(item.file.size)}</span>`;
+        let actionButton = `<button onclick="window.removeQueueItem('${item.id}')" class="text-mute hover:text-error-deep p-1 transition-colors"><i class="fa-regular fa-trash-can"></i></button>`;
+
+        if (item.status === 'compressing') {
+          statusBadge = `<span class="px-2 py-0.5 text-[11px] rounded bg-warning-soft text-warning-deep border border-warning-deep/10 font-mono animate-pulse">Compressing</span>`;
+          progressSection = `
+            <div class="w-full bg-hairline rounded-full h-1.5 mt-2 overflow-hidden">
+              <div class="bg-gradient-to-r from-gradient-develop-start to-gradient-develop-end h-1.5 rounded-full transition-all duration-150" style="width: ${item.progress}%"></div>
+            </div>
+          `;
+          actionButton = `<span class="text-[11px] font-mono text-mute">${item.progress}%</span>`;
+        } else if (item.status === 'completed') {
+          const savingsPct = Math.round(((item.file.size - item.compressedSize) / item.file.size) * 100);
+          totalOutputSize += item.compressedSize;
+          completedCount++;
+
+          statusBadge = `<span class="px-2 py-0.5 text-[11px] rounded bg-link-bg-soft text-success border border-link/10 font-mono">Completed</span>`;
+          statsSection = `
+            <div class="text-right">
+              <div class="text-body-sm font-mono text-mute line-through">${formatBytes(item.file.size)}</div>
+              <div class="text-body-sm font-mono font-medium text-success">${formatBytes(item.compressedSize)} <span class="font-semibold">(-${savingsPct}%)</span></div>
+            </div>
+          `;
+          
+          actionButton = `
+            <button onclick="window.downloadSingleItem('${item.id}')" class="px-2.5 py-1 bg-primary text-on-primary rounded hover:bg-black text-[11px] font-semibold transition-all inline-flex items-center gap-1 shadow-level-1">
+              <i class="fa-solid fa-download"></i> Download
+            </button>
+          `;
+        } else if (item.status === 'failed') {
+          statusBadge = `<span class="px-2 py-0.5 text-[11px] rounded bg-error-soft text-error-deep border border-error/10 font-mono">Failed</span>`;
+          actionButton = `<span class="text-[11px] text-error-deep"><i class="fa-solid fa-triangle-exclamation"></i> Error</span>`;
+        }
+
+        row.innerHTML = `
+          <div class="flex items-center gap-3 max-w-[65%]">
+            <i class="fa-regular fa-file-pdf text-xl text-body flex-shrink-0"></i>
+            <div class="truncate">
+              <div class="text-body-sm-strong text-ink truncate">${item.file.name}</div>
+              <div class="flex items-center gap-2 mt-1">
+                ${statusBadge}
+                ${progressSection}
+              </div>
+            </div>
+          </div>
+          <div class="flex items-center justify-between sm:justify-end gap-6">
+            ${statsSection}
+            <div class="w-20 text-right flex-shrink-0 flex justify-end">
+              ${actionButton}
+            </div>
+          </div>
+        `;
+        queueList.appendChild(row);
+      });
+
+      totalInputSizeEl.textContent = formatBytes(totalInputSize);
+      
+      if (completedCount > 0) {
+        totalSavingsContainer.classList.remove('hidden');
+        totalOutputSizeEl.textContent = formatBytes(totalOutputSize);
+        const totalSavingsPct = Math.round(((totalInputSize - totalOutputSize) / totalInputSize) * 100);
+        totalSavingsPctEl.textContent = `-${totalSavingsPct}%`;
+        downloadZipBtn.classList.remove('hidden');
+      } else {
+        totalSavingsContainer.classList.add('hidden');
+        downloadZipBtn.classList.add('hidden');
+      }
+    }
+
+    // Expose Global UI Functions
+    window.removeQueueItem = function(id) {
+      if (isProcessing) return;
+      queue = queue.filter(item => item.id !== id);
+      logToConsole("Removed item from queue.", "sys");
+      updateQueueUI();
+    };
+
+    window.downloadSingleItem = function(id) {
+      const item = queue.find(i => i.id === id);
+      if (!item || !item.compressedBlob) return;
+      
+      const url = URL.createObjectURL(item.compressedBlob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `compressed_${item.file.name}`;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    };
+
+    // Clean Queue Button
+    clearQueueBtn.addEventListener('click', () => {
+      if (isProcessing) return;
+      queue = [];
+      logToConsole("Queue cleared.", "sys");
+      updateQueueUI();
+    });
+
+    // ZIP Download Button
+    downloadZipBtn.addEventListener('click', async () => {
+      const completedItems = queue.filter(item => item.status === 'completed' && item.compressedBlob);
+      if (completedItems.length === 0) return;
+
+      logToConsole("Creating ZIP archive containing compressed files...", "sys");
+      
+      const zip = new JSZip();
+      completedItems.forEach(item => {
+        zip.file(`compressed_${item.file.name}`, item.compressedBlob);
+      });
+
+      try {
+        const zipBlob = await zip.generateAsync({ type: 'blob' });
+        const url = URL.createObjectURL(zipBlob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'zcompressed_pdfs.zip';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+        logToConsole("ZIP archive successfully generated and downloaded.", "success");
+      } catch (err) {
+        logToConsole(`Failed to create ZIP: ${err.message}`, "error");
+      }
+    });
+
+    // The core PDF compression wrapper loop
+    compressBtn.addEventListener('click', async () => {
+      if (isProcessing) return;
+      const pendingItems = queue.filter(item => item.status !== 'completed');
+      if (pendingItems.length === 0) {
+        logToConsole("No pending files in the queue to compress.", "error");
+        return;
+      }
+
+      isProcessing = true;
+      compressBtn.disabled = true;
+      compressBtn.classList.add('opacity-50', 'cursor-not-allowed');
+      clearQueueBtn.disabled = true;
+      clearQueueBtn.classList.add('opacity-50', 'cursor-not-allowed');
+
+      const params = getCompressionParams();
+      logToConsole(`Starting batch compression queue. Target DPI: ${params.dpi}, Quality: ${Math.round(params.quality * 100)}%`, 'sys');
+
+      for (const item of pendingItems) {
+        item.status = 'compressing';
+        item.progress = 0;
+        updateQueueUI();
+        logToConsole(`Initializing compression for: ${item.file.name}`, 'sys');
+
+        try {
+          const compressedBytes = await runCompressEngine(item.file, params.dpi, params.quality, (pageNum, totalPages) => {
+            item.progress = Math.round((pageNum / totalPages) * 100);
+            updateQueueUI();
+            logToConsole(`Compressed Page ${pageNum}/${totalPages} for ${item.file.name}...`, 'progress');
+          });
+
+          item.status = 'completed';
+          item.compressedSize = compressedBytes.length;
+          item.compressedBlob = new Blob([compressedBytes], { type: 'application/pdf' });
+          
+          const reduction = Math.round(((item.file.size - item.compressedSize) / item.file.size) * 100);
+          logToConsole(`Compression completed for ${item.file.name}. Saved ${reduction}% (New size: ${formatBytes(item.compressedSize)})`, 'success');
+        } catch (err) {
+          console.error(err);
+          item.status = 'failed';
+          logToConsole(`Compression failed for ${item.file.name}: ${err.message}`, 'error');
+        }
+        
+        updateQueueUI();
+      }
+
+      isProcessing = false;
+      compressBtn.disabled = false;
+      compressBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+      clearQueueBtn.disabled = false;
+      clearQueueBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+      logToConsole("Batch compression queue finished.", "sys");
+    });
+
+    // The low level execution code doing Canvas rendering & PDF injection
+    async function runCompressEngine(file, dpi, quality, onProgress) {
+      if (!window.pdfjsLib || !window.PDFLib) {
+        throw new Error("Required libraries (pdf.js or pdf-lib) are not loaded.");
+      }
+
+      const arrayBuffer = await file.arrayBuffer();
+      const pdfDoc = await window.pdfjsLib.getDocument({ data: arrayBuffer }).promise;
+      const totalPages = pdfDoc.numPages;
+
+      const newPdfDoc = await window.PDFLib.PDFDocument.create();
+
+      for (let pageNum = 1; pageNum <= totalPages; pageNum++) {
+        const page = await pdfDoc.getPage(pageNum);
+        const scale = dpi / 72; // pdf.js default is 72 dpi
+        const viewport = page.getViewport({ scale });
+
+        // Initialize Canvas
+        const canvas = document.createElement('canvas');
+        const context = canvas.getContext('2d');
+        canvas.width = viewport.width;
+        canvas.height = viewport.height;
+
+        // Draw solid white background to prevent transparency rendering as black blocks
+        context.fillStyle = '#ffffff';
+        context.fillRect(0, 0, canvas.width, canvas.height);
+
+        // Render PDF page onto canvas
+        await page.render({ canvasContext: context, viewport }).promise;
+
+        // Compress canvas visual drawing as a JPEG
+        const imgDataUrl = canvas.toDataURL('image/jpeg', quality);
+
+        // Embed the JPEG into the PDF structure
+        const jpegImage = await newPdfDoc.embedJpg(imgDataUrl);
+
+        // Recreate the page matching its original standard dimensions
+        const originalWidth = viewport.width / scale;
+        const originalHeight = viewport.height / scale;
+        const newPage = newPdfDoc.addPage([originalWidth, originalHeight]);
+
+        // Draw the compressed image full-bleed over the page
+        newPage.drawImage(jpegImage, {
+          x: 0,
+          y: 0,
+          width: originalWidth,
+          height: originalHeight
+        });
+
+        if (onProgress) {
+          onProgress(pageNum, totalPages);
+        }
+      }
+
+      const compressedBytes = await newPdfDoc.save();
+      return compressedBytes;
+    }
+  </script>
 </Layout>

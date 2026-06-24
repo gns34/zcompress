@@ -1,5 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import logo from '../components/logo.png';
+import { Image } from 'astro:assets';
 ---
 
 <Layout title="Zcompress — Private, Client-Side PDF Compressor">
@@ -10,36 +12,59 @@ import Layout from '../layouts/Layout.astro';
   <script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
 
   <!-- Navigation Bar -->
-  <nav class="sticky top-0 z-50 h-[64px] border-b border-hairline bg-canvas/80 backdrop-blur-md px-6 py-2 transition-all">
-    <div class="max-w-[1200px] mx-auto h-full flex items-center justify-between">
+  <nav class="sticky top-0 z-50 border-b border-hairline bg-canvas/80 backdrop-blur-md px-6 py-2 transition-all">
+    <div class="max-w-[1200px] mx-auto h-[48px] flex items-center justify-between">
       <!-- Logo -->
-      <a href="#" class="flex items-center gap-2 group">
-        <span class="w-8 h-8 rounded-sm bg-primary text-on-primary flex items-center justify-center font-mono font-bold text-lg select-none group-hover:scale-105 transition-transform duration-200">Z</span>
+      <a href="#" class="flex items-center gap-2 group rounded focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none" aria-label="Zcompress Homepage">
+        <Image src={logo} alt="Zcompress Logo" class="w-8 h-8 rounded-sm select-none group-hover:scale-105 transition-transform duration-200" />
         <span class="font-sans font-semibold text-lg text-ink tracking-[-0.6px]">Zcompress</span>
       </a>
 
       <!-- Navigation Links -->
       <div class="hidden md:flex items-center gap-6">
-        <a href="#compressor" class="text-body-sm text-body hover:text-ink transition-colors px-3 py-1.5 rounded-full hover:bg-canvas-soft-2/50">Compressor</a>
-        <a href="#features" class="text-body-sm text-body hover:text-ink transition-colors px-3 py-1.5 rounded-full hover:bg-canvas-soft-2/50">Features</a>
-        <a href="#faq" class="text-body-sm text-body hover:text-ink transition-colors px-3 py-1.5 rounded-full hover:bg-canvas-soft-2/50">FAQ</a>
+        <a href="#compressor" class="text-body-sm text-body hover:text-ink transition-colors px-3 py-1.5 rounded-full hover:bg-canvas-soft-2/50 focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none">Compressor</a>
+        <a href="#features" class="text-body-sm text-body hover:text-ink transition-colors px-3 py-1.5 rounded-full hover:bg-canvas-soft-2/50 focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none">Features</a>
+        <a href="#faq" class="text-body-sm text-body hover:text-ink transition-colors px-3 py-1.5 rounded-full hover:bg-canvas-soft-2/50 focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none">FAQ</a>
       </div>
 
       <!-- Action Button -->
       <div class="flex items-center gap-3">
         <span class="hidden sm:inline-flex items-center gap-1.5 px-2.5 py-1 text-[11px] font-mono border border-hairline rounded bg-canvas-soft text-body">
-          <span class="w-1.5 h-1.5 rounded-full bg-cyan animate-pulse"></span>
+          <span class="w-1.5 h-1.5 rounded-full bg-cyan animate-pulse" aria-hidden="true"></span>
           100% Client-Side
         </span>
-        <a href="#compressor" class="px-3.5 h-[28px] bg-primary text-on-primary text-body-sm-strong rounded-sm hover:bg-black transition-colors inline-flex items-center justify-center select-none shadow-level-1">
+        
+        <!-- Theme Toggle Button -->
+        <button id="theme-toggle" class="w-[28px] h-[28px] rounded-sm border border-hairline bg-canvas text-ink flex items-center justify-center hover:bg-canvas-soft-2/50 cursor-pointer transition-colors shadow-level-1 focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none" aria-label="Toggle theme">
+          <i class="fa-regular fa-sun hidden dark:block text-xs" aria-hidden="true"></i>
+          <i class="fa-regular fa-moon block dark:hidden text-xs" aria-hidden="true"></i>
+        </button>
+
+        <a href="#compressor" class="px-3.5 h-[28px] bg-primary text-on-primary text-body-sm-strong rounded-sm hover:bg-black transition-colors inline-flex items-center justify-center select-none shadow-level-1 focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none">
           Start Compressing
         </a>
+        <button id="mobile-menu-btn" class="md:hidden p-1.5 text-body hover:text-ink transition-colors rounded focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none" aria-label="Toggle Navigation Menu">
+          <i class="fa-solid fa-bars text-xl" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu Dropdown -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-hairline mt-2 py-4 flex flex-col gap-3 animate-fade-in">
+      <a href="#compressor" class="mobile-nav-link text-body hover:text-ink transition-colors py-2 border-b border-hairline/30 text-body-sm-strong focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none">Compressor</a>
+      <a href="#features" class="mobile-nav-link text-body hover:text-ink transition-colors py-2 border-b border-hairline/30 text-body-sm-strong focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none">Features</a>
+      <a href="#faq" class="mobile-nav-link text-body hover:text-ink transition-colors py-2 text-body-sm-strong focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none">FAQ</a>
+      <div class="flex sm:hidden items-center justify-between pt-2 border-t border-hairline/30">
+        <span class="inline-flex items-center gap-1.5 px-2.5 py-1 text-[11px] font-mono border border-hairline rounded bg-canvas-soft text-body">
+          <span class="w-1.5 h-1.5 rounded-full bg-cyan animate-pulse" aria-hidden="true"></span>
+          100% Client-Side
+        </span>
       </div>
     </div>
   </nav>
 
   <!-- Hero Section with Mesh Gradient -->
-  <section class="relative bg-mesh-gradient overflow-hidden py-24 px-6 border-b border-hairline">
+  <section class="relative bg-mesh-gradient overflow-hidden py-16 md:py-24 px-4 md:px-6 border-b border-hairline">
     <div class="max-w-[800px] mx-auto text-center relative z-10">
       <!-- Eyebrow Badge -->
       <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-link-bg-soft border border-link-deep/10 text-link-deep mb-6 animate-fade-in">
@@ -47,21 +72,21 @@ import Layout from '../layouts/Layout.astro';
       </div>
 
       <!-- Headline -->
-      <h1 class="text-display-xl text-ink font-semibold tracking-[-2.4px] mb-6 leading-tight">
+      <h1 class="text-display-xl text-ink font-semibold tracking-[-1.5px] md:tracking-[-2.4px] mb-6 leading-tight text-balance">
         Compress PDFs with absolute privacy.
       </h1>
 
       <!-- Description -->
-      <p class="text-body-lg text-body mb-8 max-w-[600px] mx-auto">
+      <p class="text-body-lg text-body mb-8 max-w-[600px] mx-auto text-balance">
         Run state-of-the-art compression entirely inside your browser. Your files never touch any servers. Fast, secure, and completely free.
       </p>
 
       <!-- Action Button -->
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-        <a href="#compressor" class="px-6 h-[48px] bg-primary text-on-primary text-button-lg rounded-pill hover:bg-black transition-all flex items-center justify-center select-none shadow-level-3 hover:scale-[1.02] duration-200">
+        <a href="#compressor" class="w-full sm:w-auto px-6 h-[48px] bg-primary text-on-primary text-button-lg rounded-pill hover:bg-black transition-all flex items-center justify-center select-none shadow-level-3 hover:scale-[1.02] duration-200 focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none">
           Open Compressor
         </a>
-        <a href="#features" class="px-6 h-[48px] bg-canvas text-ink border border-hairline text-button-lg rounded-pill hover:bg-canvas-soft transition-all flex items-center justify-center select-none shadow-level-2 hover:scale-[1.02] duration-200">
+        <a href="#features" class="w-full sm:w-auto px-6 h-[48px] bg-canvas text-ink border border-hairline text-button-lg rounded-pill hover:bg-canvas-soft transition-all flex items-center justify-center select-none shadow-level-2 hover:scale-[1.02] duration-200 focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none">
           Learn How It Works
         </a>
       </div>
@@ -74,35 +99,35 @@ import Layout from '../layouts/Layout.astro';
       <!-- Main Compressor Card -->
       <div class="lg:col-span-2 space-y-6">
         <!-- Drag & Drop Zone -->
-        <div id="dropzone" class="relative group border-2 border-dashed border-hairline-strong/60 rounded-lg bg-canvas p-12 text-center hover:border-primary/50 hover:bg-canvas-soft transition-all duration-300 shadow-level-3">
-          <input type="file" id="file-input" multiple accept=".pdf" class="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10" />
+        <div id="dropzone" class="relative group border-2 border-dashed border-hairline-strong/60 rounded-lg bg-canvas p-8 sm:p-12 text-center hover:border-primary/50 hover:bg-canvas-soft transition-all duration-300 shadow-level-3 focus-within:border-primary focus-within:ring-2 focus-within:ring-primary/20">
+          <input type="file" id="file-input" multiple accept=".pdf" class="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10 focus:outline-none" aria-label="Select PDF files to compress" />
           
           <div class="space-y-4">
             <div class="w-16 h-16 mx-auto rounded-full bg-canvas-soft border border-hairline flex items-center justify-center group-hover:scale-110 group-hover:border-primary/30 transition-all duration-300 shadow-level-2">
-              <i class="fa-regular fa-file-pdf text-3xl text-body group-hover:text-primary transition-colors"></i>
+              <i class="fa-regular fa-file-pdf text-3xl text-body group-hover:text-primary transition-colors" aria-hidden="true"></i>
             </div>
             <div>
               <p class="text-body-md-strong text-ink mb-1">Drag and drop your PDF files here</p>
               <p class="text-body-sm text-body">or click to browse from your computer</p>
             </div>
             <div class="pt-2 flex justify-center gap-3 text-caption text-mute font-mono">
-              <span><i class="fa-solid fa-lock text-cyan-deep mr-1"></i> End-to-end Local</span>
+              <span><i class="fa-solid fa-lock text-cyan-deep mr-1" aria-hidden="true"></i> End-to-end Local</span>
               <span>•</span>
-              <span><i class="fa-solid fa-bolt text-warning-deep mr-1"></i> Multi-file Batch</span>
+              <span><i class="fa-solid fa-bolt text-warning-deep mr-1" aria-hidden="true"></i> Multi-file Batch</span>
             </div>
           </div>
         </div>
 
         <!-- File List / Queue -->
-        <div id="queue-container" class="hidden rounded-lg bg-canvas border border-hairline p-6 shadow-level-3 space-y-4">
+        <div id="queue-container" class="hidden rounded-lg bg-canvas border border-hairline p-4 sm:p-6 shadow-level-3 space-y-4">
           <div class="flex items-center justify-between border-b border-hairline pb-4">
             <h3 class="text-display-sm text-ink font-semibold tracking-[-0.6px] flex items-center gap-2">
               <span>Files Queue</span>
               <span id="queue-badge" class="px-2 py-0.5 text-caption font-mono border border-hairline rounded bg-canvas-soft">0</span>
             </h3>
             <div class="flex gap-2">
-              <button id="clear-queue-btn" class="px-3 py-1.5 border border-hairline hover:border-error-deep/30 hover:bg-error-soft text-body hover:text-error-deep rounded-sm text-body-sm transition-all flex items-center gap-1.5">
-                <i class="fa-regular fa-trash-can text-xs"></i>
+              <button id="clear-queue-btn" class="px-3 py-1.5 border border-hairline hover:border-error-deep/30 hover:bg-error-soft text-body hover:text-error-deep rounded-sm text-body-sm transition-all flex items-center gap-1.5 focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none">
+                <i class="fa-regular fa-trash-can text-xs" aria-hidden="true"></i>
                 Clear Queue
               </button>
             </div>
@@ -115,20 +140,20 @@ import Layout from '../layouts/Layout.astro';
 
           <!-- Batch Action Bar -->
           <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-4 border-t border-hairline">
-            <div class="text-body-sm text-body">
+            <div class="text-body-sm text-body w-full sm:w-auto text-left">
               Total input size: <span id="total-input-size" class="font-mono font-medium text-ink">0 KB</span>
               <span id="total-savings-container" class="hidden">
                 | New size: <span id="total-output-size" class="font-mono font-medium text-success">0 KB</span> 
                 (<span id="total-savings-pct" class="font-mono font-semibold text-success">-0%</span>)
               </span>
             </div>
-            <div class="flex gap-3 w-full sm:w-auto">
-              <button id="compress-btn" class="flex-1 sm:flex-none px-6 h-[40px] bg-primary text-on-primary text-button-md rounded-pill hover:bg-black transition-all flex items-center justify-center gap-2 shadow-level-3">
-                <i class="fa-solid fa-compress"></i>
+            <div class="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
+              <button id="compress-btn" class="w-full sm:w-auto px-6 h-[40px] bg-primary text-on-primary text-button-md rounded-pill hover:bg-black transition-all flex items-center justify-center gap-2 shadow-level-3 focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none">
+                <i class="fa-solid fa-compress" aria-hidden="true"></i>
                 Compress All Files
               </button>
-              <button id="download-zip-btn" class="hidden flex-1 sm:flex-none px-6 h-[40px] bg-canvas text-ink border border-hairline text-button-md rounded-pill hover:bg-canvas-soft transition-all flex items-center justify-center gap-2 shadow-level-2">
-                <i class="fa-regular fa-file-archive"></i>
+              <button id="download-zip-btn" class="hidden w-full sm:w-auto px-6 h-[40px] bg-canvas text-ink border border-hairline text-button-md rounded-pill hover:bg-canvas-soft transition-all flex items-center justify-center gap-2 shadow-level-2 focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none">
+                <i class="fa-regular fa-file-archive" aria-hidden="true"></i>
                 Download ZIP
               </button>
             </div>
@@ -136,39 +161,40 @@ import Layout from '../layouts/Layout.astro';
         </div>
 
         <!-- Terminal Output Log Panel -->
-        <div class="rounded-lg bg-primary text-on-primary shadow-level-4 overflow-hidden border border-primary">
-          <div class="bg-primary/95 border-b border-primary/20 px-4 py-2.5 flex items-center justify-between select-none">
+        <div class="rounded-lg bg-[#121212] text-[#f5f5f5] shadow-level-4 overflow-hidden border border-[#222222]">
+          <div id="terminal-header" class="bg-[#171717] border-b border-[#222222] px-4 py-2.5 flex items-center justify-between select-none cursor-pointer hover:bg-[#1a1a1a] transition-colors" role="button" aria-expanded="true" aria-controls="terminal-logs" tabindex="0">
             <div class="flex items-center gap-2">
-              <span class="w-3 h-3 rounded-full bg-error-deep"></span>
-              <span class="w-3 h-3 rounded-full bg-warning"></span>
-              <span class="w-3 h-3 rounded-full bg-cyan-deep"></span>
-              <span class="text-caption-mono text-mute/80 ml-2 font-mono">zcompress-engine-console</span>
+              <span class="w-3 h-3 rounded-full bg-error-deep" aria-hidden="true"></span>
+              <span class="w-3 h-3 rounded-full bg-warning" aria-hidden="true"></span>
+              <span class="w-3 h-3 rounded-full bg-cyan-deep" aria-hidden="true"></span>
+              <span class="text-caption-mono text-white/50 ml-2 font-mono">zcompress-engine-console</span>
+              <i id="terminal-toggle-icon" class="fa-solid fa-chevron-down text-white/40 text-[10px] transition-transform duration-200 ml-1" aria-hidden="true"></i>
             </div>
-            <button id="clear-logs-btn" class="text-mute hover:text-on-primary transition-colors text-caption-mono font-mono flex items-center gap-1">
-              <i class="fa-solid fa-terminal text-[10px]"></i>
+            <button id="clear-logs-btn" class="text-white/60 hover:text-white transition-colors text-caption-mono font-mono flex items-center gap-1 rounded focus-visible:ring-2 focus-visible:ring-white focus-visible:outline-none" aria-label="Clear Console Logs">
+              <i class="fa-solid fa-terminal text-[10px]" aria-hidden="true"></i>
               Clear
             </button>
           </div>
-          <div id="terminal-logs" class="p-4 h-[180px] overflow-y-auto font-mono text-code text-left space-y-1.5 scrollbar-thin scrollbar-thumb-primary/50 scrollbar-track-transparent">
-            <div class="text-mute">[SYS] Console ready. Waiting for files to compress...</div>
+          <div id="terminal-logs" class="p-4 h-[180px] overflow-y-auto font-mono text-code text-left space-y-1.5 scrollbar-thin scrollbar-thumb-white/10 scrollbar-track-transparent transition-all">
+            <div class="text-white/40">[SYS] Console ready. Waiting for files to compress…</div>
           </div>
         </div>
       </div>
 
       <!-- Settings & Controls Panel -->
       <div class="space-y-6">
-        <div class="rounded-lg bg-canvas border border-hairline p-6 shadow-level-3 space-y-6 text-left">
+        <div class="rounded-lg bg-canvas border border-hairline p-4 sm:p-6 shadow-level-3 space-y-6 text-left">
           <h3 class="text-display-sm text-ink font-semibold tracking-[-0.6px] flex items-center gap-2 pb-4 border-b border-hairline">
-            <i class="fa-solid fa-sliders text-body text-base"></i>
+            <i class="fa-solid fa-sliders text-body text-base" aria-hidden="true"></i>
             Compression Settings
           </h3>
 
           <!-- Presets -->
           <div class="space-y-3">
-            <label class="text-body-sm-strong text-ink">Presets</label>
-            <div class="grid grid-cols-1 gap-2">
+            <span class="text-body-sm-strong text-ink block">Presets</span>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-2">
               <!-- Preset High -->
-              <button data-preset="high" class="preset-btn text-left p-3 rounded border border-hairline hover:border-hairline-strong transition-all flex items-start justify-between group">
+              <button data-preset="high" class="preset-btn text-left p-3 rounded border border-hairline hover:border-hairline-strong transition-all flex items-start justify-between group focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none">
                 <div>
                   <div class="text-body-sm-strong text-ink group-hover:text-primary transition-colors">High Compression</div>
                   <div class="text-caption text-body">Low resolution. Ideal for emails.</div>
@@ -177,7 +203,7 @@ import Layout from '../layouts/Layout.astro';
               </button>
               
               <!-- Preset Recommended -->
-              <button data-preset="recommended" class="preset-btn active text-left p-3 rounded border-2 border-primary bg-canvas-soft transition-all flex items-start justify-between group">
+              <button data-preset="recommended" class="preset-btn active text-left p-3 rounded border-2 border-primary bg-canvas-soft transition-all flex items-start justify-between group focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none">
                 <div>
                   <div class="text-body-sm-strong text-ink flex items-center gap-1.5">
                     Recommended
@@ -189,7 +215,7 @@ import Layout from '../layouts/Layout.astro';
               </button>
 
               <!-- Preset Low -->
-              <button data-preset="low" class="preset-btn text-left p-3 rounded border border-hairline hover:border-hairline-strong transition-all flex items-start justify-between group">
+              <button data-preset="low" class="preset-btn text-left p-3 rounded border border-hairline hover:border-hairline-strong transition-all flex items-start justify-between group focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none">
                 <div>
                   <div class="text-body-sm-strong text-ink group-hover:text-primary transition-colors">Low Compression</div>
                   <div class="text-caption text-body">High resolution. Keeps images sharp.</div>
@@ -198,7 +224,7 @@ import Layout from '../layouts/Layout.astro';
               </button>
 
               <!-- Preset Custom -->
-              <button data-preset="custom" class="preset-btn text-left p-3 rounded border border-hairline hover:border-hairline-strong transition-all flex items-start justify-between group">
+              <button data-preset="custom" class="preset-btn text-left p-3 rounded border border-hairline hover:border-hairline-strong transition-all flex items-start justify-between group focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none">
                 <div>
                   <div class="text-body-sm-strong text-ink group-hover:text-primary transition-colors">Custom Configuration</div>
                   <div class="text-caption text-body">Fine-tune DPI and image quality.</div>
@@ -212,12 +238,12 @@ import Layout from '../layouts/Layout.astro';
           <div id="custom-sliders" class="hidden space-y-4 pt-4 border-t border-hairline animate-fade-in">
             <!-- DPI Slider -->
             <div class="space-y-2">
-              <div class="flex justify-between items-center text-body-sm">
+              <label for="dpi-slider" class="flex justify-between items-center text-body-sm cursor-pointer">
                 <span class="text-body-sm-strong text-ink">Resolution (DPI)</span>
                 <span id="dpi-val" class="font-mono text-mute">150 DPI</span>
-              </div>
-              <input type="range" id="dpi-slider" min="72" max="300" step="10" value="150" class="w-full accent-primary h-1 bg-hairline rounded-lg appearance-none cursor-pointer" />
-              <div class="flex justify-between text-[10px] text-mute font-mono">
+              </label>
+              <input type="range" id="dpi-slider" min="72" max="300" step="10" value="150" class="w-full accent-primary h-1 bg-hairline rounded-lg appearance-none cursor-pointer focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:outline-none" aria-label="Resolution (DPI)" />
+              <div class="flex justify-between text-[10px] text-mute font-mono" aria-hidden="true">
                 <span>72 (Low)</span>
                 <span>150 (Med)</span>
                 <span>300 (High)</span>
@@ -226,12 +252,12 @@ import Layout from '../layouts/Layout.astro';
 
             <!-- Quality Slider -->
             <div class="space-y-2">
-              <div class="flex justify-between items-center text-body-sm">
+              <label for="quality-slider" class="flex justify-between items-center text-body-sm cursor-pointer">
                 <span class="text-body-sm-strong text-ink">JPEG Quality</span>
                 <span id="quality-val" class="font-mono text-mute">60%</span>
-              </div>
-              <input type="range" id="quality-slider" min="10" max="100" step="5" value="60" class="w-full accent-primary h-1 bg-hairline rounded-lg appearance-none cursor-pointer" />
-              <div class="flex justify-between text-[10px] text-mute font-mono">
+              </label>
+              <input type="range" id="quality-slider" min="10" max="100" step="5" value="60" class="w-full accent-primary h-1 bg-hairline rounded-lg appearance-none cursor-pointer focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:outline-none" aria-label="JPEG Quality" />
+              <div class="flex justify-between text-[10px] text-mute font-mono" aria-hidden="true">
                 <span>10% (Small)</span>
                 <span>60% (Rec)</span>
                 <span>100% (High)</span>
@@ -242,7 +268,7 @@ import Layout from '../layouts/Layout.astro';
           <!-- Help Info Callout -->
           <div class="rounded p-4 bg-canvas-soft border border-hairline text-body-sm text-body space-y-2 shadow-level-1">
             <div class="font-medium text-ink flex items-center gap-1.5">
-              <i class="fa-solid fa-circle-info text-link"></i>
+              <i class="fa-solid fa-circle-info text-link" aria-hidden="true"></i>
               Visual Compression
             </div>
             <p>
@@ -258,11 +284,11 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <!-- Interactive Features Section -->
-  <section id="features" class="py-20 px-6 border-t border-b border-hairline bg-canvas-soft-2/50 scroll-mt-[64px]">
+  <section id="features" class="py-16 md:py-20 px-4 md:px-6 border-t border-b border-hairline bg-canvas-soft-2/50 scroll-mt-[64px]">
     <div class="max-w-[1200px] mx-auto text-left">
       <div class="max-w-[600px] mb-12">
         <span class="text-caption-mono font-mono text-mute uppercase tracking-widest">Architected for Privacy</span>
-        <h2 class="text-display-lg text-ink font-semibold tracking-[-1.28px] mt-2 mb-4 leading-tight">
+        <h2 class="text-display-lg text-ink font-semibold tracking-[-0.8px] md:tracking-[-1.28px] mt-2 mb-4 leading-tight text-balance">
           Engineered to be completely local.
         </h2>
         <p class="text-body-md text-body">
@@ -275,7 +301,7 @@ import Layout from '../layouts/Layout.astro';
         <!-- Feature 1 -->
         <div class="rounded-lg bg-canvas border border-hairline p-6 shadow-level-3 hover:scale-[1.02] transition-transform duration-300">
           <div class="w-10 h-10 rounded bg-canvas-soft border border-hairline flex items-center justify-center mb-6">
-            <i class="fa-solid fa-shield-halved text-success"></i>
+            <i class="fa-solid fa-shield-halved text-success" aria-hidden="true"></i>
           </div>
           <h3 class="text-display-sm text-ink font-semibold tracking-[-0.6px] mb-3">100% Client-Side</h3>
           <p class="text-body-sm text-body leading-relaxed">
@@ -286,7 +312,7 @@ import Layout from '../layouts/Layout.astro';
         <!-- Feature 2 -->
         <div class="rounded-lg bg-canvas border border-hairline p-6 shadow-level-3 hover:scale-[1.02] transition-transform duration-300">
           <div class="w-10 h-10 rounded bg-canvas-soft border border-hairline flex items-center justify-center mb-6">
-            <i class="fa-solid fa-layer-group text-violet"></i>
+            <i class="fa-solid fa-layer-group text-violet" aria-hidden="true"></i>
           </div>
           <h3 class="text-display-sm text-ink font-semibold tracking-[-0.6px] mb-3">Batch Processing</h3>
           <p class="text-body-sm text-body leading-relaxed">
@@ -297,7 +323,7 @@ import Layout from '../layouts/Layout.astro';
         <!-- Feature 3 -->
         <div class="rounded-lg bg-canvas border border-hairline p-6 shadow-level-3 hover:scale-[1.02] transition-transform duration-300">
           <div class="w-10 h-10 rounded bg-canvas-soft border border-hairline flex items-center justify-center mb-6">
-            <i class="fa-solid fa-chart-pie text-cyan-deep"></i>
+            <i class="fa-solid fa-chart-pie text-cyan-deep" aria-hidden="true"></i>
           </div>
           <h3 class="text-display-sm text-ink font-semibold tracking-[-0.6px] mb-3">Granular Control</h3>
           <p class="text-body-sm text-body leading-relaxed">
@@ -309,10 +335,10 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <!-- Accordion FAQ Section -->
-  <section id="faq" class="py-20 px-6 max-w-[800px] mx-auto text-left scroll-mt-[64px]">
+  <section id="faq" class="py-16 md:py-20 px-4 md:px-6 max-w-[800px] mx-auto text-left scroll-mt-[64px]">
     <div class="text-center mb-12">
       <span class="text-caption-mono font-mono text-mute uppercase tracking-widest">Frequently Asked Questions</span>
-      <h2 class="text-display-lg text-ink font-semibold tracking-[-1.28px] mt-2 mb-4">
+      <h2 class="text-display-lg text-ink font-semibold tracking-[-0.8px] md:tracking-[-1.28px] mt-2 mb-4 text-balance">
         Questions & Answers.
       </h2>
     </div>
@@ -320,11 +346,11 @@ import Layout from '../layouts/Layout.astro';
     <!-- Accordion Items -->
     <div class="space-y-4">
       <div class="border border-hairline rounded-lg bg-canvas overflow-hidden shadow-level-2 faq-item">
-        <button class="w-full flex items-center justify-between p-5 text-left text-body-md-strong text-ink hover:bg-canvas-soft transition-colors select-none">
+        <button class="w-full flex items-center justify-between p-5 text-left text-body-md-strong text-ink hover:bg-canvas-soft transition-colors select-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none" aria-expanded="false" aria-controls="faq-ans-1">
           <span>Are my PDF files sent to a server?</span>
-          <i class="fa-solid fa-chevron-down text-mute text-sm transition-transform duration-200"></i>
+          <i class="fa-solid fa-chevron-down text-mute text-sm transition-transform duration-200" aria-hidden="true"></i>
         </button>
-        <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out faq-answer">
+        <div id="faq-ans-1" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out faq-answer">
           <div class="p-5 pt-0 text-body-sm text-body border-t border-hairline/50 mt-4 leading-relaxed">
             No, never. Zcompress executes 100% inside your web browser. We use local libraries like pdf.js and pdf-lib to read, optimize, and write PDFs in browser memory. Even if you turn off your internet, the compression engine will still work.
           </div>
@@ -332,11 +358,11 @@ import Layout from '../layouts/Layout.astro';
       </div>
 
       <div class="border border-hairline rounded-lg bg-canvas overflow-hidden shadow-level-2 faq-item">
-        <button class="w-full flex items-center justify-between p-5 text-left text-body-md-strong text-ink hover:bg-canvas-soft transition-colors select-none">
+        <button class="w-full flex items-center justify-between p-5 text-left text-body-md-strong text-ink hover:bg-canvas-soft transition-colors select-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none" aria-expanded="false" aria-controls="faq-ans-2">
           <span>Why is text-only PDF compression not very active?</span>
-          <i class="fa-solid fa-chevron-down text-mute text-sm transition-transform duration-200"></i>
+          <i class="fa-solid fa-chevron-down text-mute text-sm transition-transform duration-200" aria-hidden="true"></i>
         </button>
-        <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out faq-answer">
+        <div id="faq-ans-2" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out faq-answer">
           <div class="p-5 pt-0 text-body-sm text-body border-t border-hairline/50 mt-4 leading-relaxed">
             Our compression engine works by rasterizing document pages into compressed JPEG images. PDFs containing only text take very little space, and converting them to images can actually increase the file size. Zcompress is highly optimized for <strong>images, scans, slide decks, and photography documents</strong>.
           </div>
@@ -344,11 +370,11 @@ import Layout from '../layouts/Layout.astro';
       </div>
 
       <div class="border border-hairline rounded-lg bg-canvas overflow-hidden shadow-level-2 faq-item">
-        <button class="w-full flex items-center justify-between p-5 text-left text-body-md-strong text-ink hover:bg-canvas-soft transition-colors select-none">
+        <button class="w-full flex items-center justify-between p-5 text-left text-body-md-strong text-ink hover:bg-canvas-soft transition-colors select-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none" aria-expanded="false" aria-controls="faq-ans-3">
           <span>What is the maximum file size I can upload?</span>
-          <i class="fa-solid fa-chevron-down text-mute text-sm transition-transform duration-200"></i>
+          <i class="fa-solid fa-chevron-down text-mute text-sm transition-transform duration-200" aria-hidden="true"></i>
         </button>
-        <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out faq-answer">
+        <div id="faq-ans-3" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out faq-answer">
           <div class="p-5 pt-0 text-body-sm text-body border-t border-hairline/50 mt-4 leading-relaxed">
             Because processing is done in the browser memory, the maximum file size is limited only by your computer's RAM and browser environment. We recommend processing files under 100MB to prevent browser tab restarts, especially on mobile devices.
           </div>
@@ -363,7 +389,7 @@ import Layout from '../layouts/Layout.astro';
       <!-- Col 1 -->
       <div class="space-y-4">
         <div class="flex items-center gap-2">
-          <span class="w-6 h-6 rounded-sm bg-primary text-on-primary flex items-center justify-center font-mono font-bold text-sm">Z</span>
+          <Image src={logo} alt="Zcompress Logo" class="w-6 h-6 rounded-sm select-none" />
           <span class="font-sans font-semibold text-base text-ink tracking-[-0.4px]">Zcompress</span>
         </div>
         <p class="text-caption text-body">
@@ -441,6 +467,13 @@ import Layout from '../layouts/Layout.astro';
     const dpiVal = document.getElementById('dpi-val');
     const qualitySlider = document.getElementById('quality-slider');
     const qualityVal = document.getElementById('quality-val');
+    
+    // Mobile Menu & Collapsible Terminal Elements
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const terminalHeader = document.getElementById('terminal-header');
+    const terminalToggleIcon = document.getElementById('terminal-toggle-icon');
+    const themeToggle = document.getElementById('theme-toggle');
 
     // Terminal Logger
     function logToConsole(message, type = 'info') {
@@ -448,11 +481,11 @@ import Layout from '../layouts/Layout.astro';
       const div = document.createElement('div');
       
       let prefix = '[INFO]';
-      let colorClass = 'text-on-primary';
+      let colorClass = 'text-white';
       
       if (type === 'sys') {
         prefix = '[SYS]';
-        colorClass = 'text-mute';
+        colorClass = 'text-white/40';
       } else if (type === 'success') {
         prefix = '[OK]';
         colorClass = 'text-cyan-soft';
@@ -538,14 +571,18 @@ import Layout from '../layouts/Layout.astro';
         if (answer.style.maxHeight) {
           answer.style.maxHeight = null;
           icon.style.transform = 'rotate(0deg)';
+          button.setAttribute('aria-expanded', 'false');
         } else {
           // close other open accordions
-          document.querySelectorAll('.faq-answer').forEach(ans => {
+          document.querySelectorAll('.faq-item button').forEach(btn => {
+            const ans = btn.parentElement.querySelector('.faq-answer');
             ans.style.maxHeight = null;
-            ans.parentElement.querySelector('i').style.transform = 'rotate(0deg)';
+            btn.parentElement.querySelector('i').style.transform = 'rotate(0deg)';
+            btn.setAttribute('aria-expanded', 'false');
           });
           answer.style.maxHeight = answer.scrollHeight + 'px';
           icon.style.transform = 'rotate(180deg)';
+          button.setAttribute('aria-expanded', 'true');
         }
       });
     });
@@ -554,6 +591,71 @@ import Layout from '../layouts/Layout.astro';
     clearLogsBtn.addEventListener('click', () => {
       terminalLogs.innerHTML = `<div class="text-mute">[SYS] Console cleared. ready.</div>`;
     });
+
+    // Theme Toggle Handler
+    if (themeToggle) {
+      themeToggle.addEventListener('click', () => {
+        const isDark = document.documentElement.classList.toggle('dark');
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      });
+    }
+
+    // Mobile Menu Toggle
+    if (mobileMenuBtn && mobileMenu) {
+      mobileMenuBtn.addEventListener('click', () => {
+        const isHidden = mobileMenu.classList.contains('hidden');
+        if (isHidden) {
+          mobileMenu.classList.remove('hidden');
+          mobileMenuBtn.querySelector('i').className = 'fa-solid fa-xmark text-xl';
+        } else {
+          mobileMenu.classList.add('hidden');
+          mobileMenuBtn.querySelector('i').className = 'fa-solid fa-bars text-xl';
+        }
+      });
+
+      // Close mobile menu when clicking nav links
+      document.querySelectorAll('.mobile-nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+          mobileMenuBtn.querySelector('i').className = 'fa-solid fa-bars text-xl';
+        });
+      });
+    }
+
+    // Terminal Collapse Toggle
+    if (terminalHeader && terminalLogs && terminalToggleIcon) {
+      const toggleTerminal = () => {
+        const isHidden = terminalLogs.classList.contains('hidden');
+        if (isHidden) {
+          terminalLogs.classList.remove('hidden');
+          terminalToggleIcon.style.transform = 'rotate(0deg)';
+          terminalHeader.setAttribute('aria-expanded', 'true');
+        } else {
+          terminalLogs.classList.add('hidden');
+          terminalToggleIcon.style.transform = 'rotate(-90deg)';
+          terminalHeader.setAttribute('aria-expanded', 'false');
+        }
+      };
+
+      terminalHeader.addEventListener('click', (e) => {
+        if (e.target.closest('#clear-logs-btn')) return;
+        toggleTerminal();
+      });
+
+      terminalHeader.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          toggleTerminal();
+        }
+      });
+
+      // Collapse terminal by default on mobile screens
+      if (window.innerWidth < 768) {
+        terminalLogs.classList.add('hidden');
+        terminalToggleIcon.style.transform = 'rotate(-90deg)';
+        terminalHeader.setAttribute('aria-expanded', 'false');
+      }
+    }
 
     // Handling Drag and Drop / Selection
     function addFilesToQueue(files) {
@@ -643,7 +745,7 @@ import Layout from '../layouts/Layout.astro';
         let statusBadge = `<span class="px-2 py-0.5 text-[11px] rounded bg-canvas-soft text-body border border-hairline font-mono">Pending</span>`;
         let progressSection = '';
         let statsSection = `<span class="text-body-sm font-mono text-body">${formatBytes(item.file.size)}</span>`;
-        let actionButton = `<button onclick="window.removeQueueItem('${item.id}')" class="text-mute hover:text-error-deep p-1 transition-colors"><i class="fa-regular fa-trash-can"></i></button>`;
+        let actionButton = `<button onclick="window.removeQueueItem('${item.id}')" class="text-mute hover:text-error-deep p-1 transition-colors rounded focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none" aria-label="Remove file from queue"><i class="fa-regular fa-trash-can" aria-hidden="true"></i></button>`;
 
         if (item.status === 'compressing') {
           statusBadge = `<span class="px-2 py-0.5 text-[11px] rounded bg-warning-soft text-warning-deep border border-warning-deep/10 font-mono animate-pulse">Compressing</span>`;
@@ -667,19 +769,19 @@ import Layout from '../layouts/Layout.astro';
           `;
           
           actionButton = `
-            <button onclick="window.downloadSingleItem('${item.id}')" class="px-2.5 py-1 bg-primary text-on-primary rounded hover:bg-black text-[11px] font-semibold transition-all inline-flex items-center gap-1 shadow-level-1">
-              <i class="fa-solid fa-download"></i> Download
+            <button onclick="window.downloadSingleItem('${item.id}')" class="px-2.5 py-1 bg-primary text-on-primary rounded hover:bg-black text-[11px] font-semibold transition-all inline-flex items-center gap-1 shadow-level-1 focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none">
+              <i class="fa-solid fa-download" aria-hidden="true"></i> Download
             </button>
           `;
         } else if (item.status === 'failed') {
           statusBadge = `<span class="px-2 py-0.5 text-[11px] rounded bg-error-soft text-error-deep border border-error/10 font-mono">Failed</span>`;
-          actionButton = `<span class="text-[11px] text-error-deep"><i class="fa-solid fa-triangle-exclamation"></i> Error</span>`;
+          actionButton = `<span class="text-[11px] text-error-deep"><i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i> Error</span>`;
         }
 
         row.innerHTML = `
-          <div class="flex items-center gap-3 max-w-[65%]">
-            <i class="fa-regular fa-file-pdf text-xl text-body flex-shrink-0"></i>
-            <div class="truncate">
+          <div class="flex items-center gap-3 min-w-0 w-full sm:max-w-[65%]">
+            <i class="fa-regular fa-file-pdf text-xl text-body flex-shrink-0" aria-hidden="true"></i>
+            <div class="truncate min-w-0 w-full">
               <div class="text-body-sm-strong text-ink truncate">${item.file.name}</div>
               <div class="flex items-center gap-2 mt-1">
                 ${statusBadge}
@@ -687,7 +789,7 @@ import Layout from '../layouts/Layout.astro';
               </div>
             </div>
           </div>
-          <div class="flex items-center justify-between sm:justify-end gap-6">
+          <div class="flex items-center justify-between sm:justify-end gap-6 w-full sm:w-auto">
             ${statsSection}
             <div class="w-20 text-right flex-shrink-0 flex justify-end">
               ${actionButton}
@@ -746,7 +848,7 @@ import Layout from '../layouts/Layout.astro';
       const completedItems = queue.filter(item => item.status === 'completed' && item.compressedBlob);
       if (completedItems.length === 0) return;
 
-      logToConsole("Creating ZIP archive containing compressed files...", "sys");
+      logToConsole("Creating ZIP archive containing compressed files…", "sys");
       
       const zip = new JSZip();
       completedItems.forEach(item => {
@@ -797,7 +899,7 @@ import Layout from '../layouts/Layout.astro';
           const compressedBytes = await runCompressEngine(item.file, params.dpi, params.quality, (pageNum, totalPages) => {
             item.progress = Math.round((pageNum / totalPages) * 100);
             updateQueueUI();
-            logToConsole(`Compressed Page ${pageNum}/${totalPages} for ${item.file.name}...`, 'progress');
+            logToConsole(`Compressed Page ${pageNum}/${totalPages} for ${item.file.name}…`, 'progress');
           });
 
           item.status = 'completed';
@@ -835,14 +937,24 @@ import Layout from '../layouts/Layout.astro';
 
       const newPdfDoc = await window.PDFLib.PDFDocument.create();
 
+      // Initialize a single reusable Canvas element to minimize garbage collection & GPU memory overhead
+      const canvas = document.createElement('canvas');
+      const context = canvas.getContext('2d');
+
       for (let pageNum = 1; pageNum <= totalPages; pageNum++) {
         const page = await pdfDoc.getPage(pageNum);
-        const scale = dpi / 72; // pdf.js default is 72 dpi
-        const viewport = page.getViewport({ scale });
+        let scale = dpi / 72; // pdf.js default is 72 dpi
+        let viewport = page.getViewport({ scale });
 
-        // Initialize Canvas
-        const canvas = document.createElement('canvas');
-        const context = canvas.getContext('2d');
+        // Safety limit to prevent high DPI and large page canvas allocations from crashing mobile browsers (OOM)
+        const MAX_CANVAS_DIMENSION = 3000;
+        if (viewport.width > MAX_CANVAS_DIMENSION || viewport.height > MAX_CANVAS_DIMENSION) {
+          const limitScale = MAX_CANVAS_DIMENSION / Math.max(viewport.width, viewport.height);
+          scale = scale * limitScale;
+          viewport = page.getViewport({ scale });
+        }
+
+        // Set dimensions of the single reusable canvas
         canvas.width = viewport.width;
         canvas.height = viewport.height;
 
@@ -876,6 +988,10 @@ import Layout from '../layouts/Layout.astro';
           onProgress(pageNum, totalPages);
         }
       }
+
+      // Explicitly collapse the canvas dimensions to 0 to trigger immediate GPU texture memory release in mobile browsers
+      canvas.width = 0;
+      canvas.height = 0;
 
       const compressedBytes = await newPdfDoc.save();
       return compressedBytes;

@@ -1,0 +1,122 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout
+  title="Terms & Conditions - Zcompress | Free Local PDF Compressor"
+  description="Review the Terms and Conditions for Zcompress. Understand our terms of use, local browser sandbox processing, and liability disclaimers."
+  ogUrl="https://zcompress.com/terms"
+>
+  <Header />
+
+  <main class="min-h-screen bg-canvas-soft text-ink py-16 px-6">
+    <div class="max-w-[800px] mx-auto">
+      <!-- Page Header -->
+      <div class="mb-12 border-b border-hairline pb-8">
+        <span class="text-caption-mono font-mono text-link-deep uppercase tracking-wider block mb-3">
+          Legal Agreement
+        </span>
+        <h1 class="text-display-lg md:text-display-xl text-ink font-semibold tracking-[-1.5px] md:tracking-[-2.4px] mb-4">
+          Terms & Conditions.
+        </h1>
+        <p class="text-body-lg text-body">
+          Last updated: June 26, 2026. Please read these terms carefully before using Zcompress.
+        </p>
+      </div>
+
+      <!-- Main Content -->
+      <article class="space-y-10">
+        <section>
+          <h2 class="text-display-md text-ink font-semibold tracking-[-0.96px] mb-4">
+            1. Acceptance of Terms.
+          </h2>
+          <p class="text-body-md text-body leading-relaxed">
+            By accessing or using Zcompress (the "Service"), you agree to be bound by these Terms & Conditions. If you do not agree to all of these terms, please do not use the Service.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-display-md text-ink font-semibold tracking-[-0.96px] mb-4">
+            2. Description of Service.
+          </h2>
+          <p class="text-body-md text-body leading-relaxed">
+            Zcompress is a free, web-based utility that enables users to optimize and compress PDF documents. The entire compression process runs locally on your device within your web browser using HTML5 technologies and client-side JavaScript. No documents are uploaded to or stored on Zcompress servers.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-display-md text-ink font-semibold tracking-[-0.96px] mb-4">
+            3. Disclaimer of Warranties.
+          </h2>
+          <p class="text-body-md text-body leading-relaxed">
+            Zcompress is provided on an "AS IS" and "AS AVAILABLE" basis without warranties of any kind, whether express or implied.
+          </p>
+          <p class="text-body-md text-body leading-relaxed font-semibold">
+            We do not warrant that:
+          </p>
+          <ul class="list-disc pl-6 space-y-2 text-body-md text-body mb-6">
+            <li>The Service will be uninterrupted, secure, or available at any particular time.</li>
+            <li>Any errors or defects will be corrected.</li>
+            <li>The compressed PDFs will always render perfectly on all devices or satisfy specific government/organizational file size limits.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="text-display-md text-ink font-semibold tracking-[-0.96px] mb-4">
+            4. Limitation of Liability.
+          </h2>
+          <p class="text-body-md text-body leading-relaxed">
+            In no event shall Zcompress, its developers, or its contributors be liable for any indirect, incidental, special, consequential, or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from:
+          </p>
+          <ul class="list-disc pl-6 space-y-2 text-body-md text-body mb-6">
+            <li>Your use of or inability to use the Service.</li>
+            <li>Any data corruption or file damage that may occur during the client-side compression process.</li>
+            <li>Unintended outcomes when handling highly sensitive or confidential information.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="text-display-md text-ink font-semibold tracking-[-0.96px] mb-4">
+            5. User Responsibility.
+          </h2>
+          <p class="text-body-md text-body leading-relaxed">
+            Since Zcompress executes all code directly on your device, you are solely responsible for:
+          </p>
+          <ul class="list-disc pl-6 space-y-2 text-body-md text-body mb-6">
+            <li>Ensuring your device has sufficient memory (RAM) and CPU performance to handle files of your selected size.</li>
+            <li>Maintaining original copies of files before processing them. We recommend keeping backups of all documents.</li>
+            <li>Complying with any laws or regulatory frameworks applicable to the documents you choose to optimize.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="text-display-md text-ink font-semibold tracking-[-0.96px] mb-4">
+            6. Open Source Licensing.
+          </h2>
+          <p class="text-body-md text-body leading-relaxed">
+            Zcompress is open-source software distributed under the MIT License. You are free to inspect, modify, fork, and host the code independently, provided that the copyright and permission notices are included in all copies or substantial portions of the software.
+          </p>
+        </section>
+
+        <section class="border-t border-hairline pt-8">
+          <h2 class="text-display-md text-ink font-semibold tracking-[-0.96px] mb-4">
+            Contact Information.
+          </h2>
+          <p class="text-body-md text-body leading-relaxed mb-4">
+            For questions about these Terms, please reach out to us.
+          </p>
+          <a
+            href="/contact"
+            class="inline-flex items-center justify-center px-4 py-2 border border-hairline rounded bg-canvas text-body-sm-strong text-ink hover:bg-canvas-soft-2/50 transition-colors shadow-level-2 focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none"
+          >
+            Go to Contact Us
+          </a>
+        </section>
+      </article>
+    </div>
+  </main>
+
+  <Footer />
+</Layout>

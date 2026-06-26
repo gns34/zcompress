@@ -1,0 +1,135 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout
+  title="About Us - Zcompress | Developer-Grade Local PDF Compressor"
+  description="Discover Zcompress's story, open-source technology, and why we believe in 100% private, client-side document processing."
+  ogUrl="https://zcompress.com/about"
+>
+  <Header />
+
+  <main class="min-h-screen bg-canvas-soft text-ink py-16 px-6">
+    <div class="max-w-[800px] mx-auto">
+      <!-- Page Header -->
+      <div class="mb-12 border-b border-hairline pb-8">
+        <span class="text-caption-mono font-mono text-link-deep uppercase tracking-wider block mb-3">
+          Our Philosophy
+        </span>
+        <h1 class="text-display-lg md:text-display-xl text-ink font-semibold tracking-[-1.5px] md:tracking-[-2.4px] mb-4">
+          About Zcompress.
+        </h1>
+        <p class="text-body-lg text-body">
+          We built Zcompress to solve a fundamental security flaw in online utility tools: the requirement to upload personal documents to remote servers.
+        </p>
+      </div>
+
+      <!-- Main Content -->
+      <article class="space-y-10">
+        <section>
+          <h2 class="text-display-md text-ink font-semibold tracking-[-0.96px] mb-4">
+            The Problem with Web Uploads.
+          </h2>
+          <p class="text-body-md text-body leading-relaxed">
+            Most online PDF compressors require you to upload your files to their servers. Even if a service claims to "delete files after 1 hour," your documents are still transmitted over the internet, processed on remote infrastructure, and briefly stored on someone else's system.
+          </p>
+          <p class="text-body-md text-body leading-relaxed">
+            For developers, businesses, lawyers, and healthcare professionals, uploading sensitive records (contracts, medical logs, financial audits, API keys, or private databases) to a third-party server represents an unacceptable compliance risk.
+          </p>
+        </section>
+
+        <!-- Feature Grid/List -->
+        <section class="bg-canvas border border-hairline rounded-lg p-6 sm:p-8 shadow-level-3 space-y-6">
+          <h3 class="text-display-sm text-ink font-semibold tracking-[-0.6px]">
+            The Zcompress Difference.
+          </h3>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
+            <div class="space-y-2">
+              <h4 class="text-body-md-strong text-ink flex items-center gap-2">
+                <i class="fa-solid fa-shield-halved text-cyan-deep"></i> 100% Private
+              </h4>
+              <p class="text-body-sm text-body">
+                Processing runs inside a secure local sandbox in your browser. Files never touch the cloud.
+              </p>
+            </div>
+            <div class="space-y-2">
+              <h4 class="text-body-md-strong text-ink flex items-center gap-2">
+                <i class="fa-solid fa-bolt text-warning-deep"></i> No Upload Bottlenecks
+              </h4>
+              <p class="text-body-sm text-body">
+                Local compression skips slow internet uploads. Large files process immediately.
+              </p>
+            </div>
+            <div class="space-y-2">
+              <h4 class="text-body-md-strong text-ink flex items-center gap-2">
+                <i class="fa-solid fa-code text-link-deep"></i> Open Source
+              </h4>
+              <p class="text-body-sm text-body">
+                The entire codebase is auditable, allowing developers to inspect our local pipeline code.
+              </p>
+            </div>
+            <div class="space-y-2">
+              <h4 class="text-body-md-strong text-ink flex items-center gap-2">
+                <i class="fa-solid fa-wand-magic-sparkles text-violet"></i> 100% Free
+              </h4>
+              <p class="text-body-sm text-body">
+                No subscription, no watermarks, no registration, and no file limits. Period.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2 class="text-display-md text-ink font-semibold tracking-[-0.96px] mb-4">
+            Under the Hood.
+          </h2>
+          <p class="text-body-md text-body leading-relaxed mb-4">
+            Zcompress leverages cutting-edge web standard technologies to execute client-side compression:
+          </p>
+          <ul class="list-disc pl-6 space-y-2 text-body-md text-body mb-6">
+            <li>
+              <strong>Astro & Tailwind CSS v4</strong>: A high-performance, modern framework stack that renders highly optimized, static, responsive HTML markup.
+            </li>
+            <li>
+              <strong>Mozilla PDF.js</strong>: Renders high-quality PDF page viewports onto local HTML5 Canvas bitmaps in browser thread workers.
+            </li>
+            <li>
+              <strong>pdf-lib</strong>: Rewrites and downsamples internal PDF document objects, stream metadata, and image structures without remote APIs.
+            </li>
+            <li>
+              <strong>JSZip</strong>: Bundles multiple compressed PDFs into a single, structured download in memory.
+            </li>
+          </ul>
+        </section>
+
+        <section class="border-t border-hairline pt-8">
+          <h2 class="text-display-md text-ink font-semibold tracking-[-0.96px] mb-4">
+            Our Mission.
+          </h2>
+          <p class="text-body-md text-body leading-relaxed mb-6">
+            We believe that basic file utilities should be local utility operations. Our mission is to continue delivering privacy-first, web-native utility tools that respect user data and security.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a
+              href="/#compressor"
+              class="px-5 h-[40px] bg-primary text-on-primary text-body-sm-strong rounded-pill hover:bg-black transition-colors inline-flex items-center justify-center shadow-level-2 focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none"
+            >
+              Start Compressing
+            </a>
+            <a
+              href="/contact"
+              class="px-5 h-[40px] bg-canvas text-ink border border-hairline text-body-sm-strong rounded-pill hover:bg-canvas-soft transition-colors inline-flex items-center justify-center shadow-level-1 focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none"
+            >
+              Contact Our Team
+            </a>
+          </div>
+        </section>
+      </article>
+    </div>
+  </main>
+
+  <Footer />
+</Layout>

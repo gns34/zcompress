@@ -1,5 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <Layout
@@ -163,123 +165,7 @@ import Layout from "../layouts/Layout.astro";
     }
   </script>
 
-  <!-- Navigation Bar -->
-  <nav
-    class="sticky top-0 z-50 border-b border-hairline bg-canvas/80 backdrop-blur-md px-6 py-2 transition-all"
-  >
-    <div
-      class="max-w-[1200px] mx-auto h-[48px] flex items-center justify-between"
-    >
-      <!-- Logo -->
-      <a
-        href="#"
-        class="flex items-center gap-2 group rounded focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none"
-        aria-label="Zcompress Homepage"
-      >
-        <img
-          src="https://res.cloudinary.com/dyo3ckrjq/image/upload/v1782469077/logo_folw2r.png"
-          alt="Zcompress Logo"
-          class="w-8 h-8 rounded-sm select-none group-hover:scale-105 transition-transform duration-200"
-        />
-        <span class="font-sans font-semibold text-lg text-ink tracking-[-0.6px]"
-          >Zcompress</span
-        >
-      </a>
-
-      <!-- Navigation Links -->
-      <div class="hidden md:flex items-center gap-6">
-        <a
-          href="#compressor"
-          class="text-body-sm text-body hover:text-ink transition-colors px-3 py-1.5 rounded-full hover:bg-canvas-soft-2/50 focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none"
-          >Compressor</a
-        >
-        <a
-          href="#features"
-          class="text-body-sm text-body hover:text-ink transition-colors px-3 py-1.5 rounded-full hover:bg-canvas-soft-2/50 focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none"
-          >Features</a
-        >
-        <a
-          href="#faq"
-          class="text-body-sm text-body hover:text-ink transition-colors px-3 py-1.5 rounded-full hover:bg-canvas-soft-2/50 focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none"
-          >FAQ</a
-        >
-      </div>
-
-      <!-- Action Button -->
-      <div class="flex items-center gap-3">
-        <span
-          class="hidden sm:inline-flex items-center gap-1.5 px-2.5 py-1 text-[11px] font-mono border border-hairline rounded bg-canvas-soft text-body"
-        >
-          <span
-            class="w-1.5 h-1.5 rounded-full bg-cyan animate-pulse"
-            aria-hidden="true"></span>
-          100% Client-Side
-        </span>
-
-        <!-- Theme Toggle Button -->
-        <button
-          id="theme-toggle"
-          class="w-[28px] h-[28px] rounded-sm border border-hairline bg-canvas text-ink flex items-center justify-center hover:bg-canvas-soft-2/50 cursor-pointer transition-colors shadow-level-1 focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none"
-          aria-label="Toggle theme"
-        >
-          <i
-            class="fa-regular fa-sun hidden dark:block text-xs"
-            aria-hidden="true"></i>
-          <i
-            class="fa-regular fa-moon block dark:hidden text-xs"
-            aria-hidden="true"></i>
-        </button>
-
-        <a
-          href="#compressor"
-          class="px-3.5 h-[28px] bg-primary text-on-primary text-body-sm-strong rounded-sm hover:bg-black transition-colors inline-flex items-center justify-center select-none shadow-level-1 focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none"
-        >
-          Start Compressing
-        </a>
-        <button
-          id="mobile-menu-btn"
-          class="md:hidden p-1.5 text-body hover:text-ink transition-colors rounded focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none"
-          aria-label="Toggle Navigation Menu"
-        >
-          <i class="fa-solid fa-bars text-xl" aria-hidden="true"></i>
-        </button>
-      </div>
-    </div>
-
-    <!-- Mobile Menu Dropdown -->
-    <div
-      id="mobile-menu"
-      class="hidden md:hidden border-t border-hairline mt-2 py-4 flex flex-col gap-3 animate-fade-in"
-    >
-      <a
-        href="#compressor"
-        class="mobile-nav-link text-body hover:text-ink transition-colors py-2 border-b border-hairline/30 text-body-sm-strong focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none"
-        >Compressor</a
-      >
-      <a
-        href="#features"
-        class="mobile-nav-link text-body hover:text-ink transition-colors py-2 border-b border-hairline/30 text-body-sm-strong focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none"
-        >Features</a
-      >
-      <a
-        href="#faq"
-        class="mobile-nav-link text-body hover:text-ink transition-colors py-2 text-body-sm-strong focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none"
-        >FAQ</a
-      >
-      <div
-        class="flex sm:hidden items-center justify-between pt-2 border-t border-hairline/30"
-      >
-        <span
-          class="inline-flex items-center gap-1.5 px-2.5 py-1 text-[11px] font-mono border border-hairline rounded bg-canvas-soft text-body"
-        >
-          <span
-            class="w-1.5 h-1.5 rounded-full bg-cyan animate-pulse"
-            aria-hidden="true"></span>
-          100% Client-Side
-        </span>
-      </div>
-    </div>
-  </nav>
+  <Header />
 
   <!-- Hero Section with Mesh Gradient -->
   <section
@@ -1197,124 +1083,7 @@ import Layout from "../layouts/Layout.astro";
     </div>
   </section>
 
-  <!-- Footer Section -->
-  <footer class="bg-canvas border-t border-hairline py-16 px-6">
-    <div
-      class="max-w-[1200px] mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8"
-    >
-      <!-- Col 1 -->
-      <div class="space-y-4">
-        <div class="flex items-center gap-2">
-          <img
-            src="https://res.cloudinary.com/dyo3ckrjq/image/upload/v1782469077/logo_folw2r.png"
-            alt="Zcompress Logo"
-            class="w-6 h-6 rounded-sm select-none"
-          />
-          <span
-            class="font-sans font-semibold text-base text-ink tracking-[-0.4px]"
-            >Zcompress</span
-          >
-        </div>
-        <p class="text-caption text-body">
-          A premium, high-security developer-grade utility to compress PDFs
-          locally in your browser.
-        </p>
-      </div>
-      <!-- Col 2 -->
-      <div>
-        <h4
-          class="text-caption-mono font-mono text-mute uppercase tracking-wider mb-4"
-        >
-          Product
-        </h4>
-        <ul class="space-y-2">
-          <li>
-            <a
-              href="#compressor"
-              class="text-body-sm text-body hover:text-ink transition-colors"
-              >Compressor</a
-            >
-          </li>
-          <li>
-            <a
-              href="#features"
-              class="text-body-sm text-body hover:text-ink transition-colors"
-              >Features</a
-            >
-          </li>
-        </ul>
-      </div>
-      <!-- Col 3 -->
-      <div>
-        <h4
-          class="text-caption-mono font-mono text-mute uppercase tracking-wider mb-4"
-        >
-          Resources
-        </h4>
-        <ul class="space-y-2">
-          <li>
-            <a
-              href="https://pdf-lib.js.org/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="text-body-sm text-body hover:text-ink transition-colors"
-              >pdf-lib docs</a
-            >
-          </li>
-          <li>
-            <a
-              href="https://mozilla.github.io/pdf.js/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="text-body-sm text-body hover:text-ink transition-colors"
-              >pdf.js docs</a
-            >
-          </li>
-        </ul>
-      </div>
-      <!-- Col 4 -->
-      <div>
-        <h4
-          class="text-caption-mono font-mono text-mute uppercase tracking-wider mb-4"
-        >
-          Security
-        </h4>
-        <ul class="space-y-2">
-          <li>
-            <span class="text-body-sm text-body flex items-center gap-1.5"
-              ><i class="fa-solid fa-lock text-xs text-cyan-deep"></i> 100% Local
-              Sandbox</span
-            >
-          </li>
-          <li>
-            <span class="text-body-sm text-body flex items-center gap-1.5"
-              ><i class="fa-solid fa-network-wired text-xs text-mute"></i> No telemetry
-              / logs sent</span
-            >
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div
-      class="max-w-[1200px] mx-auto mt-12 pt-8 border-t border-hairline/60 flex flex-col sm:flex-row justify-between items-center gap-4"
-    >
-      <span class="text-caption text-mute">
-        © 2026 Zcompress. Open Source under MIT License.
-      </span>
-      <div class="flex gap-4">
-        <a
-          href="#"
-          class="text-caption text-mute hover:text-ink transition-colors"
-          >Terms of Service</a
-        >
-        <a
-          href="#"
-          class="text-caption text-mute hover:text-ink transition-colors"
-          >Privacy Policy</a
-        >
-      </div>
-    </div>
-  </footer>
+  <Footer />
 
   <!-- Core Javascript Compression Logic -->
   <script>
@@ -1355,12 +1124,9 @@ import Layout from "../layouts/Layout.astro";
     const qualitySlider = document.getElementById("quality-slider");
     const qualityVal = document.getElementById("quality-val");
 
-    // Mobile Menu & Collapsible Terminal Elements
-    const mobileMenuBtn = document.getElementById("mobile-menu-btn");
-    const mobileMenu = document.getElementById("mobile-menu");
+    // Collapsible Terminal Elements
     const terminalHeader = document.getElementById("terminal-header");
     const terminalToggleIcon = document.getElementById("terminal-toggle-icon");
-    const themeToggle = document.getElementById("theme-toggle");
 
     // Terminal Logger
     function logToConsole(message, type = "info") {
@@ -1493,38 +1259,6 @@ import Layout from "../layouts/Layout.astro";
       terminalLogs.innerHTML = `<div class="text-mute">[SYS] Console cleared. ready.</div>`;
     });
 
-    // Theme Toggle Handler
-    if (themeToggle) {
-      themeToggle.addEventListener("click", () => {
-        const isDark = document.documentElement.classList.toggle("dark");
-        localStorage.setItem("theme", isDark ? "dark" : "light");
-      });
-    }
-
-    // Mobile Menu Toggle
-    if (mobileMenuBtn && mobileMenu) {
-      mobileMenuBtn.addEventListener("click", () => {
-        const isHidden = mobileMenu.classList.contains("hidden");
-        if (isHidden) {
-          mobileMenu.classList.remove("hidden");
-          mobileMenuBtn.querySelector("i").className =
-            "fa-solid fa-xmark text-xl";
-        } else {
-          mobileMenu.classList.add("hidden");
-          mobileMenuBtn.querySelector("i").className =
-            "fa-solid fa-bars text-xl";
-        }
-      });
-
-      // Close mobile menu when clicking nav links
-      document.querySelectorAll(".mobile-nav-link").forEach((link) => {
-        link.addEventListener("click", () => {
-          mobileMenu.classList.add("hidden");
-          mobileMenuBtn.querySelector("i").className =
-            "fa-solid fa-bars text-xl";
-        });
-      });
-    }
 
     // Terminal Collapse Toggle
     if (terminalHeader && terminalLogs && terminalToggleIcon) {

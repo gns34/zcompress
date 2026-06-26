@@ -1,5 +1,5 @@
 ---
-import '../styles/global.css';
+import "../styles/global.css";
 interface Props {
 	title?: string;
 	description?: string;
@@ -8,15 +8,16 @@ interface Props {
 	ogUrl?: string;
 	ogType?: string;
 }
-const { 
-	title = "Free Online PDF Compressor - Zcompress | Compress PDF Free",
-	description = "Compress PDF files online for free. Zcompress is a 100% private, client-side online PDF compressor that runs completely inside your web browser. No files uploaded to servers, no limits.",
+const {
+	title = "Free Online PDF Compressor - Zcompressor | Compress PDF Free",
+	description = "Compress PDF files online for free. Zcompressor is a 100% private, client-side online PDF compressor that runs completely inside your web browser. No files uploaded to servers, no limits.",
 	keywords = "pdf compressor, pdf compressor free, free pdf compressor, online pdf compressor, pdf compressor online free, free online pdf compressor",
 	ogImage = "/og-image.jpg",
-	ogUrl = "https://zcompress.com",
-	ogType = "website"
+	ogUrl = "https://Zcompressor.com",
+	ogType = "website",
 } = Astro.props;
 ---
+
 <!doctype html>
 <html lang="en">
 	<head>
@@ -29,7 +30,7 @@ const {
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
 		/>
-		
+
 		<!-- SEO Meta Tags -->
 		<title>{title}</title>
 		<meta name="description" content={description} />
@@ -43,7 +44,7 @@ const {
 		<meta property="og:title" content={title} />
 		<meta property="og:description" content={description} />
 		<meta property="og:image" content={ogImage} />
-		<meta property="og:site_name" content="Zcompress" />
+		<meta property="og:site_name" content="Zcompressor" />
 
 		<!-- Twitter -->
 		<meta property="twitter:card" content="summary_large_image" />
@@ -53,13 +54,16 @@ const {
 		<meta property="twitter:image" content={ogImage} />
 
 		<script is:inline>
-			(function() {
-				const theme = localStorage.getItem('theme') || 
-					(window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-				if (theme === 'dark') {
-					document.documentElement.classList.add('dark');
+			(function () {
+				const theme =
+					localStorage.getItem("theme") ||
+					(window.matchMedia("(prefers-color-scheme: dark)").matches
+						? "dark"
+						: "light");
+				if (theme === "dark") {
+					document.documentElement.classList.add("dark");
 				} else {
-					document.documentElement.classList.remove('dark');
+					document.documentElement.classList.remove("dark");
 				}
 			})();
 		</script>

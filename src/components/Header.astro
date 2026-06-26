@@ -13,15 +13,15 @@
     <a
       href="/"
       class="flex items-center gap-2 group rounded focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none"
-      aria-label="Zcompress Homepage"
+      aria-label="Zcompressor Homepage"
     >
       <img
         src="https://res.cloudinary.com/dyo3ckrjq/image/upload/v1782469077/logo_folw2r.png"
-        alt="Zcompress Logo"
+        alt="Zcompressor Logo"
         class="w-8 h-8 rounded-sm select-none group-hover:scale-105 transition-transform duration-200"
       />
       <span class="font-sans font-semibold text-lg text-ink tracking-[-0.6px]"
-        >Zcompress</span
+        >Zcompressor</span
       >
     </a>
 
@@ -162,8 +162,7 @@
           "fa-solid fa-xmark text-xl";
       } else {
         mobileMenu.classList.add("hidden");
-        mobileMenuBtn.querySelector("i").className =
-          "fa-solid fa-bars text-xl";
+        mobileMenuBtn.querySelector("i").className = "fa-solid fa-bars text-xl";
       }
     });
 
@@ -171,8 +170,7 @@
     document.querySelectorAll(".mobile-nav-link").forEach((link) => {
       link.addEventListener("click", () => {
         mobileMenu.classList.add("hidden");
-        mobileMenuBtn.querySelector("i").className =
-          "fa-solid fa-bars text-xl";
+        mobileMenuBtn.querySelector("i").className = "fa-solid fa-bars text-xl";
       });
     });
   }

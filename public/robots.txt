@@ -3,4 +3,4 @@ Allow: /
 Disallow: /404
 Disallow: /500
 
-Sitemap: https://Zcompressor.com/sitemap.xml
+Sitemap: https://zcompressor.com/sitemap.xml

@@ -2,8 +2,20 @@
 import '../styles/global.css';
 interface Props {
 	title?: string;
+	description?: string;
+	keywords?: string;
+	ogImage?: string;
+	ogUrl?: string;
+	ogType?: string;
 }
-const { title = "Zcompress - Premium PDF Compressor" } = Astro.props;
+const { 
+	title = "Free Online PDF Compressor - Zcompress | Compress PDF Free",
+	description = "Compress PDF files online for free. Zcompress is a 100% private, client-side online PDF compressor that runs completely inside your web browser. No files uploaded to servers, no limits.",
+	keywords = "pdf compressor, pdf compressor free, free pdf compressor, online pdf compressor, pdf compressor online free, free online pdf compressor",
+	ogImage = "/og-image.jpg",
+	ogUrl = "https://zcompress.com",
+	ogType = "website"
+} = Astro.props;
 ---
 <!doctype html>
 <html lang="en">
@@ -13,7 +25,29 @@ const { title = "Zcompress - Premium PDF Compressor" } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
+		
+		<!-- SEO Meta Tags -->
 		<title>{title}</title>
+		<meta name="description" content={description} />
+		<meta name="keywords" content={keywords} />
+		<meta name="robots" content="index, follow" />
+		<link rel="canonical" href={ogUrl} />
+
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content={ogType} />
+		<meta property="og:url" content={ogUrl} />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content={ogImage} />
+		<meta property="og:site_name" content="Zcompress" />
+
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:url" content={ogUrl} />
+		<meta property="twitter:title" content={title} />
+		<meta property="twitter:description" content={description} />
+		<meta property="twitter:image" content={ogImage} />
+
 		<script is:inline>
 			(function() {
 				const theme = localStorage.getItem('theme') || 

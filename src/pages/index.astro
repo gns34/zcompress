@@ -79,7 +79,7 @@ import Footer from "../components/Footer.astro";
           "name": "pdf compressor how to compress pdf",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "<p>To compress a PDF with Zcompressor: drag and drop your files into the compressor, choose a DPI and quality preset, click \"Compress All Files\", and download the optimized PDF individually or as a combined ZIP archive.</p>"
+            "text": "<p>To compress a PDF with Zcompressor: drag and drop your files into the compressor, choose a target file size preset, click \"Compress All Files\", and download the optimized PDF individually or as a combined ZIP archive.</p>"
           }
         },
         {
@@ -111,7 +111,7 @@ import Footer from "../components/Footer.astro";
           "name": "which is the best pdf compressor",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "<p>The best PDF compressor is Zcompressor, which offers zero server uploads, no page limits, and custom DPI/quality controls for free.</p>"
+            "text": "<p>The best PDF compressor is Zcompressor, which offers zero server uploads, no page limits, and custom target size controls for free.</p>"
           }
         },
         {
@@ -119,7 +119,7 @@ import Footer from "../components/Footer.astro";
           "name": "how does a pdf compressor work",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "<p>A PDF compressor works by optimizing the internal elements of a PDF document: it downsamples embedded images to a lower resolution (DPI), re-compresses images using lossy compression algorithms like JPEG, and cleans up redundant structural data such as metadata and duplicate fonts.</p>"
+            "text": "<p>A PDF compressor works by optimizing the internal elements of a PDF document: it downsamples and re-compresses embedded images to match your target file size, and cleans up redundant structural data such as metadata and duplicate fonts.</p>"
           }
         },
         {
@@ -408,42 +408,63 @@ import Footer from "../components/Footer.astro";
 
           <!-- Presets -->
           <div class="space-y-3">
-            <span class="text-body-sm-strong text-ink block">Presets</span>
+            <span class="text-body-sm-strong text-ink block">Target File Size</span>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-2">
-              <!-- Preset High -->
+              <!-- Preset 250 KB -->
               <button
-                data-preset="high"
+                data-preset="250kb"
                 class="preset-btn text-left p-3 rounded border border-hairline hover:border-hairline-strong transition-all flex items-start justify-between group focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none"
               >
                 <div>
                   <div
                     class="text-body-sm-strong text-ink group-hover:text-primary transition-colors"
                   >
-                    High Compression
+                    250 KB Target
                   </div>
                   <div class="text-caption text-body">
-                    Low resolution. Ideal for emails.
+                    Maximum compression. Ideal for strict limits.
                   </div>
                 </div>
                 <span
                   class="px-2 py-0.5 text-[10px] font-mono border border-hairline rounded bg-canvas-soft text-body mt-0.5"
-                  >72 DPI</span
+                  >250 KB</span
                 >
               </button>
 
-              <!-- Preset Recommended -->
+              <!-- Preset 500 KB -->
               <button
-                data-preset="recommended"
+                data-preset="500kb"
+                class="preset-btn text-left p-3 rounded border border-hairline hover:border-hairline-strong transition-all flex items-start justify-between group focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none"
+              >
+                <div>
+                  <div
+                    class="text-body-sm-strong text-ink group-hover:text-primary transition-colors"
+                  >
+                    500 KB Target
+                  </div>
+                  <div class="text-caption text-body">
+                    High compression. Great for email attachments.
+                  </div>
+                </div>
+                <span
+                  class="px-2 py-0.5 text-[10px] font-mono border border-hairline rounded bg-canvas-soft text-body mt-0.5"
+                  >500 KB</span
+                >
+              </button>
+
+              <!-- Preset 1 MB -->
+              <button
+                data-preset="1mb"
                 class="preset-btn active text-left p-3 rounded border-2 border-primary bg-canvas-soft transition-all flex items-start justify-between group focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none"
               >
                 <div>
                   <div
                     class="text-body-sm-strong text-ink flex items-center gap-1.5"
                   >
-                    Recommended
+                    1 MB Target
                     <span
                       class="px-1.5 py-0.2 text-[9px] font-sans font-semibold rounded-full bg-link-bg-soft text-link-deep"
-                      >Best</span
+                      >Recommended</span
                     >
                   </div>
                   <div class="text-caption text-body">
@@ -452,28 +473,49 @@ import Footer from "../components/Footer.astro";
                 </div>
                 <span
                   class="px-2 py-0.5 text-[10px] font-mono border border-hairline rounded bg-canvas-soft text-body mt-0.5"
-                  >150 DPI</span
+                  >1 MB</span
                 >
               </button>
 
-              <!-- Preset Low -->
+              <!-- Preset 2 MB -->
               <button
-                data-preset="low"
+                data-preset="2mb"
                 class="preset-btn text-left p-3 rounded border border-hairline hover:border-hairline-strong transition-all flex items-start justify-between group focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none"
               >
                 <div>
                   <div
                     class="text-body-sm-strong text-ink group-hover:text-primary transition-colors"
                   >
-                    Low Compression
+                    2 MB Target
                   </div>
                   <div class="text-caption text-body">
-                    High resolution. Keeps images sharp.
+                    Medium compression. Keeps images sharp.
                   </div>
                 </div>
                 <span
                   class="px-2 py-0.5 text-[10px] font-mono border border-hairline rounded bg-canvas-soft text-body mt-0.5"
-                  >220 DPI</span
+                  >2 MB</span
+                >
+              </button>
+
+              <!-- Preset 5 MB -->
+              <button
+                data-preset="5mb"
+                class="preset-btn text-left p-3 rounded border border-hairline hover:border-hairline-strong transition-all flex items-start justify-between group focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none"
+              >
+                <div>
+                  <div
+                    class="text-body-sm-strong text-ink group-hover:text-primary transition-colors"
+                  >
+                    5 MB Target
+                  </div>
+                  <div class="text-caption text-body">
+                    Low compression. Best visual quality.
+                  </div>
+                </div>
+                <span
+                  class="px-2 py-0.5 text-[10px] font-mono border border-hairline rounded bg-canvas-soft text-body mt-0.5"
+                  >5 MB</span
                 >
               </button>
 
@@ -486,15 +528,15 @@ import Footer from "../components/Footer.astro";
                   <div
                     class="text-body-sm-strong text-ink group-hover:text-primary transition-colors"
                   >
-                    Custom Configuration
+                    Custom Target Size
                   </div>
                   <div class="text-caption text-body">
-                    Fine-tune DPI and image quality.
+                    Specify your own target file size limit.
                   </div>
                 </div>
                 <span
                   class="px-2 py-0.5 text-[10px] font-mono border border-hairline rounded bg-canvas-soft text-body mt-0.5"
-                  >Manual</span
+                  >Custom</span
                 >
               </button>
             </div>
@@ -505,63 +547,34 @@ import Footer from "../components/Footer.astro";
             id="custom-sliders"
             class="hidden space-y-4 pt-4 border-t border-hairline animate-fade-in"
           >
-            <!-- DPI Slider -->
+            <!-- Target Size Slider -->
             <div class="space-y-2">
               <label
-                for="dpi-slider"
+                for="size-slider"
                 class="flex justify-between items-center text-body-sm cursor-pointer"
               >
                 <span class="text-body-sm-strong text-ink"
-                  >Resolution (DPI)</span
+                  >Target File Size</span
                 >
-                <span id="dpi-val" class="font-mono text-mute">150 DPI</span>
+                <span id="size-val" class="font-mono text-mute">1000 KB (1.0 MB)</span>
               </label>
               <input
                 type="range"
-                id="dpi-slider"
-                min="72"
-                max="300"
-                step="10"
-                value="150"
+                id="size-slider"
+                min="100"
+                max="10000"
+                step="100"
+                value="1000"
                 class="w-full accent-primary h-1 bg-hairline rounded-lg appearance-none cursor-pointer focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:outline-none"
-                aria-label="Resolution (DPI)"
+                aria-label="Target File Size"
               />
               <div
                 class="flex justify-between text-[10px] text-mute font-mono"
                 aria-hidden="true"
               >
-                <span>72 (Low)</span>
-                <span>150 (Med)</span>
-                <span>300 (High)</span>
-              </div>
-            </div>
-
-            <!-- Quality Slider -->
-            <div class="space-y-2">
-              <label
-                for="quality-slider"
-                class="flex justify-between items-center text-body-sm cursor-pointer"
-              >
-                <span class="text-body-sm-strong text-ink">JPEG Quality</span>
-                <span id="quality-val" class="font-mono text-mute">60%</span>
-              </label>
-              <input
-                type="range"
-                id="quality-slider"
-                min="10"
-                max="100"
-                step="5"
-                value="60"
-                class="w-full accent-primary h-1 bg-hairline rounded-lg appearance-none cursor-pointer focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:outline-none"
-                aria-label="JPEG Quality"
-              />
-              <div
-                class="flex justify-between text-[10px] text-mute font-mono"
-                aria-hidden="true"
-              >
-                <span>10% (Small)</span>
-                <span>60% (Rec)</span>
-                <span>100% (High)</span>
+                <span>100 KB</span>
+                <span>5,000 KB (5 MB)</span>
+                <span>10,000 KB (10 MB)</span>
               </div>
             </div>
           </div>
@@ -675,8 +688,8 @@ import Footer from "../components/Footer.astro";
             Granular Control
           </h3>
           <p class="text-body-sm text-body leading-relaxed">
-            Choose from quick presets or fine-tune exact target DPI and image
-            quality parameters to achieve optimal output file size.
+            Choose from quick target size presets or fine-tune exact target file
+            sizes to achieve the optimal document size.
           </p>
         </div>
       </div>
@@ -754,11 +767,11 @@ import Footer from "../components/Footer.astro";
             class="p-5 pt-0 text-body-sm text-body border-t border-hairline/50 mt-4 leading-relaxed"
           >
             A PDF compressor reduces file size by analyzing document components
-            and applying optimization algorithms. Specifically, it downsamples
-            high-resolution images to a lower DPI (dots per inch), re-compresses
-            them using efficient lossy formats (like JPEG), and strips out
-            duplicate fonts, metadata, and unused objects. This results in a
-            much smaller PDF file that is easier to store or send.
+            and applying optimization algorithms. Specifically, it optimizes and 
+            downsamples embedded images to match your desired target size, re-compresses 
+            them using efficient lossy formats, and strips out duplicate fonts, 
+            metadata, and unused objects. This results in a much smaller PDF file 
+            that fits perfectly within your required file size limit.
           </div>
         </div>
       </div>
@@ -1042,8 +1055,8 @@ import Footer from "../components/Footer.astro";
           </li>
           <li>
             <strong>Flexible Presets:</strong> Choose from recommended presets or
-            customize the DPI and image quality variables to balance between file
-            size and visual clarity.
+            customize the target file size directly to balance between file
+            size constraints and visual clarity.
           </li>
           <li>
             <strong>No Registration Needed:</strong> Start compressing immediately
@@ -1066,7 +1079,7 @@ import Footer from "../components/Footer.astro";
           image-heavy documents, presentations, scanned contracts, and PDF
           portfolios. For text-only PDFs, compression may have a minimal impact
           as characters occupy very little byte space. By selecting the
-          appropriate DPI and JPEG quality presets, you can significantly shrink
+          appropriate target size presets, you can significantly shrink
           files, making them perfect for email attachments or web uploads.
         </p>
 
@@ -1133,9 +1146,8 @@ import Footer from "../components/Footer.astro";
     // Program State
     let queue = [];
     let isProcessing = false;
-    let selectedPreset = "recommended";
-    let customDpi = 150;
-    let customQuality = 60; // scale 0-100
+    let selectedPreset = "1mb";
+    let customTargetSize = 1000; // KB
 
     // DOM Elements
     const dropzone = document.getElementById("dropzone");
@@ -1156,10 +1168,8 @@ import Footer from "../components/Footer.astro";
     const clearLogsBtn = document.getElementById("clear-logs-btn");
     const presetButtons = document.querySelectorAll(".preset-btn");
     const customSliders = document.getElementById("custom-sliders");
-    const dpiSlider = document.getElementById("dpi-slider");
-    const dpiVal = document.getElementById("dpi-val");
-    const qualitySlider = document.getElementById("quality-slider");
-    const qualityVal = document.getElementById("quality-val");
+    const sizeSlider = document.getElementById("size-slider");
+    const sizeVal = document.getElementById("size-val");
 
     // Collapsible Terminal Elements
     const terminalHeader = document.getElementById("terminal-header");
@@ -1204,15 +1214,21 @@ import Footer from "../components/Footer.astro";
     }
 
     // Setup Presets Configuration
-    function getCompressionParams() {
-      if (selectedPreset === "high") {
-        return { dpi: 72, quality: 0.4 };
-      } else if (selectedPreset === "recommended") {
-        return { dpi: 150, quality: 0.6 };
-      } else if (selectedPreset === "low") {
-        return { dpi: 220, quality: 0.85 };
+    function getTargetSize() {
+      if (selectedPreset === "250kb") {
+        return 250 * 1024;
+      } else if (selectedPreset === "500kb") {
+        return 500 * 1024;
+      } else if (selectedPreset === "1mb") {
+        return 1 * 1024 * 1024;
+      } else if (selectedPreset === "2mb") {
+        return 2 * 1024 * 1024;
+      } else if (selectedPreset === "5mb") {
+        return 5 * 1024 * 1024;
+      } else if (selectedPreset === "custom") {
+        return customTargetSize * 1024;
       } else {
-        return { dpi: customDpi, quality: customQuality / 100 };
+        return 1 * 1024 * 1024; // Default to 1MB
       }
     }
 
@@ -1245,23 +1261,18 @@ import Footer from "../components/Footer.astro";
           customSliders.classList.add("hidden");
         }
 
-        const params = getCompressionParams();
+        const targetSize = getTargetSize();
         logToConsole(
-          `Preset changed to: ${selectedPreset.toUpperCase()} (Target DPI: ${params.dpi}, Quality: ${Math.round(params.quality * 100)}%)`,
+          `Preset changed to: ${selectedPreset.toUpperCase()} (Target Size: ${formatBytes(targetSize)})`,
           "sys",
         );
       });
     });
 
-    // Custom Sliders Input Listeners
-    dpiSlider.addEventListener("input", (e) => {
-      customDpi = parseInt(e.target.value);
-      dpiVal.textContent = `${customDpi} DPI`;
-    });
-
-    qualitySlider.addEventListener("input", (e) => {
-      customQuality = parseInt(e.target.value);
-      qualityVal.textContent = `${customQuality}%`;
+    // Custom Slider Input Listener
+    sizeSlider.addEventListener("input", (e) => {
+      customTargetSize = parseInt(e.target.value);
+      sizeVal.textContent = `${customTargetSize} KB (${(customTargetSize / 1024).toFixed(1)} MB)`;
     });
 
     // FAQ Accordion Handler
@@ -1587,9 +1598,9 @@ import Footer from "../components/Footer.astro";
       clearQueueBtn.disabled = true;
       clearQueueBtn.classList.add("opacity-50", "cursor-not-allowed");
 
-      const params = getCompressionParams();
+      const targetSize = getTargetSize();
       logToConsole(
-        `Starting batch compression queue. Target DPI: ${params.dpi}, Quality: ${Math.round(params.quality * 100)}%`,
+        `Starting batch compression queue. Target Size: ${formatBytes(targetSize)}`,
         "sys",
       );
 
@@ -1602,13 +1613,12 @@ import Footer from "../components/Footer.astro";
         try {
           const compressedBytes = await runCompressEngine(
             item.file,
-            params.dpi,
-            params.quality,
-            (pageNum, totalPages) => {
+            targetSize,
+            (pageNum, totalPages, passNum) => {
               item.progress = Math.round((pageNum / totalPages) * 100);
               updateQueueUI();
               logToConsole(
-                `Compressed Page ${pageNum}/${totalPages} for ${item.file.name}…`,
+                `[Pass ${passNum}] Compressed Page ${pageNum}/${totalPages} for ${item.file.name}…`,
                 "progress",
               );
             },
@@ -1647,23 +1657,9 @@ import Footer from "../components/Footer.astro";
       logToConsole("Batch compression queue finished.", "sys");
     });
 
-    // The low level execution code doing Canvas rendering & PDF injection
-    async function runCompressEngine(file, dpi, quality, onProgress) {
-      await loadLibraries();
-      if (!window.pdfjsLib || !window.PDFLib) {
-        throw new Error(
-          "Required libraries (pdf.js or pdf-lib) failed to initialize.",
-        );
-      }
-
-      const arrayBuffer = await file.arrayBuffer();
-      const pdfDoc = await window.pdfjsLib.getDocument({ data: arrayBuffer })
-        .promise;
-      const totalPages = pdfDoc.numPages;
-
+    // Helper to render and compress pages in a single pass
+    async function runSingleCompressPass(pdfDoc, totalPages, dpi, quality, onProgress, passNum) {
       const newPdfDoc = await window.PDFLib.PDFDocument.create();
-
-      // Initialize a single reusable Canvas element to minimize garbage collection & GPU memory overhead
       const canvas = document.createElement("canvas");
       const context = canvas.getContext("2d");
 
@@ -1684,29 +1680,21 @@ import Footer from "../components/Footer.astro";
           viewport = page.getViewport({ scale });
         }
 
-        // Set dimensions of the single reusable canvas
         canvas.width = viewport.width;
         canvas.height = viewport.height;
 
-        // Draw solid white background to prevent transparency rendering as black blocks
         context.fillStyle = "#ffffff";
         context.fillRect(0, 0, canvas.width, canvas.height);
 
-        // Render PDF page onto canvas
         await page.render({ canvasContext: context, viewport }).promise;
 
-        // Compress canvas visual drawing as a JPEG
         const imgDataUrl = canvas.toDataURL("image/jpeg", quality);
-
-        // Embed the JPEG into the PDF structure
         const jpegImage = await newPdfDoc.embedJpg(imgDataUrl);
 
-        // Recreate the page matching its original standard dimensions
         const originalWidth = viewport.width / scale;
         const originalHeight = viewport.height / scale;
         const newPage = newPdfDoc.addPage([originalWidth, originalHeight]);
 
-        // Draw the compressed image full-bleed over the page
         newPage.drawImage(jpegImage, {
           x: 0,
           y: 0,
@@ -1715,15 +1703,132 @@ import Footer from "../components/Footer.astro";
         });
 
         if (onProgress) {
-          onProgress(pageNum, totalPages);
+          onProgress(pageNum, totalPages, passNum);
         }
       }
 
-      // Explicitly collapse the canvas dimensions to 0 to trigger immediate GPU texture memory release in mobile browsers
       canvas.width = 0;
       canvas.height = 0;
 
-      const compressedBytes = await newPdfDoc.save();
+      return await newPdfDoc.save();
+    }
+
+    // The low level execution code doing Canvas rendering & PDF injection
+    async function runCompressEngine(file, targetSize, onProgress) {
+      await loadLibraries();
+      if (!window.pdfjsLib || !window.PDFLib) {
+        throw new Error(
+          "Required libraries (pdf.js or pdf-lib) failed to initialize.",
+        );
+      }
+
+      const arrayBuffer = await file.arrayBuffer();
+      const originalBytes = new Uint8Array(arrayBuffer);
+
+      // Check if original file is already smaller than target size.
+      // If so, return original directly to preserve 100% quality.
+      if (originalBytes.length <= targetSize) {
+        logToConsole(`Original file size (${formatBytes(originalBytes.length)}) is already under the target limit of ${formatBytes(targetSize)}. Returning original file directly to preserve 100% quality.`, "success");
+        return originalBytes;
+      }
+
+      const pdfDoc = await window.pdfjsLib.getDocument({ data: arrayBuffer.slice(0) })
+        .promise;
+      const totalPages = pdfDoc.numPages;
+
+      logToConsole(`File has ${totalPages} pages. Target size is ${formatBytes(targetSize)}.`, "sys");
+
+      // Heuristic for starting parameters based on target size per page
+      const targetSizePerPage = targetSize / totalPages;
+      const kbPerPage = targetSizePerPage / 1024;
+      
+      let dpi = 150;
+      let quality = 0.65;
+
+      if (kbPerPage >= 1000) {
+        dpi = 300;
+        quality = 0.9;
+      } else if (kbPerPage >= 500) {
+        dpi = 220;
+        quality = 0.85;
+      } else if (kbPerPage >= 250) {
+        dpi = 180;
+        quality = 0.8;
+      } else if (kbPerPage >= 120) {
+        dpi = 150;
+        quality = 0.7;
+      } else if (kbPerPage >= 60) {
+        dpi = 120;
+        quality = 0.6;
+      } else {
+        dpi = 90;
+        quality = 0.5;
+      }
+
+      logToConsole(`Pass 1: Estimating parameters (DPI: ${dpi}, Quality: ${Math.round(quality * 100)}%)`, "sys");
+
+      let compressedBytes = await runSingleCompressPass(pdfDoc, totalPages, dpi, quality, onProgress, 1);
+      let resultingSize = compressedBytes.length;
+
+      logToConsole(`Pass 1 result size: ${formatBytes(resultingSize)}`, "sys");
+
+      // If resulting size exceeds target size, try to adjust and run a 2nd pass
+      if (resultingSize > targetSize && (dpi > 60 || quality > 0.15)) {
+        const ratio = targetSize / resultingSize;
+        const safetyRatio = ratio * 0.92; // Conservative 8% safety buffer to force target size compliance
+
+        const oldDpi = dpi;
+        const oldQuality = quality;
+
+        // Try to reduce quality first to preserve resolution (DPI)
+        let newQuality = oldQuality * safetyRatio;
+        let newDpi = oldDpi;
+
+        if (newQuality < 0.35) {
+          // If quality drops below 0.35, cap it and reduce DPI instead
+          const remainingRatio = newQuality / 0.35;
+          newQuality = 0.35;
+          newDpi = Math.max(60, Math.min(300, Math.round(oldDpi * Math.sqrt(remainingRatio))));
+        } else {
+          newQuality = Math.max(0.35, Math.min(0.9, newQuality));
+        }
+
+        dpi = newDpi;
+        quality = newQuality;
+
+        logToConsole(`Result size exceeds target. Adjusting parameters for Pass 2: DPI ${oldDpi} -> ${dpi}, Quality ${Math.round(oldQuality * 100)}% -> ${Math.round(quality * 100)}%`, "sys");
+
+        compressedBytes = await runSingleCompressPass(pdfDoc, totalPages, dpi, quality, onProgress, 2);
+        resultingSize = compressedBytes.length;
+        logToConsole(`Pass 2 result size: ${formatBytes(resultingSize)}`, "sys");
+      }
+
+      // If resulting size STILL exceeds target size after Pass 2, try to adjust and run an emergency 3rd pass
+      if (resultingSize > targetSize && (dpi > 50 || quality > 0.15)) {
+        const ratio = targetSize / resultingSize;
+        const safetyRatio = ratio * 0.88; // Even more conservative 12% safety buffer for the final pass
+
+        const oldDpi = dpi;
+        const oldQuality = quality;
+
+        // For Pass 3, aggressively reduce both parameters to ensure compliance
+        dpi = Math.max(50, Math.min(300, Math.round(oldDpi * Math.sqrt(safetyRatio))));
+        quality = Math.max(0.15, Math.min(0.8, oldQuality * safetyRatio));
+
+        logToConsole(`Result size STILL exceeds target. Aggressively adjusting parameters for final Pass 3: DPI ${oldDpi} -> ${dpi}, Quality ${Math.round(oldQuality * 100)}% -> ${Math.round(quality * 100)}%`, "sys");
+
+        compressedBytes = await runSingleCompressPass(pdfDoc, totalPages, dpi, quality, onProgress, 3);
+        resultingSize = compressedBytes.length;
+        logToConsole(`Pass 3 result size: ${formatBytes(resultingSize)}`, "sys");
+      }
+
+      // If the original file size was already smaller than our best compression result,
+      // or if compression actually made the file larger than the original, return original.
+      if (originalBytes.length < resultingSize) {
+        logToConsole(`Compressed size (${formatBytes(resultingSize)}) is larger than original file (${formatBytes(originalBytes.length)}). Returning original file to preserve quality.`, "sys");
+        return originalBytes;
+      }
+
       return compressedBytes;
     }
   </script>

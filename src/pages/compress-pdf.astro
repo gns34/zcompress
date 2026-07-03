@@ -1,0 +1,1252 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout
+  title="Free Online PDF Compressor - Zcompressor | Compress PDF Free"
+  description="Use Zcompressor, the best free online PDF compressor, to reduce PDF file size online for free. Compress PDF files securely client-side with no server uploads. Fast, private, and unlimited."
+  keywords="pdf compressor, pdf compressor free, free pdf compressor, online pdf compressor, pdf compressor online free, free online pdf compressor"
+  ogUrl="https://zcompressor.com/compress-pdf"
+  ogType="website"
+>
+  <Header />
+
+  <!-- Hero Section with Mesh Gradient -->
+  <section
+    class="relative bg-mesh-gradient overflow-hidden py-12 md:py-16 px-4 md:px-6 border-b border-hairline"
+  >
+    <!-- Background grid overlay -->
+    <div
+      class="absolute inset-0 bg-grid-pattern opacity-[0.35] dark:opacity-[0.25] pointer-events-none z-0"
+    >
+    </div>
+    <!-- Spotlight gradient overlay -->
+    <div class="absolute inset-0 bg-radial-spotlight pointer-events-none z-0">
+    </div>
+
+    <!-- Decorative glowing background orbs -->
+    <div
+      class="absolute top-1/4 left-1/4 w-[320px] h-[320px] rounded-full bg-cyan/10 dark:bg-cyan/5 blur-[100px] pointer-events-none z-0 animate-pulse hidden md:block"
+      style="animation-duration: 8s;"
+    >
+    </div>
+    <div
+      class="absolute bottom-1/4 right-1/4 w-[360px] h-[360px] rounded-full bg-highlight-pink/8 dark:bg-highlight-pink/4 blur-[120px] pointer-events-none z-0 animate-pulse hidden md:block"
+      style="animation-duration: 12s;"
+    >
+    </div>
+
+    <div class="max-w-[800px] mx-auto text-center relative z-10">
+      <!-- Eyebrow Badge -->
+      <div
+        class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-canvas/60 dark:bg-canvas-soft-2/40 backdrop-blur-md border border-hairline text-ink mb-6 shadow-level-2 animate-fade-in"
+      >
+        <span class="relative flex h-2 w-2">
+          <span
+            class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-deep opacity-75"
+          ></span>
+          <span class="relative inline-flex rounded-full h-2 w-2 bg-cyan-deep"
+          ></span>
+        </span>
+        <span
+          class="text-caption font-mono font-medium tracking-wider uppercase text-body"
+          >Zero Server Uploads</span
+        >
+      </div>
+
+      <!-- Headline -->
+      <h1
+        class="text-display-xl text-ink font-semibold tracking-[-1.5px] md:tracking-[-2.4px] mb-4 leading-tight text-balance"
+      >
+        Local PDF Compressor
+      </h1>
+
+      <!-- Description -->
+      <p class="text-body-md text-body mb-2 max-w-[600px] mx-auto text-balance">
+        Run state-of-the-art compression entirely inside your browser. Your
+        files never touch any servers. Fast, secure, and completely free.
+      </p>
+    </div>
+  </section>
+
+  <!-- Compressor Tool Dashboard -->
+  <section
+    id="compressor"
+    class="py-12 px-6 max-w-[1200px] mx-auto scroll-mt-[64px]"
+  >
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <!-- Main Compressor Card -->
+      <div class="lg:col-span-2 space-y-6">
+        <!-- Drag & Drop Zone -->
+        <div
+          id="dropzone"
+          class="relative group border-2 border-dashed border-hairline-strong/60 rounded-lg bg-canvas p-8 sm:p-12 text-center hover:border-primary/50 hover:bg-canvas-soft transition-all duration-300 shadow-level-3 focus-within:border-primary focus-within:ring-2 focus-within:ring-primary/20"
+        >
+          <input
+            type="file"
+            id="file-input"
+            multiple
+            accept=".pdf"
+            class="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10 focus:outline-none"
+            aria-label="Select PDF files to compress"
+          />
+
+          <div class="space-y-4">
+            <div
+              class="w-16 h-16 mx-auto rounded-full bg-canvas-soft border border-hairline flex items-center justify-center group-hover:scale-110 group-hover:border-primary/30 transition-all duration-300 shadow-level-2"
+            >
+              <i
+                class="fa-regular fa-file-pdf text-3xl text-body group-hover:text-primary transition-colors"
+                aria-hidden="true"></i>
+            </div>
+            <div>
+              <p class="text-body-md-strong text-ink mb-1">
+                Drag and drop your PDF files here
+              </p>
+              <p class="text-body-sm text-body">
+                or click to browse from your computer
+              </p>
+            </div>
+            <div
+              class="pt-2 flex justify-center gap-3 text-caption text-mute font-mono"
+            >
+              <span
+                ><i
+                  class="fa-solid fa-lock text-cyan-deep mr-1"
+                  aria-hidden="true"></i> End-to-end Local</span
+              >
+              <span>•</span>
+              <span
+                ><i
+                  class="fa-solid fa-bolt text-warning-deep mr-1"
+                  aria-hidden="true"></i> Multi-file Batch</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- File List / Queue -->
+        <div
+          id="queue-container"
+          class="hidden rounded-lg bg-canvas border border-hairline p-4 sm:p-6 shadow-level-3 space-y-4"
+        >
+          <div
+            class="flex items-center justify-between border-b border-hairline pb-4"
+          >
+            <h3
+              class="text-display-sm text-ink font-semibold tracking-[-0.6px] flex items-center gap-2"
+            >
+              <span>Files Queue</span>
+              <span
+                id="queue-badge"
+                class="px-2 py-0.5 text-caption font-mono border border-hairline rounded bg-canvas-soft"
+                >0</span
+              >
+            </h3>
+            <div class="flex gap-2">
+              <button
+                id="clear-queue-btn"
+                class="px-3 py-1.5 border border-hairline hover:border-error-deep/30 hover:bg-error-soft text-body hover:text-error-deep rounded-sm text-body-sm transition-all flex items-center gap-1.5 focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none"
+              >
+                <i class="fa-regular fa-trash-can text-xs" aria-hidden="true"
+                ></i>
+                Clear Queue
+              </button>
+            </div>
+          </div>
+
+          <!-- Queue List -->
+          <div
+            id="queue-list"
+            class="divide-y divide-hairline max-h-[350px] overflow-y-auto pr-1"
+          >
+            <!-- Dynamic File Rows -->
+          </div>
+
+          <!-- Batch Action Bar -->
+          <div
+            class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-4 border-t border-hairline"
+          >
+            <div class="text-body-sm text-body w-full sm:w-auto text-left">
+              Total input size: <span
+                id="total-input-size"
+                class="font-mono font-medium text-ink">0 KB</span
+              >
+              <span id="total-savings-container" class="hidden">
+                | New size: <span
+                  id="total-output-size"
+                  class="font-mono font-medium text-success">0 KB</span
+                >
+                (<span
+                  id="total-savings-pct"
+                  class="font-mono font-semibold text-success">-0%</span
+                >)
+              </span>
+            </div>
+            <div class="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
+              <button
+                id="compress-btn"
+                class="w-full sm:w-auto px-6 h-[40px] bg-primary text-on-primary text-button-md rounded-pill hover:bg-black transition-all flex items-center justify-center gap-2 shadow-level-3 focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none"
+              >
+                <i class="fa-solid fa-compress" aria-hidden="true"></i>
+                Compress All Files
+              </button>
+              <button
+                id="download-zip-btn"
+                class="hidden w-full sm:w-auto px-6 h-[40px] bg-canvas text-ink border border-hairline text-button-md rounded-pill hover:bg-canvas-soft transition-all flex items-center justify-center gap-2 shadow-level-2 focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none"
+              >
+                <i class="fa-regular fa-file-archive" aria-hidden="true"></i>
+                Download ZIP
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Terminal Output Log Panel -->
+        <div
+          class="rounded-lg bg-[#121212] text-[#f5f5f5] shadow-level-4 overflow-hidden border border-[#222222]"
+        >
+          <div
+            id="terminal-header"
+            class="bg-[#171717] border-b border-[#222222] px-4 py-2.5 flex items-center justify-between select-none cursor-pointer hover:bg-[#1a1a1a] transition-colors"
+            role="button"
+            aria-expanded="true"
+            aria-controls="terminal-logs"
+            tabindex="0"
+          >
+            <div class="flex items-center gap-2">
+              <span
+                class="w-3 h-3 rounded-full bg-error-deep"
+                aria-hidden="true"></span>
+              <span class="w-3 h-3 rounded-full bg-warning" aria-hidden="true"
+              ></span>
+              <span class="w-3 h-3 rounded-full bg-cyan-deep" aria-hidden="true"
+              ></span>
+              <span class="text-caption-mono text-white/50 ml-2 font-mono"
+                >Zcompressor-engine-console</span
+              >
+              <i
+                id="terminal-toggle-icon"
+                class="fa-solid fa-chevron-down text-white/40 text-[10px] transition-transform duration-200 ml-1"
+                aria-hidden="true"></i>
+            </div>
+            <button
+              id="clear-logs-btn"
+              class="text-white/60 hover:text-white transition-colors text-caption-mono font-mono flex items-center gap-1 rounded focus-visible:ring-2 focus-visible:ring-white focus-visible:outline-none"
+              aria-label="Clear Console Logs"
+            >
+              <i class="fa-solid fa-terminal text-[10px]" aria-hidden="true"
+              ></i>
+              Clear
+            </button>
+          </div>
+          <div
+            id="terminal-logs"
+            class="p-4 h-[180px] overflow-y-auto font-mono text-code text-left space-y-1.5 scrollbar-thin scrollbar-thumb-white/10 scrollbar-track-transparent transition-all"
+          >
+            <div class="text-white/40">
+              [SYS] Console ready. Waiting for files to compress…
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Settings & Controls Panel -->
+      <div class="space-y-6">
+        <div
+          class="rounded-lg bg-canvas border border-hairline p-4 sm:p-6 shadow-level-3 space-y-6 text-left"
+        >
+          <h3
+            class="text-display-sm text-ink font-semibold tracking-[-0.6px] flex items-center gap-2 pb-4 border-b border-hairline"
+          >
+            <i
+              class="fa-solid fa-sliders text-body text-base"
+              aria-hidden="true"></i>
+            Compression Settings
+          </h3>
+
+          <!-- Presets -->
+          <div class="space-y-3">
+            <span class="text-body-sm-strong text-ink block"
+              >Target File Size</span
+            >
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-2">
+              <!-- Preset 250 KB -->
+              <button
+                data-preset="250kb"
+                class="preset-btn text-left p-3 rounded border border-hairline hover:border-hairline-strong transition-all flex items-start justify-between group focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none"
+              >
+                <div>
+                  <div
+                    class="text-body-sm-strong text-ink group-hover:text-primary transition-colors"
+                  >
+                    250 KB Target
+                  </div>
+                  <div class="text-caption text-body">
+                    Maximum compression. Ideal for strict limits.
+                  </div>
+                </div>
+                <span
+                  class="px-2 py-0.5 text-[10px] font-mono border border-hairline rounded bg-canvas-soft text-body mt-0.5"
+                  >250 KB</span
+                >
+              </button>
+
+              <!-- Preset 500 KB -->
+              <button
+                data-preset="500kb"
+                class="preset-btn text-left p-3 rounded border border-hairline hover:border-hairline-strong transition-all flex items-start justify-between group focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none"
+              >
+                <div>
+                  <div
+                    class="text-body-sm-strong text-ink group-hover:text-primary transition-colors"
+                  >
+                    500 KB Target
+                  </div>
+                  <div class="text-caption text-body">
+                    High compression. Great for email attachments.
+                  </div>
+                </div>
+                <span
+                  class="px-2 py-0.5 text-[10px] font-mono border border-hairline rounded bg-canvas-soft text-body mt-0.5"
+                  >500 KB</span
+                >
+              </button>
+
+              <!-- Preset 1 MB -->
+              <button
+                data-preset="1mb"
+                class="preset-btn active text-left p-3 rounded border-2 border-primary bg-canvas-soft transition-all flex items-start justify-between group focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none"
+              >
+                <div>
+                  <div
+                    class="text-body-sm-strong text-ink flex items-center gap-1.5"
+                  >
+                    1 MB Target
+                    <span
+                      class="px-1.5 py-0.2 text-[9px] font-sans font-semibold rounded-full bg-link-bg-soft text-link-deep"
+                      >Recommended</span
+                    >
+                  </div>
+                  <div class="text-caption text-body">
+                    Balanced visual quality & file size.
+                  </div>
+                </div>
+                <span
+                  class="px-2 py-0.5 text-[10px] font-mono border border-hairline rounded bg-canvas-soft text-body mt-0.5"
+                  >1 MB</span
+                >
+              </button>
+
+              <!-- Preset 2 MB -->
+              <button
+                data-preset="2mb"
+                class="preset-btn text-left p-3 rounded border border-hairline hover:border-hairline-strong transition-all flex items-start justify-between group focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none"
+              >
+                <div>
+                  <div
+                    class="text-body-sm-strong text-ink group-hover:text-primary transition-colors"
+                  >
+                    2 MB Target
+                  </div>
+                  <div class="text-caption text-body">
+                    Medium compression. Keeps images sharp.
+                  </div>
+                </div>
+                <span
+                  class="px-2 py-0.5 text-[10px] font-mono border border-hairline rounded bg-canvas-soft text-body mt-0.5"
+                  >2 MB</span
+                >
+              </button>
+
+              <!-- Preset 5 MB -->
+              <button
+                data-preset="5mb"
+                class="preset-btn text-left p-3 rounded border border-hairline hover:border-hairline-strong transition-all flex items-start justify-between group focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none"
+              >
+                <div>
+                  <div
+                    class="text-body-sm-strong text-ink group-hover:text-primary transition-colors"
+                  >
+                    5 MB Target
+                  </div>
+                  <div class="text-caption text-body">
+                    Low compression. Best visual quality.
+                  </div>
+                </div>
+                <span
+                  class="px-2 py-0.5 text-[10px] font-mono border border-hairline rounded bg-canvas-soft text-body mt-0.5"
+                  >5 MB</span
+                >
+              </button>
+
+              <!-- Preset Custom -->
+              <button
+                data-preset="custom"
+                class="preset-btn text-left p-3 rounded border border-hairline hover:border-hairline-strong transition-all flex items-start justify-between group focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none"
+              >
+                <div>
+                  <div
+                    class="text-body-sm-strong text-ink group-hover:text-primary transition-colors"
+                  >
+                    Custom Target Size
+                  </div>
+                  <div class="text-caption text-body">
+                    Specify your own target file size limit.
+                  </div>
+                </div>
+                <span
+                  class="px-2 py-0.5 text-[10px] font-mono border border-hairline rounded bg-canvas-soft text-body mt-0.5"
+                  >Custom</span
+                >
+              </button>
+            </div>
+          </div>
+
+          <!-- Custom Settings Controls -->
+          <div
+            id="custom-sliders"
+            class="hidden space-y-4 pt-4 border-t border-hairline animate-fade-in"
+          >
+            <!-- Target Size Slider -->
+            <div class="space-y-2">
+              <label
+                for="size-slider"
+                class="flex justify-between items-center text-body-sm cursor-pointer"
+              >
+                <span class="text-body-sm-strong text-ink"
+                  >Target File Size</span
+                >
+                <span id="size-val" class="font-mono text-mute"
+                  >1000 KB (1.0 MB)</span
+                >
+              </label>
+              <input
+                type="range"
+                id="size-slider"
+                min="100"
+                max="10000"
+                step="100"
+                value="1000"
+                class="w-full accent-primary h-1 bg-hairline rounded-lg appearance-none cursor-pointer focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:outline-none"
+                aria-label="Target File Size"
+              />
+              <div
+                class="flex justify-between text-[10px] text-mute font-mono"
+                aria-hidden="true"
+              >
+                <span>100 KB</span>
+                <span>5,000 KB (5 MB)</span>
+                <span>10,000 KB (10 MB)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Help Info Callout -->
+        <div
+          class="rounded p-4 bg-canvas-soft border border-hairline text-body-sm text-body space-y-2 shadow-level-1"
+        >
+          <div class="font-medium text-ink flex items-center gap-1.5">
+            <i class="fa-solid fa-circle-info text-link" aria-hidden="true"
+            ></i>
+            Visual Compression
+          </div>
+          <p>
+            This tool compresses PDFs by downsampling and re-encoding embedded
+            images. It works exceptionally well on <strong
+              >scanned PDFs, presentations, and picture-heavy documents</strong
+            >.
+          </p>
+          <p class="text-caption text-mute">
+            Note: Text in compressed PDFs will be rasterized to ensure maximum
+            compression. Original searchable text layer will not be preserved
+            in this version.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+
+  <!-- Core Javascript Compression Logic -->
+  <script>
+    // Helper to dynamically load external scripts
+    function loadScript(src) {
+      return new Promise((resolve, reject) => {
+        const script = document.createElement("script");
+        script.src = src;
+        script.async = true;
+        script.onload = resolve;
+        script.onerror = () =>
+          reject(new Error(`Failed to load script: ${src}`));
+        document.body.appendChild(script);
+      });
+    }
+
+    let librariesPromise = null;
+    function loadLibraries() {
+      if (librariesPromise) return librariesPromise;
+
+      librariesPromise = Promise.all([
+        loadScript(
+          "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js",
+        ),
+        loadScript("https://unpkg.com/pdf-lib@1.17.1/dist/pdf-lib.min.js"),
+        loadScript(
+          "https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js",
+        ),
+      ]).then(() => {
+        if (window.pdfjsLib) {
+          window.pdfjsLib.GlobalWorkerOptions.workerSrc =
+            "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
+        }
+      });
+      return librariesPromise;
+    }
+
+    // Trigger background loading after page load or on first interaction
+    window.addEventListener("load", () => {
+      if ("requestIdleCallback" in window) {
+        requestIdleCallback(() => setTimeout(loadLibraries, 1000));
+      } else {
+        setTimeout(loadLibraries, 1500);
+      }
+    });
+
+    const triggerEvents = ["dragover", "click", "touchstart"];
+    function triggerLoad() {
+      loadLibraries();
+      triggerEvents.forEach((evt) =>
+        document.removeEventListener(evt, triggerLoad),
+      );
+    }
+    triggerEvents.forEach((evt) =>
+      document.addEventListener(evt, triggerLoad, { passive: true }),
+    );
+
+    // Program State
+    let queue = [];
+    let isProcessing = false;
+    let selectedPreset = "1mb";
+    let customTargetSize = 1000; // KB
+
+    // DOM Elements
+    const dropzone = document.getElementById("dropzone");
+    const fileInput = document.getElementById("file-input");
+    const queueContainer = document.getElementById("queue-container");
+    const queueList = document.getElementById("queue-list");
+    const queueBadge = document.getElementById("queue-badge");
+    const totalInputSizeEl = document.getElementById("total-input-size");
+    const totalSavingsContainer = document.getElementById(
+      "total-savings-container",
+    );
+    const totalOutputSizeEl = document.getElementById("total-output-size");
+    const totalSavingsPctEl = document.getElementById("total-savings-pct");
+    const compressBtn = document.getElementById("compress-btn");
+    const downloadZipBtn = document.getElementById("download-zip-btn");
+    const clearQueueBtn = document.getElementById("clear-queue-btn");
+    const terminalLogs = document.getElementById("terminal-logs");
+    const clearLogsBtn = document.getElementById("clear-logs-btn");
+    const presetButtons = document.querySelectorAll(".preset-btn");
+    const customSliders = document.getElementById("custom-sliders");
+    const sizeSlider = document.getElementById("size-slider");
+    const sizeVal = document.getElementById("size-val");
+
+    // Collapsible Terminal Elements
+    const terminalHeader = document.getElementById("terminal-header");
+    const terminalToggleIcon = document.getElementById("terminal-toggle-icon");
+
+    // Terminal Logger
+    function logToConsole(message, type = "info") {
+      const timestamp = new Date().toTimeString().split(" ")[0];
+      const div = document.createElement("div");
+
+      let prefix = "[INFO]";
+      let colorClass = "text-white";
+
+      if (type === "sys") {
+        prefix = "[SYS]";
+        colorClass = "text-white/40";
+      } else if (type === "success") {
+        prefix = "[OK]";
+        colorClass = "text-cyan-soft";
+      } else if (type === "error") {
+        prefix = "[ERR]";
+        colorClass = "text-highlight-pink font-semibold";
+      } else if (type === "progress") {
+        prefix = "[COMPRESS]";
+        colorClass = "text-warning-soft";
+      }
+
+      div.className = colorClass;
+      div.innerHTML = `<span class="opacity-60">${timestamp}</span> ${prefix} ${message}`;
+      terminalLogs.appendChild(div);
+      terminalLogs.scrollTop = terminalLogs.scrollHeight;
+    }
+
+    // Size Formatter
+    function formatBytes(bytes, decimals = 2) {
+      if (bytes === 0) return "0 Bytes";
+      const k = 1024;
+      const dm = decimals < 0 ? 0 : decimals;
+      const sizes = ["Bytes", "KB", "MB", "GB"];
+      const i = Math.floor(Math.log(bytes) / Math.log(k));
+      return parseFloat((bytes / Math.pow(k, i)).toFixed(dm)) + " " + sizes[i];
+    }
+
+    // Setup Presets Configuration
+    function getTargetSize() {
+      if (selectedPreset === "250kb") {
+        return 250 * 1024;
+      } else if (selectedPreset === "500kb") {
+        return 500 * 1024;
+      } else if (selectedPreset === "1mb") {
+        return 1 * 1024 * 1024;
+      } else if (selectedPreset === "2mb") {
+        return 2 * 1024 * 1024;
+      } else if (selectedPreset === "5mb") {
+        return 5 * 1024 * 1024;
+      } else if (selectedPreset === "custom") {
+        return customTargetSize * 1024;
+      } else {
+        return 1 * 1024 * 1024; // Default to 1MB
+      }
+    }
+
+    // Event Listeners for Preset buttons
+    presetButtons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        presetButtons.forEach((b) => {
+          b.classList.remove(
+            "active",
+            "border-2",
+            "border-primary",
+            "bg-canvas-soft",
+          );
+          b.classList.add("border", "border-hairline");
+        });
+
+        btn.classList.remove("border", "border-hairline");
+        btn.classList.add(
+          "active",
+          "border-2",
+          "border-primary",
+          "bg-canvas-soft",
+        );
+
+        selectedPreset = btn.getAttribute("data-preset");
+
+        if (selectedPreset === "custom") {
+          customSliders.classList.remove("hidden");
+        } else {
+          customSliders.classList.add("hidden");
+        }
+
+        const targetSize = getTargetSize();
+        logToConsole(
+          `Preset changed to: ${selectedPreset.toUpperCase()} (Target Size: ${formatBytes(targetSize)})`,
+          "sys",
+        );
+      });
+    });
+
+    // Custom Slider Input Listener
+    sizeSlider.addEventListener("input", (e) => {
+      customTargetSize = parseInt(e.target.value);
+      sizeVal.textContent = `${customTargetSize} KB (${(customTargetSize / 1024).toFixed(1)} MB)`;
+    });
+
+    // Clear Console Logs
+    clearLogsBtn.addEventListener("click", () => {
+      terminalLogs.innerHTML = `<div class="text-mute">[SYS] Console cleared. ready.</div>`;
+    });
+
+    // Terminal Collapse Toggle
+    if (terminalHeader && terminalLogs && terminalToggleIcon) {
+      const toggleTerminal = () => {
+        const isHidden = terminalLogs.classList.contains("hidden");
+        if (isHidden) {
+          terminalLogs.classList.remove("hidden");
+          terminalToggleIcon.style.transform = "rotate(0deg)";
+          terminalHeader.setAttribute("aria-expanded", "true");
+        } else {
+          terminalLogs.classList.add("hidden");
+          terminalToggleIcon.style.transform = "rotate(-90deg)";
+          terminalHeader.setAttribute("aria-expanded", "false");
+        }
+      };
+
+      terminalHeader.addEventListener("click", (e) => {
+        if (e.target.closest("#clear-logs-btn")) return;
+        toggleTerminal();
+      });
+
+      terminalHeader.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          toggleTerminal();
+        }
+      });
+
+      // Collapse terminal by default on mobile screens
+      if (window.innerWidth < 768) {
+        terminalLogs.classList.add("hidden");
+        terminalToggleIcon.style.transform = "rotate(-90deg)";
+        terminalHeader.setAttribute("aria-expanded", "false");
+      }
+    }
+
+    // Handling Drag and Drop / Selection
+    function addFilesToQueue(files) {
+      if (isProcessing) {
+        logToConsole("Cannot add files while compression is running.", "error");
+        return;
+      }
+
+      let addedCount = 0;
+      for (const file of files) {
+        if (file.type !== "application/pdf") {
+          logToConsole(`Skipped non-PDF file: ${file.name}`, "error");
+          continue;
+        }
+
+        // Prevent duplicate loads
+        if (
+          queue.some(
+            (item) =>
+              item.file.name === file.name && item.file.size === file.size,
+          )
+        ) {
+          continue;
+        }
+
+        const id = "file-" + Math.random().toString(36).substr(2, 9);
+        queue.push({
+          id,
+          file,
+          status: "pending",
+          progress: 0,
+          compressedSize: null,
+          compressedBlob: null,
+        });
+        addedCount++;
+        logToConsole(
+          `Added file to queue: ${file.name} (${formatBytes(file.size)})`,
+          "sys",
+        );
+      }
+
+      if (addedCount > 0) {
+        updateQueueUI();
+      }
+    }
+
+    fileInput.addEventListener("change", (e) => {
+      addFilesToQueue(e.target.files);
+      fileInput.value = ""; // Reset input to allow choosing the same file again
+    });
+
+    // Drag-over styling
+    ["dragenter", "dragover"].forEach((eventName) => {
+      dropzone.addEventListener(
+        eventName,
+        (e) => {
+          e.preventDefault();
+          dropzone.classList.add("border-primary", "bg-canvas-soft-2");
+        },
+        false,
+      );
+    });
+
+    ["dragleave", "drop"].forEach((eventName) => {
+      dropzone.addEventListener(
+        eventName,
+        (e) => {
+          e.preventDefault();
+          dropzone.classList.remove("border-primary", "bg-canvas-soft-2");
+        },
+        false,
+      );
+    });
+
+    dropzone.addEventListener("drop", (e) => {
+      const dt = e.dataTransfer;
+      const files = dt.files;
+      addFilesToQueue(files);
+    });
+
+    // Update the Queue UI Elements
+    function updateQueueUI() {
+      if (queue.length === 0) {
+        queueContainer.classList.add("hidden");
+        return;
+      }
+
+      queueContainer.classList.remove("hidden");
+      queueBadge.textContent = queue.length;
+
+      queueList.innerHTML = "";
+      let totalInputSize = 0;
+      let totalOutputSize = 0;
+      let completedCount = 0;
+
+      queue.forEach((item) => {
+        totalInputSize += item.file.size;
+
+        const row = document.createElement("div");
+        row.className =
+          "py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3";
+        row.id = item.id;
+
+        let statusBadge = `<span class="px-2 py-0.5 text-[11px] rounded bg-canvas-soft text-body border border-hairline font-mono">Pending</span>`;
+        let progressSection = "";
+        let statsSection = `<span class="text-body-sm font-mono text-body">${formatBytes(item.file.size)}</span>`;
+        let actionButton = `<button onclick="window.removeQueueItem('${item.id}')" class="text-mute hover:text-error-deep p-1 transition-colors rounded focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none" aria-label="Remove file from queue"><i class="fa-regular fa-trash-can" aria-hidden="true"></i></button>`;
+
+        if (item.status === "compressing") {
+          statusBadge = `<span class="px-2 py-0.5 text-[11px] rounded bg-warning-soft text-warning-deep border border-warning-deep/10 font-mono animate-pulse">Compressing</span>`;
+          progressSection = `
+            <div class="w-full bg-hairline rounded-full h-1.5 mt-2 overflow-hidden">
+              <div class="bg-gradient-to-r from-gradient-develop-start to-gradient-develop-end h-1.5 rounded-full transition-all duration-150" style="width: ${item.progress}%"></div>
+            </div>
+          `;
+          actionButton = `<span class="text-[11px] font-mono text-mute">${item.progress}%</span>`;
+        } else if (item.status === "completed") {
+          const savingsPct = Math.round(
+            ((item.file.size - item.compressedSize) / item.file.size) * 100,
+          );
+          totalOutputSize += item.compressedSize;
+          completedCount++;
+
+          statusBadge = `<span class="px-2 py-0.5 text-[11px] rounded bg-link-bg-soft text-success border border-link/10 font-mono">Completed</span>`;
+          statsSection = `
+            <div class="text-right">
+              <div class="text-body-sm font-mono text-mute line-through">${formatBytes(item.file.size)}</div>
+              <div class="text-body-sm font-mono font-medium text-success">${formatBytes(item.compressedSize)} <span class="font-semibold">(-${savingsPct}%)</span></div>
+            </div>
+          `;
+
+          actionButton = `
+            <button onclick="window.downloadSingleItem('${item.id}')" class="px-2.5 py-1 bg-primary text-on-primary rounded hover:bg-black text-[11px] font-semibold transition-all inline-flex items-center gap-1 shadow-level-1 focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none">
+              <i class="fa-solid fa-download" aria-hidden="true"></i> Download
+            </button>
+          `;
+        } else if (item.status === "failed") {
+          statusBadge = `<span class="px-2 py-0.5 text-[11px] rounded bg-error-soft text-error-deep border border-error/10 font-mono">Failed</span>`;
+          actionButton = `<span class="text-[11px] text-error-deep"><i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i> Error</span>`;
+        }
+
+        row.innerHTML = `
+          <div class="flex items-center gap-3 min-w-0 w-full sm:max-w-[65%]">
+            <i class="fa-regular fa-file-pdf text-xl text-body flex-shrink-0" aria-hidden="true"></i>
+            <div class="truncate min-w-0 w-full">
+              <div class="text-body-sm-strong text-ink truncate">${item.file.name}</div>
+              <div class="flex items-center gap-2 mt-1">
+                ${statusBadge}
+                ${progressSection}
+              </div>
+            </div>
+          </div>
+          <div class="flex items-center justify-between sm:justify-end gap-6 w-full sm:w-auto">
+            ${statsSection}
+            <div class="w-20 text-right flex-shrink-0 flex justify-end">
+              ${actionButton}
+            </div>
+          </div>
+        `;
+        queueList.appendChild(row);
+      });
+
+      totalInputSizeEl.textContent = formatBytes(totalInputSize);
+
+      if (completedCount > 0) {
+        totalSavingsContainer.classList.remove("hidden");
+        totalOutputSizeEl.textContent = formatBytes(totalOutputSize);
+        const totalSavingsPct = Math.round(
+          ((totalInputSize - totalOutputSize) / totalInputSize) * 100,
+        );
+        totalSavingsPctEl.textContent = `-${totalSavingsPct}%`;
+        downloadZipBtn.classList.remove("hidden");
+      } else {
+        totalSavingsContainer.classList.add("hidden");
+        downloadZipBtn.classList.add("hidden");
+      }
+    }
+
+    // Expose Global UI Functions
+    window.removeQueueItem = function (id) {
+      if (isProcessing) return;
+      queue = queue.filter((item) => item.id !== id);
+      logToConsole("Removed item from queue.", "sys");
+      updateQueueUI();
+    };
+
+    window.downloadSingleItem = function (id) {
+      const item = queue.find((i) => i.id === id);
+      if (!item || !item.compressedBlob) return;
+
+      const url = URL.createObjectURL(item.compressedBlob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = `compressed_${item.file.name}`;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    };
+
+    // Clean Queue Button
+    clearQueueBtn.addEventListener("click", () => {
+      if (isProcessing) return;
+      queue = [];
+      logToConsole("Queue cleared.", "sys");
+      updateQueueUI();
+    });
+
+    // ZIP Download Button
+    downloadZipBtn.addEventListener("click", async () => {
+      await loadLibraries();
+      const completedItems = queue.filter(
+        (item) => item.status === "completed" && item.compressedBlob,
+      );
+      if (completedItems.length === 0) return;
+
+      logToConsole("Creating ZIP archive containing compressed files…", "sys");
+
+      const zip = new JSZip();
+      completedItems.forEach((item) => {
+        zip.file(`compressed_${item.file.name}`, item.compressedBlob);
+      });
+
+      try {
+        const zipBlob = await zip.generateAsync({ type: "blob" });
+        const url = URL.createObjectURL(zipBlob);
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = "Zcompressored_pdfs.zip";
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+        logToConsole(
+          "ZIP archive successfully generated and downloaded.",
+          "success",
+        );
+      } catch (err) {
+        logToConsole(`Failed to create ZIP: ${err.message}`, "error");
+      }
+    });
+
+    // The core PDF compression wrapper loop
+    compressBtn.addEventListener("click", async () => {
+      if (isProcessing) return;
+      const pendingItems = queue.filter((item) => item.status !== "completed");
+      if (pendingItems.length === 0) {
+        logToConsole("No pending files in the queue to compress.", "error");
+        return;
+      }
+
+      isProcessing = true;
+      compressBtn.disabled = true;
+      compressBtn.classList.add("opacity-50", "cursor-not-allowed");
+      clearQueueBtn.disabled = true;
+      clearQueueBtn.classList.add("opacity-50", "cursor-not-allowed");
+
+      const targetSize = getTargetSize();
+      logToConsole(
+        `Starting batch compression queue. Target Size: ${formatBytes(targetSize)}`,
+        "sys",
+      );
+
+      for (const item of pendingItems) {
+        item.status = "compressing";
+        item.progress = 0;
+        updateQueueUI();
+        logToConsole(`Initializing compression for: ${item.file.name}`, "sys");
+
+        try {
+          const compressedBytes = await runCompressEngine(
+            item.file,
+            targetSize,
+            (pageNum, totalPages, passNum) => {
+              item.progress = Math.round((pageNum / totalPages) * 100);
+              updateQueueUI();
+              logToConsole(
+                `[Pass ${passNum}] Compressed Page ${pageNum}/${totalPages} for ${item.file.name}…`,
+                "progress",
+              );
+            },
+          );
+
+          item.status = "completed";
+          item.compressedSize = compressedBytes.length;
+          item.compressedBlob = new Blob([compressedBytes], {
+            type: "application/pdf",
+          });
+
+          const reduction = Math.round(
+            ((item.file.size - item.compressedSize) / item.file.size) * 100,
+          );
+          logToConsole(
+            `Compression completed for ${item.file.name}. Saved ${reduction}% (New size: ${formatBytes(item.compressedSize)})`,
+            "success",
+          );
+        } catch (err) {
+          console.error(err);
+          item.status = "failed";
+          logToConsole(
+            `Compression failed for ${item.file.name}: ${err.message}`,
+            "error",
+          );
+        }
+
+        updateQueueUI();
+      }
+
+      isProcessing = false;
+      compressBtn.disabled = false;
+      compressBtn.classList.remove("opacity-50", "cursor-not-allowed");
+      clearQueueBtn.disabled = false;
+      clearQueueBtn.classList.remove("opacity-50", "cursor-not-allowed");
+      logToConsole("Batch compression queue finished.", "sys");
+    });
+
+    // Helper to render and compress pages in a single pass
+    async function runSingleCompressPass(
+      pdfDoc,
+      totalPages,
+      dpi,
+      quality,
+      onProgress,
+      passNum,
+    ) {
+      const newPdfDoc = await window.PDFLib.PDFDocument.create();
+      const canvas = document.createElement("canvas");
+      const context = canvas.getContext("2d");
+
+      for (let pageNum = 1; pageNum <= totalPages; pageNum++) {
+        const page = await pdfDoc.getPage(pageNum);
+        let scale = dpi / 72; // pdf.js default is 72 dpi
+        let viewport = page.getViewport({ scale });
+
+        // Safety limit to prevent high DPI and large page canvas allocations from crashing mobile browsers (OOM)
+        const MAX_CANVAS_DIMENSION = 3000;
+        if (
+          viewport.width > MAX_CANVAS_DIMENSION ||
+          viewport.height > MAX_CANVAS_DIMENSION
+        ) {
+          const limitScale =
+            MAX_CANVAS_DIMENSION / Math.max(viewport.width, viewport.height);
+          scale = scale * limitScale;
+          viewport = page.getViewport({ scale });
+        }
+
+        canvas.width = viewport.width;
+        canvas.height = viewport.height;
+
+        context.fillStyle = "#ffffff";
+        context.fillRect(0, 0, canvas.width, canvas.height);
+
+        await page.render({ canvasContext: context, viewport }).promise;
+
+        const imgDataUrl = canvas.toDataURL("image/jpeg", quality);
+        const jpegImage = await newPdfDoc.embedJpg(imgDataUrl);
+
+        const originalWidth = viewport.width / scale;
+        const originalHeight = viewport.height / scale;
+        const newPage = newPdfDoc.addPage([originalWidth, originalHeight]);
+
+        newPage.drawImage(jpegImage, {
+          x: 0,
+          y: 0,
+          width: originalWidth,
+          height: originalHeight,
+        });
+
+        if (onProgress) {
+          onProgress(pageNum, totalPages, passNum);
+        }
+      }
+
+      canvas.width = 0;
+      canvas.height = 0;
+
+      return await newPdfDoc.save();
+    }
+
+    // The low level execution code doing Canvas rendering & PDF injection
+    async function runCompressEngine(file, targetSize, onProgress) {
+      await loadLibraries();
+      if (!window.pdfjsLib || !window.PDFLib) {
+        throw new Error(
+          "Required libraries (pdf.js or pdf-lib) failed to initialize.",
+        );
+      }
+
+      const arrayBuffer = await file.arrayBuffer();
+      const originalBytes = new Uint8Array(arrayBuffer);
+
+      // Check if original file is already smaller than target size.
+      // If so, return original directly to preserve 100% quality.
+      if (originalBytes.length <= targetSize) {
+        logToConsole(
+          `Original file size (${formatBytes(originalBytes.length)}) is already under the target limit of ${formatBytes(targetSize)}. Returning original file directly to preserve 100% quality.`,
+          "success",
+        );
+        return originalBytes;
+      }
+
+      const pdfDoc = await window.pdfjsLib.getDocument({
+        data: arrayBuffer.slice(0),
+      }).promise;
+      const totalPages = pdfDoc.numPages;
+
+      logToConsole(
+        `File has ${totalPages} pages. Target size is ${formatBytes(targetSize)}.`,
+        "sys",
+      );
+
+      // Heuristic for starting parameters based on target size per page
+      const targetSizePerPage = targetSize / totalPages;
+      const kbPerPage = targetSizePerPage / 1024;
+
+      let dpi = 150;
+      let quality = 0.65;
+
+      if (kbPerPage >= 1000) {
+        dpi = 300;
+        quality = 0.9;
+      } else if (kbPerPage >= 500) {
+        dpi = 220;
+        quality = 0.85;
+      } else if (kbPerPage >= 250) {
+        dpi = 180;
+        quality = 0.8;
+      } else if (kbPerPage >= 120) {
+        dpi = 150;
+        quality = 0.7;
+      } else if (kbPerPage >= 60) {
+        dpi = 120;
+        quality = 0.6;
+      } else {
+        dpi = 90;
+        quality = 0.5;
+      }
+
+      logToConsole(
+        `Pass 1: Estimating parameters (DPI: ${dpi}, Quality: ${Math.round(quality * 100)}%)`,
+        "sys",
+      );
+
+      let compressedBytes = await runSingleCompressPass(
+        pdfDoc,
+        totalPages,
+        dpi,
+        quality,
+        onProgress,
+        1,
+      );
+      let resultingSize = compressedBytes.length;
+
+      logToConsole(`Pass 1 result size: ${formatBytes(resultingSize)}`, "sys");
+
+      // If resulting size exceeds target size, try to adjust and run a 2nd pass
+      if (resultingSize > targetSize && (dpi > 60 || quality > 0.15)) {
+        const ratio = targetSize / resultingSize;
+        const safetyRatio = ratio * 0.92; // Conservative 8% safety buffer to force target size compliance
+
+        const oldDpi = dpi;
+        const oldQuality = quality;
+
+        // Try to reduce quality first to preserve resolution (DPI)
+        let newQuality = oldQuality * safetyRatio;
+        let newDpi = oldDpi;
+
+        if (newQuality < 0.35) {
+          // If quality drops below 0.35, cap it and reduce DPI instead
+          const remainingRatio = newQuality / 0.35;
+          newQuality = 0.35;
+          newDpi = Math.max(
+            60,
+            Math.min(300, Math.round(oldDpi * Math.sqrt(remainingRatio))),
+          );
+        } else {
+          newQuality = Math.max(0.35, Math.min(0.9, newQuality));
+        }
+
+        dpi = newDpi;
+        quality = newQuality;
+
+        logToConsole(
+          `Result size exceeds target. Adjusting parameters for Pass 2: DPI ${oldDpi} -> ${dpi}, Quality ${Math.round(oldQuality * 100)}% -> ${Math.round(quality * 100)}%`,
+          "sys",
+        );
+
+        compressedBytes = await runSingleCompressPass(
+          pdfDoc,
+          totalPages,
+          dpi,
+          quality,
+          onProgress,
+          2,
+        );
+        resultingSize = compressedBytes.length;
+        logToConsole(
+          `Pass 2 result size: ${formatBytes(resultingSize)}`,
+          "sys",
+        );
+      }
+
+      // If resulting size STILL exceeds target size after Pass 2, try to adjust and run an emergency 3rd pass
+      if (resultingSize > targetSize && (dpi > 50 || quality > 0.15)) {
+        const ratio = targetSize / resultingSize;
+        const safetyRatio = ratio * 0.88; // Even more conservative 12% safety buffer for the final pass
+
+        const oldDpi = dpi;
+        const oldQuality = quality;
+
+        // For Pass 3, aggressively reduce both parameters to ensure compliance
+        dpi = Math.max(
+          50,
+          Math.min(300, Math.round(oldDpi * Math.sqrt(safetyRatio))),
+        );
+        quality = Math.max(0.15, Math.min(0.8, oldQuality * safetyRatio));
+
+        logToConsole(
+          `Result size STILL exceeds target. Aggressively adjusting parameters for final Pass 3: DPI ${oldDpi} -> ${dpi}, Quality ${Math.round(oldQuality * 100)}% -> ${Math.round(quality * 100)}%`,
+          "sys",
+        );
+
+        compressedBytes = await runSingleCompressPass(
+          pdfDoc,
+          totalPages,
+          dpi,
+          quality,
+          onProgress,
+          3,
+        );
+        resultingSize = compressedBytes.length;
+        logToConsole(
+          `Pass 3 result size: ${formatBytes(resultingSize)}`,
+          "sys",
+        );
+      }
+
+      // If the original file size was already smaller than our best compression result,
+      // or if compression actually made the file larger than the original, return original.
+      if (originalBytes.length < resultingSize) {
+        logToConsole(
+          `Compressed size (${formatBytes(resultingSize)}) is larger than original file (${formatBytes(originalBytes.length)}). Returning original file to preserve quality.`,
+          "sys",
+        );
+        return originalBytes;
+      }
+
+      return compressedBytes;
+    }
+  </script>
+</Layout>

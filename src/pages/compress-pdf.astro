@@ -5,12 +5,70 @@ import Footer from "../components/Footer.astro";
 ---
 
 <Layout
-  title="Free Online PDF Compressor - Zcompressor | Compress PDF Free"
+  title="Compress PDF Online - Zcompressor"
   description="Use Zcompressor, the best free online PDF compressor, to reduce PDF file size online for free. Compress PDF files securely client-side with no server uploads. Fast, private, and unlimited."
   keywords="pdf compressor, pdf compressor free, free pdf compressor, online pdf compressor, pdf compressor online free, free online pdf compressor"
   ogUrl="https://zcompressor.com/compress-pdf"
   ogType="website"
 >
+  <!-- JSON-LD FAQ Schema for SEO -->
+  <script type="application/ld+json" is:inline>
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "how does zcompressor compare to adobe acrobat online pdf compressor?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "<p>Zcompressor is completely free, requires no user sign-in or account registration, has no usage caps, and compresses files 100% locally in your web browser. In contrast, Adobe Acrobat Online limits free compressions, requires users to sign in after a single action, and uploads your PDF files to their cloud servers.</p>"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "how does zcompressor's free tier compare to smallpdf or ilovepdf?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "<p>Unlike Smallpdf and ILovePDF, which restrict free users with strict daily limits (e.g., Smallpdf caps you at 2 files per day) and require premium plans for batch processing, Zcompressor offers entirely free, unlimited file compressions, supports batch processing without fees, and does not upload your documents to external servers.</p>"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "can i compress multiple pdfs at once without a premium subscription?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "<p>Yes. Other brands like Smallpdf or ILovePDF restrict multi-file batch compression to paid tiers. Zcompressor lets you drag and drop multiple PDFs and compress them all at once for free. Since the compression occurs client-side in your browser's RAM, there are no bandwidth drops, remote server queues, or file count restrictions, and you can download the completed files individually or in a ZIP archive.</p>"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "how is zcompressor's custom target size compression different from other brands?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "<p>Most online PDF compressors only offer simple 'low' or 'high' compression presets without letting you target a specific file size. Zcompressor allows you to choose predefined target sizes (like 250 KB, 500 KB, 1 MB, 2 MB, 5 MB) or enter a custom target size in KB. The engine then performs up to three local optimization passes to adjust resolution (DPI) and quality dynamically to match your target file size as closely as possible.</p>"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "is zcompressor as secure as offline desktop pdf compressors?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "<p>Yes. Zcompressor provides the security benefits of offline desktop software (like Adobe Acrobat Pro) without requiring any software installation or administrator permissions. Because it runs entirely client-side using browser memory, your files never leave your device and are never sent to external servers, making it safe for confidential files.</p>"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "do other free pdf compressors add watermarks to the output?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "<p>Yes, many free online PDF compressors add a branded watermark, stamp, or promotional header to your optimized files unless you upgrade to a paid account. Zcompressor never adds watermarks or branding to your documents, ensuring that your output PDFs look clean, professional, and ready for official submissions.</p>"
+          }
+        }
+      ]
+    }
+  </script>
+
   <Header />
 
   <!-- Hero Section with Mesh Gradient -->
@@ -465,6 +523,183 @@ import Footer from "../components/Footer.astro";
             compression. Original searchable text layer will not be preserved
             in this version.
           </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Accordion FAQ Section (Brand Comparisons) -->
+  <section
+    id="faq"
+    class="py-16 md:py-20 px-4 md:px-6 max-w-[800px] mx-auto text-left scroll-mt-[64px]"
+  >
+    <div class="text-center mb-12">
+      <span
+        class="text-caption-mono font-mono text-mute uppercase tracking-widest"
+        >Compare Brand Features</span
+      >
+      <h2
+        class="text-display-lg text-ink font-semibold tracking-[-0.8px] md:tracking-[-1.28px] mt-2 mb-4 text-balance"
+      >
+        Zcompressor vs. Other Brands.
+      </h2>
+    </div>
+
+    <!-- Accordion Items -->
+    <div class="space-y-4">
+      <!-- FAQ Item 1 -->
+      <div
+        class="border border-hairline rounded-lg bg-canvas overflow-hidden shadow-level-2 faq-item"
+      >
+        <button
+          class="w-full flex items-center justify-between p-5 text-left text-body-md-strong text-ink hover:bg-canvas-soft transition-colors select-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none"
+          aria-expanded="false"
+          aria-controls="faq-ans-1"
+        >
+          <span>How does Zcompressor compare to Adobe Acrobat online PDF compressor?</span>
+          <i
+            class="fa-solid fa-chevron-down text-mute text-sm transition-transform duration-200"
+            aria-hidden="true"></i>
+        </button>
+        <div
+          id="faq-ans-1"
+          class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out faq-answer"
+        >
+          <div
+            class="p-5 pt-0 text-body-sm text-body border-t border-hairline/50 mt-4 leading-relaxed"
+          >
+            <strong>Zcompressor</strong> is completely free, requires no user sign-in or account registration, has no usage caps, and compresses files 100% locally in your web browser. In contrast, <strong>Adobe Acrobat Online</strong> limits free compressions, requires users to sign in after a single action, and uploads your PDF files to their cloud servers, which may pose a privacy risk for confidential documents.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ Item 2 -->
+      <div
+        class="border border-hairline rounded-lg bg-canvas overflow-hidden shadow-level-2 faq-item"
+      >
+        <button
+          class="w-full flex items-center justify-between p-5 text-left text-body-md-strong text-ink hover:bg-canvas-soft transition-colors select-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none"
+          aria-expanded="false"
+          aria-controls="faq-ans-2"
+        >
+          <span>How does Zcompressor's free tier compare to Smallpdf or ILovePDF?</span>
+          <i
+            class="fa-solid fa-chevron-down text-mute text-sm transition-transform duration-200"
+            aria-hidden="true"></i>
+        </button>
+        <div
+          id="faq-ans-2"
+          class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out faq-answer"
+        >
+          <div
+            class="p-5 pt-0 text-body-sm text-body border-t border-hairline/50 mt-4 leading-relaxed"
+          >
+            Unlike <strong>Smallpdf</strong> and <strong>ILovePDF</strong>, which restrict free users with strict daily limits (e.g., Smallpdf caps you at 2 files per day) and require premium plans for batch processing, Zcompressor offers entirely free, unlimited file compressions, supports batch processing without fees, and does not upload your documents to external servers.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ Item 3 -->
+      <div
+        class="border border-hairline rounded-lg bg-canvas overflow-hidden shadow-level-2 faq-item"
+      >
+        <button
+          class="w-full flex items-center justify-between p-5 text-left text-body-md-strong text-ink hover:bg-canvas-soft transition-colors select-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none"
+          aria-expanded="false"
+          aria-controls="faq-ans-3"
+        >
+          <span>Can I compress multiple PDFs at once without a premium subscription?</span>
+          <i
+            class="fa-solid fa-chevron-down text-mute text-sm transition-transform duration-200"
+            aria-hidden="true"></i>
+        </button>
+        <div
+          id="faq-ans-3"
+          class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out faq-answer"
+        >
+          <div
+            class="p-5 pt-0 text-body-sm text-body border-t border-hairline/50 mt-4 leading-relaxed"
+          >
+            Yes. Other brands like Smallpdf or ILovePDF restrict multi-file batch compression to paid tiers. <strong>Zcompressor</strong> lets you drag and drop multiple PDFs and compress them all at once for free. Since the compression occurs client-side in your browser's RAM, there are no bandwidth drops, remote server queues, or file count restrictions, and you can download the completed files individually or in a ZIP archive.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ Item 4 -->
+      <div
+        class="border border-hairline rounded-lg bg-canvas overflow-hidden shadow-level-2 faq-item"
+      >
+        <button
+          class="w-full flex items-center justify-between p-5 text-left text-body-md-strong text-ink hover:bg-canvas-soft transition-colors select-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none"
+          aria-expanded="false"
+          aria-controls="faq-ans-4"
+        >
+          <span>How is Zcompressor's custom target size compression different from other brands?</span>
+          <i
+            class="fa-solid fa-chevron-down text-mute text-sm transition-transform duration-200"
+            aria-hidden="true"></i>
+        </button>
+        <div
+          id="faq-ans-4"
+          class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out faq-answer"
+        >
+          <div
+            class="p-5 pt-0 text-body-sm text-body border-t border-hairline/50 mt-4 leading-relaxed"
+          >
+            Most online PDF compressors only offer simple 'low' or 'high' compression presets without letting you target a specific file size. <strong>Zcompressor</strong> allows you to choose predefined target sizes (like 250 KB, 500 KB, 1 MB, 2 MB, 5 MB) or enter a custom target size in KB. The engine then performs up to three local optimization passes to adjust resolution (DPI) and quality dynamically to match your target file size as closely as possible.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ Item 5 -->
+      <div
+        class="border border-hairline rounded-lg bg-canvas overflow-hidden shadow-level-2 faq-item"
+      >
+        <button
+          class="w-full flex items-center justify-between p-5 text-left text-body-md-strong text-ink hover:bg-canvas-soft transition-colors select-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none"
+          aria-expanded="false"
+          aria-controls="faq-ans-5"
+        >
+          <span>Is Zcompressor as secure as offline desktop PDF compressors?</span>
+          <i
+            class="fa-solid fa-chevron-down text-mute text-sm transition-transform duration-200"
+            aria-hidden="true"></i>
+        </button>
+        <div
+          id="faq-ans-5"
+          class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out faq-answer"
+        >
+          <div
+            class="p-5 pt-0 text-body-sm text-body border-t border-hairline/50 mt-4 leading-relaxed"
+          >
+            Yes. <strong>Zcompressor</strong> provides the security benefits of offline desktop software (like Adobe Acrobat Pro) without requiring any software installation or administrator permissions. Because it runs entirely client-side using browser memory, your files never leave your device and are never sent to external servers, making it 100% safe for confidential files.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ Item 6 -->
+      <div
+        class="border border-hairline rounded-lg bg-canvas overflow-hidden shadow-level-2 faq-item"
+      >
+        <button
+          class="w-full flex items-center justify-between p-5 text-left text-body-md-strong text-ink hover:bg-canvas-soft transition-colors select-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none"
+          aria-expanded="false"
+          aria-controls="faq-ans-6"
+        >
+          <span>Do other free PDF compressors add watermarks to the output?</span>
+          <i
+            class="fa-solid fa-chevron-down text-mute text-sm transition-transform duration-200"
+            aria-hidden="true"></i>
+        </button>
+        <div
+          id="faq-ans-6"
+          class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out faq-answer"
+        >
+          <div
+            class="p-5 pt-0 text-body-sm text-body border-t border-hairline/50 mt-4 leading-relaxed"
+          >
+            Yes, many free online PDF compressors add a branded watermark, stamp, or promotional header to your optimized files unless you upgrade to a paid account. <strong>Zcompressor</strong> never adds watermarks or branding to your documents, ensuring that your output PDFs look clean, professional, and ready for official submissions.
+          </div>
         </div>
       </div>
     </div>
@@ -1248,5 +1483,35 @@ import Footer from "../components/Footer.astro";
 
       return compressedBytes;
     }
+  </script>
+
+  <!-- FAQ Accordion Script -->
+  <script>
+    // FAQ Accordion Handler
+    document.querySelectorAll(".faq-item button").forEach((button) => {
+      button.addEventListener("click", () => {
+        const item = button.parentElement;
+        const answer = item.querySelector(".faq-answer");
+        const icon = button.querySelector("i");
+
+        if (answer.style.maxHeight) {
+          answer.style.maxHeight = null;
+          icon.style.transform = "rotate(0deg)";
+          button.setAttribute("aria-expanded", "false");
+        } else {
+          // close other open accordions
+          document.querySelectorAll(".faq-item button").forEach((btn) => {
+            const ans = btn.parentElement.querySelector(".faq-answer");
+            ans.style.maxHeight = null;
+            btn.parentElement.querySelector("i").style.transform =
+              "rotate(0deg)";
+            btn.setAttribute("aria-expanded", "false");
+          });
+          answer.style.maxHeight = answer.scrollHeight + "px";
+          icon.style.transform = "rotate(180deg)";
+          button.setAttribute("aria-expanded", "true");
+        }
+      });
+    });
   </script>
 </Layout>

@@ -144,6 +144,38 @@ import Footer from "../components/Footer.astro";
             "@type": "Answer",
             "text": "<p>Zcompressor is considered the best PDF compressor because it is free, unlimited, secure, and processes files completely locally inside your browser.</p>"
           }
+        },
+        {
+          "@type": "Question",
+          "name": "is zcompressor completely free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "<p>Yes, Zcompressor is 100% free with no hidden charges, premium paywalls, registration, or subscriptions. You can use all features without any trial periods or restrictions.</p>"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "are there any usage limits or page caps on zcompressor?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "<p>No, there are no limits. Zcompressor provides unlimited usage, letting you compress as many files and pages as you need without daily quotas or file volume restrictions.</p>"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "does zcompressor add watermarks to compressed pdfs?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "<p>No. Zcompressor outputs clean files exactly like your originals, without adding any watermarks, branding, or digital stamps.</p>"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "why is zcompressor free and unlimited?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "<p>Because Zcompressor processes your documents locally in your browser, we do not need to host expensive cloud servers or pay for high bandwidth and processing power. This allows us to keep the service free and unlimited indefinitely.</p>"
+          }
         }
       ]
     }
@@ -248,8 +280,8 @@ import Footer from "../components/Footer.astro";
         </p>
       </div>
 
-      <!-- Features Cards 3-up -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- Features Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         <!-- Feature 1 -->
         <div
           class="rounded-lg bg-canvas border border-hairline p-6 shadow-level-3 hover:scale-[1.02] transition-transform duration-300"
@@ -278,6 +310,66 @@ import Footer from "../components/Footer.astro";
           <div
             class="w-10 h-10 rounded bg-canvas-soft border border-hairline flex items-center justify-center mb-6"
           >
+            <i class="fa-solid fa-gift text-highlight-pink" aria-hidden="true"
+            ></i>
+          </div>
+          <h3
+            class="text-display-sm text-ink font-semibold tracking-[-0.6px] mb-3"
+          >
+            Zero Cost, No Paywalls
+          </h3>
+          <p class="text-body-sm text-body leading-relaxed">
+            Completely free PDF compressor. No subscription required, no hidden upgrade prompts, no trial versions, and absolutely no watermarks.
+          </p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div
+          class="rounded-lg bg-canvas border border-hairline p-6 shadow-level-3 hover:scale-[1.02] transition-transform duration-300"
+        >
+          <div
+            class="w-10 h-10 rounded bg-canvas-soft border border-hairline flex items-center justify-center mb-6"
+          >
+            <i class="fa-solid fa-infinity text-warning-deep" aria-hidden="true"
+            ></i>
+          </div>
+          <h3
+            class="text-display-sm text-ink font-semibold tracking-[-0.6px] mb-3"
+          >
+            Unlimited PDF Files
+          </h3>
+          <p class="text-body-sm text-body leading-relaxed">
+            Process as many files as you need. No daily or monthly usage limits, no queue wait times, and no throttled compression speeds.
+          </p>
+        </div>
+
+        <!-- Feature 4 -->
+        <div
+          class="rounded-lg bg-canvas border border-hairline p-6 shadow-level-3 hover:scale-[1.02] transition-transform duration-300"
+        >
+          <div
+            class="w-10 h-10 rounded bg-canvas-soft border border-hairline flex items-center justify-center mb-6"
+          >
+            <i class="fa-solid fa-file-circle-check text-error" aria-hidden="true"
+            ></i>
+          </div>
+          <h3
+            class="text-display-sm text-ink font-semibold tracking-[-0.6px] mb-3"
+          >
+            No Page Limits
+          </h3>
+          <p class="text-body-sm text-body leading-relaxed">
+            Compress documents of any page length. We don't cap your pages, restrict document orientation, or impose arbitrary size limits.
+          </p>
+        </div>
+
+        <!-- Feature 5 -->
+        <div
+          class="rounded-lg bg-canvas border border-hairline p-6 shadow-level-3 hover:scale-[1.02] transition-transform duration-300"
+        >
+          <div
+            class="w-10 h-10 rounded bg-canvas-soft border border-hairline flex items-center justify-center mb-6"
+          >
             <i class="fa-solid fa-layer-group text-violet" aria-hidden="true"
             ></i>
           </div>
@@ -292,7 +384,7 @@ import Footer from "../components/Footer.astro";
           </p>
         </div>
 
-        <!-- Feature 3 -->
+        <!-- Feature 6 -->
         <div
           class="rounded-lg bg-canvas border border-hairline p-6 shadow-level-3 hover:scale-[1.02] transition-transform duration-300"
         >
@@ -427,6 +519,58 @@ import Footer from "../components/Footer.astro";
         </div>
       </div>
 
+      <!-- FAQ Item 6 -->
+      <div
+        class="border border-hairline rounded-lg bg-canvas overflow-hidden shadow-level-2 faq-item"
+      >
+        <button
+          class="w-full flex items-center justify-between p-5 text-left text-body-md-strong text-ink hover:bg-canvas-soft transition-colors select-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none"
+          aria-expanded="false"
+          aria-controls="faq-ans-6"
+        >
+          <span>Is Zcompressor completely free?</span>
+          <i
+            class="fa-solid fa-chevron-down text-mute text-sm transition-transform duration-200"
+            aria-hidden="true"></i>
+        </button>
+        <div
+          id="faq-ans-6"
+          class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out faq-answer"
+        >
+          <div
+            class="p-5 pt-0 text-body-sm text-body border-t border-hairline/50 mt-4 leading-relaxed"
+          >
+            Yes, <strong>Zcompressor is 100% free</strong> with no hidden fees, premium tiers, trial versions, or subscriptions. We do not require an email registration, credit card, or account sign-up. All features are fully accessible right away.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ Item 7 -->
+      <div
+        class="border border-hairline rounded-lg bg-canvas overflow-hidden shadow-level-2 faq-item"
+      >
+        <button
+          class="w-full flex items-center justify-between p-5 text-left text-body-md-strong text-ink hover:bg-canvas-soft transition-colors select-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none"
+          aria-expanded="false"
+          aria-controls="faq-ans-7"
+        >
+          <span>Are there any usage limits or page caps?</span>
+          <i
+            class="fa-solid fa-chevron-down text-mute text-sm transition-transform duration-200"
+            aria-hidden="true"></i>
+        </button>
+        <div
+          id="faq-ans-7"
+          class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out faq-answer"
+        >
+          <div
+            class="p-5 pt-0 text-body-sm text-body border-t border-hairline/50 mt-4 leading-relaxed"
+          >
+            No, there are absolutely <strong>no limits on usage</strong>. You can compress as many files and pages as you like. There are no daily quotas, no restrictions on the number of PDFs processed, and no queue wait times.
+          </div>
+        </div>
+      </div>
+
       <!-- FAQ Item 4 -->
       <div
         class="border border-hairline rounded-lg bg-canvas overflow-hidden shadow-level-2 faq-item"
@@ -523,6 +667,58 @@ import Footer from "../components/Footer.astro";
             local libraries like pdf.js and pdf-lib to read, optimize, and write
             PDFs in browser memory. Even if you turn off your internet, the
             compression engine will still work.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ Item 11 -->
+      <div
+        class="border border-hairline rounded-lg bg-canvas overflow-hidden shadow-level-2 faq-item"
+      >
+        <button
+          class="w-full flex items-center justify-between p-5 text-left text-body-md-strong text-ink hover:bg-canvas-soft transition-colors select-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none"
+          aria-expanded="false"
+          aria-controls="faq-ans-11"
+        >
+          <span>Does Zcompressor add a watermark to my compressed PDFs?</span>
+          <i
+            class="fa-solid fa-chevron-down text-mute text-sm transition-transform duration-200"
+            aria-hidden="true"></i>
+        </button>
+        <div
+          id="faq-ans-11"
+          class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out faq-answer"
+        >
+          <div
+            class="p-5 pt-0 text-body-sm text-body border-t border-hairline/50 mt-4 leading-relaxed"
+          >
+            No. Zcompressor outputs clean files exactly like your original documents, without adding watermarks, trial stamps, or branding of any kind.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ Item 12 -->
+      <div
+        class="border border-hairline rounded-lg bg-canvas overflow-hidden shadow-level-2 faq-item"
+      >
+        <button
+          class="w-full flex items-center justify-between p-5 text-left text-body-md-strong text-ink hover:bg-canvas-soft transition-colors select-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none"
+          aria-expanded="false"
+          aria-controls="faq-ans-12"
+        >
+          <span>Why is Zcompressor free and unlimited?</span>
+          <i
+            class="fa-solid fa-chevron-down text-mute text-sm transition-transform duration-200"
+            aria-hidden="true"></i>
+        </button>
+        <div
+          id="faq-ans-12"
+          class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out faq-answer"
+        >
+          <div
+            class="p-5 pt-0 text-body-sm text-body border-t border-hairline/50 mt-4 leading-relaxed"
+          >
+            Traditional PDF compression services upload files to the cloud, meaning they have to pay for bandwidth and CPU hosting for every single file. Because Zcompressor processes your PDFs locally inside your browser, we have zero backend server costs. This efficiency allows us to keep the service free and unlimited indefinitely.
           </div>
         </div>
       </div>

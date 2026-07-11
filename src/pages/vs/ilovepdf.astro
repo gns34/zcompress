@@ -1,0 +1,199 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+---
+
+<Layout
+  title="Zcompressor vs iLovePDF - Secure iLovePDF Alternative | Compress PDF"
+  description="Compare Zcompressor and iLovePDF. Learn why local client-side processing is a more secure, private, and faster alternative to uploading files to iLovePDF servers."
+  ogUrl="https://zcompressor.com/vs/ilovepdf"
+>
+  <!-- JSON-LD FAQ Schema for SEO -->
+  <script type="application/ld+json" is:inline>
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Why is Zcompressor a safer alternative to iLovePDF?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "<p>Zcompressor operates 100% client-side inside your browser, meaning your PDF files are never uploaded to any remote server. iLovePDF requires you to upload files to their servers for processing, which introduces security risks for sensitive documents like contracts, financial records, and medical files.</p>"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Zcompressor completely free compared to iLovePDF?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "<p>Yes. Zcompressor has no premium tiers, daily file quotas, or page limits. iLovePDF restricts free users to limited batch sizes and tasks per day, prompting users to buy their premium subscription for larger files and batch actions.</p>"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do my files get sent to any servers when using Zcompressor?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "<p>No. Zcompressor uses advanced modern browser APIs (Mozilla PDF.js and pdf-lib) to compress documents locally in your device's memory. No network traffic carries your PDF content, guaranteeing absolute data privacy.</p>"
+          }
+        }
+      ]
+    }
+  </script>
+
+  <Header />
+
+  <main class="min-h-screen bg-canvas-soft text-ink py-16 px-6">
+    <div class="max-w-[800px] mx-auto">
+      <!-- Eyebrow & Title -->
+      <div class="mb-12 border-b border-hairline pb-8">
+        <span
+          class="text-caption-mono font-mono text-link-deep dark:text-cyan-deep uppercase tracking-wider block mb-3 animate-fade-in"
+        >
+          Security Review
+        </span>
+        <h1
+          class="text-display-lg md:text-display-xl text-ink font-semibold tracking-[-1.5px] md:tracking-[-2.4px] mb-4"
+        >
+          Zcompressor vs iLovePDF.
+        </h1>
+        <p class="text-body-lg text-body text-balance">
+          A side-by-side comparison of local, browser-based compression versus cloud-upload utility processing.
+        </p>
+      </div>
+
+      <!-- Overview Section -->
+      <section class="space-y-6 mb-12">
+        <p class="text-body-md text-body leading-relaxed">
+          iLovePDF is a well-known web utility suite for editing and compressing documents. However, because iLovePDF relies on a cloud-based server infrastructure, it presents limitations and compliance vulnerabilities that modern developers and privacy-focused professionals seek to avoid.
+        </p>
+        <p class="text-body-md text-body leading-relaxed">
+          Zcompressor was designed to solve these vulnerabilities by executing all optimizations client-side. The file never leaves your browser sandbox.
+        </p>
+      </section>
+
+      <!-- Side-by-Side Comparison Table -->
+      <section class="mb-12">
+        <h2 class="text-display-md text-ink font-semibold tracking-[-0.96px] mb-6">
+          Feature Breakdown.
+        </h2>
+        <div class="border border-hairline rounded-lg overflow-hidden shadow-level-2 bg-canvas">
+          <div class="overflow-x-auto">
+            <table class="w-full border-collapse">
+              <thead>
+                <tr>
+                  <th class="bg-canvas-soft-2/50 dark:bg-canvas-soft-2 text-caption-mono font-mono text-mute uppercase px-4 py-3 text-left border-b border-hairline">Feature</th>
+                  <th class="bg-canvas-soft-2/50 dark:bg-canvas-soft-2 text-caption-mono font-mono text-ink font-semibold uppercase px-4 py-3 text-left border-b border-hairline">Zcompressor</th>
+                  <th class="bg-canvas-soft-2/50 dark:bg-canvas-soft-2 text-caption-mono font-mono text-mute uppercase px-4 py-3 text-left border-b border-hairline">iLovePDF</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="text-body-sm-strong text-ink px-4 py-3.5 border-b border-hairline">Data Privacy</td>
+                  <td class="text-body-sm text-success font-medium px-4 py-3.5 border-b border-hairline">100% Private (No uploads)</td>
+                  <td class="text-body-sm text-body px-4 py-3.5 border-b border-hairline">Transferred to Cloud Servers</td>
+                </tr>
+                <tr>
+                  <td class="text-body-sm-strong text-ink px-4 py-3.5 border-b border-hairline">HIPAA / GDPR Compliance</td>
+                  <td class="text-body-sm text-success font-medium px-4 py-3.5 border-b border-hairline">Inherently compliant (Local)</td>
+                  <td class="text-body-sm text-body px-4 py-3.5 border-b border-hairline">Requires explicit agreements</td>
+                </tr>
+                <tr>
+                  <td class="text-body-sm-strong text-ink px-4 py-3.5 border-b border-hairline">Daily Free Limits</td>
+                  <td class="text-body-sm text-success font-medium px-4 py-3.5 border-b border-hairline">Unlimited (No caps)</td>
+                  <td class="text-body-sm text-body px-4 py-3.5 border-b border-hairline">Restricted free tier capabilities</td>
+                </tr>
+                <tr>
+                  <td class="text-body-sm-strong text-ink px-4 py-3.5 border-b border-hairline">Processing Speed</td>
+                  <td class="text-body-sm text-success font-medium px-4 py-3.5 border-b border-hairline">Instant local execution</td>
+                  <td class="text-body-sm text-body px-4 py-3.5 border-b border-hairline">Dependent on upload bandwidth</td>
+                </tr>
+                <tr>
+                  <td class="text-body-sm-strong text-ink px-4 py-3.5 border-b border-hairline">Watermarks / Stamps</td>
+                  <td class="text-body-sm text-success font-medium px-4 py-3.5 border-b border-hairline">None</td>
+                  <td class="text-body-sm text-body px-4 py-3.5 border-b border-hairline">None (but restricts features)</td>
+                </tr>
+                <tr>
+                  <td class="text-body-sm-strong text-ink px-4 py-3.5 border-b border-hairline">User Account Required</td>
+                  <td class="text-body-sm text-success font-medium px-4 py-3.5 border-b border-hairline">No (Completely anonymous)</td>
+                  <td class="text-body-sm text-body px-4 py-3.5 border-b border-hairline">Optional (but pushed heavily)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- Deep Dive Comparisons -->
+      <section class="space-y-10 mb-16">
+        <div>
+          <h3 class="text-display-sm text-ink font-semibold tracking-[-0.6px] mb-3">
+            Why client-side speeds beat cloud processing.
+          </h3>
+          <p class="text-body-md text-body leading-relaxed">
+            With iLovePDF, your browser must upload the full PDF file over the internet to their processing nodes, wait in a queue for conversion, and then download the compressed output. If you are dealing with a 50MB presentation or file on a slow connection, this process can take minutes or fail entirely.
+          </p>
+          <p class="text-body-md text-body leading-relaxed mt-3">
+            Zcompressor compiles the compression engine into standard client-side JavaScript threads. Since the processing runs directly inside your device's memory, compression is bound only by your local CPU speed, making it nearly instantaneous for most documents.
+          </p>
+        </div>
+
+        <div class="rounded-lg bg-canvas border border-hairline p-6 shadow-level-3">
+          <h3 class="text-display-sm text-ink font-semibold tracking-[-0.6px] mb-3">
+            HIPAA and GDPR Compliance by Design.
+          </h3>
+          <p class="text-body-md text-body leading-relaxed mb-4">
+            Under data protection regimes like GDPR, HIPAA, and CCPA, sharing documents containing personally identifiable information (PII), medical patient records, or financial figures with cloud processors requires complex legal agreements (e.g., BAAs) and risk audits.
+          </p>
+          <p class="text-body-md text-body leading-relaxed">
+            Zcompressor resolves this compliance overhead entirely. Because Zcompressor never receives, logs, or transmits document data, **no data sharing occurs**. Your compliance perimeter remains intact.
+          </p>
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section class="border-t border-hairline pt-12 mb-16">
+        <h2 class="text-display-md text-ink font-semibold tracking-[-0.96px] mb-8">
+          Frequently Asked Questions.
+        </h2>
+        <div class="space-y-6">
+          <div>
+            <h4 class="text-body-md-strong text-ink mb-2">Does Zcompressor compress PDFs as well as iLovePDF?</h4>
+            <p class="text-body-sm text-body leading-relaxed">
+              Yes. Zcompressor supports multiple custom preset optimization targets (High, Recommended, and Low compression) which downsample resolution, re-encode embedded JPEG/PNG streams, and strip unused metadata fields to achieve compression results matching or beating cloud alternatives.
+            </p>
+          </div>
+          <div>
+            <h4 class="text-body-md-strong text-ink mb-2">Is Zcompressor completely offline?</h4>
+            <p class="text-body-sm text-body leading-relaxed">
+              Yes. Once your browser loads Zcompressor, you can disconnect your internet connection entirely and the tool will continue to compress PDF documents locally. This is impossible with cloud-based tools like iLovePDF.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Call to Action -->
+      <section class="border-t border-hairline pt-8 text-center">
+        <h2 class="text-display-sm text-ink font-semibold mb-6">Experience private, fast PDF compression.</h2>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a
+            href="/compress-pdf"
+            class="px-6 h-[48px] bg-primary text-on-primary text-button-lg rounded-pill hover:bg-black transition-all inline-flex items-center justify-center shadow-level-3 hover:scale-[1.02] duration-200"
+          >
+            Start Compressing
+          </a>
+          <a
+            href="/vs"
+            class="px-6 h-[48px] bg-canvas text-ink border border-hairline text-button-lg rounded-pill hover:bg-canvas-soft transition-all inline-flex items-center justify-center shadow-level-2 hover:scale-[1.02] duration-200"
+          >
+            View Alternatives
+          </a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <Footer />
+</Layout>

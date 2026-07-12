@@ -189,29 +189,42 @@ import Footer from "../components/Footer.astro";
   >
     <!-- Background grid overlay -->
     <div
-      class="absolute inset-0 bg-grid-pattern opacity-[0.35] dark:opacity-[0.25] pointer-events-none z-0"
+      class="absolute inset-0 bg-grid-pattern opacity-[0.35] dark:opacity-[0.25] pointer-events-none z-0 animate-grid-reveal"
     >
     </div>
     <!-- Spotlight gradient overlay -->
-    <div class="absolute inset-0 bg-radial-spotlight pointer-events-none z-0">
+    <div class="absolute inset-0 bg-radial-spotlight pointer-events-none z-0 animate-spotlight-expand">
     </div>
+
+    <!-- Ambient shimmer sweep -->
+    <div
+      class="absolute inset-0 pointer-events-none z-0 overflow-hidden"
+    >
+      <div
+        class="absolute top-0 left-0 w-1/3 h-full bg-gradient-to-r from-transparent via-white/[0.04] dark:via-white/[0.02] to-transparent animate-ambient-shimmer"
+      ></div>
+    </div>
+
+    <!-- Breathing center glow -->
+    <div
+      class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] rounded-full pointer-events-none z-0 animate-glow-breathe"
+      style="background: radial-gradient(ellipse at center, rgba(0, 124, 240, 0.08) 0%, rgba(121, 40, 202, 0.04) 40%, transparent 70%);"
+    ></div>
 
     <!-- Decorative glowing background orbs -->
     <div
-      class="absolute top-1/4 left-1/4 w-[320px] h-[320px] rounded-full bg-cyan/10 dark:bg-cyan/5 blur-[100px] pointer-events-none z-0 animate-pulse hidden md:block"
-      style="animation-duration: 8s;"
+      class="absolute top-1/4 left-1/4 w-[320px] h-[320px] rounded-full bg-cyan/10 dark:bg-cyan/5 blur-[100px] pointer-events-none z-0 animate-orb-float hidden md:block"
     >
     </div>
     <div
-      class="absolute bottom-1/4 right-1/4 w-[360px] h-[360px] rounded-full bg-highlight-pink/8 dark:bg-highlight-pink/4 blur-[120px] pointer-events-none z-0 animate-pulse hidden md:block"
-      style="animation-duration: 12s;"
+      class="absolute bottom-1/4 right-1/4 w-[360px] h-[360px] rounded-full bg-highlight-pink/8 dark:bg-highlight-pink/4 blur-[120px] pointer-events-none z-0 animate-orb-float-reverse hidden md:block"
     >
     </div>
 
     <div class="max-w-[800px] mx-auto text-center relative z-10">
       <!-- Eyebrow Badge -->
       <div
-        class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-canvas/60 dark:bg-canvas-soft-2/40 backdrop-blur-md border border-hairline text-ink mb-6 shadow-level-2 animate-fade-in"
+        class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-canvas/60 dark:bg-canvas-soft-2/40 backdrop-blur-md border border-hairline text-ink mb-6 shadow-level-2 animate-hero-badge"
       >
         <span class="relative flex h-2 w-2">
           <span
@@ -228,19 +241,27 @@ import Footer from "../components/Footer.astro";
 
       <!-- Headline -->
       <h1
-        class="text-display-xl text-ink font-semibold tracking-[-1.5px] md:tracking-[-2.4px] mb-6 leading-tight text-balance"
+        class="text-display-xl text-ink font-semibold tracking-[-1.5px] md:tracking-[-2.4px] mb-6 leading-tight text-balance animate-hero-headline"
+        data-char-reveal
+        data-char-delay="300"
+        data-char-stagger="25"
       >
         Compress PDFs with absolute privacy.
       </h1>
 
       <!-- Description -->
-      <p class="text-body-lg text-body mb-8 max-w-[600px] mx-auto text-balance">
+      <p
+        class="text-body-lg text-body mb-8 max-w-[600px] mx-auto text-balance animate-hero-body"
+        data-word-reveal
+        data-word-delay="1000"
+        data-word-stagger="40"
+      >
         Run state-of-the-art compression entirely inside your browser. Your
         files never touch any servers. Fast, secure, and completely free.
       </p>
 
       <!-- Action Button -->
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 animate-hero-cta">
         <a
           href="/compress-pdf"
           class="w-full sm:w-auto px-6 h-[48px] bg-primary text-on-primary text-button-lg rounded-pill hover:bg-black transition-all flex items-center justify-center select-none shadow-level-3 hover:scale-[1.02] duration-200 focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none"
@@ -939,6 +960,68 @@ import Footer from "../components/Footer.astro";
           icon.style.transform = "rotate(180deg)";
           button.setAttribute("aria-expanded", "true");
         }
+      });
+    });
+
+    // ── Hero text typing reveal ──
+    // Per-character reveal for headlines
+    document.querySelectorAll("[data-char-reveal]").forEach((el) => {
+      const baseDelay = parseInt(el.dataset.charDelay || "300");
+      const stagger = parseInt(el.dataset.charStagger || "25");
+      const text = (el.textContent || "").trim();
+
+      el.textContent = "";
+      el.style.opacity = "1";
+
+      let charIdx = 0;
+      const segments = text.split(/(\s+)/);
+
+      segments.forEach((segment) => {
+        if (/^\s+$/.test(segment)) {
+          el.appendChild(document.createTextNode(" "));
+        } else {
+          for (const char of segment) {
+            const span = document.createElement("span");
+            span.textContent = char;
+            span.className = "reveal-char";
+            span.style.setProperty("--d", String(baseDelay + charIdx * stagger));
+            charIdx++;
+            el.appendChild(span);
+          }
+        }
+      });
+
+      // Add blinking cursor
+      const cursor = document.createElement("span");
+      cursor.className = "typing-cursor";
+      cursor.setAttribute("aria-hidden", "true");
+      el.appendChild(cursor);
+
+      // Fade out cursor after all characters have revealed
+      const totalTime = baseDelay + charIdx * stagger + 500;
+      setTimeout(() => {
+        cursor.style.animation = "cursor-fade 0.5s ease-out forwards";
+      }, totalTime);
+      setTimeout(() => cursor.remove(), totalTime + 600);
+    });
+
+    // Per-word reveal for body text
+    document.querySelectorAll("[data-word-reveal]").forEach((el) => {
+      const baseDelay = parseInt(el.dataset.wordDelay || "1000");
+      const stagger = parseInt(el.dataset.wordStagger || "40");
+      const text = (el.textContent || "").trim().replace(/\s+/g, " ");
+      const words = text.split(" ");
+
+      el.textContent = "";
+      el.style.opacity = "1";
+
+      words.forEach((word, i) => {
+        if (i > 0) el.appendChild(document.createTextNode(" "));
+        const span = document.createElement("span");
+        span.textContent = word;
+        span.className = "reveal-word";
+        span.style.setProperty("--d", String(baseDelay + i * stagger));
+        el.appendChild(span);
       });
     });
   </script>

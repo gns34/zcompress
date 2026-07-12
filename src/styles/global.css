@@ -210,13 +210,198 @@ html, body {
     radial-gradient(at 20% 90%, rgba(255, 77, 77, 0.12) 0px, transparent 50%),
     radial-gradient(at 90% 80%, rgba(249, 203, 40, 0.12) 0px, transparent 50%);
   background-size: 200% 200%;
-  animation: mesh-shift 25s ease infinite alternate;
+  animation:
+    mesh-entrance 1.4s cubic-bezier(0.16, 1, 0.3, 1) both,
+    mesh-shift 25s ease 1.4s infinite alternate;
+}
+
+@keyframes mesh-entrance {
+  from {
+    background-size: 300% 300%;
+    background-position: 50% 50%;
+    opacity: 0;
+  }
+  to {
+    background-size: 200% 200%;
+    background-position: 0% 50%;
+    opacity: 1;
+  }
 }
 
 @keyframes mesh-shift {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
+}
+
+/* ── Hero entrance animations ── */
+@keyframes hero-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes hero-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes hero-scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.92) translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes hero-blur-in {
+  from {
+    opacity: 0;
+    filter: blur(8px);
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateY(0);
+  }
+}
+
+@keyframes orb-float {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.7;
+  }
+  25% {
+    transform: translate(30px, -20px) scale(1.05);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(-10px, -40px) scale(0.95);
+    opacity: 0.6;
+  }
+  75% {
+    transform: translate(-30px, -10px) scale(1.08);
+    opacity: 0.9;
+  }
+}
+
+@keyframes orb-float-reverse {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.6;
+  }
+  25% {
+    transform: translate(-20px, 30px) scale(1.08);
+    opacity: 0.9;
+  }
+  50% {
+    transform: translate(20px, 20px) scale(0.92);
+    opacity: 0.5;
+  }
+  75% {
+    transform: translate(30px, -15px) scale(1.04);
+    opacity: 0.8;
+  }
+}
+
+/* Hero entrance animation utilities */
+@utility animate-fade-in {
+  animation: hero-fade-in 0.6s ease-out both;
+}
+
+@utility animate-hero-badge {
+  opacity: 0;
+  animation: hero-scale-in 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both;
+}
+
+@utility animate-hero-headline {
+  opacity: 0;
+}
+
+@utility animate-hero-body {
+  opacity: 0;
+}
+
+@utility animate-hero-cta {
+  opacity: 0;
+  animation: hero-fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) 1.6s both;
+}
+
+@utility animate-orb-float {
+  animation: orb-float 14s ease-in-out infinite;
+}
+
+@utility animate-orb-float-reverse {
+  animation: orb-float-reverse 18s ease-in-out infinite;
+}
+
+/* ── Character / word typing reveal system ── */
+@keyframes char-in {
+  from {
+    opacity: 0;
+    transform: translateY(0.2em);
+    filter: blur(3px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes word-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes cursor-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@keyframes cursor-fade {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+.reveal-char {
+  display: inline-block;
+  opacity: 0;
+  animation: char-in 0.35s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: calc(var(--d) * 1ms);
+}
+
+.reveal-word {
+  display: inline-block;
+  opacity: 0;
+  animation: word-in 0.4s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: calc(var(--d) * 1ms);
+}
+
+.typing-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 0.85em;
+  background: currentColor;
+  margin-left: 2px;
+  vertical-align: baseline;
+  border-radius: 1px;
+  animation: cursor-blink 0.6s step-end infinite;
 }
 
 /* Elegant grid overlay for developer-centric branding */
@@ -230,6 +415,72 @@ html, body {
 /* Radial spotlight fading mask to blend the grids and colors into the background canvas */
 @utility bg-radial-spotlight {
   background-image: radial-gradient(circle at center, transparent 20%, var(--color-canvas) 80%);
+}
+
+/* ── Hero background layer entrance animations ── */
+@keyframes grid-reveal {
+  from {
+    mask-image: radial-gradient(circle at center, black 0%, transparent 0%);
+    -webkit-mask-image: radial-gradient(circle at center, black 0%, transparent 0%);
+    opacity: 0;
+  }
+  to {
+    mask-image: radial-gradient(circle at center, black 60%, transparent 100%);
+    -webkit-mask-image: radial-gradient(circle at center, black 60%, transparent 100%);
+    opacity: 1;
+  }
+}
+
+@keyframes spotlight-expand {
+  from {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes ambient-shimmer {
+  0% {
+    transform: translateX(-100%) rotate(-15deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(200%) rotate(-15deg);
+    opacity: 0;
+  }
+}
+
+@keyframes glow-breathe {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+@utility animate-grid-reveal {
+  opacity: 0;
+  animation: grid-reveal 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both;
+}
+
+@utility animate-spotlight-expand {
+  opacity: 0;
+  animation: spotlight-expand 1.6s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both;
+}
+
+@utility animate-ambient-shimmer {
+  animation: ambient-shimmer 6s ease-in-out 2s infinite;
+}
+
+@utility animate-glow-breathe {
+  animation: glow-breathe 8s ease-in-out 1.5s infinite;
 }
 
 @media (prefers-reduced-motion: reduce) {

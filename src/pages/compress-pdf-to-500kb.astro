@@ -1,0 +1,10 @@
+---
+import ExamPageLayout from "../components/ExamPageLayout.astro";
+import { getEntry } from "astro:content";
+
+const entry = await getEntry("examPages", "compress-pdf-to-500kb");
+if (!entry) throw new Error("Content entry not found: compress-pdf-to-500kb");
+const data = entry.data;
+---
+
+<ExamPageLayout {...data} />

@@ -1,0 +1,62 @@
+{
+  "slug": "compress-pdf-to-1mb",
+  "title": "Compress PDF to 1 MB — For Bundle & Multi-Page Uploads | Zcompressor",
+  "metaDescription": "Compress PDF to 1 MB (1024 KB) for portals requiring larger document uploads. Ideal for multi-page bundles, presentation slides, and combined certificate packages. Free client-side compression.",
+  "targetSizeKB": 1024,
+  "docType": "Size-specific",
+  "heroHeadline": "Compress PDF to 1 MB.",
+  "heroDescription": "The standard limit for multi-page bundles and longer documents. At 1 MB, even complex scanned documents retain excellent quality — but hitting the target requires smart compression for larger files.",
+  "eyebrowText": "1 MB Target",
+  "privacyNote": "Your document never leaves your browser. Compression runs 100% client-side using browser APIs — no server uploads, no data collection, no account required.",
+  "sections": [
+    {
+      "heading": "The bundle upload limit.",
+      "body": [
+        "1 MB (1024 KB) is often the cap for merged or bundled uploads — portals that accept multiple certificates combined into a single PDF file. It's also the standard limit for longer documents: multi-page marksheets, project reports, and presentation slides.",
+        "Unlike the tighter 100–500 KB limits (designed for single-page certificate scans), 1 MB gives you room for 5–10 pages of scanned content or 15–20 pages of digitally-created content at good quality."
+      ]
+    },
+    {
+      "heading": "When 1 MB is the real challenge.",
+      "body": [
+        "1 MB sounds generous until you're dealing with:",
+        "• A 10-page merged bundle of scanned certificates at 300 DPI. Uncompressed, this is 30–40 MB. Compressing to 1 MB means keeping about 2.5–3.3% of the data — similar ratios to compressing a single page to 100 KB.",
+        "• A presentation deck with embedded high-resolution images. A 15-slide deck with photos can easily be 20+ MB before compression.",
+        "• A scanned booklet or report with mixed text and images across 8+ pages.",
+        "In these cases, 1 MB is actually a tight constraint. The compressor needs to aggressively downsample images while preserving text readability across all pages."
+      ]
+    },
+    {
+      "heading": "Per-page budget matters.",
+      "body": [
+        "Think of 1 MB as a budget distributed across your pages. A 10-page document at 1 MB gives each page roughly 100 KB — the same budget as compressing a single page to 100 KB. A 5-page document gives each page 200 KB — much more comfortable.",
+        "If your result looks too compressed, consider these options: reduce the page count (split into two uploads if the portal allows it), scan at 200 DPI instead of 300 DPI, or convert colour pages to grayscale where colour isn't required."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "Is 1 MB the same as 1000 KB or 1024 KB?",
+      "a": "Technically, 1 MB = 1,000,000 bytes (decimal) and 1 MiB = 1,048,576 bytes (binary/1024 KB). Most portals that say '1 MB' accept files up to 1,048,576 bytes. Zcompressor targets 1024 KB (1 MiB) by default for this page to match the binary measurement most portals actually check."
+    },
+    {
+      "q": "Can I compress a 20-page scanned document to 1 MB?",
+      "a": "Yes, but quality will vary by page content. Text-heavy pages compress very well; image-heavy pages need more aggressive compression. For 20 scanned pages at 1 MB, expect each page to have roughly 50 KB of budget — similar quality to a single page at 100 KB. Consider splitting into smaller files if your portal allows multiple uploads."
+    },
+    {
+      "q": "Which portals use 1 MB limits?",
+      "a": "1 MB is common for bundle/merged certificate uploads on state PSC portals, university admission applications requiring combined documents, job portals accepting multi-page CVs or portfolios, and government scheme applications requiring multiple supporting documents in one file."
+    },
+    {
+      "q": "Should I compress each document first and then merge, or merge first?",
+      "a": "Both approaches work. Compressing each document individually first gives you more control — you can verify each page's quality before combining. Merging first and then compressing in one pass lets the compressor optimise across all pages at once, which can produce slightly smaller results. If hitting the 1 MB target is tight, try both approaches and keep whichever produces better quality."
+    }
+  ],
+  "crossLinks": [
+    { "href": "/compress-pdf-to-500kb", "label": "Compress PDF to 500 KB" },
+    { "href": "/compress-pdf-to-300kb", "label": "Compress PDF to 300 KB" },
+    { "href": "/compress-pdf-to-200kb", "label": "Compress PDF to 200 KB" },
+    { "href": "/compress-pdf", "label": "General PDF Compressor" }
+  ],
+  "lastVerified": "2026-07-15"
+}

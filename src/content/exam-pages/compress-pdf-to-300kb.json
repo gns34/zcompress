@@ -1,0 +1,65 @@
+{
+  "slug": "compress-pdf-to-300kb",
+  "title": "Compress PDF to 300 KB — UPSC Size Limit Tool | Zcompressor",
+  "metaDescription": "Compress any PDF to exactly 300 KB for UPSC and government portal uploads. Free, client-side compression — your files never leave your browser. Handles the binary vs decimal KB confusion.",
+  "exam": "UPSC",
+  "targetSizeKB": 300,
+  "docType": "Size-specific",
+  "heroHeadline": "Compress PDF to 300 KB.",
+  "heroDescription": "300 KB is the exact cap UPSC uses for certificate uploads. Not a round number — a real requirement from a real exam portal. Hit it precisely with client-side compression.",
+  "eyebrowText": "300 KB Target",
+  "privacyNote": "Your document never leaves your browser. Compression runs 100% client-side using browser APIs — no server uploads, no data collection, no account required.",
+  "sections": [
+    {
+      "heading": "Why 300 KB specifically.",
+      "body": [
+        "300 KB isn't a generic marketing number — it's the actual upper limit UPSC sets for certificate PDF uploads in its One Time Registration (OTR) system. When candidates search for 'compress PDF to 300 KB', they're usually holding a UPSC notification that specifies this exact figure.",
+        "Other portals that use 300 KB limits include certain state public service commission applications (APPSC, TSPSC) for individual certificate uploads. If a portal tells you '300 KB max', this is the tool."
+      ]
+    },
+    {
+      "heading": "What a 300 KB PDF looks like.",
+      "body": [
+        "A typical scanned certificate starts at 3–4 MB (a single colour page at 300 DPI). Compressing to 300 KB means reducing to roughly 8–10% of the original file size. At this ratio:",
+        "• Text remains legible — names, dates, certificate numbers, and registration IDs are clearly readable.",
+        "• Official seals and stamps are visible, though fine watermark lines may lose some detail.",
+        "• Photographs embedded in the certificate (like a passport photo on an ID proof) retain enough clarity for verification.",
+        "• The PDF will have slightly softer image quality compared to the original scan, but this is expected and accepted by portals."
+      ]
+    },
+    {
+      "heading": "The 300 KB vs 300 KiB confusion.",
+      "body": [
+        "This is genuinely the most common reason uploads get rejected. Here's why:",
+        "300 KB (decimal) = 300,000 bytes. 300 KiB (binary) = 307,200 bytes. Some portals measure one way, some measure the other, and they both display as '300 KB' in the requirement.",
+        "If your file is 301,000 bytes, it's over 300 KB but under 300 KiB. Depending on which system the portal uses, it may pass or fail.",
+        "Our recommendation: target 250 KB. The visual quality difference between 250 KB and 300 KB for a scanned certificate is negligible, and you eliminate the binary/decimal ambiguity entirely."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "Is 300 KB the same as 300 kilobytes or 300 KiB?",
+      "a": "300 KB (kilobytes, decimal) = 300,000 bytes. 300 KiB (kibibytes, binary) = 307,200 bytes. Most government portals display the limit as '300 KB' without specifying which standard. The difference is small (about 2.4%), but it can cause upload rejections. Target 250 KB to be safe with either measurement."
+    },
+    {
+      "q": "Which exams require exactly 300 KB PDF uploads?",
+      "a": "UPSC's OTR system is the most prominent exam that uses 300 KB as the certificate upload cap. Some state PSC portals (like APPSC and TSPSC for certain notifications) also use 300 KB. Always verify against the current notification for your specific exam."
+    },
+    {
+      "q": "Can I compress a multi-page PDF to 300 KB?",
+      "a": "Yes, though results depend on the number of pages and content type. A 2-page scanned certificate can typically compress to 300 KB with acceptable quality. For documents with 5+ pages of scanned images, 300 KB may result in very low image resolution — consider whether your portal allows a higher limit for multi-page documents."
+    },
+    {
+      "q": "Why does my compressed PDF look blurry?",
+      "a": "At 300 KB for a full-page colour scan, some image softening is expected — you're compressing to about 8–10% of the original size. Text and printed content should remain legible. If it's too blurry, your source scan may be at too high a resolution (e.g., 600 DPI). Try scanning at 200–300 DPI for a better starting point, which requires less aggressive compression."
+    }
+  ],
+  "crossLinks": [
+    { "href": "/compress-pdf-for-upsc", "label": "Compress PDF for UPSC" },
+    { "href": "/compress-pdf-to-200kb", "label": "Compress PDF to 200 KB" },
+    { "href": "/compress-pdf-to-500kb", "label": "Compress PDF to 500 KB" },
+    { "href": "/compress-pdf", "label": "General PDF Compressor" }
+  ],
+  "lastVerified": "2026-07-15"
+}

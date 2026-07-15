@@ -1,0 +1,62 @@
+{
+  "slug": "compress-pdf-to-200kb",
+  "title": "Compress PDF to 200 KB — Mid-Range Portal Limit | Zcompressor",
+  "metaDescription": "Compress PDF to 200 KB for government portal and exam form uploads. See how 200 KB compares to 100 KB and 500 KB compression levels. Free, private, client-side tool.",
+  "targetSizeKB": 200,
+  "docType": "Size-specific",
+  "heroHeadline": "Compress PDF to 200 KB.",
+  "heroDescription": "The mid-range sweet spot. 200 KB is tight enough for most portal limits while preserving noticeably better quality than 100 KB. See the real differences side by side.",
+  "eyebrowText": "200 KB Target",
+  "privacyNote": "Your document never leaves your browser. Compression runs 100% client-side using browser APIs — no server uploads, no data collection, no account required.",
+  "sections": [
+    {
+      "heading": "The middle ground.",
+      "body": [
+        "200 KB sits between the aggressive 100 KB limit and the more forgiving 300–500 KB range. For a single-page scanned certificate, 200 KB provides a good balance: text is clearly legible, seals are recognisable with reasonable detail, and photographs retain enough clarity for identification.",
+        "This is a common limit on state government portals, scholarship applications, and some competitive exam registration forms where the portal designers chose a tighter constraint than the 300–500 KB range but recognised that 100 KB was too aggressive for document verification."
+      ]
+    },
+    {
+      "heading": "How 100 KB, 200 KB, and 500 KB compare.",
+      "body": [
+        "Here's what actually changes across these three common size targets for a typical single-page colour certificate scan (original: ~3.5 MB at 300 DPI):",
+        "At 100 KB (2.8% of original): Text is readable but may show softening on fine print. Seals lose edge detail. Photographs show visible compression artifacts. Light watermarks may disappear.",
+        "At 200 KB (5.7% of original): Text is clearly legible including fine print. Seals retain most detail — perimeter micro-text may still be soft. Photographs are identifiable with moderate softening. Watermarks are faint but visible.",
+        "At 500 KB (14.3% of original): Near-original quality for text and seals. Photographs retain good detail. Watermarks and fine decorative elements are preserved. Most viewers wouldn't notice the compression.",
+        "The jump from 100 KB to 200 KB is the single biggest quality improvement per kilobyte — if your portal accepts 200 KB, always prefer it over 100 KB."
+      ]
+    },
+    {
+      "heading": "When to use 200 KB vs other targets.",
+      "body": [
+        "Use 200 KB when your portal specifies it, or when you need a margin below a 250 KB limit. If your portal says '200 KB or less', target 180–190 KB to account for potential binary/decimal KB measurement differences.",
+        "If your portal accepts 300 KB or higher, there's no benefit to compressing further. Use the larger allowance for better quality. Only compress to 200 KB when the portal actually requires it."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "Is 200 KB enough for a scanned certificate to be readable?",
+      "a": "Yes. For a single-page scanned certificate, 200 KB provides clearly legible text, recognisable seals, and identifiable photographs. It's the smallest size where most document elements remain well-preserved. Quality is noticeably better than 100 KB."
+    },
+    {
+      "q": "What's the visual difference between 200 KB and 300 KB?",
+      "a": "The difference is subtle but present. At 300 KB, fine details like seal perimeter text and thin decorative borders are slightly crisper. For most government portal submissions, both sizes produce acceptable results. If your portal allows 300 KB, prefer it for marginally better quality."
+    },
+    {
+      "q": "Can I compress a colour certificate to 200 KB without losing too much quality?",
+      "a": "Yes. Colour certificates compress well to 200 KB because most of the data in a scanned certificate is redundant background and margin space. The compressor can aggressively compress these uniform areas while preserving detail in the text and seal regions."
+    },
+    {
+      "q": "Should I scan in grayscale to get better 200 KB results?",
+      "a": "If your certificate doesn't require colour for verification (e.g., it has no coloured seals or stamps), scanning in grayscale reduces the source file size by roughly 60%, which means less compression is needed to reach 200 KB. The result is sharper text and better seal preservation."
+    }
+  ],
+  "crossLinks": [
+    { "href": "/compress-pdf-to-100kb", "label": "Compress PDF to 100 KB" },
+    { "href": "/compress-pdf-to-300kb", "label": "Compress PDF to 300 KB" },
+    { "href": "/compress-pdf-to-500kb", "label": "Compress PDF to 500 KB" },
+    { "href": "/compress-pdf", "label": "General PDF Compressor" }
+  ],
+  "lastVerified": "2026-07-15"
+}

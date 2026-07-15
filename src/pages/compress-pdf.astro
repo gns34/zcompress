@@ -895,6 +895,51 @@ import Footer from "../components/Footer.astro";
       sizeVal.textContent = `${customTargetSize} KB (${(customTargetSize / 1024).toFixed(1)} MB)`;
     });
 
+    // URL Parameter Auto-Select (for SEO landing pages linking with ?target=300 etc.)
+    (function applyUrlTarget() {
+      const params = new URLSearchParams(window.location.search);
+      const targetParam = params.get("target");
+      if (!targetParam) return;
+
+      const targetKB = parseInt(targetParam, 10);
+      if (isNaN(targetKB) || targetKB <= 0) return;
+
+      // Map KB values to preset data-attributes
+      const presetMap = {
+        250: "250kb",
+        500: "500kb",
+        1024: "1mb",
+        2048: "2mb",
+        5120: "5mb",
+      };
+
+      const matchedPreset = presetMap[targetKB];
+
+      if (matchedPreset) {
+        // Click the matching preset button
+        const targetBtn = document.querySelector(`.preset-btn[data-preset="${matchedPreset}"]`);
+        if (targetBtn) targetBtn.click();
+      } else {
+        // Use custom slider for non-standard values
+        const clampedKB = Math.max(100, Math.min(10000, targetKB));
+        const roundedKB = Math.round(clampedKB / 100) * 100;
+
+        // Activate custom preset
+        const customBtn = document.querySelector('.preset-btn[data-preset="custom"]');
+        if (customBtn) customBtn.click();
+
+        // Set slider value
+        sizeSlider.value = roundedKB;
+        customTargetSize = roundedKB;
+        sizeVal.textContent = `${roundedKB} KB (${(roundedKB / 1024).toFixed(1)} MB)`;
+      }
+
+      logToConsole(
+        `Target size set from URL parameter: ${targetKB >= 1024 ? (targetKB / 1024).toFixed(0) + " MB" : targetKB + " KB"}`,
+        "sys",
+      );
+    })();
+
     // Clear Console Logs
     clearLogsBtn.addEventListener("click", () => {
       terminalLogs.innerHTML = `<div class="text-mute">[SYS] Console cleared. ready.</div>`;

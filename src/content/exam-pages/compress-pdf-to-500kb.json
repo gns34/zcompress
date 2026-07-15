@@ -1,0 +1,62 @@
+{
+  "slug": "compress-pdf-to-500kb",
+  "title": "Compress PDF to 500 KB — Minimal Quality Loss | Zcompressor",
+  "metaDescription": "Compress PDF to 500 KB with minimal visible quality loss. The most forgiving common portal limit — ideal for scanned documents, presentations, and picture-heavy PDFs. Free, client-side, no uploads.",
+  "targetSizeKB": 500,
+  "docType": "Size-specific",
+  "heroHeadline": "Compress PDF to 500 KB.",
+  "heroDescription": "The most forgiving common limit. At 500 KB, compression is barely noticeable — text stays sharp, seals stay crisp, photographs stay clear. For most documents, this is the easiest target to hit well.",
+  "eyebrowText": "500 KB Target",
+  "privacyNote": "Your document never leaves your browser. Compression runs 100% client-side using browser APIs — no server uploads, no data collection, no account required.",
+  "sections": [
+    {
+      "heading": "The forgiving limit.",
+      "body": [
+        "500 KB is one of the most common upload limits across government portals, job applications, and university admission forms. It's also the most forgiving — for a typical single-page scanned certificate (3–4 MB at 300 DPI), compressing to 500 KB means keeping roughly 14% of the original data.",
+        "At this ratio, compression artifacts are minimal. Text is sharp, seals retain fine detail, photographs look clean, and even light watermarks survive. Most people viewing a 500 KB compressed certificate side-by-side with the original at screen resolution would struggle to spot the difference."
+      ]
+    },
+    {
+      "heading": "Where 500 KB excels.",
+      "body": [
+        "500 KB is generous enough for most document types that struggle at tighter limits:",
+        "• Multi-page documents: A 2–3 page scanned document can compress to 500 KB with each page retaining good quality. Compare this to 100 KB, where even single-page documents show visible degradation.",
+        "• Colour-heavy certificates: Certificates with coloured seals, stamps, or decorative borders preserve their appearance at 500 KB. At 100–200 KB, colour gradients often show banding.",
+        "• Documents with photographs: ID proofs and certificates with embedded passport photos retain enough detail for clear identification. The photo may show slight softening but no visible block artifacts.",
+        "• Presentation slides: If your portal requires uploading a PDF of presentation slides, 500 KB handles a 5–10 slide deck reasonably well."
+      ]
+    },
+    {
+      "heading": "Contrast with tighter limits.",
+      "body": [
+        "The quality difference between 500 KB and the tighter 100–200 KB range is substantial. If your portal gives you a choice or mentions 'up to 500 KB', always use the full allowance. There's no advantage to compressing more aggressively than your portal requires — it only reduces quality.",
+        "That said, if your original PDF is already under 500 KB (which happens with digitally-created PDFs, not scanned ones), there's no need to compress at all. Zcompressor won't re-encode a file that already meets your target."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "Is there any visible quality loss at 500 KB?",
+      "a": "For a single-page scanned document, quality loss at 500 KB is minimal. Text stays sharp, seals retain detail, and photographs remain clear. Most viewers would not notice the compression at screen resolution. This is the most forgiving common portal limit."
+    },
+    {
+      "q": "Can I compress a multi-page PDF to 500 KB?",
+      "a": "Yes, and 500 KB is much better suited for multi-page documents than tighter limits. A 2–3 page scanned document compresses well to 500 KB. For 5+ pages of scanned images, quality will depend on content — text-heavy pages compress better than image-heavy pages."
+    },
+    {
+      "q": "Which portals use a 500 KB limit?",
+      "a": "500 KB is a common limit across a wide range of portals: state government service applications, university admission forms, job application portals, and some competitive exam registrations. It's one of the most frequently encountered limits after 1 MB."
+    },
+    {
+      "q": "Should I compress to exactly 500 KB or slightly under?",
+      "a": "Target 480–490 KB to give yourself a margin. As with other size limits, some portals measure in binary kilobytes (KiB) vs decimal kilobytes (KB). The difference at 500 KB is about 12 KB — small but enough to cause a rejection on strict validators."
+    }
+  ],
+  "crossLinks": [
+    { "href": "/compress-pdf-to-200kb", "label": "Compress PDF to 200 KB" },
+    { "href": "/compress-pdf-to-300kb", "label": "Compress PDF to 300 KB" },
+    { "href": "/compress-pdf-to-1mb", "label": "Compress PDF to 1 MB" },
+    { "href": "/compress-pdf", "label": "General PDF Compressor" }
+  ],
+  "lastVerified": "2026-07-15"
+}

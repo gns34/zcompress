@@ -1,0 +1,355 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+interface SpecItem {
+  label: string;
+  value: string;
+}
+
+interface FaqItem {
+  q: string;
+  a: string;
+}
+
+interface SectionItem {
+  heading: string;
+  body: string[];
+}
+
+interface CrossLinkItem {
+  href: string;
+  label: string;
+}
+
+interface Props {
+  slug: string;
+  title: string;
+  metaDescription: string;
+  exam?: string;
+  targetSizeKB?: number;
+  docType?: string;
+  heroHeadline: string;
+  heroDescription: string;
+  eyebrowText: string;
+  privacyNote: string;
+  sections: SectionItem[];
+  faq: FaqItem[];
+  specs?: SpecItem[];
+  specsHeading?: string;
+  crossLinks?: CrossLinkItem[];
+  lastVerified: string;
+}
+
+const {
+  slug,
+  title,
+  metaDescription,
+  targetSizeKB,
+  heroHeadline,
+  heroDescription,
+  eyebrowText,
+  privacyNote,
+  sections,
+  faq,
+  specs,
+  specsHeading,
+  crossLinks,
+  lastVerified,
+} = Astro.props;
+
+const canonicalUrl = `https://zcompressor.com/${slug}`;
+const compressorLink = targetSizeKB
+  ? `/compress-pdf?target=${targetSizeKB}`
+  : "/compress-pdf";
+const targetLabel = targetSizeKB
+  ? targetSizeKB >= 1024
+    ? `${(targetSizeKB / 1024).toFixed(0)} MB`
+    : `${targetSizeKB} KB`
+  : null;
+
+// Build FAQ structured data
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faq.map((item) => ({
+    "@type": "Question",
+    name: item.q,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: `<p>${item.a}</p>`,
+    },
+  })),
+};
+---
+
+<Layout
+  title={title}
+  description={metaDescription}
+  ogUrl={canonicalUrl}
+  ogType="website"
+>
+  <!-- JSON-LD FAQPage Schema -->
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(faqSchema)} />
+
+  <Header />
+
+  <!-- Hero Section with Mesh Gradient -->
+  <section
+    class="relative bg-mesh-gradient overflow-hidden pt-24 pb-16 md:pt-32 md:pb-24 px-4 md:px-6 border-b border-hairline"
+  >
+    <!-- Background grid overlay -->
+    <div
+      class="absolute inset-0 bg-grid-pattern opacity-[0.35] dark:opacity-[0.25] pointer-events-none z-0"
+    ></div>
+    <!-- Spotlight gradient overlay -->
+    <div class="absolute inset-0 bg-radial-spotlight pointer-events-none z-0"></div>
+
+    <!-- Decorative glowing background orbs -->
+    <div
+      class="absolute top-1/4 left-1/4 w-[320px] h-[320px] rounded-full bg-cyan/10 dark:bg-cyan/5 blur-[100px] pointer-events-none z-0 animate-pulse hidden md:block"
+      style="animation-duration: 8s;"
+    ></div>
+    <div
+      class="absolute bottom-1/4 right-1/4 w-[360px] h-[360px] rounded-full bg-highlight-pink/8 dark:bg-highlight-pink/4 blur-[120px] pointer-events-none z-0 animate-pulse hidden md:block"
+      style="animation-duration: 12s;"
+    ></div>
+
+    <div class="max-w-[800px] mx-auto text-center relative z-10">
+      <!-- Eyebrow Badge -->
+      <div
+        class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-canvas/60 dark:bg-canvas-soft-2/40 backdrop-blur-md border border-hairline text-ink mb-6 shadow-level-2 animate-fade-in"
+      >
+        <span class="relative flex h-2 w-2">
+          <span
+            class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-deep opacity-75"
+          ></span>
+          <span class="relative inline-flex rounded-full h-2 w-2 bg-cyan-deep"></span>
+        </span>
+        <span
+          class="text-caption font-mono font-medium tracking-wider uppercase text-body"
+        >{eyebrowText}</span>
+      </div>
+
+      <!-- Headline -->
+      <h1 class="text-display-xl text-ink mb-4 text-balance">
+        {heroHeadline}
+      </h1>
+
+      <!-- Description -->
+      <p class="text-body-md text-body mb-6 max-w-[600px] mx-auto text-balance">
+        {heroDescription}
+      </p>
+
+      <!-- CTA Row -->
+      <div class="flex flex-wrap justify-center gap-4">
+        <a
+          href={compressorLink}
+          class="px-6 h-[48px] bg-primary text-on-primary text-button-lg rounded-pill hover:bg-black transition-all inline-flex items-center justify-center shadow-level-3 hover:scale-[1.02] duration-200"
+        >
+          {targetLabel ? `Compress to ${targetLabel}` : "Start Compressing"}
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <main class="py-12 md:py-16 px-4 md:px-6 max-w-[800px] mx-auto">
+    <!-- Specs Table (if provided) -->
+    {specs && specs.length > 0 && (
+      <section class="mb-12">
+        <h2 class="text-display-md text-ink font-semibold tracking-[-0.96px] mb-6">
+          {specsHeading || "Document requirements."}
+        </h2>
+        <div class="border border-hairline rounded-lg overflow-hidden shadow-level-2 bg-canvas">
+          <div class="overflow-x-auto">
+            <table class="w-full border-collapse">
+              <thead>
+                <tr>
+                  <th class="bg-canvas-soft-2/50 dark:bg-canvas-soft-2 text-caption-mono font-mono text-mute uppercase px-4 py-3 text-left border-b border-hairline">
+                    Document
+                  </th>
+                  <th class="bg-canvas-soft-2/50 dark:bg-canvas-soft-2 text-caption-mono font-mono text-mute uppercase px-4 py-3 text-left border-b border-hairline">
+                    Format & Size
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {specs.map((spec) => (
+                  <tr>
+                    <td class="text-body-sm-strong text-ink px-4 py-3.5 border-b border-hairline">
+                      {spec.label}
+                    </td>
+                    <td class="text-body-sm text-body font-mono px-4 py-3.5 border-b border-hairline">
+                      {spec.value}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <p class="text-caption text-mute mt-3 font-mono">
+          Last verified: {lastVerified}
+        </p>
+      </section>
+    )}
+
+    <!-- Content Sections -->
+    {sections.map((section) => (
+      <section class="mb-12">
+        <h2 class="text-display-md text-ink font-semibold tracking-[-0.96px] mb-4">
+          {section.heading}
+        </h2>
+        <div class="space-y-4">
+          {section.body.map((paragraph) => (
+            <p class="text-body-md text-body leading-relaxed">
+              {paragraph}
+            </p>
+          ))}
+        </div>
+      </section>
+    ))}
+
+    <!-- Privacy Callout -->
+    <section class="mb-12">
+      <div class="rounded-lg bg-canvas border border-hairline p-6 shadow-level-3">
+        <div class="flex items-start gap-3">
+          <div class="flex-shrink-0 w-10 h-10 rounded-full bg-cyan-deep/10 flex items-center justify-center mt-0.5">
+            <i class="fa-solid fa-shield-halved text-cyan-deep" aria-hidden="true"></i>
+          </div>
+          <div>
+            <h3 class="text-display-sm text-ink font-semibold tracking-[-0.6px] mb-2">
+              Your files stay on your device.
+            </h3>
+            <p class="text-body-md text-body leading-relaxed">
+              {privacyNote}
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Accordion Section -->
+    <section class="border-t border-hairline pt-12 mb-12">
+      <h2 class="text-display-md text-ink font-semibold tracking-[-0.96px] mb-8">
+        Frequently Asked Questions.
+      </h2>
+      <div class="space-y-4" id="seo-faq">
+        {faq.map((item, index) => (
+          <div class="border border-hairline rounded-lg bg-canvas overflow-hidden shadow-level-2 faq-item">
+            <button
+              class="w-full flex items-center justify-between p-5 text-left text-body-md-strong text-ink hover:bg-canvas-soft transition-colors select-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none"
+              aria-expanded="false"
+              aria-controls={`seo-faq-ans-${index}`}
+            >
+              <span>{item.q}</span>
+              <i
+                class="fa-solid fa-chevron-down text-mute text-sm transition-transform duration-200 flex-shrink-0 ml-4"
+                aria-hidden="true"
+              ></i>
+            </button>
+            <div
+              id={`seo-faq-ans-${index}`}
+              class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out faq-answer"
+            >
+              <div class="p-5 pt-0 text-body-sm text-body border-t border-hairline/50 mt-4 leading-relaxed">
+                {item.a}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Cross Links -->
+    {crossLinks && crossLinks.length > 0 && (
+      <section class="border-t border-hairline pt-12 mb-12">
+        <h2 class="text-display-sm text-ink font-semibold tracking-[-0.6px] mb-6">
+          Related tools.
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          {crossLinks.map((link) => (
+            <a
+              href={link.href}
+              class="group flex items-center justify-between p-4 rounded-lg bg-canvas border border-hairline shadow-level-2 hover:shadow-level-3 hover:border-hairline-strong transition-all duration-200"
+            >
+              <span class="text-body-sm-strong text-ink group-hover:text-primary transition-colors">
+                {link.label}
+              </span>
+              <i class="fa-solid fa-arrow-right text-mute group-hover:text-primary text-xs transition-all group-hover:translate-x-0.5 duration-200" aria-hidden="true"></i>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
+
+    <!-- Bottom CTA -->
+    <section class="border-t border-hairline pt-8 text-center">
+      <h2 class="text-display-sm text-ink font-semibold mb-6">
+        {targetLabel
+          ? `Compress your PDF to ${targetLabel} now.`
+          : "Start compressing your PDFs."}
+      </h2>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a
+          href={compressorLink}
+          class="px-6 h-[48px] bg-primary text-on-primary text-button-lg rounded-pill hover:bg-black transition-all inline-flex items-center justify-center shadow-level-3 hover:scale-[1.02] duration-200"
+        >
+          Start Compressing
+        </a>
+        <a
+          href="/compress-pdf"
+          class="px-6 h-[48px] bg-canvas text-ink border border-hairline text-button-lg rounded-pill hover:bg-canvas-soft transition-all inline-flex items-center justify-center shadow-level-2 hover:scale-[1.02] duration-200"
+        >
+          General Compressor
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<!-- FAQ Accordion Script -->
+<script is:inline>
+  document.addEventListener("DOMContentLoaded", () => {
+    const faqContainer = document.getElementById("seo-faq");
+    if (!faqContainer) return;
+
+    faqContainer.addEventListener("click", (e) => {
+      const btn = e.target.closest("button[aria-expanded]");
+      if (!btn) return;
+
+      const item = btn.closest(".faq-item");
+      if (!item) return;
+
+      const answer = item.querySelector(".faq-answer");
+      const icon = btn.querySelector("i");
+      const isOpen = btn.getAttribute("aria-expanded") === "true";
+
+      // Close all others
+      faqContainer.querySelectorAll(".faq-item").forEach((other) => {
+        if (other !== item) {
+          const otherBtn = other.querySelector("button[aria-expanded]");
+          const otherAnswer = other.querySelector(".faq-answer");
+          const otherIcon = otherBtn?.querySelector("i");
+          if (otherBtn) otherBtn.setAttribute("aria-expanded", "false");
+          if (otherAnswer) otherAnswer.style.maxHeight = null;
+          if (otherIcon) otherIcon.style.transform = "";
+        }
+      });
+
+      // Toggle current
+      if (isOpen) {
+        btn.setAttribute("aria-expanded", "false");
+        answer.style.maxHeight = null;
+        if (icon) icon.style.transform = "";
+      } else {
+        btn.setAttribute("aria-expanded", "true");
+        answer.style.maxHeight = answer.scrollHeight + "px";
+        if (icon) icon.style.transform = "rotate(180deg)";
+      }
+    });
+  });
+</script>

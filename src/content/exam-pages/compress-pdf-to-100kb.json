@@ -1,0 +1,66 @@
+{
+  "slug": "compress-pdf-to-100kb",
+  "title": "Compress PDF to 100 KB — For Strict Portal Limits | Zcompressor",
+  "metaDescription": "Compress PDF files to 100 KB for portals with the tightest upload limits. Free client-side compression — understand what's preserved and what's lost at maximum compression. No server uploads.",
+  "targetSizeKB": 100,
+  "docType": "Size-specific",
+  "heroHeadline": "Compress PDF to 100 KB.",
+  "heroDescription": "The tightest common limit. When your portal demands 100 KB, you need a tool that can hit it — and honest guidance about what that compression level means for your document.",
+  "eyebrowText": "100 KB Target",
+  "privacyNote": "Your document never leaves your browser. Compression runs 100% client-side using browser APIs — no server uploads, no data collection, no account required.",
+  "sections": [
+    {
+      "heading": "When even light compression isn't enough.",
+      "body": [
+        "100 KB is aggressive. A typical single-page colour scan at 300 DPI starts at 3–4 MB — compressing to 100 KB means reducing to roughly 2.5–3.3% of the original file size. At this level, the compressor must downsample images significantly and re-encode at lower quality.",
+        "This works well for text-heavy documents with minimal graphics. For documents with colour photographs, detailed seals, or fine print, some visual detail will be lost. This is a physical constraint of file size, not a limitation of the tool."
+      ]
+    },
+    {
+      "heading": "What changes at 100 KB.",
+      "body": [
+        "At 100 KB compression, expect the following compared to higher size targets:",
+        "• Printed text: Remains readable in most cases, though fine print below 8pt may show softening.",
+        "• Official seals and stamps: Circular seals and embossed stamps lose fine edge detail. The seal is recognisable but the micro-text around the seal perimeter may not be individually legible.",
+        "• Photographs: Passport-size photos embedded in certificates will show visible compression artifacts. Facial features remain identifiable but the image will appear noticeably softer than the original.",
+        "• Watermarks: Light background watermarks (common on government certificates) may become very faint or invisible.",
+        "• Colour gradients: Smooth gradients in logos or decorative elements may show banding."
+      ]
+    },
+    {
+      "heading": "How to verify before submitting.",
+      "body": [
+        "Always open your compressed PDF and check these three things before uploading to any portal:",
+        "1. Your full name is clearly readable without zooming in.",
+        "2. The certificate number or registration number is legible.",
+        "3. The issuing authority's seal or stamp is recognisable (it doesn't need to be crisp — just identifiable).",
+        "If any of these fail, your source scan may be too detailed for 100 KB. Try scanning at 150–200 DPI instead of 300 DPI — this produces a smaller source file that needs less compression, resulting in better quality at the same target size."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "Which portals require PDFs under 100 KB?",
+      "a": "100 KB limits are less common than 200–500 KB limits. They're sometimes found on older state government portals, certain scholarship application forms, and some university admission portals. Always check your specific portal's current notification for the exact limit."
+    },
+    {
+      "q": "Can I compress a multi-page PDF to 100 KB?",
+      "a": "Technically yes, but quality will be severely impacted for documents with more than one page of scanned images. Each page gets roughly 50 KB or less of budget. For multi-page documents, check if your portal accepts a higher size limit or allows splitting the document across multiple upload fields."
+    },
+    {
+      "q": "Why does my 100 KB PDF look significantly worse than 200 KB?",
+      "a": "The quality difference between 100 KB and 200 KB is more noticeable than between 200 KB and 300 KB. Going from 200 KB to 100 KB halves the available data, forcing much more aggressive image downsampling. If your portal accepts 200 KB, use that instead — the visual quality improvement is substantial."
+    },
+    {
+      "q": "How can I get better quality at 100 KB?",
+      "a": "Start with a lower-resolution scan (150–200 DPI instead of 300 DPI). Scan in grayscale instead of colour if your document doesn't require colour. Both reduce the source file size, meaning less aggressive compression is needed to hit 100 KB, which preserves more detail."
+    }
+  ],
+  "crossLinks": [
+    { "href": "/compress-pdf-to-200kb", "label": "Compress PDF to 200 KB" },
+    { "href": "/compress-pdf-to-300kb", "label": "Compress PDF to 300 KB" },
+    { "href": "/compress-pdf-to-500kb", "label": "Compress PDF to 500 KB" },
+    { "href": "/compress-pdf", "label": "General PDF Compressor" }
+  ],
+  "lastVerified": "2026-07-15"
+}

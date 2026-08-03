@@ -22,6 +22,22 @@
     {
       "q": "What is the SSC PDF size limit for certificates?",
       "a": "For SSC posts requiring certificate uploads, the maximum file size for PDFs is typically 500 KB."
+    },
+    {
+      "q": "Which SSC exams require PDF document uploads?",
+      "a": "While SSC CGL and CHSL mainly request photographs and signatures in JPG, Phase/Selection Post notifications and Phase IX/X/XI/XII document verification stages require uploading experience proofs, degree marksheets, and caste certificates in PDF format up to 500 KB."
+    },
+    {
+      "q": "Can I compress multi-page SSC marksheets into a single PDF under 500 KB?",
+      "a": "Yes. Zcompressor handles multi-page PDF documents smoothly. A 4-page scanned marksheet PDF will be compressed to ~400 KB while retaining full legibility across every page."
+    },
+    {
+      "q": "What resolution should I scan my documents at for SSC portal uploads?",
+      "a": "We recommend scanning your original certificates at 200 DPI in color or grayscale. A 200 DPI scan offers an optimal balance between visual clarity and initial file size, making local compression to 500 KB fast and seamless."
+    },
+    {
+      "q": "Is Zcompressor safe for SSC candidate certificates?",
+      "a": "Yes. Processing is 100% browser-based. Your documents stay inside your device, avoiding third-party server risks."
     }
   ],
   "specsHeading": "SSC document upload specifications",

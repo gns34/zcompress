@@ -34,6 +34,22 @@
     {
       "q": "Can I compress my UPSC PDF to exactly 300 KB?",
       "a": "Yes, our custom compression slider allows you to target 300 KB. However, we recommend selecting 250 KB. The visual difference is indistinguishable, and you guarantee your file stays safely below the server's byte cap."
+    },
+    {
+      "q": "Why does UPSC reject my PDF even when it is 299 KB?",
+      "a": "UPSC servers calculate file size using binary bytes (1 KB = 1024 bytes). If your operating system reports 299 KB (decimal), the file might actually be 306,000 bytes, which exceeds UPSC's 307,200 byte limit. Setting a target of 250 KB ensures your file passes both binary and decimal validation."
+    },
+    {
+      "q": "Is it safe to compress confidential government identity proofs on Zcompressor?",
+      "a": "Yes, 100% safe. Zcompressor uses browser-native WebAssembly APIs. Your PDF certificates are processed entirely inside your computer or smartphone's memory. No file is ever uploaded to external servers or logged in a database."
+    },
+    {
+      "q": "What file format is accepted for UPSC Photo ID and Certificates?",
+      "a": "Certificates (such as Caste, PwBD, Matriculation, or Age proof) must be uploaded in PDF format only. Photographs and signatures must be uploaded in JPG/JPEG format."
+    },
+    {
+      "q": "How can I check if my compressed UPSC certificate is readable?",
+      "a": "After compressing, open the downloaded PDF and zoom in to 100%. Check that your name, registration number, date of birth, issuing authority stamp, and signature are clear and legible before uploading to the UPSC OTR portal."
     }
   ],
   "specsHeading": "UPSC CSE / OTR upload specifications",

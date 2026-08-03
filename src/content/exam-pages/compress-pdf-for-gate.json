@@ -27,6 +27,18 @@
     {
       "q": "How do I make sure my GATE certificate is legible after compression?",
       "a": "Our browser-based engine applies a specialized downsampling algorithm that preserves fine black text while compressing the background, keeping signatures and seal numbers crisp."
+    },
+    {
+      "q": "Can password-protected PDFs be uploaded to the GOAPS / GATE portal?",
+      "a": "No, GOAPS (GATE Online Application Processing System) will reject password-protected PDF files or flag them with a 'Defect Status'. Ensure your file is unencrypted before compressing and uploading."
+    },
+    {
+      "q": "What should I do if my GATE certificate PDF is rejected for Defect Status?",
+      "a": "Check two things: 1) Ensure the file size is strictly under 300 KB (target 250 KB with Zcompressor). 2) Ensure the PDF does not contain special characters or spaces in its filename (use names like category_certificate.pdf)."
+    },
+    {
+      "q": "Are my educational & category certificates uploaded securely?",
+      "a": "Yes. Zcompressor runs completely client-side in your web browser memory. Your documents never reach any server or third-party database."
     }
   ],
   "specsHeading": "GATE document upload specifications",

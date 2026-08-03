@@ -23,6 +23,22 @@
     {
       "q": "What is the PDF size limit for NEET certificates?",
       "a": "NEET certificate PDFs (Category, PwBD, Citizenship, Class 10) must be between 50 KB and 300 KB."
+    },
+    {
+      "q": "Which documents must be uploaded in PDF format for NEET?",
+      "a": "NTA (National Testing Agency) requires the Class 10 Pass Certificate, Category Certificate (SC/ST/OBC-NCL/EWS), PwBD Certificate, and Citizenship Certificate to be uploaded strictly as PDF files."
+    },
+    {
+      "q": "What happens if my NEET Class 10 certificate is below 50 KB?",
+      "a": "NTA's system will display an error if the uploaded PDF is less than 50 KB or greater than 300 KB. Our compressor allows you to select a custom target size like 150 KB or 250 KB, staying safely inside the valid 50 KB to 300 KB bracket."
+    },
+    {
+      "q": "Can I compress a mobile scanner scan of my NEET certificate?",
+      "a": "Yes, mobile scanner apps (like Adobe Scan or CamScanner) usually produce PDFs around 2 MB to 5 MB. Zcompressor shrinks these scanned PDFs down to 100-250 KB directly on your smartphone without losing essential legibility."
+    },
+    {
+      "q": "Does Zcompressor store my NEET documents or Aadhaar details?",
+      "a": "No, absolutely not. Zcompressor runs 100% locally inside your web browser. No server uploads occur, ensuring your marksheets, identity cards, and personal records remain private."
     }
   ],
   "specsHeading": "NEET document upload specifications",

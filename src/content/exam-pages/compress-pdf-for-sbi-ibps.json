@@ -22,6 +22,22 @@
     {
       "q": "What is the PDF size limit for SBI and IBPS applications?",
       "a": "For bank exam applications, the maximum size limit for supporting document PDFs (such as resume, educational records, age proof) is 500 KB."
+    },
+    {
+      "q": "Which documents require PDF format in IBPS / SBI PO forms?",
+      "a": "The Brief Resume (for Specialist Officer & PO interviews), Educational Marksheets, Category/Caste Certificates, and Work Experience Certificates must be uploaded as PDF files. Photo, Signature, Left Thumb Impression, and Handwritten Declaration must be uploaded in JPG/JPEG format."
+    },
+    {
+      "q": "Why is my 490 KB resume PDF being rejected by IBPS portal?",
+      "a": "IBPS server limits are strict. Sometimes a file showing 490 KB in Windows Explorer is calculated slightly higher by the server due to binary vs decimal conversion (KiB vs KB). Target 450 KB using Zcompressor's custom slider to guarantee successful upload."
+    },
+    {
+      "q": "Can I compress my resume PDF on a mobile device?",
+      "a": "Yes. Zcompressor is fully responsive and runs on iOS Safari, Android Chrome, and mobile browsers. You can select your PDF resume from your mobile files and compress it to under 500 KB directly on your phone."
+    },
+    {
+      "q": "Are my confidential resume & experience documents safe?",
+      "a": "Completely safe. Processing happens 100% locally in your browser memory. Your resume, phone number, address, and marksheets are never transmitted over the internet to remote servers."
     }
   ],
   "specsHeading": "SBI PO & IBPS upload specifications",

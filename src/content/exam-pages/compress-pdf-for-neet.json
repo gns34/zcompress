@@ -1,0 +1,41 @@
+{
+  "slug": "compress-pdf-for-neet",
+  "title": "Compress PDF for NEET — Class 10 & Category Certificate Tool",
+  "metaDescription": "Compress PDF documents to exactly 300 KB for NEET registration. High quality, safe, and secure client-side PDF compressor for category and class 10 certificates.",
+  "exam": "NEET",
+  "targetSizeKB": 300,
+  "docType": "Exam-specific",
+  "heroHeadline": "Compress PDF for NEET.",
+  "heroDescription": "Reduce your Category, Citizenship, PwBD, or Class 10 certificates to under 300 KB for NEET application form. Run 100% locally in your browser.",
+  "eyebrowText": "NEET Upload Spec",
+  "privacyNote": "Your document never leaves your browser. Compression runs 100% client-side using browser APIs — no server uploads, no data collection, no account required.",
+  "sections": [
+    {
+      "heading": "NEET Document Specifications.",
+      "body": [
+        "The National Eligibility cum Entrance Test (NEET) requires candidates to upload several documents in PDF format: Category certificates, PwBD certificates, Citizenship certificates, and Class 10 certificates.",
+        "The size range for these scanned PDF files must be between 50 KB and 300 KB. It is critical that all details, such as school names, marks, and official stamp details remain legible.",
+        "If a file is blurry or illegible, it may cause problems during online document verification, potentially halting your application progress."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is the PDF size limit for NEET certificates?",
+      "a": "NEET certificate PDFs (Category, PwBD, Citizenship, Class 10) must be between 50 KB and 300 KB."
+    }
+  ],
+  "specsHeading": "NEET document upload specifications",
+  "specs": [
+    { "label": "Certificate PDF Size (Category/PwBD/Citizenship)", "value": "50 KB to 300 KB" },
+    { "label": "Class 10 Certificate PDF Size", "value": "50 KB to 300 KB" },
+    { "label": "Passport Photograph (JPG)", "value": "10 KB to 200 KB" },
+    { "label": "Postcard Photograph (JPG)", "value": "10 KB to 200 KB" }
+  ],
+  "crossLinks": [
+    { "href": "/compress-pdf-for-upsc", "label": "Compress PDF for UPSC" },
+    { "href": "/compress-pdf-for-gate", "label": "Compress PDF for GATE" },
+    { "href": "/compress-pdf-to-300kb", "label": "Compress PDF to 300 KB" }
+  ],
+  "lastVerified": "2026-08-03"
+}

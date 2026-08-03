@@ -1,0 +1,38 @@
+{
+  "slug": "compress-pdf-for-ssc",
+  "title": "Compress PDF for SSC — Post-Specific Document Tool | Zcompressor",
+  "metaDescription": "Compress scanned PDFs for SSC online application forms to under 500 KB. Highly secure client-side compression. No watermarks.",
+  "exam": "SSC",
+  "targetSizeKB": 500,
+  "docType": "Exam-specific",
+  "heroHeadline": "Compress PDF for SSC.",
+  "heroDescription": "Reduce certificates and experience documents to under 500 KB for Staff Selection Commission (SSC) applications. Completely local and secure.",
+  "eyebrowText": "SSC Portal Spec",
+  "privacyNote": "Your document never leaves your browser. Compression runs 100% client-side using browser APIs — no server uploads, no data collection, no account required.",
+  "sections": [
+    {
+      "heading": "SSC Document Upload Rules.",
+      "body": [
+        "While Staff Selection Commission (SSC) portals primarily demand JPEGs for photographs and signatures, certain post categories and selection posts require uploading supporting qualifications or experience proofs in PDF format.",
+        "The standard limit for these scanned PDF files is 500 KB. Running local browser-based compression ensures your high-resolution scanner files are reduced to this exact target size while keeping the text fully readable."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is the SSC PDF size limit for certificates?",
+      "a": "For SSC posts requiring certificate uploads, the maximum file size for PDFs is typically 500 KB."
+    }
+  ],
+  "specsHeading": "SSC document upload specifications",
+  "specs": [
+    { "label": "Scanned Certificate PDF Size", "value": "10 KB to 500 KB" },
+    { "label": "Candidate Photograph (JPG)", "value": "20 KB to 50 KB" },
+    { "label": "Candidate Signature (JPG)", "value": "10 KB to 20 KB" }
+  ],
+  "crossLinks": [
+    { "href": "/compress-pdf-for-sbi-ibps", "label": "Compress PDF for SBI / IBPS" },
+    { "href": "/compress-pdf-to-500kb", "label": "Compress PDF to 500 KB" }
+  ],
+  "lastVerified": "2026-08-03"
+}

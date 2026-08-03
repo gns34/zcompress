@@ -1,0 +1,53 @@
+{
+  "slug": "compress-pdf-for-upsc",
+  "title": "Compress PDF for UPSC — Exact 300 KB Certificate Tool | Zcompressor",
+  "metaDescription": "Compress PDF documents to exactly 300 KB for UPSC One Time Registration (OTR) and application portal uploads. 100% client-side, private, and secure.",
+  "exam": "UPSC",
+  "targetSizeKB": 300,
+  "docType": "Exam-specific",
+  "heroHeadline": "Compress PDF for UPSC.",
+  "heroDescription": "Prepare your certificates for UPSC registration. Shrink documents to the strict 300 KB limit directly on your device — no uploads, no privacy risk.",
+  "eyebrowText": "UPSC OTR Spec",
+  "privacyNote": "Your document never leaves your browser. Compression runs 100% client-side using browser APIs — no server uploads, no data collection, no account required.",
+  "sections": [
+    {
+      "heading": "UPSC Document Upload Requirements.",
+      "body": [
+        "The Union Public Service Commission (UPSC) enforces strict size limits on PDF certificates, such as reservation category proofs, age relaxation certificates, and educational documents.",
+        "Under the UPSC One Time Registration (OTR) system, scanned PDF certificates must be not less than 20 KB and not exceed 300 KB. Files outside this range are rejected by the server.",
+        "We recommend targetting around 250 KB to prevent decimal/binary size mismatches (300 KB vs 300 KiB) that often lead to unexpected upload rejections."
+      ]
+    },
+    {
+      "heading": "How to name files for UPSC.",
+      "body": [
+        "UPSC's system is highly sensitive to naming conventions. Avoid using special characters, spaces, or uppercase letters in your file name.",
+        "Format your filename clearly, for example: 'caste_certificate.pdf' or 'matriculation_proof.pdf'. This ensures maximum compatibility and prevents portal errors."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is the UPSC PDF size limit for certificates?",
+      "a": "UPSC requires scanned document PDFs to be between 20 KB and 300 KB. Any file larger than 300 KB or smaller than 20 KB will fail to upload."
+    },
+    {
+      "q": "Can I compress my UPSC PDF to exactly 300 KB?",
+      "a": "Yes, our custom compression slider allows you to target 300 KB. However, we recommend selecting 250 KB. The visual difference is indistinguishable, and you guarantee your file stays safely below the server's byte cap."
+    }
+  ],
+  "specsHeading": "UPSC CSE / OTR upload specifications",
+  "specs": [
+    { "label": "Certificate/Document PDF Size", "value": "20 KB to 300 KB" },
+    { "label": "Candidate Photograph (JPG)", "value": "20 KB to 200 KB" },
+    { "label": "Candidate Signature (JPG)", "value": "20 KB to 200 KB" },
+    { "label": "File Format", "value": "PDF Only (for certificates)" }
+  ],
+  "crossLinks": [
+    { "href": "/compress-pdf-for-gate", "label": "Compress PDF for GATE" },
+    { "href": "/compress-pdf-for-neet", "label": "Compress PDF for NEET" },
+    { "href": "/compress-pdf-to-300kb", "label": "Compress PDF to 300 KB" },
+    { "href": "/compress-pdf", "label": "General PDF Compressor" }
+  ],
+  "lastVerified": "2026-08-03"
+}

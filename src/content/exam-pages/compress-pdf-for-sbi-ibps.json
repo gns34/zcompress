@@ -1,0 +1,40 @@
+{
+  "slug": "compress-pdf-for-sbi-ibps",
+  "title": "Compress PDF for SBI PO & IBPS — Resume & Certificate Tool",
+  "metaDescription": "Compress PDF resumes and certificates to exactly 500 KB for bank exam applications (SBI PO/Clerk, IBPS PO/Clerk). Free local client-side tool.",
+  "exam": "SBI/IBPS",
+  "targetSizeKB": 500,
+  "docType": "Exam-specific",
+  "heroHeadline": "Compress PDF for SBI PO & IBPS.",
+  "heroDescription": "Compress your brief resume, ID proofs, and educational certificates to under 500 KB for banking exam registrations. Fast and secure browser processing.",
+  "eyebrowText": "Bank Exam Spec",
+  "privacyNote": "Your document never leaves your browser. Compression runs 100% client-side using browser APIs — no server uploads, no data collection, no account required.",
+  "sections": [
+    {
+      "heading": "Bank Exam Document Specifications.",
+      "body": [
+        "Portals run by the Institute of Banking Personnel Selection (IBPS) and State Bank of India (SBI) require PDF uploads for resumes, ID proofs, age relaxation certificates, and work experience letters.",
+        "These documents must be scanned and uploaded as PDF files, with a strict size cap of 500 KB. Text legibility is critical, as banking applications undergo rigorous automated and manual validation processes."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is the PDF size limit for SBI and IBPS applications?",
+      "a": "For bank exam applications, the maximum size limit for supporting document PDFs (such as resume, educational records, age proof) is 500 KB."
+    }
+  ],
+  "specsHeading": "SBI PO & IBPS upload specifications",
+  "specs": [
+    { "label": "Scanned Certificates PDF Size", "value": "10 KB to 500 KB" },
+    { "label": "Brief Resume PDF Size", "value": "10 KB to 500 KB" },
+    { "label": "Handwritten Declaration (JPG)", "value": "50 KB to 100 KB" },
+    { "label": "Candidate Photograph (JPG)", "value": "20 KB to 50 KB" },
+    { "label": "Candidate Signature (JPG)", "value": "10 KB to 20 KB" }
+  ],
+  "crossLinks": [
+    { "href": "/compress-pdf-for-ssc", "label": "Compress PDF for SSC" },
+    { "href": "/compress-pdf-to-500kb", "label": "Compress PDF to 500 KB" }
+  ],
+  "lastVerified": "2026-08-03"
+}

@@ -53,6 +53,8 @@
     }
   ],
   "crossLinks": [
+    { "href": "/compress-pdf-for-ssc", "label": "Compress PDF for SSC" },
+    { "href": "/compress-pdf-for-sbi-ibps", "label": "Compress PDF for SBI / IBPS" },
     { "href": "/compress-pdf-to-200kb", "label": "Compress PDF to 200 KB" },
     { "href": "/compress-pdf-to-300kb", "label": "Compress PDF to 300 KB" },
     { "href": "/compress-pdf-to-1mb", "label": "Compress PDF to 1 MB" },

@@ -57,6 +57,8 @@
   ],
   "crossLinks": [
     { "href": "/compress-pdf-for-upsc", "label": "Compress PDF for UPSC" },
+    { "href": "/compress-pdf-for-gate", "label": "Compress PDF for GATE" },
+    { "href": "/compress-pdf-for-neet", "label": "Compress PDF for NEET" },
     { "href": "/compress-pdf-to-200kb", "label": "Compress PDF to 200 KB" },
     { "href": "/compress-pdf-to-500kb", "label": "Compress PDF to 500 KB" },
     { "href": "/compress-pdf", "label": "General PDF Compressor" }

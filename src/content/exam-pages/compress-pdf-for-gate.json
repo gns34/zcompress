@@ -1,0 +1,44 @@
+{
+  "slug": "compress-pdf-for-gate",
+  "title": "Compress PDF for GATE — SC/ST/PwD Certificate Tool | Zcompressor",
+  "metaDescription": "Compress PDF files for the GATE examination. Shrink SC, ST, OBC, and PwD certificates to under 300 KB. Secure, free client-side PDF compressor.",
+  "exam": "GATE",
+  "targetSizeKB": 300,
+  "docType": "Exam-specific",
+  "heroHeadline": "Compress PDF for GATE.",
+  "heroDescription": "Compress your SC, ST, OBC, or PwD certificates to the official GATE requirements. Processes 100% locally in your browser for absolute confidentiality.",
+  "eyebrowText": "GATE Certificate Spec",
+  "privacyNote": "Your document never leaves your browser. Compression runs 100% client-side using browser APIs — no server uploads, no data collection, no account required.",
+  "sections": [
+    {
+      "heading": "GATE Certificate Upload Requirements.",
+      "body": [
+        "When registering online for the Graduate Aptitude Test in Engineering (GATE), candidates claiming fee concession or reservation must upload supporting certificates (such as Category or PwD status) in PDF format.",
+        "The official requirements state that these PDFs must be between 10 KB and 300 KB. Legibility is crucial: names, dates, and issuing officer signatures must remain completely readable.",
+        "Do not password-protect your PDFs, as the GATE verification team will be unable to open them, leading to registration defects."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is the GATE PDF size limit?",
+      "a": "For category, PwD, and scribe certificates, GATE requires PDF files to be sized between 10 KB and 300 KB. The text must remain legible."
+    },
+    {
+      "q": "How do I make sure my GATE certificate is legible after compression?",
+      "a": "Our browser-based engine applies a specialized downsampling algorithm that preserves fine black text while compressing the background, keeping signatures and seal numbers crisp."
+    }
+  ],
+  "specsHeading": "GATE document upload specifications",
+  "specs": [
+    { "label": "Certificate PDF Size (Category/PwD)", "value": "10 KB to 300 KB" },
+    { "label": "Candidate Photograph (JPEG)", "value": "5 KB to 200 KB" },
+    { "label": "Candidate Signature (JPEG)", "value": "5 KB to 150 KB" }
+  ],
+  "crossLinks": [
+    { "href": "/compress-pdf-for-upsc", "label": "Compress PDF for UPSC" },
+    { "href": "/compress-pdf-for-neet", "label": "Compress PDF for NEET" },
+    { "href": "/compress-pdf-to-300kb", "label": "Compress PDF to 300 KB" }
+  ],
+  "lastVerified": "2026-08-03"
+}

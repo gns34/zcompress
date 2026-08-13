@@ -1,0 +1,64 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import { getCollection } from "astro:content";
+
+const articles = await getCollection("blog");
+---
+
+<Layout
+  title="PDF Compression & Document Engineering Blog — Zcompressor"
+  description="Guides, technical deep dives, and troubleshooting articles on PDF stream compression, document upload rejection causes, KB vs KiB sizing, and scanner optimization."
+  ogUrl="https://zcompressor.com/blog"
+>
+  <Header />
+
+  <main class="min-h-screen bg-canvas-soft text-ink py-16 px-6">
+    <div class="max-w-[1000px] mx-auto">
+      <!-- Eyebrow & Title -->
+      <div class="mb-12 border-b border-hairline pb-8">
+        <span class="text-caption-mono font-mono text-link-deep dark:text-cyan-deep uppercase tracking-wider block mb-3">
+          Engineering & Guides
+        </span>
+        <h1 class="text-display-lg md:text-display-xl text-ink font-semibold tracking-[-1.5px] md:tracking-[-2.4px] mb-4">
+          PDF Compression Blog.
+        </h1>
+        <p class="text-body-lg text-body text-balance">
+          Technical articles, document scanning guides, and portal rejection fixes written by Zcompressor engineering.
+        </p>
+      </div>
+
+      <!-- Articles Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
+        {articles.map((article) => (
+          <a
+            href={`/blog/${article.data.slug}`}
+            class="group flex flex-col justify-between p-6 rounded-lg bg-canvas border border-hairline shadow-level-2 hover:shadow-level-3 hover:border-hairline-strong transition-all duration-200"
+          >
+            <div>
+              <div class="flex items-center justify-between text-caption font-mono text-mute mb-3">
+                <span>{article.data.eyebrowText}</span>
+                <span>{article.data.readTime} read</span>
+              </div>
+              <h2 class="text-display-sm text-ink font-semibold tracking-[-0.6px] mb-3 group-hover:text-primary transition-colors">
+                {article.data.heroHeadline}
+              </h2>
+              <p class="text-body-sm text-body line-clamp-3 mb-6 leading-relaxed">
+                {article.data.heroDescription}
+              </p>
+            </div>
+            <div class="flex items-center justify-between border-t border-hairline/60 pt-4 text-caption font-mono text-mute">
+              <span>{article.data.publishedDate}</span>
+              <span class="text-link-deep dark:text-cyan-deep font-semibold group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">
+                Read guide <i class="fa-solid fa-arrow-right text-xs"></i>
+              </span>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </main>
+
+  <Footer />
+</Layout>

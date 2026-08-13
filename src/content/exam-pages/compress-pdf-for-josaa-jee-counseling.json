@@ -1,0 +1,54 @@
+{
+  "slug": "compress-pdf-for-josaa-jee-counseling",
+  "title": "Compress PDF for JoSAA JEE Counseling (50–300 KB) — Fast Client-Side Tool",
+  "metaDescription": "Compress PDF documents for JoSAA & CSAB JEE counseling seat allocation. Resize Category (GEN-EWS/OBC-NCL/SC/ST) and PwD certificates strictly between 50 KB and 300 KB.",
+  "exam": "JoSAA / JEE Main & Advanced Counseling",
+  "targetSizeKB": 300,
+  "docType": "Category Certificate (OBC-NCL/EWS/SC/ST), PwD Certificate, Class 10/12 Marksheet",
+  "heroHeadline": "Compress PDF for JoSAA JEE Counseling (50–300 KB).",
+  "heroDescription": "Resize JoSAA seat allotment certificates—OBC-NCL, GEN-EWS, SC/ST, PwD, and State Code of Eligibility documents—between 50 KB and 300 KB safely in browser.",
+  "eyebrowText": "Zero Server Storage",
+  "privacyNote": "Your JEE Rank Cards, Category Certificates, and Marksheets remain 100% private in browser RAM.",
+  "specsHeading": "JoSAA Document Upload Requirements & Size Limits.",
+  "specs": [
+    { "label": "Category Certificate (GEN-EWS / OBC-NCL / SC / ST)", "value": "PDF, 50 KB – 300 KB" },
+    { "label": "PwD Certificate", "value": "PDF, 50 KB – 300 KB" },
+    { "label": "Class 10 Marksheet / Birth Certificate", "value": "PDF, 100 KB – 500 KB" },
+    { "label": "Class 12 Marksheet & Passing Certificate", "value": "PDF, 100 KB – 500 KB" },
+    { "label": "Medical Certificate (Format Annexure 7)", "value": "PDF, Under 500 KB" },
+    { "label": "Crossed Cheque / Bank Passbook Copy", "value": "PDF / JPG, Under 500 KB" }
+  ],
+  "lastVerified": "August 2026",
+  "sections": [
+    {
+      "heading": "Navigating narrow 10–12 day JoSAA counseling windows.",
+      "body": [
+        "During JoSAA and CSAB seat allotment rounds, candidates receive an extremely narrow 2-to-3 day window per round to accept seats, pay fees, and upload verified certificates.",
+        "Uploading an invalid file format or exceeding the 300 KB ceiling for Category/PwD certificates will cause query raises by verifying officers at reporting centers (RCs). If queries are not resolved within 24 hours, seat allocations risk automatic cancellation."
+      ]
+    },
+    {
+      "heading": "Merging multiple documents into a single PDF before compression.",
+      "body": [
+        "Certain counseling rounds require combining multiple term marksheets or multiple pages of a medical certificate into a single PDF.",
+        "Ensure your merged document is under 300 KB so the portal system accepts your upload instantly without error flags."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is the exact file size for Category & PwD certificates in JoSAA?",
+      "a": "JoSAA specifies that Category (GEN-EWS, OBC-NCL, SC, ST) and PwD certificates must be in PDF format with a file size strictly between 50 KB and 300 KB."
+    },
+    {
+      "q": "Why is my OBC-NCL / EWS certificate rejected for size?",
+      "a": "State or Central authority digital certificates signed with electronic seals frequently exceed 500 KB due to embedded fonts and graphics. Compressing the PDF to 300 KB with Zcompressor removes bloated graphics while preserving the digital verification QR code."
+    }
+  ],
+  "crossLinks": [
+    { "href": "/compress-pdf-to-300kb", "label": "300 KB PDF Compressor Tool" },
+    { "href": "/compress-pdf-for-upsc", "label": "UPSC PDF Compressor" },
+    { "href": "/compress-pdf-for-neet-counseling", "label": "NEET Counseling PDF Tool" },
+    { "href": "/compress-pdf-to-500kb", "label": "500 KB PDF Compressor Tool" }
+  ]
+}

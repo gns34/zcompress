@@ -1,0 +1,53 @@
+{
+  "slug": "common-document-upload-rejection-reasons",
+  "title": "Top 7 Document Upload Rejection Reasons across Indian Exams & Portals",
+  "metaDescription": "Discover the top 7 reasons why UPSC, NSP, SSC, JoSAA, and State PSC portals reject document uploads. Fix file size caps, invalid file formats, blurry text, and password protection.",
+  "publishedDate": "August 2026",
+  "readTime": "5 min",
+  "author": "Zcompressor Engineering",
+  "heroHeadline": "Common document upload rejection reasons & how to fix them.",
+  "heroDescription": "Document rejections during government scholarship and exam registrations can cost candidates their application eligibility. Here are the top 7 failure modes and how to prevent them.",
+  "eyebrowText": "Application Checklist",
+  "sections": [
+    {
+      "heading": "1. Exceeding exact file size ceilings (KB / MB limit).",
+      "body": [
+        "Portals like NSP (200 KB), UPSC (300 KB), and SSC strictly enforce hard file size limits. Uploading a 205 KB PDF to a 200 KB portal ceiling triggers automated backend validation errors."
+      ]
+    },
+    {
+      "heading": "2. Password-protected or encrypted PDF files.",
+      "body": [
+        "Government document verification bots cannot open PDFs protected with user passwords or restricted editing permissions. Ensure your PDF is unencrypted before uploading."
+      ]
+    },
+    {
+      "heading": "3. Wrong file format extension (.JPG uploaded as .PDF or vice versa).",
+      "body": [
+        "Uploading a JPEG file renamed manually to '.pdf' will fail MIME-type server checks. Always use a proper document converter or native PDF export."
+      ]
+    },
+    {
+      "heading": "4. Blurry or illegible official seals & Roll Numbers.",
+      "body": [
+        "Over-compressing an image to an extreme low resolution can smudge Tehsildar seals, QR codes, or marksheet Roll Numbers, resulting in manual verification rejection."
+      ]
+    },
+    {
+      "heading": "5. Document size below minimum KB threshold.",
+      "body": [
+        "Portals like UPSC require documents to be at least 20 KB (between 20 KB and 300 KB). Compressing a 1-page text file down to 12 KB will cause a 'file too small' validation error."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "How can I test if my compressed PDF is acceptable before submitting?",
+      "a": "Open the compressed PDF in your device PDF viewer, zoom in to 100%, and verify that your Roll Number, Name, and seals are clear and unencrypted."
+    }
+  ],
+  "relatedArticles": [
+    { "href": "/blog/kb-vs-kib-file-size-explained", "title": "KB vs KiB File Size Limits Explained" },
+    { "href": "/blog/how-to-scan-documents-for-government-portals", "title": "How to Scan Documents for Government Portals" }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "slug": "pdf-compression-lossy-vs-lossless",
+  "title": "PDF Compression Lossy vs Lossless — Technical Breakdown & Comparison",
+  "metaDescription": "Understand lossy vs lossless PDF compression algorithms. Learn how Flate/Deflate stream encoding and JPEG image downsampling shrink PDF file size safely.",
+  "publishedDate": "August 2026",
+  "readTime": "4 min",
+  "author": "Zcompressor Engineering",
+  "heroHeadline": "PDF compression: lossy vs. lossless algorithms.",
+  "heroDescription": "A technical breakdown of how PDF stream encoding, Flate/Deflate algorithms, and lossy image DCT downsampling work together to reduce document file sizes.",
+  "eyebrowText": "Deep Dive",
+  "sections": [
+    {
+      "heading": "Lossless PDF stream compression (Flate / Deflate).",
+      "body": [
+        "Lossless compression reduces file size by reorganizing structural metadata, stripping duplicate font subsets, and applying Flate/Deflate zlib encoding to raw content streams.",
+        "Because lossless compression is 100% reversible, 0% visual quality is lost. However, lossless compression alone usually achieves only 10% to 25% size reduction if the PDF contains heavy scanned images."
+      ]
+    },
+    {
+      "heading": "Lossy image stream optimization (DCT & Downsampling).",
+      "body": [
+        "To achieve 70% to 90% size reductions (e.g. shrinking a 3 MB document under 200 KB), lossy image compression is required for embedded photo and scan streams.",
+        "Zcompressor intelligently separates vector text elements (which remain 100% lossless) from background raster graphics (which undergo smart bicubic resampling and JPEG DCT quantization)."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "Does Zcompressor use lossy or lossless compression?",
+      "a": "Zcompressor uses a hybrid model: 100% lossless compression for vector text, fonts, and layout structures, combined with smart lossy downsampling for heavy embedded images."
+    }
+  ],
+  "relatedArticles": [
+    { "href": "/blog/why-is-my-pdf-still-too-large", "title": "Why Is My PDF Still Too Large After Compression?" },
+    { "href": "/compress-pdf-without-losing-quality", "title": "Compress PDF Without Losing Quality" }
+  ]
+}

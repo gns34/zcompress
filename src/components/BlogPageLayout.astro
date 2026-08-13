@@ -1,0 +1,220 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+interface SectionItem {
+  heading: string;
+  body: string[];
+}
+
+interface FaqItem {
+  q: string;
+  a: string;
+}
+
+interface RelatedArticle {
+  href: string;
+  title: string;
+}
+
+interface Props {
+  slug: string;
+  title: string;
+  metaDescription: string;
+  publishedDate: string;
+  readTime: string;
+  author: string;
+  heroHeadline: string;
+  heroDescription: string;
+  eyebrowText: string;
+  sections: SectionItem[];
+  faq?: FaqItem[];
+  relatedArticles?: RelatedArticle[];
+}
+
+const {
+  slug,
+  title,
+  metaDescription,
+  publishedDate,
+  readTime,
+  author,
+  heroHeadline,
+  heroDescription,
+  eyebrowText,
+  sections,
+  faq,
+  relatedArticles,
+} = Astro.props;
+
+const canonicalUrl = `https://zcompressor.com/blog/${slug}`;
+
+// Build Article Schema
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  headline: heroHeadline,
+  description: metaDescription,
+  author: {
+    "@type": "Organization",
+    name: author,
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Zcompressor",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://res.cloudinary.com/dyo3ckrjq/image/upload/v1782469077/logo_folw2r.png",
+    },
+  },
+  datePublished: publishedDate,
+  mainEntityOfPage: canonicalUrl,
+};
+
+// Build FAQ Schema if present
+const faqSchema = faq && faq.length > 0 ? {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faq.map((item) => ({
+    "@type": "Question",
+    name: item.q,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: `<p>${item.a}</p>`,
+    },
+  })),
+} : null;
+---
+
+<Layout
+  title={title}
+  description={metaDescription}
+  ogUrl={canonicalUrl}
+  ogType="article"
+>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(articleSchema)} />
+  {faqSchema && <script type="application/ld+json" is:inline set:html={JSON.stringify(faqSchema)} />}
+
+  <Header />
+
+  <!-- Hero Section -->
+  <section class="relative bg-mesh-gradient overflow-hidden pt-20 pb-12 md:pt-28 md:pb-20 px-4 md:px-6 border-b border-hairline">
+    <div class="absolute inset-0 bg-grid-pattern opacity-[0.35] dark:opacity-[0.25] pointer-events-none z-0"></div>
+    <div class="absolute inset-0 bg-radial-spotlight pointer-events-none z-0"></div>
+
+    <div class="max-w-[800px] mx-auto relative z-10">
+      <!-- Breadcrumb -->
+      <nav class="flex items-center gap-2 text-caption-mono font-mono text-mute mb-6" aria-label="Breadcrumb">
+        <a href="/" class="hover:text-ink transition-colors">Home</a>
+        <span>/</span>
+        <a href="/blog" class="hover:text-ink transition-colors">Blog</a>
+        <span>/</span>
+        <span class="text-ink truncate">{slug}</span>
+      </nav>
+
+      <!-- Badge & Meta -->
+      <div class="flex flex-wrap items-center gap-3 mb-6">
+        <span class="px-3 py-1 rounded-full bg-canvas/70 dark:bg-canvas-soft-2/50 backdrop-blur-md border border-hairline text-caption-mono font-mono uppercase text-link-deep dark:text-cyan-deep">
+          {eyebrowText}
+        </span>
+        <span class="text-caption text-mute font-mono">
+          {publishedDate} • {readTime} read
+        </span>
+      </div>
+
+      <!-- Headline -->
+      <h1 class="text-display-lg md:text-display-xl text-ink font-semibold tracking-[-1.5px] md:tracking-[-2.4px] mb-4 text-balance">
+        {heroHeadline}
+      </h1>
+
+      <!-- Description -->
+      <p class="text-body-lg text-body text-balance leading-relaxed">
+        {heroDescription}
+      </p>
+    </div>
+  </section>
+
+  <!-- Article Main Body -->
+  <main class="py-12 md:py-16 px-4 md:px-6 max-w-[800px] mx-auto">
+    <article class="space-y-12">
+      {sections.map((section) => (
+        <section class="space-y-4">
+          <h2 class="text-display-md text-ink font-semibold tracking-[-0.96px] pt-4 border-t border-hairline/40">
+            {section.heading}
+          </h2>
+          {section.body.map((paragraph) => (
+            <p class="text-body-md text-body leading-relaxed">
+              {paragraph}
+            </p>
+          ))}
+        </section>
+      ))}
+
+      <!-- Interactive Tool Callout -->
+      <section class="my-12">
+        <div class="rounded-lg bg-canvas border border-hairline p-6 shadow-level-3">
+          <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+            <div>
+              <h3 class="text-display-sm text-ink font-semibold tracking-[-0.6px] mb-1">
+                Need to compress a PDF right now?
+              </h3>
+              <p class="text-body-sm text-body">
+                Use Zcompressor's zero-server, 100% private browser compressor.
+              </p>
+            </div>
+            <a
+              href="/compress-pdf"
+              class="px-5 h-[40px] bg-primary text-on-primary text-button-md rounded-pill hover:bg-black transition-all inline-flex items-center justify-center shadow-level-2 whitespace-nowrap"
+            >
+              Open Compressor
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ Section if present -->
+      {faq && faq.length > 0 && (
+        <section class="border-t border-hairline pt-12">
+          <h2 class="text-display-md text-ink font-semibold tracking-[-0.96px] mb-8">
+            Frequently Asked Questions.
+          </h2>
+          <div class="space-y-6">
+            {faq.map((item) => (
+              <div class="border border-hairline rounded-lg bg-canvas p-5 shadow-level-2">
+                <h4 class="text-body-md-strong text-ink mb-2">{item.q}</h4>
+                <p class="text-body-sm text-body leading-relaxed">{item.a}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
+      <!-- Related Articles if present -->
+      {relatedArticles && relatedArticles.length > 0 && (
+        <section class="border-t border-hairline pt-12">
+          <h2 class="text-display-sm text-ink font-semibold tracking-[-0.6px] mb-6">
+            Related guides & articles.
+          </h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {relatedArticles.map((article) => (
+              <a
+                href={article.href}
+                class="group p-5 rounded-lg bg-canvas border border-hairline shadow-level-2 hover:shadow-level-3 transition-all duration-200"
+              >
+                <span class="text-body-sm-strong text-ink group-hover:text-primary transition-colors block mb-1">
+                  {article.title}
+                </span>
+                <span class="text-caption text-mute flex items-center gap-1 group-hover:text-primary transition-colors">
+                  Read article <i class="fa-solid fa-arrow-right text-xs"></i>
+                </span>
+              </a>
+            ))}
+          </div>
+        </section>
+      )}
+    </article>
+  </main>
+
+  <Footer />
+</Layout>

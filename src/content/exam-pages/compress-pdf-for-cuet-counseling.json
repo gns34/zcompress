@@ -1,0 +1,39 @@
+{
+  "slug": "compress-pdf-for-cuet-counseling",
+  "title": "Compress PDF for CUET Counseling (50–300 KB) — Central Universities",
+  "metaDescription": "Compress PDF documents for CUET UG & PG counseling. Resize Category (SC/ST/OBC/EWS), PwD, and Marksheets between 50 KB and 300 KB locally in browser.",
+  "exam": "CUET UG / PG Counseling",
+  "targetSizeKB": 300,
+  "docType": "Category Certificate, PwD Certificate, Class 10/12 Marksheet, CUET Scorecard",
+  "heroHeadline": "Compress PDF for CUET Counseling (50–300 KB).",
+  "heroDescription": "Reduce Central Universities Common Entrance Test (CUET) admission upload documents—Category, PwD, Scorecards, and Marksheets—under 300 KB in browser.",
+  "eyebrowText": "Local In-Browser Tool",
+  "privacyNote": "Your CUET admission documents are processed 100% locally inside your browser memory.",
+  "specsHeading": "CUET Counseling Upload Specs.",
+  "specs": [
+    { "label": "Category Certificate (SC/ST/OBC/EWS)", "value": "PDF, 50 KB – 300 KB" },
+    { "label": "PwD / UDID Certificate", "value": "PDF, 50 KB – 300 KB" },
+    { "label": "Class 10 & Class 12 Marksheets", "value": "PDF, 100 KB – 500 KB" },
+    { "label": "CUET NTA Scorecard", "value": "PDF, 50 KB – 300 KB" }
+  ],
+  "lastVerified": "August 2026",
+  "sections": [
+    {
+      "heading": "CUET University portal document upload guidelines.",
+      "body": [
+        "University portals (DU CSAS, BHU, JNU, AU) processing CUET admission counselling require certificates in PDF format within NTA's standard 50–300 KB file band."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "What size PDF is needed for CUET admission forms?",
+      "a": "Category and PwD certificates generally require PDF files between 50 KB and 300 KB."
+    }
+  ],
+  "crossLinks": [
+    { "href": "/compress-pdf-to-300kb", "label": "300 KB PDF Compressor Tool" },
+    { "href": "/compress-pdf-for-josaa-jee-counseling", "label": "JoSAA JEE Counseling PDF Tool" },
+    { "href": "/compress-pdf-for-neet-counseling", "label": "NEET Counseling PDF Tool" }
+  ]
+}

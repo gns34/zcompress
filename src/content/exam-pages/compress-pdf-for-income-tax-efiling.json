@@ -1,0 +1,38 @@
+{
+  "slug": "compress-pdf-for-income-tax-efiling",
+  "title": "Compress PDF for Income Tax e-Filing Under 5 MB — Fast Tool",
+  "metaDescription": "Compress PDF attachments for Income Tax e-Filing portal (incometax.gov.in) under 5 MB. Reduce Form 16, bank statements, audit reports, and ITR documents locally.",
+  "targetSizeKB": 5120,
+  "docType": "Form 16, Bank Statements, Audit Reports, Notice Responses, Purchase Bills",
+  "heroHeadline": "Compress PDF for Income Tax e-Filing under 5 MB.",
+  "heroDescription": "Reduce Income Tax e-Proceedings and ITR response attachments—Form 16, Bank Statements, and Audit Reports—under 5 MB per file 100% locally in your browser.",
+  "eyebrowText": "100% Private Financial Data",
+  "privacyNote": "Your confidential financial records, PAN details, and tax audit files never cross remote cloud servers.",
+  "specsHeading": "Income Tax e-Filing Portal Attachment Limits.",
+  "specs": [
+    { "label": "Single Attachment File Limit", "value": "PDF, Under 5 MB (5120 KB)" },
+    { "label": "Maximum Number of Attachments", "value": "10 PDFs per submission" },
+    { "label": "Combined Zip Attachment Limit", "value": "50 MB Max Zip Size" }
+  ],
+  "lastVerified": "August 2026",
+  "sections": [
+    {
+      "heading": "Income Tax portal document submission rules.",
+      "body": [
+        "When responding to e-Proceedings, Section 143(1) / 148 notices, or attaching Form 16 and bank statements on incometax.gov.in, each individual PDF must not exceed 5 MB.",
+        "Scanned annual bank statements or multi-page tax audit books easily reach 15–30 MB. Zcompressor compresses these documents under 5 MB while maintaining financial table legibility."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is the attachment limit on the Income Tax e-Filing portal?",
+      "a": "The maximum file size for a single PDF attachment on the Income Tax e-Filing portal is 5 MB, with up to 10 PDF attachments permitted per response."
+    }
+  ],
+  "crossLinks": [
+    { "href": "/compress-pdf-to-1mb", "label": "Compress PDF to 1 MB" },
+    { "href": "/compress-pdf-for-email", "label": "Compress PDF for Email" },
+    { "href": "/reduce-pdf-file-size", "label": "Reduce PDF File Size" }
+  ]
+}

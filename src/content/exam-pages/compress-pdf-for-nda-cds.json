@@ -1,0 +1,39 @@
+{
+  "slug": "compress-pdf-for-nda-cds",
+  "title": "Compress PDF for NDA & CDS Exams (20–300 KB) — UPSC OTR Portal",
+  "metaDescription": "Compress PDF documents for UPSC NDA & CDS exam applications (upsconline.nic.in). Resize photo ID, educational certificates, and category proofs between 20 KB and 300 KB.",
+  "exam": "UPSC NDA & CDS",
+  "targetSizeKB": 300,
+  "docType": "Aadhaar Card, Passport, Educational Certificate, Category Certificate",
+  "heroHeadline": "Compress PDF for NDA & CDS Exams (20–300 KB).",
+  "heroDescription": "Resize UPSC NDA & CDS online application upload files—Photo ID, Educational Certificates, and Category Certificates—strictly between 20 KB and 300 KB.",
+  "eyebrowText": "Zero Upload Risk",
+  "privacyNote": "Your defense application documents never leave your browser sandbox.",
+  "specsHeading": "UPSC NDA / CDS Application Upload Limits (OTR Portal).",
+  "specs": [
+    { "label": "Photo ID Card (Aadhaar/Voter/Passport/PAN)", "value": "PDF, 20 KB – 300 KB" },
+    { "label": "Educational Qualification Certificate", "value": "PDF, 20 KB – 300 KB" },
+    { "label": "Category Certificate (SC/ST/OBC/EWS)", "value": "PDF, 20 KB – 300 KB" }
+  ],
+  "lastVerified": "August 2026",
+  "sections": [
+    {
+      "heading": "UPSC One Time Registration (OTR) rules for NDA & CDS.",
+      "body": [
+        "UPSC's application portal (upsconline.nic.in) handles NDA (National Defence Academy) and CDS (Combined Defence Services) exams.",
+        "All uploaded documents must be PDF format, un-password-protected, and strictly between 20 KB (minimum) and 300 KB (maximum)."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is the document file size range for UPSC NDA & CDS applications?",
+      "a": "Uploaded PDF documents on upsconline.nic.in must be between 20 KB and 300 KB in file size."
+    }
+  ],
+  "crossLinks": [
+    { "href": "/compress-pdf-for-upsc", "label": "UPSC PDF Compressor Tool" },
+    { "href": "/compress-pdf-to-300kb", "label": "300 KB PDF Compressor Tool" },
+    { "href": "/compress-pdf-to-200kb", "label": "200 KB PDF Compressor Tool" }
+  ]
+}

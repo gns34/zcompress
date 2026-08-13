@@ -1,0 +1,40 @@
+{
+  "slug": "compress-pdf-for-up-scholarship",
+  "title": "Compress PDF for UP Scholarship Under 200 KB — Online Free Tool",
+  "metaDescription": "Compress PDF documents for Uttar Pradesh Scholarship portal (scholarship.up.gov.in) under 200 KB. Reduce income, caste, domicile, and fee receipts fast.",
+  "exam": "UP Scholarship",
+  "targetSizeKB": 200,
+  "docType": "Income Certificate, Caste Certificate, Marksheets, Fee Receipt",
+  "heroHeadline": "Compress PDF for UP Scholarship under 200 KB.",
+  "heroDescription": "Quickly reduce Uttar Pradesh Scholarship & Fee Reimbursement Online System upload files under 200 KB directly in your browser.",
+  "eyebrowText": "Zero Upload Risk",
+  "privacyNote": "Your UP scholarship certificates are processed locally inside your web browser.",
+  "specsHeading": "UP Scholarship Portal Document Specifications.",
+  "specs": [
+    { "label": "Income Certificate (Aaye Praman Patra)", "value": "PDF, Under 200 KB" },
+    { "label": "Caste Certificate (Jati Praman Patra)", "value": "PDF, Under 200 KB" },
+    { "label": "Domicile Certificate (Nivas Praman Patra)", "value": "PDF, Under 200 KB" },
+    { "label": "High School / Intermediate Marksheet", "value": "PDF, Under 200 KB" },
+    { "label": "College Fee Receipt", "value": "PDF, Under 200 KB" }
+  ],
+  "lastVerified": "August 2026",
+  "sections": [
+    {
+      "heading": "UP Scholarship application upload rules.",
+      "body": [
+        "The UP scholarship portal (scholarship.up.gov.in) requires all supporting documents to be attached in PDF format under 200 KB. Oversized attachments block online submission and lead to student form rejections."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is the file size limit for UP scholarship portal?",
+      "a": "All document uploads on scholarship.up.gov.in must be under 200 KB in PDF format."
+    }
+  ],
+  "crossLinks": [
+    { "href": "/compress-pdf-to-200kb", "label": "Compress PDF to 200 KB" },
+    { "href": "/compress-pdf-for-nsp-scholarship", "label": "NSP Scholarship PDF Tool" },
+    { "href": "/compress-pdf-for-bihar-scholarship", "label": "Bihar Scholarship PDF Tool" }
+  ]
+}

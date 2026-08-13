@@ -1,0 +1,39 @@
+{
+  "slug": "batch-compress-pdf",
+  "title": "Batch Compress PDF Files Free — Multiple PDF Compression",
+  "metaDescription": "Batch compress multiple PDF files at once online for free. No file limits, no daily caps, no registration required. Download all compressed PDFs individually or in a ZIP file.",
+  "targetSizeKB": 300,
+  "docType": "Multiple PDFs, Document Sets, Portfolios, Application Packets",
+  "heroHeadline": "Batch compress multiple PDF files at once.",
+  "heroDescription": "Drag and drop multiple PDFs and compress them simultaneously in parallel browser threads. Download individually or in a single ZIP archive 100% free with zero caps.",
+  "eyebrowText": "Unlimited Batch Engine",
+  "privacyNote": "All files in your batch queue are compressed strictly inside local browser memory.",
+  "specsHeading": "Batch PDF Compressor Specifications.",
+  "specs": [
+    { "label": "Batch Queue File Limit", "value": "Unlimited Files per Batch" },
+    { "label": "Daily Task Limit", "value": "Unlimited (No Paywalls or Quotas)" },
+    { "label": "Download Format", "value": "Individual File Downloads or 1-Click ZIP Archive" },
+    { "label": "Execution Environment", "value": "Multi-threaded Client-Side WebAssembly" }
+  ],
+  "lastVerified": "August 2026",
+  "sections": [
+    {
+      "heading": "Why pay for batch PDF tools when your browser can do it free?",
+      "body": [
+        "Competitors like Smallpdf or iLovePDF restrict multi-file batch processing to expensive monthly subscription plans.",
+        "Zcompressor leverages your computer or phone's modern multi-core CPU to compress dozens of PDF documents in parallel directly inside your browser sandbox—completely free of charge."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "How many PDFs can I batch compress at once?",
+      "a": "There is no artificial file count limit. You can select 5, 20, or 50 PDFs and compress them all in one operation."
+    }
+  ],
+  "crossLinks": [
+    { "href": "/reduce-pdf-file-size", "label": "Reduce PDF File Size" },
+    { "href": "/compress-pdf-on-mobile", "label": "Compress PDF on Mobile" },
+    { "href": "/vs/smallpdf", "label": "Zcompressor vs Smallpdf" }
+  ]
+}

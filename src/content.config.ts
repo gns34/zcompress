@@ -26,4 +26,26 @@ const examPages = defineCollection({
   }),
 });
 
-export const collections = { examPages };
+const blog = defineCollection({
+  loader: glob({ pattern: '**/*.json', base: './src/content/blog' }),
+  schema: z.object({
+    slug: z.string(),
+    title: z.string(),
+    metaDescription: z.string(),
+    publishedDate: z.string(),
+    readTime: z.string(),
+    author: z.string().default('Zcompressor Engineering'),
+    heroHeadline: z.string(),
+    heroDescription: z.string(),
+    eyebrowText: z.string().default('Technical Guide'),
+    sections: z.array(z.object({
+      heading: z.string(),
+      body: z.array(z.string()),
+    })),
+    faq: z.array(z.object({ q: z.string(), a: z.string() })).optional(),
+    relatedArticles: z.array(z.object({ href: z.string(), title: z.string() })).optional(),
+  }),
+});
+
+export const collections = { examPages, blog };
+

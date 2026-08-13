@@ -1,0 +1,41 @@
+{
+  "slug": "compress-pdf-for-state-psc-exams",
+  "title": "Compress PDF for State PSC Exams (MPSC, TNPSC, KPSC, WBPSC, BPSC)",
+  "metaDescription": "Compress PDF documents for State Public Service Commission exams (MPSC, TNPSC, KPSC, WBPSC, BPSC, UPPSC). Resize certificates, marksheets, and identity proofs under 100 KB, 200 KB, 300 KB, or 500 KB.",
+  "exam": "State PSC Recruitment (MPSC, TNPSC, KPSC, WBPSC, BPSC)",
+  "docType": "Domicile, Marksheets, Category Certificate, Experience Certificate",
+  "heroHeadline": "Compress PDF for State PSC Exams.",
+  "heroDescription": "Resize certificates for State Public Service Commission applications—MPSC, TNPSC, KPSC, WBPSC, BPSC, UPPSC—to exact portal limits (100 KB, 200 KB, 300 KB, or 500 KB) locally in browser.",
+  "eyebrowText": "State PSC Hub",
+  "privacyNote": "Your State PSC recruitment application documents are optimized entirely in browser RAM without server transfers.",
+  "specsHeading": "Overview of Popular State PSC Document Upload Bandwidth Limits.",
+  "specs": [
+    { "label": "MPSC (Maharashtra PSC)", "value": "PDF, 50 KB – 500 KB" },
+    { "label": "TNPSC (Tamil Nadu PSC)", "value": "PDF, Under 200 KB" },
+    { "label": "KPSC (Karnataka PSC)", "value": "PDF, Under 300 KB" },
+    { "label": "WBPSC (West Bengal PSC)", "value": "PDF, Under 200 KB" },
+    { "label": "BPSC (Bihar PSC)", "value": "PDF, Under 100 KB / 500 KB" }
+  ],
+  "lastVerified": "August 2026",
+  "sections": [
+    {
+      "heading": "State PSC document requirements vary by portal.",
+      "body": [
+        "State Public Service Commissions each maintain distinct Online Application Systems (OTR/OAS). Document upload caps vary from 100 KB to 500 KB depending on the specific state and recruitment post.",
+        "Check your specific notification details below or select an exact file target KB tool to compress your certificates instantly."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "How do I compress my State PSC application PDF?",
+      "a": "Select the target KB size specified in your state PSC notification (100 KB, 200 KB, 300 KB, or 500 KB) and use Zcompressor to resize your PDF in seconds."
+    }
+  ],
+  "crossLinks": [
+    { "href": "/compress-pdf-to-100kb", "label": "Compress to 100 KB" },
+    { "href": "/compress-pdf-to-200kb", "label": "Compress to 200 KB" },
+    { "href": "/compress-pdf-to-300kb", "label": "Compress to 300 KB" },
+    { "href": "/compress-pdf-to-500kb", "label": "Compress to 500 KB" }
+  ]
+}

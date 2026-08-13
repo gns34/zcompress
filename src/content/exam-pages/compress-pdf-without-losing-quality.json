@@ -1,0 +1,39 @@
+{
+  "slug": "compress-pdf-without-losing-quality",
+  "title": "Compress PDF Without Losing Quality — Smart Vector Preservation",
+  "metaDescription": "Compress PDF file size without losing text quality or image clarity. Advanced browser-based smart DPI reduction and stream optimization. 100% free & secure.",
+  "targetSizeKB": 300,
+  "docType": "High-Res Scans, Graphic Reports, Vector Design Documents",
+  "heroHeadline": "Compress PDF without losing quality.",
+  "heroDescription": "Reduce PDF file size significantly while preserving crystal-clear vector typography, crisp logos, and readable document scans.",
+  "eyebrowText": "Smart Lossless & Lossy Stream Compression",
+  "privacyNote": "Your documents remain strictly in browser RAM throughout the compression cycle.",
+  "specsHeading": "Smart Quality Preserving Compression Specs.",
+  "specs": [
+    { "label": "Text Quality Engine", "value": "Vector Font Preservation (Zero Pixelation)" },
+    { "label": "Image Resampling", "value": "Bicubic Smart Downsampling (150–200 DPI Target)" },
+    { "label": "Metadata Optimization", "value": "Strips Unused Structural Bloat & Unreferenced Streams" },
+    { "label": "Processing Location", "value": "100% Local In-Browser WebAssembly" }
+  ],
+  "lastVerified": "August 2026",
+  "sections": [
+    {
+      "heading": "The science behind high-quality PDF compression.",
+      "body": [
+        "Unoptimized PDFs often carry heavy hidden bloat: redundant font subsets, uncompressed thumbnail caches, thumbnail XML metadata, and high-DPI camera rasters.",
+        "Zcompressor isolates background raster assets and re-encodes image streams using optimal JPEG color space downsampling while preserving document vector text layers intact. This produces smaller files that look visually indistinguishable from the original."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "Will my text look blurry after compression?",
+      "a": "No! True PDF text is stored as vector glyphs. Zcompressor never converts vector text into bitmap images, so your text stays pin-sharp at any zoom level."
+    }
+  ],
+  "crossLinks": [
+    { "href": "/compress-scanned-pdf", "label": "Compress Scanned PDF" },
+    { "href": "/reduce-pdf-file-size", "label": "Reduce PDF File Size" },
+    { "href": "/compress-pdf-to-300kb", "label": "Compress PDF to 300 KB" }
+  ]
+}

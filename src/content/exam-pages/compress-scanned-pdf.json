@@ -1,0 +1,39 @@
+{
+  "slug": "compress-scanned-pdf",
+  "title": "Compress Scanned PDF Files — Reduce Scanned Document Size",
+  "metaDescription": "Compress scanned PDF documents and image-heavy files. Reduce large multi-page scans from 20MB down to under 200KB or 500KB locally in your browser.",
+  "targetSizeKB": 300,
+  "docType": "Scanned Marksheets, Contracts, Book Scans, Physical Documents",
+  "heroHeadline": "Compress scanned PDF files.",
+  "heroDescription": "Shrink heavy scanned PDF documents and mobile scanner apps output from 20 MB+ down to under 200 KB, 300 KB, or 500 KB 100% locally in browser.",
+  "eyebrowText": "Scanned Raster Engine",
+  "privacyNote": "Your scanned physical certificates and personal contracts never leave your screen.",
+  "specsHeading": "Scanned PDF Optimization Benchmark.",
+  "specs": [
+    { "label": "Input File Type", "value": "Scanned PDF / Image-Based PDF" },
+    { "label": "Image Downsampling Target", "value": "150 DPI – 200 DPI Grayscale/Color" },
+    { "label": "Average Size Reduction", "value": "60% to 90% Compression Ratio" },
+    { "label": "Processing Speed", "value": "< 3 Seconds via WebAssembly" }
+  ],
+  "lastVerified": "August 2026",
+  "sections": [
+    {
+      "heading": "Why scanned PDFs are so huge.",
+      "body": [
+        "Physical documents scanned with home scanners or smartphone scanner apps capture millions of raw pixels per page. A single color scan at 600 DPI can produce a 5 MB to 10 MB file for just one page.",
+        "Zcompressor analyzes the image stream resolution, downsizes bloated raster dimensions, and applies efficient JPEG stream encoding to compress scanned PDFs rapidly."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "Can Zcompressor compress multi-page scanned books or contracts?",
+      "a": "Yes! Zcompressor processes multi-page scanned documents page by page in parallel WebAssembly threads without page count limits."
+    }
+  ],
+  "crossLinks": [
+    { "href": "/compress-pdf-without-losing-quality", "label": "Compress Without Quality Loss" },
+    { "href": "/compress-pdf-to-200kb", "label": "Compress PDF to 200 KB" },
+    { "href": "/batch-compress-pdf", "label": "Batch Compress PDFs" }
+  ]
+}

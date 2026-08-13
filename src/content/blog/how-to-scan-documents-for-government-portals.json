@@ -1,0 +1,42 @@
+{
+  "slug": "how-to-scan-documents-for-government-portals",
+  "title": "How to Scan Documents for Government Portals — Best Scanner Settings",
+  "metaDescription": "Learn the best scanner settings (DPI, color mode, file format) to scan marksheets, certificates, and ID cards for UPSC, NSP, SSC, and state PSC portal uploads.",
+  "publishedDate": "August 2026",
+  "readTime": "5 min",
+  "author": "Zcompressor Engineering",
+  "heroHeadline": "How to scan documents for government portals.",
+  "heroDescription": "Avoid document upload rejections by using optimal scanner resolution (150–200 DPI), grayscale color modes, and proper cropping before compressing your PDFs.",
+  "eyebrowText": "Scanning Guide",
+  "sections": [
+    {
+      "heading": "Optimal scanner resolution: 150 DPI to 200 DPI.",
+      "body": [
+        "Scanning at 300 DPI or 600 DPI is great for high-end printing, but produces unnecessarily huge file sizes (5 MB to 15 MB per page) for online form submissions.",
+        "For government applications (UPSC, NSP, JoSAA, SSC), set your scanner or mobile scanning app to 150 DPI or 200 DPI. This retains full legibility for stamps, signatures, and fine print while keeping raw file sizes manageable."
+      ]
+    },
+    {
+      "heading": "Choose Grayscale mode over 24-bit Full Color.",
+      "body": [
+        "Unless a document specifically requires full color (such as a passport photo), scan text marksheets, certificates, and income proofs in Grayscale or 8-bit Color mode. This instantly slashes file size by 66% without sacrificing text readability."
+      ]
+    },
+    {
+      "heading": "Crop dark table edges and background shadows.",
+      "body": [
+        "When using mobile scanner apps (Adobe Scan, CamScanner), ensure you crop out wooden desk backgrounds and heavy shadow borders around your document. Extraneous background graphics waste precious kilobytes."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "What scanner DPI should I use for PDF certificates?",
+      "a": "200 DPI Grayscale is the sweet spot for official certificate PDFs—offering sharp seal clarity and low file size."
+    }
+  ],
+  "relatedArticles": [
+    { "href": "/blog/why-is-my-pdf-still-too-large", "title": "Why Is My PDF Still Too Large After Compression?" },
+    { "href": "/blog/common-document-upload-rejection-reasons", "title": "Common Document Upload Rejection Reasons" }
+  ]
+}

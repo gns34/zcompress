@@ -1,0 +1,32 @@
+---
+import ExamPageLayout from "../components/ExamPageLayout.astro";
+import { getCollection } from "astro:content";
+
+export async function getStaticPaths() {
+  const PREBUILD_SLUGS = new Set([
+    "compress-pdf-for-gate",
+    "compress-pdf-for-neet",
+    "compress-pdf-for-sbi-ibps",
+    "compress-pdf-for-ssc",
+    "compress-pdf-for-upsc",
+    "compress-pdf-to-100kb",
+    "compress-pdf-to-1mb",
+    "compress-pdf-to-200kb",
+    "compress-pdf-to-300kb",
+    "compress-pdf-to-500kb",
+  ]);
+
+  const entries = await getCollection("examPages");
+  return entries
+    .filter((entry) => !PREBUILD_SLUGS.has(entry.data.slug))
+    .map((entry) => ({
+      params: { slug: entry.data.slug },
+      props: { entry },
+    }));
+}
+
+const { entry } = Astro.props;
+const data = entry.data;
+---
+
+<ExamPageLayout {...data} />

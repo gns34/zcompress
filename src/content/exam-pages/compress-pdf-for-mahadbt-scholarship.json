@@ -1,0 +1,51 @@
+{
+  "slug": "compress-pdf-for-mahadbt-scholarship",
+  "title": "Compress PDF for MahaDBT Scholarship Under 200 KB — Free Browser Tool",
+  "metaDescription": "Compress PDF files for Maharashtra MahaDBT scholarship portal (mahadbt.maharashtra.gov.in) under 200 KB. Reduce income certificate, domicile, and marksheets locally.",
+  "exam": "MahaDBT Scholarship",
+  "targetSizeKB": 200,
+  "docType": "Income Certificate, Domicile, Caste Certificate, Marksheets",
+  "heroHeadline": "Compress PDF for MahaDBT Scholarship under 200 KB.",
+  "heroDescription": "Resize Maharashtra MahaDBT portal upload files—Income Certificate, Domicile, Ration Card, and College Admission Receipts—under 200 KB 100% locally in browser.",
+  "eyebrowText": "Zero Server Uploads",
+  "privacyNote": "Your confidential state scholarship files never leave your device. All calculations occur inside your browser memory.",
+  "specsHeading": "MahaDBT Portal Document Upload Requirements.",
+  "specs": [
+    { "label": "Income Certificate (Tehsildar)", "value": "PDF, Under 200 KB" },
+    { "label": "Maharashtra Domicile Certificate", "value": "PDF, Under 200 KB" },
+    { "label": "Caste / Validity Certificate", "value": "PDF, Under 200 KB" },
+    { "label": "SSC / HSC / Degree Marksheet", "value": "PDF, Under 200 KB" },
+    { "label": "College Fee Receipt & Allotment Letter", "value": "PDF, Under 200 KB" }
+  ],
+  "lastVerified": "August 2026",
+  "sections": [
+    {
+      "heading": "MahaDBT document submission guidelines.",
+      "body": [
+        "The Aaple Sarkar DBT portal (MahaDBT) requires students applying for Rajarshi Chhatrapati Shahu Maharaj, Post-Matric, and EBC scholarships to upload verified PDF documents capped under 200 KB per entry.",
+        "Scanned government certificates often contain heavy background watermarks and stamp seals that increase PDF file sizes beyond the 200 KB portal limit."
+      ]
+    },
+    {
+      "heading": "Local compression built for student data privacy.",
+      "body": [
+        "Zcompressor processes your certificates locally. Sensitive personal identifiers like your Aadhaar number, income details, and domicile registration numbers remain strictly on your computer or smartphone screen."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is the maximum PDF size allowed on MahaDBT portal?",
+      "a": "Most document uploads on mahadbt.maharashtra.gov.in require files to be under 200 KB in PDF format."
+    },
+    {
+      "q": "Can I compress scanned income certificates from phone scan apps?",
+      "a": "Yes! Phone scanner apps frequently generate 3 MB+ files. Zcompressor compresses these scanned image PDFs down to under 200 KB while keeping stamp text clear."
+    }
+  ],
+  "crossLinks": [
+    { "href": "/compress-pdf-to-200kb", "label": "Compress PDF to 200 KB" },
+    { "href": "/compress-pdf-for-nsp-scholarship", "label": "NSP Scholarship PDF Tool" },
+    { "href": "/compress-pdf-for-up-scholarship", "label": "UP Scholarship PDF Tool" }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "slug": "compress-pdf-for-bihar-scholarship",
+  "title": "Compress PDF for Bihar Scholarship Under 200 KB — Free Browser Tool",
+  "metaDescription": "Compress PDF documents for Bihar Post-Matric Scholarship portal (pmsonline.bih.nic.in) under 200 KB. Resize income, bonafide, and marksheets locally.",
+  "exam": "Bihar Post Matric Scholarship",
+  "targetSizeKB": 200,
+  "docType": "Income Certificate, Bonafide Certificate, Marksheets, Fee Receipt",
+  "heroHeadline": "Compress PDF for Bihar Scholarship under 200 KB.",
+  "heroDescription": "Compress PMS Bihar (pmsonline.bih.nic.in) upload files—Income Certificate, Bonafide Certificate, and Marksheets—under 200 KB safely in browser.",
+  "eyebrowText": "Local In-Browser Processing",
+  "privacyNote": "Your Bihar scholarship files never cross remote servers.",
+  "specsHeading": "Bihar Post-Matric Scholarship Document Specs.",
+  "specs": [
+    { "label": "Residential Certificate (Niwas)", "value": "PDF, Under 200 KB" },
+    { "label": "Caste Certificate (Jati)", "value": "PDF, Under 200 KB" },
+    { "label": "Income Certificate (Aay)", "value": "PDF, Under 200 KB" },
+    { "label": "Bonafide Certificate from Institution", "value": "PDF, Under 200 KB" },
+    { "label": "Last Exam Passed Marksheet", "value": "PDF, Under 200 KB" }
+  ],
+  "lastVerified": "August 2026",
+  "sections": [
+    {
+      "heading": "PMS Bihar document submission guidelines.",
+      "body": [
+        "The Bihar Post-Matric Scholarship portal mandates that all certificate attachments be clear PDF files under 200 KB. High-resolution scans regularly fail upload validation until compressed."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is the document limit on Bihar Post-Matric Scholarship portal?",
+      "a": "All certificates uploaded on pmsonline.bih.nic.in must be PDF files under 200 KB."
+    }
+  ],
+  "crossLinks": [
+    { "href": "/compress-pdf-to-200kb", "label": "Compress PDF to 200 KB" },
+    { "href": "/compress-pdf-for-nsp-scholarship", "label": "NSP Scholarship PDF Tool" },
+    { "href": "/compress-pdf-for-up-scholarship", "label": "UP Scholarship PDF Tool" }
+  ]
+}

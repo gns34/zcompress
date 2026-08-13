@@ -1,0 +1,39 @@
+{
+  "slug": "compress-pdf-on-mobile",
+  "title": "Compress PDF on Mobile Phone (Android & iPhone) — Fast Free Tool",
+  "metaDescription": "Compress PDF files directly on mobile phone (Android, iPhone, iPad). No app installation required. Reduce PDF file size 100% locally in Safari or Chrome mobile browser.",
+  "targetSizeKB": 300,
+  "docType": "Mobile Phone Scans, Downloads, Marksheets, Certificates",
+  "heroHeadline": "Compress PDF on mobile phone.",
+  "heroDescription": "Reduce PDF file size on Android phones, iPhones, and iPads directly inside your mobile browser without installing sketchy apps or uploading files to remote servers.",
+  "eyebrowText": "100% Mobile Browser Native",
+  "privacyNote": "Runs locally in Safari, Chrome, and Edge mobile browsers using client-side WebAssembly.",
+  "specsHeading": "Mobile PDF Processing Compatibility.",
+  "specs": [
+    { "label": "Android OS (Chrome, Edge, Firefox)", "value": "Supported (100% Local)" },
+    { "label": "iOS / iPadOS (Safari, Chrome)", "value": "Supported (100% Local)" },
+    { "label": "App Installation Required", "value": "None — Web App Native" },
+    { "label": "Data / Cellular Usage", "value": "Zero file upload bandwidth used" }
+  ],
+  "lastVerified": "August 2026",
+  "sections": [
+    {
+      "heading": "Why mobile PDF compression is superior in-browser.",
+      "body": [
+        "Downloading third-party mobile PDF compressor apps from app stores often exposes users to intrusive full-screen ads, subscription popups, and battery drain.",
+        "Zcompressor works instantly inside your mobile browser. You can select documents from your iOS Files app or Android Downloads folder, set your target KB, and save the compressed PDF directly back to your device."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "Do I need to install an app to compress PDFs on Android or iPhone?",
+      "a": "No! Zcompressor runs directly in Safari, Mobile Chrome, and Firefox without any downloads or app installations."
+    }
+  ],
+  "crossLinks": [
+    { "href": "/compress-pdf-for-whatsapp", "label": "Compress PDF for WhatsApp" },
+    { "href": "/compress-scanned-pdf", "label": "Compress Scanned PDF" },
+    { "href": "/compress-pdf-to-300kb", "label": "Compress PDF to 300 KB" }
+  ]
+}

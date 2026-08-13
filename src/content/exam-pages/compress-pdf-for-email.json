@@ -1,0 +1,40 @@
+{
+  "slug": "compress-pdf-for-email",
+  "title": "Compress PDF for Email Attachments (Gmail, Outlook, Yahoo) — Under 10MB/25MB",
+  "metaDescription": "Compress PDF file size for email attachments. Reduce large PDFs to send via Gmail, Outlook, Apple Mail, and Yahoo without bounce-back errors. Free & private in-browser tool.",
+  "targetSizeKB": 1024,
+  "docType": "Presentation, Contract, Multi-page Report, Scan Portfolio",
+  "heroHeadline": "Compress PDF for email attachments.",
+  "heroDescription": "Reduce oversized PDF documents so they bypass Gmail (25MB), Outlook (20MB), and Yahoo Mail attachment limits instantly without cloud uploads.",
+  "eyebrowText": "Zero Attachment Bounces",
+  "privacyNote": "Your sensitive email attachments and corporate files are processed locally inside your browser.",
+  "specsHeading": "Standard Email Provider Attachment Limits.",
+  "specs": [
+    { "label": "Gmail (Google Workspace)", "value": "25 MB Max Attachment Limit" },
+    { "label": "Outlook / Microsoft 365", "value": "20 MB Max Attachment Limit" },
+    { "label": "Yahoo Mail", "value": "25 MB Max Attachment Limit" },
+    { "label": "Apple Mail (iCloud Mail)", "value": "20 MB Max Attachment Limit" },
+    { "label": "Corporate / Enterprise Mail Servers", "value": "Commonly 10 MB – 15 MB Ceiling" }
+  ],
+  "lastVerified": "August 2026",
+  "sections": [
+    {
+      "heading": "Bypass email bounce-backs and recipient mailbox limits.",
+      "body": [
+        "Sending PDFs larger than 10–20 MB over email often results in annoying bounce notifications like 'Message size exceeds recipient gateway limit' or forces attachments into external cloud drive links.",
+        "Zcompressor optimizes your PDF document streams locally, shrinking file size by up to 80% so your attachments send instantly directly inside standard email messages."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is the best PDF size for email attachments?",
+      "a": "Keeping your PDF under 5 MB to 10 MB ensures it delivers quickly and reliably across all corporate and webmail providers without triggering recipient spam filters or attachment caps."
+    }
+  ],
+  "crossLinks": [
+    { "href": "/compress-pdf-to-1mb", "label": "Compress PDF to 1 MB" },
+    { "href": "/compress-pdf-for-whatsapp", "label": "Compress PDF for WhatsApp" },
+    { "href": "/batch-compress-pdf", "label": "Batch Compress PDFs" }
+  ]
+}

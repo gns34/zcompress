@@ -1,0 +1,38 @@
+{
+  "slug": "compress-pdf-for-passport-seva",
+  "title": "Compress PDF for Passport Seva Portal Under 1 MB — Free Tool",
+  "metaDescription": "Compress PDF supporting documents for Passport Seva portal (passportindia.gov.in) under 1 MB or 200–500 KB. Fast client-side tool for Aadhaar, birth certificate, and bank passbooks.",
+  "targetSizeKB": 1024,
+  "docType": "Aadhaar Card, Birth Certificate, Annexures, Bank Passbook, Rent Agreement",
+  "heroHeadline": "Compress PDF for Passport Seva portal.",
+  "heroDescription": "Reduce Passport Seva application supporting documents—Aadhaar, Birth Certificate, Annexures, and Bank Passbooks—under 1 MB (or 200–500 KB) 100% locally in your browser.",
+  "eyebrowText": "Zero Upload Storage",
+  "privacyNote": "Your sensitive passport identity proofs never leave your browser sandbox.",
+  "specsHeading": "Passport Seva Portal Document Upload Specs.",
+  "specs": [
+    { "label": "Supporting Documents (Aadhaar, Birth Cert, Annexures)", "value": "PDF, Under 1 MB (200–500 KB recommended)" },
+    { "label": "Applicant Photo (JPG/JPEG only)", "value": "JPG, 10 KB – 250 KB (630 x 810 px)" },
+    { "label": "Applicant Signature (JPG/JPEG only)", "value": "JPG, Under 100 KB" }
+  ],
+  "lastVerified": "August 2026",
+  "sections": [
+    {
+      "heading": "Passport Seva document upload guidelines.",
+      "body": [
+        "The Passport Seva Portal (passportindia.gov.in) accepts supporting documents in PDF format up to 1 MB per file.",
+        "However, slow government server connection speeds mean files over 500 KB frequently cause upload timeout errors. Compressing your PDF down to 200–500 KB ensures fast, glitch-free submission."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is the maximum file size for Passport Seva document uploads?",
+      "a": "Supporting documents uploaded to Passport Seva must be PDF format under 1 MB. Staying between 200 KB and 500 KB is highly recommended to avoid server timeout issues."
+    }
+  ],
+  "crossLinks": [
+    { "href": "/compress-pdf-to-1mb", "label": "Compress PDF to 1 MB" },
+    { "href": "/compress-pdf-to-500kb", "label": "Compress PDF to 500 KB" },
+    { "href": "/compress-pdf-for-email", "label": "Compress PDF for Email" }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "slug": "why-is-my-pdf-still-too-large",
+  "title": "Why Is My PDF Still Too Large After Compression? — 5 Common Causes",
+  "metaDescription": "Discover why your PDF file size won't shrink even after running a compressor. Learn how embedded fonts, pre-compressed JPEGs, and high DPI scans block file size reduction.",
+  "publishedDate": "August 2026",
+  "readTime": "4 min",
+  "author": "Zcompressor Engineering",
+  "heroHeadline": "Why is my PDF still too large after compression?",
+  "heroDescription": "If your PDF file barely changes size when compressed, embedded fonts, pre-compressed JPEG streams, or scanner color depths are causing the bottleneck. Here is how to fix it.",
+  "eyebrowText": "Troubleshooting Guide",
+  "sections": [
+    {
+      "heading": "1. The images inside are already compressed JPEGs.",
+      "body": [
+        "PDFs do not store images in raw uncompressed pixels—they encapsulate existing JPEG or PNG binary streams directly. If you paste pre-compressed 80% JPEG photos into a PDF, re-compressing them using standard zip/deflate algorithms produces virtually 0% file size reduction.",
+        "To shrink an image-heavy PDF, the compressor must physically downsample the image resolution (e.g. from 300 DPI to 150 DPI) or lower the JPEG DCT quantization matrix, which Zcompressor performs automatically."
+      ]
+    },
+    {
+      "heading": "2. Embedded full font subsets and vector artwork.",
+      "body": [
+        "When you export a PDF from Microsoft Word, Adobe InDesign, or Canva, the software frequently embeds entire font families (TTF/OTF font files) inside the PDF file structure.",
+        "A single custom font family can add 2 MB to 5 MB of pure vector font data. Standard image compression algorithms cannot strip embedded fonts without breaking document rendering."
+      ]
+    },
+    {
+      "heading": "3. High DPI scanner color depths (24-bit RGB vs 8-bit Grayscale).",
+      "body": [
+        "Scanning a single white paper sheet in 600 DPI full color creates an 8 MB bitmap file. Even aggressive compression can only shrink this down to ~1.2 MB—still far above the 200 KB or 300 KB limit required by government portals.",
+        "Scanning at 150–200 DPI in Grayscale reduces the raw input size by 80% before compression even begins."
+      ]
+    },
+    {
+      "heading": "4. Hidden PDF version history and structural bloat.",
+      "body": [
+        "PDFs edited multiple times in desktop PDF editors often retain old version revisions, hidden annotations, and unused object streams inside the file trailer.",
+        "Re-processing the PDF through Zcompressor strips orphaned streams and rebuilds a clean cross-reference table."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "How can I force my PDF under 200 KB if it won't compress?",
+      "a": "Re-scan the original paper document at 150 DPI Grayscale mode, or convert multi-page color scans to 8-bit monochrome before running them through Zcompressor."
+    }
+  ],
+  "relatedArticles": [
+    { "href": "/blog/how-to-scan-documents-for-government-portals", "title": "How to Scan Documents for Government Portals" },
+    { "href": "/blog/kb-vs-kib-file-size-explained", "title": "KB vs KiB File Size Limits Explained" }
+  ]
+}

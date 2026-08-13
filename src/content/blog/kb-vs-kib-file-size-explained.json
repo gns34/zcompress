@@ -1,0 +1,36 @@
+{
+  "slug": "kb-vs-kib-file-size-explained",
+  "title": "KB vs KiB File Size Explained — Why Government Portals Reject 300 KB PDFs",
+  "metaDescription": "Understand the technical difference between KB (1000 bytes) and KiB (1024 bytes). Learn why a 300 KB PDF shows valid in Windows Explorer but fails portal uploads.",
+  "publishedDate": "August 2026",
+  "readTime": "3 min",
+  "author": "Zcompressor Engineering",
+  "heroHeadline": "KB vs KiB file size: why government portals reject 300 KB PDFs.",
+  "heroDescription": "Ever compressed a file to exactly 300.0 KB according to Windows, only for a portal like UPSC or NSP to reject it for exceeding 300 KB? Here is the binary vs decimal calculation discrepancy.",
+  "eyebrowText": "Technical Explained",
+  "sections": [
+    {
+      "heading": "Decimal KB (1,000 bytes) vs Binary KiB (1,024 bytes).",
+      "body": [
+        "In international SI standards, 1 Kilobyte (KB) equals 1,000 Bytes. However, computer operating systems (like Windows Explorer) historically calculate 1 Kilobyte using binary math: 1 KiB = 1,024 Bytes.",
+        "If a government portal validates file limits using strict byte counts (e.g. 300 KB = 300,000 Bytes max), a file that measures 298 KiB in Windows Explorer actually contains 305,152 Bytes! To the portal server, your file is 305.15 KB—over the 300 KB limit—triggering an immediate rejection."
+      ]
+    },
+    {
+      "heading": "How Zcompressor prevents byte-count rejection.",
+      "body": [
+        "Zcompressor measures PDF file sizes using strict decimal Byte calculations (1 KB = 1,000 Bytes). When you select a 300 KB target, Zcompressor ensures the resulting file contains less than 300,000 total Bytes, guaranteeing 100% acceptance across all portal validation engines."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is the safest target size for a 300 KB portal limit?",
+      "a": "Aiming for 280 KB – 290 KB ensures your document stays safely under both binary (KiB) and decimal (KB) verification checks."
+    }
+  ],
+  "relatedArticles": [
+    { "href": "/blog/common-document-upload-rejection-reasons", "title": "Common Document Upload Rejection Reasons" },
+    { "href": "/compress-pdf-to-300kb", "title": "300 KB PDF Compressor Tool" }
+  ]
+}

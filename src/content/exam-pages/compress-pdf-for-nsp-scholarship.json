@@ -1,0 +1,65 @@
+{
+  "slug": "compress-pdf-for-nsp-scholarship",
+  "title": "Compress PDF for NSP Scholarship Under 200 KB — Free & Client-Side",
+  "metaDescription": "Compress PDF documents for the National Scholarship Portal (NSP) under 200 KB. Resize Aadhaar card, income certificate, marksheets, and bank passbooks 100% locally in your browser.",
+  "exam": "NSP Scholarship",
+  "targetSizeKB": 200,
+  "docType": "Aadhaar, Income Certificate, Marksheet, Bonafide Student Certificate",
+  "heroHeadline": "Compress PDF for NSP Scholarship under 200 KB.",
+  "heroDescription": "Reduce National Scholarship Portal (scholarships.gov.in) upload documents—Aadhaar, Income Certificate, Marksheets, and Bank Passbook—under 200 KB instantly in your browser.",
+  "eyebrowText": "100% Private Client-Side Tool",
+  "privacyNote": "Your NSP scholarship documents never leave your phone or laptop. All PDF compression happens locally inside your browser memory using WebAssembly.",
+  "specsHeading": "National Scholarship Portal (NSP) Document Upload Limits.",
+  "specs": [
+    { "label": "Aadhaar Card / ID Proof", "value": "PDF / JPG, Under 200 KB" },
+    { "label": "Income Certificate", "value": "PDF / JPG, Under 200 KB" },
+    { "label": "Caste / Category Certificate", "value": "PDF / JPG, Under 200 KB" },
+    { "label": "Previous Year Marksheet", "value": "PDF / JPG, Under 200 KB" },
+    { "label": "Bonafide Student Certificate", "value": "PDF / JPG, Under 200 KB" },
+    { "label": "Bank Passbook First Page", "value": "PDF / JPG, Under 200 KB" }
+  ],
+  "lastVerified": "August 2026",
+  "sections": [
+    {
+      "heading": "Why NSP Scholarship documents get rejected.",
+      "body": [
+        "The National Scholarship Portal (scholarships.gov.in) enforces a strict 200 KB size ceiling for every uploaded file during the application window (typically September to November each year). Scanning multi-page marksheets or high-color revenue certificates at default scanner settings frequently creates file sizes of 1.5 MB to 3 MB.",
+        "Attempting to upload a PDF larger than 200 KB will trigger portal validation errors or silently drop the file attachment, leading to pending verification states or outright application rejection by institute verification officers."
+      ]
+    },
+    {
+      "heading": "How to compress NSP documents without losing legibility.",
+      "body": [
+        "Because NSP verified officers manually check your seal, signature, registration number, and parent income figures, maintaining text crispness is essential.",
+        "Zcompressor uses browser-native vector re-encoding and image stream downsampling. It scales down heavy background textures while preserving official government stamps, seal text, and Roll Numbers clearly within the 200 KB target."
+      ]
+    },
+    {
+      "heading": "Recommended scanner settings for NSP applicant documents.",
+      "body": [
+        "To avoid needing aggressive compression, scan your physical documents in Grayscale or 8-bit Color mode at 150 DPI to 200 DPI resolution. Avoid scanning in 600 DPI 24-bit full color, which unnecessarily balloons 1-page marksheets over 4 MB.",
+        "If you scanned documents on a mobile phone app, drag them into Zcompressor to target 200 KB before uploading to scholarships.gov.in."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is the exact document size limit for NSP Scholarship portal?",
+      "a": "All supporting documents on the National Scholarship Portal (NSP)—including Aadhaar, Income Certificate, Marksheet, and Bank Passbook—must be in PDF or JPG format and strictly under 200 KB per file."
+    },
+    {
+      "q": "Is NSP document compression safe on Zcompressor?",
+      "a": "Yes. Zcompressor executes all PDF optimizations 100% inside your browser using WebAssembly. Your income statements, bank account numbers, and Aadhaar files are never uploaded to any cloud server."
+    },
+    {
+      "q": "What if my marksheets are multi-page PDFs?",
+      "a": "Zcompressor compresses multi-page PDFs cleanly while keeping the file under 200 KB. If needed, you can combine multiple semester marksheets and compress the final bundle into a single PDF under 200 KB."
+    }
+  ],
+  "crossLinks": [
+    { "href": "/compress-pdf-to-200kb", "label": "200 KB PDF Compressor Tool" },
+    { "href": "/compress-pdf-for-mahadbt-scholarship", "label": "MahaDBT Scholarship PDF Tool" },
+    { "href": "/compress-pdf-for-up-scholarship", "label": "UP Scholarship PDF Tool" },
+    { "href": "/compress-pdf-for-bihar-scholarship", "label": "Bihar Scholarship PDF Tool" }
+  ]
+}

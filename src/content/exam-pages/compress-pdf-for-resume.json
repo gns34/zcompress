@@ -1,0 +1,39 @@
+{
+  "slug": "compress-pdf-for-resume",
+  "title": "Compress Resume PDF for ATS & Job Portals (Under 500 KB / 1 MB)",
+  "metaDescription": "Compress resume and CV PDF files for job portals (LinkedIn, Indeed, Naukri, Workday). Reduce file size under 500 KB or 1 MB while preserving font crispness and formatting.",
+  "targetSizeKB": 500,
+  "docType": "Resume, CV, Cover Letter, Work Portfolio",
+  "heroHeadline": "Compress resume PDF for ATS & job portals.",
+  "heroDescription": "Reduce CV and resume PDF file size under 500 KB or 1 MB for Workday, Taleo, Greenhouse, LinkedIn, and Naukri uploads without losing crisp vector text or layout alignment.",
+  "eyebrowText": "ATS Vector Friendly",
+  "privacyNote": "Your personal career data, phone number, and employment history stay 100% private in browser memory.",
+  "specsHeading": "Popular Job Portal & ATS Resume Upload Limits.",
+  "specs": [
+    { "label": "Workday ATS", "value": "PDF / DOCX, Under 5 MB (500 KB recommended)" },
+    { "label": "Greenhouse & Lever ATS", "value": "PDF, Under 10 MB (1 MB recommended)" },
+    { "label": "Naukri.com", "value": "PDF / DOCX, Under 2 MB" },
+    { "label": "LinkedIn Easy Apply", "value": "PDF, Under 5 MB" }
+  ],
+  "lastVerified": "August 2026",
+  "sections": [
+    {
+      "heading": "Why ATS resume compression requires vector text preservation.",
+      "body": [
+        "Applicant Tracking Systems (ATS) scan the raw text and embedded fonts of your PDF resume. Naive online PDF compressors convert vector text into compressed raster images, destroying your resume's searchability and causing automated ATS rejection.",
+        "Zcompressor compresses embedded background graphics and photo assets while leaving text nodes intact as true vectors, ensuring ATS parsers can read every keyword clearly."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "Will compressing my resume PDF affect ATS parsing?",
+      "a": "Not with Zcompressor! Zcompressor preserves embedded text fonts and structural metadata required by ATS parsers while compressing high-resolution headshots or design elements."
+    }
+  ],
+  "crossLinks": [
+    { "href": "/compress-pdf-to-500kb", "label": "Compress PDF to 500 KB" },
+    { "href": "/compress-pdf-to-1mb", "label": "Compress PDF to 1 MB" },
+    { "href": "/compress-pdf-without-losing-quality", "label": "Compress Without Quality Loss" }
+  ]
+}

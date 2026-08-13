@@ -1,0 +1,41 @@
+{
+  "slug": "compress-pdf-for-neet-counseling",
+  "title": "Compress PDF for NEET Counseling (50–300 KB) — MCC & State Quota",
+  "metaDescription": "Compress PDF documents for NEET UG & PG counseling (mcc.nic.in). Resize Category, PwD, and Marksheet certificates between 50 KB and 300 KB locally in browser.",
+  "exam": "NEET UG / PG Counseling (MCC)",
+  "targetSizeKB": 300,
+  "docType": "Category Certificate, PwD Certificate, Class 10/12 Marksheets, NEET Scorecard",
+  "heroHeadline": "Compress PDF for NEET Counseling (50–300 KB).",
+  "heroDescription": "Resize Medical Counseling Committee (MCC) and State NEET counseling documents—Category, PwD, Scorecards, and Marksheets—under 300 KB locally in browser.",
+  "eyebrowText": "Zero Server Uploads",
+  "privacyNote": "Your medical counseling records and certificates never leave your browser sandbox.",
+  "specsHeading": "MCC NEET Counseling Upload File Specifications.",
+  "specs": [
+    { "label": "Category Certificate (SC / ST / OBC / EWS)", "value": "PDF, 50 KB – 300 KB" },
+    { "label": "PwD Certificate", "value": "PDF, 50 KB – 300 KB" },
+    { "label": "NEET UG / PG Admit Card & Scorecard", "value": "PDF, 50 KB – 300 KB" },
+    { "label": "Class 10 & 12 Passing Certificates", "value": "PDF, 100 KB – 500 KB" },
+    { "label": "Domicile / Identity Certificate", "value": "PDF, 100 KB – 500 KB" }
+  ],
+  "lastVerified": "August 2026",
+  "sections": [
+    {
+      "heading": "MCC counseling upload standards.",
+      "body": [
+        "During MCC All India Quota (AIQ) and State Medical Counseling registration, documents must match NTA / MCC specifications (50–300 KB in PDF format).",
+        "Clear legibility of your Roll Number, Category designation, and Tehsildar seals is required to pass automated document verification."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is the size limit for NEET counseling category certificate?",
+      "a": "Category (OBC-NCL, EWS, SC, ST) and PwD certificates uploaded on mcc.nic.in must be PDF files sized between 50 KB and 300 KB."
+    }
+  ],
+  "crossLinks": [
+    { "href": "/compress-pdf-to-300kb", "label": "300 KB PDF Compressor Tool" },
+    { "href": "/compress-pdf-for-josaa-jee-counseling", "label": "JoSAA JEE Counseling PDF Tool" },
+    { "href": "/compress-pdf-for-cuet-counseling", "label": "CUET Counseling PDF Tool" }
+  ]
+}

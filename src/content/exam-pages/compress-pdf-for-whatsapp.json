@@ -1,0 +1,38 @@
+{
+  "slug": "compress-pdf-for-whatsapp",
+  "title": "Compress PDF for WhatsApp Sharing — Reduce File Size Free",
+  "metaDescription": "Compress PDF file size to send via WhatsApp and WhatsApp Web. Fast in-browser compression to stay within WhatsApp document sharing limits and save mobile data.",
+  "targetSizeKB": 1024,
+  "docType": "E-books, Presentations, Scanned Manuals, Certificates",
+  "heroHeadline": "Compress PDF for WhatsApp document sharing.",
+  "heroDescription": "Reduce PDF file sizes to send fast on WhatsApp Mobile and WhatsApp Web without data lag or upload timeouts.",
+  "eyebrowText": "Fast Mobile Sharing",
+  "privacyNote": "Your shared files are compressed locally on your phone or laptop screen.",
+  "specsHeading": "WhatsApp Document Sharing Specifications.",
+  "specs": [
+    { "label": "WhatsApp Document Upload Limit", "value": "100 MB (Recommended < 16 MB for fast mobile transfer)" },
+    { "label": "Recommended PDF Target Size", "value": "1 MB – 5 MB" },
+    { "label": "Supported Browsers", "value": "Mobile Chrome, Safari, Desktop Chrome" }
+  ],
+  "lastVerified": "August 2026",
+  "sections": [
+    {
+      "heading": "Fast document transfer on mobile networks.",
+      "body": [
+        "While WhatsApp technically allows documents up to 100 MB, sending multi-megabyte PDFs over mobile 4G/5G connections wastes cellular data and causes slow downloads for recipients.",
+        "Compressing your PDF down to 1 MB – 2 MB makes document delivery instant and smooth."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "Why should I compress PDFs before sending on WhatsApp?",
+      "a": "Smaller PDFs transfer instantly, consume significantly less mobile data, and open immediately on the recipient's phone."
+    }
+  ],
+  "crossLinks": [
+    { "href": "/compress-pdf-on-mobile", "label": "Compress PDF on Mobile" },
+    { "href": "/compress-pdf-to-1mb", "label": "Compress PDF to 1 MB" },
+    { "href": "/compress-pdf-for-email", "label": "Compress PDF for Email" }
+  ]
+}

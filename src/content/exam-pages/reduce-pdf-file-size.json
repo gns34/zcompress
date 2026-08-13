@@ -1,0 +1,41 @@
+{
+  "slug": "reduce-pdf-file-size",
+  "title": "Reduce PDF File Size Online Free — Private & Unlimited",
+  "metaDescription": "Reduce PDF file size online without installing software or uploading documents to remote cloud servers. Fast 100% browser-based PDF size reduction tool.",
+  "targetSizeKB": 300,
+  "docType": "All PDF Documents, Certificates, Forms, Reports",
+  "heroHeadline": "Reduce PDF file size online free.",
+  "heroDescription": "Shrink oversized PDF documents to exact KB target sizes (100 KB, 200 KB, 300 KB, 500 KB, 1 MB) with client-side privacy.",
+  "eyebrowText": "Universal PDF Optimizer",
+  "privacyNote": "Your documents remain on your screen and device RAM throughout the reduction process.",
+  "specsHeading": "Zcompressor PDF Size Reduction Engine Capabilities.",
+  "specs": [
+    { "label": "Security Model", "value": "100% Client-Side (Zero Server Uploads)" },
+    { "label": "Target Size Bandwidths", "value": "100 KB, 200 KB, 300 KB, 500 KB, 1 MB, Custom KB" },
+    { "label": "Supported File Types", "value": "Native PDFs, Scanned PDFs, Multi-page PDFs" },
+    { "label": "Pricing", "value": "100% Free Forever (No Accounts / No Subscriptions)" }
+  ],
+  "lastVerified": "August 2026",
+  "sections": [
+    {
+      "heading": "The modern way to reduce PDF size.",
+      "body": [
+        "Traditional PDF compression tools require uploading your sensitive contracts, marksheets, and financial statements to remote cloud servers. This exposes personal information to data breaches and server retention risks.",
+        "Zcompressor re-engineers PDF compression inside your web browser. By compiling compression algorithms directly into WebAssembly, your documents are reduced locally in seconds without sending a single byte across the internet."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "How much can I reduce my PDF file size?",
+      "a": "Depending on the initial document structure and scanned image resolution, Zcompressor typically reduces PDF file sizes by 50% to 90%."
+    }
+  ],
+  "crossLinks": [
+    { "href": "/compress-pdf-to-100kb", "label": "Reduce PDF to 100 KB" },
+    { "href": "/compress-pdf-to-200kb", "label": "Reduce PDF to 200 KB" },
+    { "href": "/compress-pdf-to-300kb", "label": "Reduce PDF to 300 KB" },
+    { "href": "/compress-pdf-to-500kb", "label": "Reduce PDF to 500 KB" },
+    { "href": "/compress-pdf-to-1mb", "label": "Reduce PDF to 1 MB" }
+  ]
+}

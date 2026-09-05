@@ -1,325 +1,1110 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Core & Main Pages -->
-  <url>
-    <loc>https://zcompressor.com</loc>
-  </url>
-  <url>
-    <loc>https://zcompressor.com/compress-pdf</loc>
-  </url>
-  <url>
-    <loc>https://zcompressor.com/about</loc>
-  </url>
-  <url>
-    <loc>https://zcompressor.com/contact</loc>
-  </url>
-  <url>
-    <loc>https://zcompressor.com/privacy</loc>
-  </url>
-  <url>
-    <loc>https://zcompressor.com/terms</loc>
-  </url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
-  <!-- Competitor Comparison Pages -->
-  <url>
-    <loc>https://zcompressor.com/vs</loc>
-  </url>
-  <url>
-    <loc>https://zcompressor.com/vs/ilovepdf</loc>
-  </url>
-  <url>
-    <loc>https://zcompressor.com/vs/smallpdf</loc>
-  </url>
-  <url>
-    <loc>https://zcompressor.com/vs/adobe-acrobat</loc>
-  </url>
-  <url>
-    <loc>https://zcompressor.com/vs/adobe-acrobat-compress</loc>
-  </url>
-  <url>
-    <loc>https://zcompressor.com/vs/pdf2go</loc>
-  </url>
-  <url>
-    <loc>https://zcompressor.com/vs/sejda</loc>
-  </url>
-  <url>
-    <loc>https://zcompressor.com/vs/pdfcandy</loc>
-  </url>
+  <!-- ================================================================== -->
+  <!-- 1. Core & Main Pages (English & Hinglish)                           -->
+  <!-- ================================================================== -->
 
-  <!-- Target Size Tools -->
+  <!-- Homepage -->
   <url>
-    <loc>https://zcompressor.com/compress-pdf-to-100kb</loc>
+    <loc>https://zcompressor.com/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zcompressor.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zcompressor.com/" />
+    <xhtml:link rel="alternate" hreflang="hi-Latn" href="https://zcompressor.com/hi/" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://zcompressor.com/hi/" />
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
   </url>
-  <url>
-    <loc>https://zcompressor.com/compress-pdf-to-200kb</loc>
-  </url>
-  <url>
-    <loc>https://zcompressor.com/compress-pdf-to-300kb</loc>
-  </url>
-  <url>
-    <loc>https://zcompressor.com/compress-pdf-to-500kb</loc>
-  </url>
-  <url>
-    <loc>https://zcompressor.com/compress-pdf-to-1mb</loc>
-  </url>
-
-  <!-- Exam & Scholarship Document Compression Tools -->
-  <url>
-    <loc>https://zcompressor.com/compress-pdf-for-upsc</loc>
-  </url>
-  <url>
-    <loc>https://zcompressor.com/compress-pdf-for-gate</loc>
-  </url>
-  <url>
-    <loc>https://zcompressor.com/compress-pdf-for-neet</loc>
-  </url>
-  <url>
-    <loc>https://zcompressor.com/compress-pdf-for-ssc</loc>
-  </url>
-  <url>
-    <loc>https://zcompressor.com/compress-pdf-for-sbi-ibps</loc>
-  </url>
-  <url>
-    <loc>https://zcompressor.com/compress-pdf-for-nsp-scholarship</loc>
-  </url>
-  <url>
-    <loc>https://zcompressor.com/compress-pdf-for-mahadbt-scholarship</loc>
-  </url>
-  <url>
-    <loc>https://zcompressor.com/compress-pdf-for-up-scholarship</loc>
-  </url>
-  <url>
-    <loc>https://zcompressor.com/compress-pdf-for-bihar-scholarship</loc>
-  </url>
-  <url>
-    <loc>https://zcompressor.com/compress-pdf-for-josaa-jee-counseling</loc>
-  </url>
-  <url>
-    <loc>https://zcompressor.com/compress-pdf-for-neet-counseling</loc>
-  </url>
-  <url>
-    <loc>https://zcompressor.com/compress-pdf-for-cuet-counseling</loc>
-  </url>
-  <url>
-    <loc>https://zcompressor.com/compress-pdf-for-nda-cds</loc>
-  </url>
-  <url>
-    <loc>https://zcompressor.com/compress-pdf-for-state-psc-exams</loc>
-  </url>
-
-  <!-- Generic Use-Case & Feature Tools -->
-  <url>
-    <loc>https://zcompressor.com/compress-pdf-for-email</loc>
-  </url>
-  <url>
-    <loc>https://zcompressor.com/compress-pdf-for-resume</loc>
-  </url>
-  <url>
-    <loc>https://zcompressor.com/compress-pdf-on-mobile</loc>
-  </url>
-  <url>
-    <loc>https://zcompressor.com/compress-pdf-for-whatsapp</loc>
-  </url>
-  <url>
-    <loc>https://zcompressor.com/compress-pdf-without-losing-quality</loc>
-  </url>
-  <url>
-    <loc>https://zcompressor.com/compress-scanned-pdf</loc>
-  </url>
-  <url>
-    <loc>https://zcompressor.com/batch-compress-pdf</loc>
-  </url>
-  <url>
-    <loc>https://zcompressor.com/reduce-pdf-file-size</loc>
-  </url>
-
-  <!-- Government & Tax Services -->
-  <url>
-    <loc>https://zcompressor.com/compress-pdf-for-passport-seva</loc>
-  </url>
-  <url>
-    <loc>https://zcompressor.com/compress-pdf-for-income-tax-efiling</loc>
-  </url>
-
-  <!-- Blog & Guides -->
-  <url>
-    <loc>https://zcompressor.com/blog</loc>
-  </url>
-  <url>
-    <loc>https://zcompressor.com/blog/why-is-my-pdf-still-too-large</loc>
-  </url>
-  <url>
-    <loc>https://zcompressor.com/blog/kb-vs-kib-file-size-explained</loc>
-  </url>
-  <url>
-    <loc>https://zcompressor.com/blog/how-to-scan-documents-for-government-portals</loc>
-  </url>
-  <url>
-    <loc>https://zcompressor.com/blog/pdf-compression-lossy-vs-lossless</loc>
-  </url>
-  <url>
-    <loc>https://zcompressor.com/blog/common-document-upload-rejection-reasons</loc>
-  </url>
-
-  <!-- Hindi / Hinglish Localized Pages -->
-  <!-- Core & Main Pages (HI) -->
   <url>
     <loc>https://zcompressor.com/hi/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zcompressor.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zcompressor.com/" />
+    <xhtml:link rel="alternate" hreflang="hi-Latn" href="https://zcompressor.com/hi/" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://zcompressor.com/hi/" />
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Main Compressor Tool -->
+  <url>
+    <loc>https://zcompressor.com/compress-pdf</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zcompressor.com/compress-pdf" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zcompressor.com/compress-pdf" />
+    <xhtml:link rel="alternate" hreflang="hi-Latn" href="https://zcompressor.com/hi/compress-pdf" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://zcompressor.com/hi/compress-pdf" />
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
   </url>
   <url>
     <loc>https://zcompressor.com/hi/compress-pdf</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zcompressor.com/compress-pdf" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zcompressor.com/compress-pdf" />
+    <xhtml:link rel="alternate" hreflang="hi-Latn" href="https://zcompressor.com/hi/compress-pdf" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://zcompressor.com/hi/compress-pdf" />
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <!-- About Us -->
+  <url>
+    <loc>https://zcompressor.com/about</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zcompressor.com/about" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zcompressor.com/about" />
+    <xhtml:link rel="alternate" hreflang="hi-Latn" href="https://zcompressor.com/hi/about" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://zcompressor.com/hi/about" />
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://zcompressor.com/hi/about</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zcompressor.com/about" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zcompressor.com/about" />
+    <xhtml:link rel="alternate" hreflang="hi-Latn" href="https://zcompressor.com/hi/about" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://zcompressor.com/hi/about" />
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Contact Us -->
+  <url>
+    <loc>https://zcompressor.com/contact</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zcompressor.com/contact" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zcompressor.com/contact" />
+    <xhtml:link rel="alternate" hreflang="hi-Latn" href="https://zcompressor.com/hi/contact" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://zcompressor.com/hi/contact" />
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zcompressor.com/hi/contact</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zcompressor.com/contact" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zcompressor.com/contact" />
+    <xhtml:link rel="alternate" hreflang="hi-Latn" href="https://zcompressor.com/hi/contact" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://zcompressor.com/hi/contact" />
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- Privacy Policy -->
+  <url>
+    <loc>https://zcompressor.com/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zcompressor.com/privacy" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zcompressor.com/privacy" />
+    <xhtml:link rel="alternate" hreflang="hi-Latn" href="https://zcompressor.com/hi/privacy" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://zcompressor.com/hi/privacy" />
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
   </url>
   <url>
     <loc>https://zcompressor.com/hi/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zcompressor.com/privacy" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zcompressor.com/privacy" />
+    <xhtml:link rel="alternate" hreflang="hi-Latn" href="https://zcompressor.com/hi/privacy" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://zcompressor.com/hi/privacy" />
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- Terms & Conditions -->
+  <url>
+    <loc>https://zcompressor.com/terms</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zcompressor.com/terms" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zcompressor.com/terms" />
+    <xhtml:link rel="alternate" hreflang="hi-Latn" href="https://zcompressor.com/hi/terms" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://zcompressor.com/hi/terms" />
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
   </url>
   <url>
     <loc>https://zcompressor.com/hi/terms</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zcompressor.com/terms" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zcompressor.com/terms" />
+    <xhtml:link rel="alternate" hreflang="hi-Latn" href="https://zcompressor.com/hi/terms" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://zcompressor.com/hi/terms" />
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
   </url>
 
-  <!-- Competitor Comparison Pages (HI) -->
+  <!-- ================================================================== -->
+  <!-- 2. Competitor Comparison Pages                                      -->
+  <!-- ================================================================== -->
+
+  <!-- Comparison Hub -->
+  <url>
+    <loc>https://zcompressor.com/vs</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zcompressor.com/vs" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zcompressor.com/vs" />
+    <xhtml:link rel="alternate" hreflang="hi-Latn" href="https://zcompressor.com/hi/vs" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://zcompressor.com/hi/vs" />
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <url>
     <loc>https://zcompressor.com/hi/vs</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zcompressor.com/vs" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zcompressor.com/vs" />
+    <xhtml:link rel="alternate" hreflang="hi-Latn" href="https://zcompressor.com/hi/vs" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://zcompressor.com/hi/vs" />
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- vs iLovePDF -->
+  <url>
+    <loc>https://zcompressor.com/vs/ilovepdf</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zcompressor.com/vs/ilovepdf" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zcompressor.com/vs/ilovepdf" />
+    <xhtml:link rel="alternate" hreflang="hi-Latn" href="https://zcompressor.com/hi/vs/ilovepdf" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://zcompressor.com/hi/vs/ilovepdf" />
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://zcompressor.com/hi/vs/ilovepdf</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zcompressor.com/vs/ilovepdf" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zcompressor.com/vs/ilovepdf" />
+    <xhtml:link rel="alternate" hreflang="hi-Latn" href="https://zcompressor.com/hi/vs/ilovepdf" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://zcompressor.com/hi/vs/ilovepdf" />
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- vs Smallpdf -->
+  <url>
+    <loc>https://zcompressor.com/vs/smallpdf</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zcompressor.com/vs/smallpdf" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zcompressor.com/vs/smallpdf" />
+    <xhtml:link rel="alternate" hreflang="hi-Latn" href="https://zcompressor.com/hi/vs/smallpdf" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://zcompressor.com/hi/vs/smallpdf" />
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://zcompressor.com/hi/vs/smallpdf</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zcompressor.com/vs/smallpdf" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zcompressor.com/vs/smallpdf" />
+    <xhtml:link rel="alternate" hreflang="hi-Latn" href="https://zcompressor.com/hi/vs/smallpdf" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://zcompressor.com/hi/vs/smallpdf" />
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- vs Adobe Acrobat -->
+  <url>
+    <loc>https://zcompressor.com/vs/adobe-acrobat</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zcompressor.com/vs/adobe-acrobat" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zcompressor.com/vs/adobe-acrobat" />
+    <xhtml:link rel="alternate" hreflang="hi-Latn" href="https://zcompressor.com/hi/vs/adobe-acrobat" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://zcompressor.com/hi/vs/adobe-acrobat" />
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://zcompressor.com/hi/vs/adobe-acrobat</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zcompressor.com/vs/adobe-acrobat" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zcompressor.com/vs/adobe-acrobat" />
+    <xhtml:link rel="alternate" hreflang="hi-Latn" href="https://zcompressor.com/hi/vs/adobe-acrobat" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://zcompressor.com/hi/vs/adobe-acrobat" />
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- vs Adobe Acrobat Compress -->
+  <url>
+    <loc>https://zcompressor.com/vs/adobe-acrobat-compress</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zcompressor.com/vs/adobe-acrobat-compress" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zcompressor.com/vs/adobe-acrobat-compress" />
+    <xhtml:link rel="alternate" hreflang="hi-Latn" href="https://zcompressor.com/hi/vs/adobe-acrobat-compress" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://zcompressor.com/hi/vs/adobe-acrobat-compress" />
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://zcompressor.com/hi/vs/adobe-acrobat-compress</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zcompressor.com/vs/adobe-acrobat-compress" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zcompressor.com/vs/adobe-acrobat-compress" />
+    <xhtml:link rel="alternate" hreflang="hi-Latn" href="https://zcompressor.com/hi/vs/adobe-acrobat-compress" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://zcompressor.com/hi/vs/adobe-acrobat-compress" />
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- vs PDF2Go -->
+  <url>
+    <loc>https://zcompressor.com/vs/pdf2go</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zcompressor.com/vs/pdf2go" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zcompressor.com/vs/pdf2go" />
+    <xhtml:link rel="alternate" hreflang="hi-Latn" href="https://zcompressor.com/hi/vs/pdf2go" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://zcompressor.com/hi/vs/pdf2go" />
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://zcompressor.com/hi/vs/pdf2go</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zcompressor.com/vs/pdf2go" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zcompressor.com/vs/pdf2go" />
+    <xhtml:link rel="alternate" hreflang="hi-Latn" href="https://zcompressor.com/hi/vs/pdf2go" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://zcompressor.com/hi/vs/pdf2go" />
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- vs Sejda -->
+  <url>
+    <loc>https://zcompressor.com/vs/sejda</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zcompressor.com/vs/sejda" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zcompressor.com/vs/sejda" />
+    <xhtml:link rel="alternate" hreflang="hi-Latn" href="https://zcompressor.com/hi/vs/sejda" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://zcompressor.com/hi/vs/sejda" />
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://zcompressor.com/hi/vs/sejda</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zcompressor.com/vs/sejda" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zcompressor.com/vs/sejda" />
+    <xhtml:link rel="alternate" hreflang="hi-Latn" href="https://zcompressor.com/hi/vs/sejda" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://zcompressor.com/hi/vs/sejda" />
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- vs PDF Candy -->
+  <url>
+    <loc>https://zcompressor.com/vs/pdfcandy</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zcompressor.com/vs/pdfcandy" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zcompressor.com/vs/pdfcandy" />
+    <xhtml:link rel="alternate" hreflang="hi-Latn" href="https://zcompressor.com/hi/vs/pdfcandy" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://zcompressor.com/hi/vs/pdfcandy" />
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://zcompressor.com/hi/vs/pdfcandy</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zcompressor.com/vs/pdfcandy" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zcompressor.com/vs/pdfcandy" />
+    <xhtml:link rel="alternate" hreflang="hi-Latn" href="https://zcompressor.com/hi/vs/pdfcandy" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://zcompressor.com/hi/vs/pdfcandy" />
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 
-  <!-- Target Size Tools (HI) -->
+  <!-- ================================================================== -->
+  <!-- 3. Target Size Tools                                               -->
+  <!-- ================================================================== -->
+
+  <!-- 100 KB -->
+  <url>
+    <loc>https://zcompressor.com/compress-pdf-to-100kb</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zcompressor.com/compress-pdf-to-100kb" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zcompressor.com/compress-pdf-to-100kb" />
+    <xhtml:link rel="alternate" hreflang="hi-Latn" href="https://zcompressor.com/hi/compress-pdf-to-100kb" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://zcompressor.com/hi/compress-pdf-to-100kb" />
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
   <url>
     <loc>https://zcompressor.com/hi/compress-pdf-to-100kb</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zcompressor.com/compress-pdf-to-100kb" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zcompressor.com/compress-pdf-to-100kb" />
+    <xhtml:link rel="alternate" hreflang="hi-Latn" href="https://zcompressor.com/hi/compress-pdf-to-100kb" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://zcompressor.com/hi/compress-pdf-to-100kb" />
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- 200 KB -->
+  <url>
+    <loc>https://zcompressor.com/compress-pdf-to-200kb</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zcompressor.com/compress-pdf-to-200kb" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zcompressor.com/compress-pdf-to-200kb" />
+    <xhtml:link rel="alternate" hreflang="hi-Latn" href="https://zcompressor.com/hi/compress-pdf-to-200kb" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://zcompressor.com/hi/compress-pdf-to-200kb" />
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://zcompressor.com/hi/compress-pdf-to-200kb</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zcompressor.com/compress-pdf-to-200kb" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zcompressor.com/compress-pdf-to-200kb" />
+    <xhtml:link rel="alternate" hreflang="hi-Latn" href="https://zcompressor.com/hi/compress-pdf-to-200kb" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://zcompressor.com/hi/compress-pdf-to-200kb" />
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- 300 KB -->
+  <url>
+    <loc>https://zcompressor.com/compress-pdf-to-300kb</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zcompressor.com/compress-pdf-to-300kb" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zcompressor.com/compress-pdf-to-300kb" />
+    <xhtml:link rel="alternate" hreflang="hi-Latn" href="https://zcompressor.com/hi/compress-pdf-to-300kb" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://zcompressor.com/hi/compress-pdf-to-300kb" />
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://zcompressor.com/hi/compress-pdf-to-300kb</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zcompressor.com/compress-pdf-to-300kb" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zcompressor.com/compress-pdf-to-300kb" />
+    <xhtml:link rel="alternate" hreflang="hi-Latn" href="https://zcompressor.com/hi/compress-pdf-to-300kb" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://zcompressor.com/hi/compress-pdf-to-300kb" />
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- 500 KB -->
+  <url>
+    <loc>https://zcompressor.com/compress-pdf-to-500kb</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zcompressor.com/compress-pdf-to-500kb" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zcompressor.com/compress-pdf-to-500kb" />
+    <xhtml:link rel="alternate" hreflang="hi-Latn" href="https://zcompressor.com/hi/compress-pdf-to-500kb" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://zcompressor.com/hi/compress-pdf-to-500kb" />
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://zcompressor.com/hi/compress-pdf-to-500kb</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zcompressor.com/compress-pdf-to-500kb" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zcompressor.com/compress-pdf-to-500kb" />
+    <xhtml:link rel="alternate" hreflang="hi-Latn" href="https://zcompressor.com/hi/compress-pdf-to-500kb" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://zcompressor.com/hi/compress-pdf-to-500kb" />
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- 1 MB -->
+  <url>
+    <loc>https://zcompressor.com/compress-pdf-to-1mb</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zcompressor.com/compress-pdf-to-1mb" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zcompressor.com/compress-pdf-to-1mb" />
+    <xhtml:link rel="alternate" hreflang="hi-Latn" href="https://zcompressor.com/hi/compress-pdf-to-1mb" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://zcompressor.com/hi/compress-pdf-to-1mb" />
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://zcompressor.com/hi/compress-pdf-to-1mb</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zcompressor.com/compress-pdf-to-1mb" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zcompressor.com/compress-pdf-to-1mb" />
+    <xhtml:link rel="alternate" hreflang="hi-Latn" href="https://zcompressor.com/hi/compress-pdf-to-1mb" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://zcompressor.com/hi/compress-pdf-to-1mb" />
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
   </url>
 
-  <!-- Exam & Scholarship Document Compression Tools (HI) -->
+  <!-- ================================================================== -->
+  <!-- 4. Exam & Scholarship Tools                                        -->
+  <!-- ================================================================== -->
+
+  <!-- UPSC -->
+  <url>
+    <loc>https://zcompressor.com/compress-pdf-for-upsc</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zcompressor.com/compress-pdf-for-upsc" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zcompressor.com/compress-pdf-for-upsc" />
+    <xhtml:link rel="alternate" hreflang="hi-Latn" href="https://zcompressor.com/hi/compress-pdf-for-upsc" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://zcompressor.com/hi/compress-pdf-for-upsc" />
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
   <url>
     <loc>https://zcompressor.com/hi/compress-pdf-for-upsc</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zcompressor.com/compress-pdf-for-upsc" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zcompressor.com/compress-pdf-for-upsc" />
+    <xhtml:link rel="alternate" hreflang="hi-Latn" href="https://zcompressor.com/hi/compress-pdf-for-upsc" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://zcompressor.com/hi/compress-pdf-for-upsc" />
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- GATE -->
+  <url>
+    <loc>https://zcompressor.com/compress-pdf-for-gate</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zcompressor.com/compress-pdf-for-gate" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zcompressor.com/compress-pdf-for-gate" />
+    <xhtml:link rel="alternate" hreflang="hi-Latn" href="https://zcompressor.com/hi/compress-pdf-for-gate" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://zcompressor.com/hi/compress-pdf-for-gate" />
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://zcompressor.com/hi/compress-pdf-for-gate</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zcompressor.com/compress-pdf-for-gate" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zcompressor.com/compress-pdf-for-gate" />
+    <xhtml:link rel="alternate" hreflang="hi-Latn" href="https://zcompressor.com/hi/compress-pdf-for-gate" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://zcompressor.com/hi/compress-pdf-for-gate" />
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- NEET -->
+  <url>
+    <loc>https://zcompressor.com/compress-pdf-for-neet</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zcompressor.com/compress-pdf-for-neet" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zcompressor.com/compress-pdf-for-neet" />
+    <xhtml:link rel="alternate" hreflang="hi-Latn" href="https://zcompressor.com/hi/compress-pdf-for-neet" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://zcompressor.com/hi/compress-pdf-for-neet" />
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://zcompressor.com/hi/compress-pdf-for-neet</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zcompressor.com/compress-pdf-for-neet" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zcompressor.com/compress-pdf-for-neet" />
+    <xhtml:link rel="alternate" hreflang="hi-Latn" href="https://zcompressor.com/hi/compress-pdf-for-neet" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://zcompressor.com/hi/compress-pdf-for-neet" />
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- SSC -->
+  <url>
+    <loc>https://zcompressor.com/compress-pdf-for-ssc</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zcompressor.com/compress-pdf-for-ssc" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zcompressor.com/compress-pdf-for-ssc" />
+    <xhtml:link rel="alternate" hreflang="hi-Latn" href="https://zcompressor.com/hi/compress-pdf-for-ssc" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://zcompressor.com/hi/compress-pdf-for-ssc" />
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://zcompressor.com/hi/compress-pdf-for-ssc</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zcompressor.com/compress-pdf-for-ssc" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zcompressor.com/compress-pdf-for-ssc" />
+    <xhtml:link rel="alternate" hreflang="hi-Latn" href="https://zcompressor.com/hi/compress-pdf-for-ssc" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://zcompressor.com/hi/compress-pdf-for-ssc" />
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- SBI / IBPS -->
+  <url>
+    <loc>https://zcompressor.com/compress-pdf-for-sbi-ibps</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zcompressor.com/compress-pdf-for-sbi-ibps" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zcompressor.com/compress-pdf-for-sbi-ibps" />
+    <xhtml:link rel="alternate" hreflang="hi-Latn" href="https://zcompressor.com/hi/compress-pdf-for-sbi-ibps" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://zcompressor.com/hi/compress-pdf-for-sbi-ibps" />
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://zcompressor.com/hi/compress-pdf-for-sbi-ibps</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zcompressor.com/compress-pdf-for-sbi-ibps" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zcompressor.com/compress-pdf-for-sbi-ibps" />
+    <xhtml:link rel="alternate" hreflang="hi-Latn" href="https://zcompressor.com/hi/compress-pdf-for-sbi-ibps" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://zcompressor.com/hi/compress-pdf-for-sbi-ibps" />
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- NSP Scholarship -->
+  <url>
+    <loc>https://zcompressor.com/compress-pdf-for-nsp-scholarship</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zcompressor.com/compress-pdf-for-nsp-scholarship" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zcompressor.com/compress-pdf-for-nsp-scholarship" />
+    <xhtml:link rel="alternate" hreflang="hi-Latn" href="https://zcompressor.com/hi/compress-pdf-for-nsp-scholarship" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://zcompressor.com/hi/compress-pdf-for-nsp-scholarship" />
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://zcompressor.com/hi/compress-pdf-for-nsp-scholarship</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zcompressor.com/compress-pdf-for-nsp-scholarship" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zcompressor.com/compress-pdf-for-nsp-scholarship" />
+    <xhtml:link rel="alternate" hreflang="hi-Latn" href="https://zcompressor.com/hi/compress-pdf-for-nsp-scholarship" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://zcompressor.com/hi/compress-pdf-for-nsp-scholarship" />
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- MahaDBT Scholarship -->
+  <url>
+    <loc>https://zcompressor.com/compress-pdf-for-mahadbt-scholarship</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zcompressor.com/compress-pdf-for-mahadbt-scholarship" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zcompressor.com/compress-pdf-for-mahadbt-scholarship" />
+    <xhtml:link rel="alternate" hreflang="hi-Latn" href="https://zcompressor.com/hi/compress-pdf-for-mahadbt-scholarship" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://zcompressor.com/hi/compress-pdf-for-mahadbt-scholarship" />
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://zcompressor.com/hi/compress-pdf-for-mahadbt-scholarship</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zcompressor.com/compress-pdf-for-mahadbt-scholarship" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zcompressor.com/compress-pdf-for-mahadbt-scholarship" />
+    <xhtml:link rel="alternate" hreflang="hi-Latn" href="https://zcompressor.com/hi/compress-pdf-for-mahadbt-scholarship" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://zcompressor.com/hi/compress-pdf-for-mahadbt-scholarship" />
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- UP Scholarship -->
+  <url>
+    <loc>https://zcompressor.com/compress-pdf-for-up-scholarship</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zcompressor.com/compress-pdf-for-up-scholarship" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zcompressor.com/compress-pdf-for-up-scholarship" />
+    <xhtml:link rel="alternate" hreflang="hi-Latn" href="https://zcompressor.com/hi/compress-pdf-for-up-scholarship" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://zcompressor.com/hi/compress-pdf-for-up-scholarship" />
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://zcompressor.com/hi/compress-pdf-for-up-scholarship</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zcompressor.com/compress-pdf-for-up-scholarship" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zcompressor.com/compress-pdf-for-up-scholarship" />
+    <xhtml:link rel="alternate" hreflang="hi-Latn" href="https://zcompressor.com/hi/compress-pdf-for-up-scholarship" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://zcompressor.com/hi/compress-pdf-for-up-scholarship" />
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Bihar Scholarship -->
+  <url>
+    <loc>https://zcompressor.com/compress-pdf-for-bihar-scholarship</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zcompressor.com/compress-pdf-for-bihar-scholarship" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zcompressor.com/compress-pdf-for-bihar-scholarship" />
+    <xhtml:link rel="alternate" hreflang="hi-Latn" href="https://zcompressor.com/hi/compress-pdf-for-bihar-scholarship" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://zcompressor.com/hi/compress-pdf-for-bihar-scholarship" />
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://zcompressor.com/hi/compress-pdf-for-bihar-scholarship</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zcompressor.com/compress-pdf-for-bihar-scholarship" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zcompressor.com/compress-pdf-for-bihar-scholarship" />
+    <xhtml:link rel="alternate" hreflang="hi-Latn" href="https://zcompressor.com/hi/compress-pdf-for-bihar-scholarship" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://zcompressor.com/hi/compress-pdf-for-bihar-scholarship" />
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- JoSAA JEE Counseling -->
+  <url>
+    <loc>https://zcompressor.com/compress-pdf-for-josaa-jee-counseling</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zcompressor.com/compress-pdf-for-josaa-jee-counseling" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zcompressor.com/compress-pdf-for-josaa-jee-counseling" />
+    <xhtml:link rel="alternate" hreflang="hi-Latn" href="https://zcompressor.com/hi/compress-pdf-for-josaa-jee-counseling" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://zcompressor.com/hi/compress-pdf-for-josaa-jee-counseling" />
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://zcompressor.com/hi/compress-pdf-for-josaa-jee-counseling</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zcompressor.com/compress-pdf-for-josaa-jee-counseling" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zcompressor.com/compress-pdf-for-josaa-jee-counseling" />
+    <xhtml:link rel="alternate" hreflang="hi-Latn" href="https://zcompressor.com/hi/compress-pdf-for-josaa-jee-counseling" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://zcompressor.com/hi/compress-pdf-for-josaa-jee-counseling" />
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- NEET Counseling -->
+  <url>
+    <loc>https://zcompressor.com/compress-pdf-for-neet-counseling</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zcompressor.com/compress-pdf-for-neet-counseling" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zcompressor.com/compress-pdf-for-neet-counseling" />
+    <xhtml:link rel="alternate" hreflang="hi-Latn" href="https://zcompressor.com/hi/compress-pdf-for-neet-counseling" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://zcompressor.com/hi/compress-pdf-for-neet-counseling" />
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://zcompressor.com/hi/compress-pdf-for-neet-counseling</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zcompressor.com/compress-pdf-for-neet-counseling" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zcompressor.com/compress-pdf-for-neet-counseling" />
+    <xhtml:link rel="alternate" hreflang="hi-Latn" href="https://zcompressor.com/hi/compress-pdf-for-neet-counseling" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://zcompressor.com/hi/compress-pdf-for-neet-counseling" />
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- CUET Counseling -->
+  <url>
+    <loc>https://zcompressor.com/compress-pdf-for-cuet-counseling</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zcompressor.com/compress-pdf-for-cuet-counseling" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zcompressor.com/compress-pdf-for-cuet-counseling" />
+    <xhtml:link rel="alternate" hreflang="hi-Latn" href="https://zcompressor.com/hi/compress-pdf-for-cuet-counseling" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://zcompressor.com/hi/compress-pdf-for-cuet-counseling" />
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://zcompressor.com/hi/compress-pdf-for-cuet-counseling</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zcompressor.com/compress-pdf-for-cuet-counseling" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zcompressor.com/compress-pdf-for-cuet-counseling" />
+    <xhtml:link rel="alternate" hreflang="hi-Latn" href="https://zcompressor.com/hi/compress-pdf-for-cuet-counseling" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://zcompressor.com/hi/compress-pdf-for-cuet-counseling" />
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- NDA / CDS -->
+  <url>
+    <loc>https://zcompressor.com/compress-pdf-for-nda-cds</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zcompressor.com/compress-pdf-for-nda-cds" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zcompressor.com/compress-pdf-for-nda-cds" />
+    <xhtml:link rel="alternate" hreflang="hi-Latn" href="https://zcompressor.com/hi/compress-pdf-for-nda-cds" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://zcompressor.com/hi/compress-pdf-for-nda-cds" />
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://zcompressor.com/hi/compress-pdf-for-nda-cds</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zcompressor.com/compress-pdf-for-nda-cds" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zcompressor.com/compress-pdf-for-nda-cds" />
+    <xhtml:link rel="alternate" hreflang="hi-Latn" href="https://zcompressor.com/hi/compress-pdf-for-nda-cds" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://zcompressor.com/hi/compress-pdf-for-nda-cds" />
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- State PSC Exams -->
+  <url>
+    <loc>https://zcompressor.com/compress-pdf-for-state-psc-exams</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zcompressor.com/compress-pdf-for-state-psc-exams" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zcompressor.com/compress-pdf-for-state-psc-exams" />
+    <xhtml:link rel="alternate" hreflang="hi-Latn" href="https://zcompressor.com/hi/compress-pdf-for-state-psc-exams" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://zcompressor.com/hi/compress-pdf-for-state-psc-exams" />
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://zcompressor.com/hi/compress-pdf-for-state-psc-exams</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zcompressor.com/compress-pdf-for-state-psc-exams" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zcompressor.com/compress-pdf-for-state-psc-exams" />
+    <xhtml:link rel="alternate" hreflang="hi-Latn" href="https://zcompressor.com/hi/compress-pdf-for-state-psc-exams" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://zcompressor.com/hi/compress-pdf-for-state-psc-exams" />
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
 
-  <!-- Generic Use-Case & Feature Tools (HI) -->
+  <!-- ================================================================== -->
+  <!-- 5. Generic Use-Case & Feature Tools                                -->
+  <!-- ================================================================== -->
+
+  <!-- For Email -->
+  <url>
+    <loc>https://zcompressor.com/compress-pdf-for-email</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zcompressor.com/compress-pdf-for-email" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zcompressor.com/compress-pdf-for-email" />
+    <xhtml:link rel="alternate" hreflang="hi-Latn" href="https://zcompressor.com/hi/compress-pdf-for-email" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://zcompressor.com/hi/compress-pdf-for-email" />
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <url>
     <loc>https://zcompressor.com/hi/compress-pdf-for-email</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zcompressor.com/compress-pdf-for-email" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zcompressor.com/compress-pdf-for-email" />
+    <xhtml:link rel="alternate" hreflang="hi-Latn" href="https://zcompressor.com/hi/compress-pdf-for-email" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://zcompressor.com/hi/compress-pdf-for-email" />
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- For Resume -->
+  <url>
+    <loc>https://zcompressor.com/compress-pdf-for-resume</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zcompressor.com/compress-pdf-for-resume" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zcompressor.com/compress-pdf-for-resume" />
+    <xhtml:link rel="alternate" hreflang="hi-Latn" href="https://zcompressor.com/hi/compress-pdf-for-resume" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://zcompressor.com/hi/compress-pdf-for-resume" />
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://zcompressor.com/hi/compress-pdf-for-resume</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zcompressor.com/compress-pdf-for-resume" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zcompressor.com/compress-pdf-for-resume" />
+    <xhtml:link rel="alternate" hreflang="hi-Latn" href="https://zcompressor.com/hi/compress-pdf-for-resume" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://zcompressor.com/hi/compress-pdf-for-resume" />
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- On Mobile -->
+  <url>
+    <loc>https://zcompressor.com/compress-pdf-on-mobile</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zcompressor.com/compress-pdf-on-mobile" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zcompressor.com/compress-pdf-on-mobile" />
+    <xhtml:link rel="alternate" hreflang="hi-Latn" href="https://zcompressor.com/hi/compress-pdf-on-mobile" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://zcompressor.com/hi/compress-pdf-on-mobile" />
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://zcompressor.com/hi/compress-pdf-on-mobile</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zcompressor.com/compress-pdf-on-mobile" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zcompressor.com/compress-pdf-on-mobile" />
+    <xhtml:link rel="alternate" hreflang="hi-Latn" href="https://zcompressor.com/hi/compress-pdf-on-mobile" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://zcompressor.com/hi/compress-pdf-on-mobile" />
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- For WhatsApp -->
+  <url>
+    <loc>https://zcompressor.com/compress-pdf-for-whatsapp</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zcompressor.com/compress-pdf-for-whatsapp" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zcompressor.com/compress-pdf-for-whatsapp" />
+    <xhtml:link rel="alternate" hreflang="hi-Latn" href="https://zcompressor.com/hi/compress-pdf-for-whatsapp" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://zcompressor.com/hi/compress-pdf-for-whatsapp" />
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://zcompressor.com/hi/compress-pdf-for-whatsapp</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zcompressor.com/compress-pdf-for-whatsapp" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zcompressor.com/compress-pdf-for-whatsapp" />
+    <xhtml:link rel="alternate" hreflang="hi-Latn" href="https://zcompressor.com/hi/compress-pdf-for-whatsapp" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://zcompressor.com/hi/compress-pdf-for-whatsapp" />
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Without Losing Quality -->
+  <url>
+    <loc>https://zcompressor.com/compress-pdf-without-losing-quality</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zcompressor.com/compress-pdf-without-losing-quality" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zcompressor.com/compress-pdf-without-losing-quality" />
+    <xhtml:link rel="alternate" hreflang="hi-Latn" href="https://zcompressor.com/hi/compress-pdf-without-losing-quality" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://zcompressor.com/hi/compress-pdf-without-losing-quality" />
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://zcompressor.com/hi/compress-pdf-without-losing-quality</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zcompressor.com/compress-pdf-without-losing-quality" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zcompressor.com/compress-pdf-without-losing-quality" />
+    <xhtml:link rel="alternate" hreflang="hi-Latn" href="https://zcompressor.com/hi/compress-pdf-without-losing-quality" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://zcompressor.com/hi/compress-pdf-without-losing-quality" />
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Scanned PDF -->
+  <url>
+    <loc>https://zcompressor.com/compress-scanned-pdf</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zcompressor.com/compress-scanned-pdf" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zcompressor.com/compress-scanned-pdf" />
+    <xhtml:link rel="alternate" hreflang="hi-Latn" href="https://zcompressor.com/hi/compress-scanned-pdf" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://zcompressor.com/hi/compress-scanned-pdf" />
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://zcompressor.com/hi/compress-scanned-pdf</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zcompressor.com/compress-scanned-pdf" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zcompressor.com/compress-scanned-pdf" />
+    <xhtml:link rel="alternate" hreflang="hi-Latn" href="https://zcompressor.com/hi/compress-scanned-pdf" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://zcompressor.com/hi/compress-scanned-pdf" />
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Batch Compress -->
+  <url>
+    <loc>https://zcompressor.com/batch-compress-pdf</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zcompressor.com/batch-compress-pdf" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zcompressor.com/batch-compress-pdf" />
+    <xhtml:link rel="alternate" hreflang="hi-Latn" href="https://zcompressor.com/hi/batch-compress-pdf" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://zcompressor.com/hi/batch-compress-pdf" />
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://zcompressor.com/hi/batch-compress-pdf</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zcompressor.com/batch-compress-pdf" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zcompressor.com/batch-compress-pdf" />
+    <xhtml:link rel="alternate" hreflang="hi-Latn" href="https://zcompressor.com/hi/batch-compress-pdf" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://zcompressor.com/hi/batch-compress-pdf" />
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Reduce PDF File Size -->
+  <url>
+    <loc>https://zcompressor.com/reduce-pdf-file-size</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zcompressor.com/reduce-pdf-file-size" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zcompressor.com/reduce-pdf-file-size" />
+    <xhtml:link rel="alternate" hreflang="hi-Latn" href="https://zcompressor.com/hi/reduce-pdf-file-size" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://zcompressor.com/hi/reduce-pdf-file-size" />
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://zcompressor.com/hi/reduce-pdf-file-size</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zcompressor.com/reduce-pdf-file-size" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zcompressor.com/reduce-pdf-file-size" />
+    <xhtml:link rel="alternate" hreflang="hi-Latn" href="https://zcompressor.com/hi/reduce-pdf-file-size" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://zcompressor.com/hi/reduce-pdf-file-size" />
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
   </url>
 
-  <!-- Government & Tax Services (HI) -->
+  <!-- ================================================================== -->
+  <!-- 6. Government & Tax Services                                       -->
+  <!-- ================================================================== -->
+
+  <!-- Passport Seva -->
+  <url>
+    <loc>https://zcompressor.com/compress-pdf-for-passport-seva</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zcompressor.com/compress-pdf-for-passport-seva" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zcompressor.com/compress-pdf-for-passport-seva" />
+    <xhtml:link rel="alternate" hreflang="hi-Latn" href="https://zcompressor.com/hi/compress-pdf-for-passport-seva" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://zcompressor.com/hi/compress-pdf-for-passport-seva" />
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <url>
     <loc>https://zcompressor.com/hi/compress-pdf-for-passport-seva</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zcompressor.com/compress-pdf-for-passport-seva" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zcompressor.com/compress-pdf-for-passport-seva" />
+    <xhtml:link rel="alternate" hreflang="hi-Latn" href="https://zcompressor.com/hi/compress-pdf-for-passport-seva" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://zcompressor.com/hi/compress-pdf-for-passport-seva" />
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Income Tax e-Filing -->
+  <url>
+    <loc>https://zcompressor.com/compress-pdf-for-income-tax-efiling</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zcompressor.com/compress-pdf-for-income-tax-efiling" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zcompressor.com/compress-pdf-for-income-tax-efiling" />
+    <xhtml:link rel="alternate" hreflang="hi-Latn" href="https://zcompressor.com/hi/compress-pdf-for-income-tax-efiling" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://zcompressor.com/hi/compress-pdf-for-income-tax-efiling" />
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://zcompressor.com/hi/compress-pdf-for-income-tax-efiling</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zcompressor.com/compress-pdf-for-income-tax-efiling" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zcompressor.com/compress-pdf-for-income-tax-efiling" />
+    <xhtml:link rel="alternate" hreflang="hi-Latn" href="https://zcompressor.com/hi/compress-pdf-for-income-tax-efiling" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://zcompressor.com/hi/compress-pdf-for-income-tax-efiling" />
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
 
-  <!-- Blog & Guides (HI) -->
+  <!-- ================================================================== -->
+  <!-- 7. Blog Hub & Guides                                               -->
+  <!-- ================================================================== -->
+
+  <!-- Blog Index -->
+  <url>
+    <loc>https://zcompressor.com/blog</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zcompressor.com/blog" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zcompressor.com/blog" />
+    <xhtml:link rel="alternate" hreflang="hi-Latn" href="https://zcompressor.com/hi/blog" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://zcompressor.com/hi/blog" />
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
   <url>
     <loc>https://zcompressor.com/hi/blog</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zcompressor.com/blog" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zcompressor.com/blog" />
+    <xhtml:link rel="alternate" hreflang="hi-Latn" href="https://zcompressor.com/hi/blog" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://zcompressor.com/hi/blog" />
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Blog Article 1: Why is my PDF still too large -->
+  <url>
+    <loc>https://zcompressor.com/blog/why-is-my-pdf-still-too-large</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zcompressor.com/blog/why-is-my-pdf-still-too-large" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zcompressor.com/blog/why-is-my-pdf-still-too-large" />
+    <xhtml:link rel="alternate" hreflang="hi-Latn" href="https://zcompressor.com/hi/blog/why-is-my-pdf-still-too-large" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://zcompressor.com/hi/blog/why-is-my-pdf-still-too-large" />
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://zcompressor.com/hi/blog/why-is-my-pdf-still-too-large</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zcompressor.com/blog/why-is-my-pdf-still-too-large" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zcompressor.com/blog/why-is-my-pdf-still-too-large" />
+    <xhtml:link rel="alternate" hreflang="hi-Latn" href="https://zcompressor.com/hi/blog/why-is-my-pdf-still-too-large" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://zcompressor.com/hi/blog/why-is-my-pdf-still-too-large" />
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Blog Article 2: KB vs KiB file size explained -->
+  <url>
+    <loc>https://zcompressor.com/blog/kb-vs-kib-file-size-explained</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zcompressor.com/blog/kb-vs-kib-file-size-explained" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zcompressor.com/blog/kb-vs-kib-file-size-explained" />
+    <xhtml:link rel="alternate" hreflang="hi-Latn" href="https://zcompressor.com/hi/blog/kb-vs-kib-file-size-explained" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://zcompressor.com/hi/blog/kb-vs-kib-file-size-explained" />
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://zcompressor.com/hi/blog/kb-vs-kib-file-size-explained</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zcompressor.com/blog/kb-vs-kib-file-size-explained" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zcompressor.com/blog/kb-vs-kib-file-size-explained" />
+    <xhtml:link rel="alternate" hreflang="hi-Latn" href="https://zcompressor.com/hi/blog/kb-vs-kib-file-size-explained" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://zcompressor.com/hi/blog/kb-vs-kib-file-size-explained" />
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Blog Article 3: How to scan documents for government portals -->
+  <url>
+    <loc>https://zcompressor.com/blog/how-to-scan-documents-for-government-portals</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zcompressor.com/blog/how-to-scan-documents-for-government-portals" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zcompressor.com/blog/how-to-scan-documents-for-government-portals" />
+    <xhtml:link rel="alternate" hreflang="hi-Latn" href="https://zcompressor.com/hi/blog/how-to-scan-documents-for-government-portals" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://zcompressor.com/hi/blog/how-to-scan-documents-for-government-portals" />
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://zcompressor.com/hi/blog/how-to-scan-documents-for-government-portals</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zcompressor.com/blog/how-to-scan-documents-for-government-portals" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zcompressor.com/blog/how-to-scan-documents-for-government-portals" />
+    <xhtml:link rel="alternate" hreflang="hi-Latn" href="https://zcompressor.com/hi/blog/how-to-scan-documents-for-government-portals" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://zcompressor.com/hi/blog/how-to-scan-documents-for-government-portals" />
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Blog Article 4: PDF compression lossy vs lossless -->
+  <url>
+    <loc>https://zcompressor.com/blog/pdf-compression-lossy-vs-lossless</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zcompressor.com/blog/pdf-compression-lossy-vs-lossless" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zcompressor.com/blog/pdf-compression-lossy-vs-lossless" />
+    <xhtml:link rel="alternate" hreflang="hi-Latn" href="https://zcompressor.com/hi/blog/pdf-compression-lossy-vs-lossless" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://zcompressor.com/hi/blog/pdf-compression-lossy-vs-lossless" />
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://zcompressor.com/hi/blog/pdf-compression-lossy-vs-lossless</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zcompressor.com/blog/pdf-compression-lossy-vs-lossless" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zcompressor.com/blog/pdf-compression-lossy-vs-lossless" />
+    <xhtml:link rel="alternate" hreflang="hi-Latn" href="https://zcompressor.com/hi/blog/pdf-compression-lossy-vs-lossless" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://zcompressor.com/hi/blog/pdf-compression-lossy-vs-lossless" />
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Blog Article 5: Common document upload rejection reasons -->
+  <url>
+    <loc>https://zcompressor.com/blog/common-document-upload-rejection-reasons</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zcompressor.com/blog/common-document-upload-rejection-reasons" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zcompressor.com/blog/common-document-upload-rejection-reasons" />
+    <xhtml:link rel="alternate" hreflang="hi-Latn" href="https://zcompressor.com/hi/blog/common-document-upload-rejection-reasons" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://zcompressor.com/hi/blog/common-document-upload-rejection-reasons" />
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://zcompressor.com/hi/blog/common-document-upload-rejection-reasons</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zcompressor.com/blog/common-document-upload-rejection-reasons" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zcompressor.com/blog/common-document-upload-rejection-reasons" />
+    <xhtml:link rel="alternate" hreflang="hi-Latn" href="https://zcompressor.com/hi/blog/common-document-upload-rejection-reasons" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://zcompressor.com/hi/blog/common-document-upload-rejection-reasons" />
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
+
 </urlset>

@@ -1,5 +1,11 @@
 ---
 // src/components/Header.astro
+import LanguagePicker from "./LanguagePicker.astro";
+import { getLangFromUrl, useTranslations, useTranslatedPath } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
 ---
 
 <!-- Navigation Bar -->
@@ -11,7 +17,7 @@
   >
     <!-- Logo -->
     <a
-      href="/"
+      href={translatePath("/")}
       class="flex items-center gap-2 group rounded focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none"
       aria-label="Zcompressor Homepage"
     >
@@ -28,14 +34,14 @@
     <!-- Navigation Links -->
     <div class="hidden md:flex items-center gap-6">
       <a
-        href="/compress-pdf"
+        href={translatePath("/compress-pdf")}
         class="text-body-sm text-body hover:text-ink transition-colors px-3 py-1.5 rounded-full hover:bg-canvas-soft-2/50 focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none"
-        >Compress PDF</a
+        >{t("nav.compressPdf")}</a
       >
       <a
         href="/blog"
         class="text-body-sm text-body hover:text-ink transition-colors px-3 py-1.5 rounded-full hover:bg-canvas-soft-2/50 focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none"
-        >Blog</a
+        >{t("nav.blog")}</a
       >
 
       <!-- Alternatives Dropdown -->
@@ -129,7 +135,7 @@
               href="/vs"
               class="flex items-center justify-between text-body-sm-strong text-link-deep dark:text-cyan-deep hover:underline focus-visible:outline-none"
             >
-              <span>View All Product Comparisons</span>
+              <span>{t("nav.allComparisons")}</span>
               <i class="fa-solid fa-arrow-right text-xs"></i>
             </a>
           </div>
@@ -139,30 +145,33 @@
       <a
         href="/#faq"
         class="text-body-sm text-body hover:text-ink transition-colors px-3 py-1.5 rounded-full hover:bg-canvas-soft-2/50 focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none"
-        >FAQ</a
+        >{t("nav.faq")}</a
       >
       <a
         href="/about"
         class="text-body-sm text-body hover:text-ink transition-colors px-3 py-1.5 rounded-full hover:bg-canvas-soft-2/50 focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none"
-        >About Us</a
+        >{t("nav.about")}</a
       >
       <a
         href="/contact"
         class="text-body-sm text-body hover:text-ink transition-colors px-3 py-1.5 rounded-full hover:bg-canvas-soft-2/50 focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none"
-        >Contact Us</a
+        >{t("nav.contact")}</a
       >
     </div>
 
     <!-- Action Button -->
-    <div class="flex items-center gap-3">
+    <div class="flex items-center gap-2 sm:gap-3">
       <span
         class="hidden sm:inline-flex items-center gap-1.5 px-2.5 py-1 text-[11px] font-mono border border-hairline rounded bg-canvas-soft text-body"
       >
         <span
           class="w-1.5 h-1.5 rounded-full bg-cyan animate-pulse"
           aria-hidden="true"></span>
-        100% Client-Side
+        {t("nav.clientSide")}
       </span>
+
+      <!-- Language Switcher Component -->
+      <LanguagePicker variant="header" />
 
       <!-- Theme Toggle Button -->
       <button
@@ -179,10 +188,10 @@
       </button>
 
       <a
-        href="/compress-pdf"
-        class="px-3.5 h-[28px] bg-primary text-on-primary text-body-sm-strong rounded-sm hover:bg-black transition-colors inline-flex items-center justify-center select-none shadow-level-1 focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none"
+        href={translatePath("/compress-pdf")}
+        class="px-3.5 h-[28px] bg-primary text-on-primary text-body-sm-strong rounded-sm hover:bg-black transition-colors inline-flex items-center justify-center select-none shadow-level-1 focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none text-xs sm:text-body-sm-strong"
       >
-        Start Compressing
+        {t("nav.startCompressing")}
       </a>
       <button
         id="mobile-menu-btn"
@@ -199,10 +208,13 @@
     id="mobile-menu"
     class="hidden md:hidden border-t border-hairline mt-2 py-4 flex flex-col gap-3 animate-fade-in"
   >
+    <!-- Mobile Language Picker -->
+    <LanguagePicker variant="mobile" class="py-2 border-b border-hairline/30" />
+
     <a
-      href="/compress-pdf"
+      href={translatePath("/compress-pdf")}
       class="mobile-nav-link text-body hover:text-ink transition-colors py-2 border-b border-hairline/30 text-body-sm-strong focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none"
-      >Compress PDF</a
+      >{t("nav.compressPdf")}</a
     >
     <div class="border-b border-hairline/30 py-1">
       <button
@@ -240,39 +252,42 @@
     <a
       href="/#faq"
       class="mobile-nav-link text-body hover:text-ink transition-colors py-2 border-b border-hairline/30 text-body-sm-strong focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none"
-      >FAQ</a
+      >{t("nav.faq")}</a
     >
     <a
       href="/about"
       class="mobile-nav-link text-body hover:text-ink transition-colors py-2 border-b border-hairline/30 text-body-sm-strong focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none"
-      >About Us</a
+      >{t("nav.about")}</a
     >
     <a
       href="/contact"
       class="mobile-nav-link text-body hover:text-ink transition-colors py-2 border-b border-hairline/30 text-body-sm-strong focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none"
-      >Contact Us</a
+      >{t("nav.contact")}</a
     >
     <a
       href="/privacy"
       class="mobile-nav-link text-body hover:text-ink transition-colors py-2 border-b border-hairline/30 text-body-sm-strong focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none"
-      >Privacy Policy</a
+      >{t("footer.privacy")}</a
     >
     <a
       href="/terms"
       class="mobile-nav-link text-body hover:text-ink transition-colors py-2 text-body-sm-strong focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none"
-      >Terms & Conditions</a
+      >{t("footer.terms")}</a
     >
     <div
-      class="flex sm:hidden items-center justify-between pt-2 border-t border-hairline/30"
+      class="flex flex-col sm:hidden gap-3 pt-3 border-t border-hairline/30"
     >
-      <span
-        class="inline-flex items-center gap-1.5 px-2.5 py-1 text-[11px] font-mono border border-hairline rounded bg-canvas-soft text-body"
-      >
+      <LanguagePicker variant="mobile" />
+      <div class="flex items-center justify-between">
         <span
-          class="w-1.5 h-1.5 rounded-full bg-cyan animate-pulse"
-          aria-hidden="true"></span>
-        100% Client-Side
-      </span>
+          class="inline-flex items-center gap-1.5 px-2.5 py-1 text-[11px] font-mono border border-hairline rounded bg-canvas-soft text-body"
+        >
+          <span
+            class="w-1.5 h-1.5 rounded-full bg-cyan animate-pulse"
+            aria-hidden="true"></span>
+          {t("nav.clientSide")}
+        </span>
+      </div>
     </div>
   </div>
 </nav>

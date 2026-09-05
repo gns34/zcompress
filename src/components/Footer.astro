@@ -1,5 +1,11 @@
 ---
 // src/components/Footer.astro
+import LanguagePicker from "./LanguagePicker.astro";
+import { getLangFromUrl, useTranslations, useTranslatedPath } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
 ---
 
 <footer class="bg-canvas border-t border-hairline py-16 px-6">
@@ -20,8 +26,7 @@
         >
       </div>
       <p class="text-caption text-body">
-        A premium, high-security developer-grade utility to compress PDFs
-        locally in your browser.
+        {t("footer.tagline")}
       </p>
     </div>
 
@@ -30,21 +35,21 @@
       <h4
         class="text-caption-mono font-mono text-mute uppercase tracking-wider mb-4"
       >
-        Product
+        {t("footer.product")}
       </h4>
       <ul class="space-y-2">
         <li>
           <a
-            href="/compress-pdf"
+            href={translatePath("/compress-pdf")}
             class="text-body-sm text-body hover:text-ink transition-colors"
-            >Compressor</a
+            >{t("nav.compressPdf")}</a
           >
         </li>
         <li>
           <a
             href="/blog"
             class="text-body-sm text-body hover:text-ink transition-colors"
-            >Engineering Blog</a
+            >{t("nav.blog")}</a
           >
         </li>
         <li>
@@ -58,7 +63,7 @@
           <a
             href="/#faq"
             class="text-body-sm text-body hover:text-ink transition-colors"
-            >FAQ</a
+            >{t("nav.faq")}</a
           >
         </li>
       </ul>
@@ -69,7 +74,7 @@
       <h4
         class="text-caption-mono font-mono text-mute uppercase tracking-wider mb-4"
       >
-        Compare
+        {t("footer.compare")}
       </h4>
       <ul class="space-y-2">
         <li>
@@ -115,21 +120,36 @@
       <h4
         class="text-caption-mono font-mono text-mute uppercase tracking-wider mb-4"
       >
-        Languages
+        {t("footer.languages")}
       </h4>
+      <LanguagePicker variant="footer" class="mb-3" />
       <ul class="space-y-2">
         <li>
           <a
-            href="/hi/compress-pdf-for-nsp-scholarship"
-            class="text-body-sm text-body hover:text-ink transition-colors"
-            >NSP Scholarship (Hindi)</a
+            href="/hi/"
+            class="text-body-sm text-body hover:text-ink transition-colors flex items-center gap-1.5"
+            ><span class="w-1.5 h-1.5 rounded-full bg-cyan-deep"></span> Hinglish Home</a
+          >
+        </li>
+        <li>
+          <a
+            href="/hi/compress-pdf"
+            class="text-body-sm text-body hover:text-ink transition-colors flex items-center gap-1.5"
+            ><span class="w-1.5 h-1.5 rounded-full bg-cyan-deep"></span> PDF Compressor (HI)</a
           >
         </li>
         <li>
           <a
             href="/hi/compress-pdf-for-upsc"
             class="text-body-sm text-body hover:text-ink transition-colors"
-            >UPSC PDF Tool (Hindi)</a
+            >UPSC PDF (Hinglish)</a
+          >
+        </li>
+        <li>
+          <a
+            href="/hi/compress-pdf-for-nsp-scholarship"
+            class="text-body-sm text-body hover:text-ink transition-colors"
+            >NSP Scholarship (Hinglish)</a
           >
         </li>
         <li>
@@ -139,14 +159,14 @@
           <a
             href="/about"
             class="text-body-sm text-body hover:text-ink transition-colors"
-            >About Us</a
+            >{t("nav.about")}</a
           >
         </li>
         <li>
           <a
             href="/contact"
             class="text-body-sm text-body hover:text-ink transition-colors"
-            >Contact Us</a
+            >{t("nav.contact")}</a
           >
         </li>
       </ul>
@@ -157,7 +177,7 @@
       <h4
         class="text-caption-mono font-mono text-mute uppercase tracking-wider mb-4"
       >
-        Popular Tools
+        {t("footer.popularTools")}
       </h4>
       <ul class="space-y-2">
         <li>
@@ -227,18 +247,17 @@
       <h4
         class="text-caption-mono font-mono text-mute uppercase tracking-wider mb-4"
       >
-        Security
+        {t("footer.security")}
       </h4>
       <ul class="space-y-2">
         <li>
           <span class="text-body-sm text-body flex items-center gap-1.5"
-            ><i class="fa-solid fa-lock text-xs text-cyan-deep"></i> 100% Local Sandbox</span
+            ><i class="fa-solid fa-lock text-xs text-cyan-deep"></i> {t("footer.localSandbox")}</span
           >
         </li>
         <li>
           <span class="text-body-sm text-body flex items-center gap-1.5"
-            ><i class="fa-solid fa-network-wired text-xs text-mute"></i> No telemetry
-            / logs sent</span
+            ><i class="fa-solid fa-network-wired text-xs text-mute"></i> {t("footer.noTelemetry")}</span
           >
         </li>
       </ul>
@@ -250,18 +269,18 @@
     class="max-w-[1200px] mx-auto mt-12 pt-8 border-t border-hairline/60 flex flex-col sm:flex-row justify-between items-center gap-4"
   >
     <span class="text-caption text-mute">
-      © 2026 Zcompressor. All rights reserved. GNS
+      © 2026 Zcompressor. {t("footer.rights")}
     </span>
     <div class="flex gap-4">
       <a
         href="/terms"
         class="text-caption text-mute hover:text-ink transition-colors"
-        >Terms & Conditions</a
+        >{t("footer.terms")}</a
       >
       <a
         href="/privacy"
         class="text-caption text-mute hover:text-ink transition-colors"
-        >Privacy Policy</a
+        >{t("footer.privacy")}</a
       >
     </div>
   </div>

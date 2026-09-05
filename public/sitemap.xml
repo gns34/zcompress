@@ -161,7 +161,13 @@
     <loc>https://zcompressor.com/blog/common-document-upload-rejection-reasons</loc>
   </url>
 
-  <!-- Hindi Localized Pages -->
+  <!-- Hindi / Hinglish Localized Pages -->
+  <url>
+    <loc>https://zcompressor.com/hi/</loc>
+  </url>
+  <url>
+    <loc>https://zcompressor.com/hi/compress-pdf</loc>
+  </url>
   <url>
     <loc>https://zcompressor.com/hi/compress-pdf-for-nsp-scholarship</loc>
   </url>

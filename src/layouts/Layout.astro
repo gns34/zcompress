@@ -1,5 +1,8 @@
 ---
 import "../styles/global.css";
+import { getLangFromUrl, getHreflangLinks, type HreflangAlternate } from "../i18n/utils";
+import { languageTags, type SupportedLanguage } from "../i18n/ui";
+
 interface Props {
 	title?: string;
 	description?: string;
@@ -7,6 +10,9 @@ interface Props {
 	ogImage?: string;
 	ogUrl?: string;
 	ogType?: string;
+	lang?: SupportedLanguage;
+	customAlternates?: Record<SupportedLanguage, string>;
+	hreflangs?: HreflangAlternate[];
 }
 const {
 	title = "Free Online PDF Compressor - Zcompressor | Compress PDF Free",
@@ -15,11 +21,17 @@ const {
 	ogImage = "https://zcompressor.com/favicon.png",
 	ogUrl = "https://zcompressor.com",
 	ogType = "website",
+	customAlternates,
+	hreflangs,
 } = Astro.props;
+
+const detectedLang = Astro.props.lang || getLangFromUrl(Astro.url);
+const htmlLang = languageTags[detectedLang] || "en";
+const computedHreflangs = hreflangs || getHreflangLinks(Astro.url, "https://zcompressor.com", customAlternates);
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={htmlLang}>
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
@@ -55,6 +67,9 @@ const {
 		<meta name="keywords" content={keywords} />
 		<meta name="robots" content="index, follow" />
 		<link rel="canonical" href={ogUrl} />
+		{computedHreflangs.map((alt) => (
+			<link rel="alternate" hreflang={alt.hreflang} href={alt.href} />
+		))}
 
 		<!-- Open Graph / Facebook -->
 		<meta property="og:type" content={ogType} />

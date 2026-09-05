@@ -39,7 +39,7 @@ const translatePath = useTranslatedPath(lang);
         >{t("nav.compressPdf")}</a
       >
       <a
-        href="/blog"
+        href={translatePath("/blog")}
         class="text-body-sm text-body hover:text-ink transition-colors px-3 py-1.5 rounded-full hover:bg-canvas-soft-2/50 focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none"
         >{t("nav.blog")}</a
       >
@@ -64,7 +64,7 @@ const translatePath = useTranslatedPath(lang);
         >
           <div class="p-4 grid grid-cols-2 gap-2 bg-canvas rounded-t-md">
             <a
-              href="/vs/ilovepdf"
+              href={translatePath("/vs/ilovepdf")}
               class="flex flex-col p-2.5 rounded-md hover:bg-canvas-soft-2/70 transition-colors group/item focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none"
               role="menuitem"
             >
@@ -75,7 +75,7 @@ const translatePath = useTranslatedPath(lang);
               <span class="text-[11px] text-mute mt-0.5 leading-normal">Privacy & limits comparison</span>
             </a>
             <a
-              href="/vs/smallpdf"
+              href={translatePath("/vs/smallpdf")}
               class="flex flex-col p-2.5 rounded-md hover:bg-canvas-soft-2/70 transition-colors group/item focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none"
               role="menuitem"
             >
@@ -86,7 +86,7 @@ const translatePath = useTranslatedPath(lang);
               <span class="text-[11px] text-mute mt-0.5 leading-normal">Limits & pricing comparison</span>
             </a>
             <a
-              href="/vs/adobe-acrobat"
+              href={translatePath("/vs/adobe-acrobat")}
               class="flex flex-col p-2.5 rounded-md hover:bg-canvas-soft-2/70 transition-colors group/item focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none"
               role="menuitem"
             >
@@ -97,7 +97,7 @@ const translatePath = useTranslatedPath(lang);
               <span class="text-[11px] text-mute mt-0.5 leading-normal">Local vs. cloud performance</span>
             </a>
             <a
-              href="/vs/pdf2go"
+              href={translatePath("/vs/pdf2go")}
               class="flex flex-col p-2.5 rounded-md hover:bg-canvas-soft-2/70 transition-colors group/item focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none"
               role="menuitem"
             >
@@ -108,7 +108,7 @@ const translatePath = useTranslatedPath(lang);
               <span class="text-[11px] text-mute mt-0.5 leading-normal">Ad density & security analysis</span>
             </a>
             <a
-              href="/vs/sejda"
+              href={translatePath("/vs/sejda")}
               class="flex flex-col p-2.5 rounded-md hover:bg-canvas-soft-2/70 transition-colors group/item focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none"
               role="menuitem"
             >
@@ -119,7 +119,7 @@ const translatePath = useTranslatedPath(lang);
               <span class="text-[11px] text-mute mt-0.5 leading-normal">Quotas & server policies</span>
             </a>
             <a
-              href="/vs/pdfcandy"
+              href={translatePath("/vs/pdfcandy")}
               class="flex flex-col p-2.5 rounded-md hover:bg-canvas-soft-2/70 transition-colors group/item focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none"
               role="menuitem"
             >
@@ -132,7 +132,7 @@ const translatePath = useTranslatedPath(lang);
           </div>
           <div class="border-t border-hairline bg-canvas-soft p-3 rounded-b-md">
             <a
-              href="/vs"
+              href={translatePath("/vs")}
               class="flex items-center justify-between text-body-sm-strong text-link-deep dark:text-cyan-deep hover:underline focus-visible:outline-none"
             >
               <span>{t("nav.allComparisons")}</span>
@@ -143,17 +143,17 @@ const translatePath = useTranslatedPath(lang);
       </div>
 
       <a
-        href="/#faq"
+        href={translatePath("/#faq")}
         class="text-body-sm text-body hover:text-ink transition-colors px-3 py-1.5 rounded-full hover:bg-canvas-soft-2/50 focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none"
         >{t("nav.faq")}</a
       >
       <a
-        href="/about"
+        href={translatePath("/about")}
         class="text-body-sm text-body hover:text-ink transition-colors px-3 py-1.5 rounded-full hover:bg-canvas-soft-2/50 focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none"
         >{t("nav.about")}</a
       >
       <a
-        href="/contact"
+        href={translatePath("/contact")}
         class="text-body-sm text-body hover:text-ink transition-colors px-3 py-1.5 rounded-full hover:bg-canvas-soft-2/50 focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none"
         >{t("nav.contact")}</a
       >
@@ -216,6 +216,11 @@ const translatePath = useTranslatedPath(lang);
       class="mobile-nav-link text-body hover:text-ink transition-colors py-2 border-b border-hairline/30 text-body-sm-strong focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none"
       >{t("nav.compressPdf")}</a
     >
+    <a
+      href={translatePath("/blog")}
+      class="mobile-nav-link text-body hover:text-ink transition-colors py-2 border-b border-hairline/30 text-body-sm-strong focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none"
+      >{t("nav.blog")}</a
+    >
     <div class="border-b border-hairline/30 py-1">
       <button
         id="mobile-compare-btn"
@@ -226,51 +231,51 @@ const translatePath = useTranslatedPath(lang);
         <i class="fa-solid fa-chevron-down text-xs transition-transform duration-200" id="mobile-compare-chevron"></i>
       </button>
       <div id="mobile-compare-menu" class="hidden pl-4 py-2 flex flex-col gap-2.5">
-        <a href="/vs/ilovepdf" class="mobile-nav-link text-body-sm hover:text-ink flex items-center gap-2 transition-colors">
+        <a href={translatePath("/vs/ilovepdf")} class="mobile-nav-link text-body-sm hover:text-ink flex items-center gap-2 transition-colors">
           <span class="w-1.5 h-1.5 rounded-full bg-cyan-deep"></span> vs. iLovePDF
         </a>
-        <a href="/vs/smallpdf" class="mobile-nav-link text-body-sm hover:text-ink flex items-center gap-2 transition-colors">
+        <a href={translatePath("/vs/smallpdf")} class="mobile-nav-link text-body-sm hover:text-ink flex items-center gap-2 transition-colors">
           <span class="w-1.5 h-1.5 rounded-full bg-violet"></span> vs. Smallpdf
         </a>
-        <a href="/vs/adobe-acrobat" class="mobile-nav-link text-body-sm hover:text-ink flex items-center gap-2 transition-colors">
+        <a href={translatePath("/vs/adobe-acrobat")} class="mobile-nav-link text-body-sm hover:text-ink flex items-center gap-2 transition-colors">
           <span class="w-1.5 h-1.5 rounded-full bg-warning-deep"></span> vs. Adobe Acrobat
         </a>
-        <a href="/vs/pdf2go" class="mobile-nav-link text-body-sm hover:text-ink flex items-center gap-2 transition-colors">
+        <a href={translatePath("/vs/pdf2go")} class="mobile-nav-link text-body-sm hover:text-ink flex items-center gap-2 transition-colors">
           <span class="w-1.5 h-1.5 rounded-full bg-success"></span> vs. PDF2Go
         </a>
-        <a href="/vs/sejda" class="mobile-nav-link text-body-sm hover:text-ink flex items-center gap-2 transition-colors">
+        <a href={translatePath("/vs/sejda")} class="mobile-nav-link text-body-sm hover:text-ink flex items-center gap-2 transition-colors">
           <span class="w-1.5 h-1.5 rounded-full bg-violet-deep"></span> vs. Sejda
         </a>
-        <a href="/vs/pdfcandy" class="mobile-nav-link text-body-sm hover:text-ink flex items-center gap-2 transition-colors">
+        <a href={translatePath("/vs/pdfcandy")} class="mobile-nav-link text-body-sm hover:text-ink flex items-center gap-2 transition-colors">
           <span class="w-1.5 h-1.5 rounded-full bg-highlight-pink"></span> vs. PDF Candy
         </a>
-        <a href="/vs" class="mobile-nav-link text-body-sm-strong text-link-deep dark:text-cyan-deep flex items-center gap-1.5 pt-1.5 transition-colors">
+        <a href={translatePath("/vs")} class="mobile-nav-link text-body-sm-strong text-link-deep dark:text-cyan-deep flex items-center gap-1.5 pt-1.5 transition-colors">
           All Comparisons <i class="fa-solid fa-arrow-right text-xs"></i>
         </a>
       </div>
     </div>
     <a
-      href="/#faq"
+      href={translatePath("/#faq")}
       class="mobile-nav-link text-body hover:text-ink transition-colors py-2 border-b border-hairline/30 text-body-sm-strong focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none"
       >{t("nav.faq")}</a
     >
     <a
-      href="/about"
+      href={translatePath("/about")}
       class="mobile-nav-link text-body hover:text-ink transition-colors py-2 border-b border-hairline/30 text-body-sm-strong focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none"
       >{t("nav.about")}</a
     >
     <a
-      href="/contact"
+      href={translatePath("/contact")}
       class="mobile-nav-link text-body hover:text-ink transition-colors py-2 border-b border-hairline/30 text-body-sm-strong focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none"
       >{t("nav.contact")}</a
     >
     <a
-      href="/privacy"
+      href={translatePath("/privacy")}
       class="mobile-nav-link text-body hover:text-ink transition-colors py-2 border-b border-hairline/30 text-body-sm-strong focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none"
       >{t("footer.privacy")}</a
     >
     <a
-      href="/terms"
+      href={translatePath("/terms")}
       class="mobile-nav-link text-body hover:text-ink transition-colors py-2 text-body-sm-strong focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none"
       >{t("footer.terms")}</a
     >

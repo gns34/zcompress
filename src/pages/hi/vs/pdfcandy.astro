@@ -1,0 +1,116 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+---
+
+<Layout
+  title="Zcompressor vs PDF Candy - Free Unlimited PDF Candy Alternative | Compress PDF"
+  description="Zcompressor aur PDF Candy ka comparison. PDF Candy ke 1 task per hour limit ke mukable Zcompressor bina kisi limit ke 100% free aur secure client-side compression deta hai."
+  ogUrl="https://zcompressor.com/hi/vs/pdfcandy"
+>
+  <!-- JSON-LD FAQ Schema in Hinglish -->
+  <script type="application/ld+json" is:inline>
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "PDF Candy ke mukable Zcompressor ki task limit kya hai?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "<p>PDF Candy free users ko ghante me sirf 1 task karne deta hai aur fir upgrade karne ko kehta hai. Zcompressor 100% free hai, bina kisi hourly task cap ya limit ke.</p>"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kya Zcompressor PDF Candy se zyada private hai?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "<p>Haan. PDF Candy aapki files unke servers par upload karke process karta hai. Zcompressor aapke browser ki memory me locally execute hota hai, isliye files kabhi internet par leak nahi ho sakti.</p>"
+          }
+        }
+      ]
+    }
+  </script>
+
+  <Header />
+
+  <main class="min-h-screen bg-canvas-soft text-ink py-16 px-6">
+    <div class="max-w-[800px] mx-auto">
+      <div class="mb-12 border-b border-hairline pb-8">
+        <span
+          class="text-caption-mono font-mono text-link-deep dark:text-cyan-deep uppercase tracking-wider block mb-3 animate-fade-in"
+        >
+          Security Review
+        </span>
+        <h1
+          class="text-display-lg md:text-display-xl text-ink font-semibold tracking-[-1.5px] md:tracking-[-2.4px] mb-4"
+        >
+          Zcompressor vs PDF Candy.
+        </h1>
+        <p class="text-body-lg text-body text-balance">
+          PDF Candy ke hourly task quotas ke mukable Zcompressor ka bina kisi limit wala free local engine.
+        </p>
+      </div>
+
+      <!-- Feature Table -->
+      <section class="mb-12">
+        <h2 class="text-display-md text-ink font-semibold tracking-[-0.96px] mb-6">
+          Feature Breakdown.
+        </h2>
+        <div class="border border-hairline rounded-lg overflow-hidden shadow-level-2 bg-canvas">
+          <div class="overflow-x-auto">
+            <table class="w-full border-collapse">
+              <thead>
+                <tr>
+                  <th class="bg-canvas-soft-2/50 dark:bg-canvas-soft-2 text-caption-mono font-mono text-mute uppercase px-4 py-3 text-left border-b border-hairline">Feature</th>
+                  <th class="bg-canvas-soft-2/50 dark:bg-canvas-soft-2 text-caption-mono font-mono text-ink font-semibold uppercase px-4 py-3 text-left border-b border-hairline">Zcompressor</th>
+                  <th class="bg-canvas-soft-2/50 dark:bg-canvas-soft-2 text-caption-mono font-mono text-mute uppercase px-4 py-3 text-left border-b border-hairline">PDF Candy</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="text-body-sm-strong text-ink px-4 py-3.5 border-b border-hairline">Task Limit</td>
+                  <td class="text-body-sm text-success font-medium px-4 py-3.5 border-b border-hairline">Unlimited (Koi limit nahi)</td>
+                  <td class="text-body-sm text-body px-4 py-3.5 border-b border-hairline">Sirf 1 task per hour</td>
+                </tr>
+                <tr>
+                  <td class="text-body-sm-strong text-ink px-4 py-3.5 border-b border-hairline">Batch Compression</td>
+                  <td class="text-body-sm text-success font-medium px-4 py-3.5 border-b border-hairline">Free me available</td>
+                  <td class="text-body-sm text-body px-4 py-3.5 border-b border-hairline">Paywall ke peeche band</td>
+                </tr>
+                <tr>
+                  <td class="text-body-sm-strong text-ink px-4 py-3.5 border-b border-hairline">Server Upload</td>
+                  <td class="text-body-sm text-success font-medium px-4 py-3.5 border-b border-hairline">0% (Pure Client-Side)</td>
+                  <td class="text-body-sm text-body px-4 py-3.5 border-b border-hairline">Remote servers par upload</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="border-t border-hairline pt-8 text-center">
+        <h2 class="text-display-sm text-ink font-semibold mb-6">Unlimited PDF compression ka anubhav karein.</h2>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a
+            href="/hi/compress-pdf"
+            class="px-6 h-[48px] bg-primary text-on-primary text-button-lg rounded-pill hover:bg-black transition-all inline-flex items-center justify-center shadow-level-3 hover:scale-[1.02] duration-200"
+          >
+            Compress Shuru Karein
+          </a>
+          <a
+            href="/hi/vs"
+            class="px-6 h-[48px] bg-canvas text-ink border border-hairline text-button-lg rounded-pill hover:bg-canvas-soft transition-all inline-flex items-center justify-center shadow-level-2 hover:scale-[1.02] duration-200"
+          >
+            Sabhi Comparisons Dekhein
+          </a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <Footer />
+</Layout>

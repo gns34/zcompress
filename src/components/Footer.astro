@@ -47,21 +47,21 @@ const translatePath = useTranslatedPath(lang);
         </li>
         <li>
           <a
-            href="/blog"
+            href={translatePath("/blog")}
             class="text-body-sm text-body hover:text-ink transition-colors"
             >{t("nav.blog")}</a
           >
         </li>
         <li>
           <a
-            href="/#features"
+            href={translatePath("/#features")}
             class="text-body-sm text-body hover:text-ink transition-colors"
             >Features</a
           >
         </li>
         <li>
           <a
-            href="/#faq"
+            href={translatePath("/#faq")}
             class="text-body-sm text-body hover:text-ink transition-colors"
             >{t("nav.faq")}</a
           >
@@ -79,35 +79,35 @@ const translatePath = useTranslatedPath(lang);
       <ul class="space-y-2">
         <li>
           <a
-            href="/vs"
+            href={translatePath("/vs")}
             class="text-body-sm text-body hover:text-ink transition-colors"
             >All Comparisons</a
           >
         </li>
         <li>
           <a
-            href="/vs/ilovepdf"
+            href={translatePath("/vs/ilovepdf")}
             class="text-body-sm text-body hover:text-ink transition-colors"
             >vs iLovePDF</a
           >
         </li>
         <li>
           <a
-            href="/vs/smallpdf"
+            href={translatePath("/vs/smallpdf")}
             class="text-body-sm text-body hover:text-ink transition-colors"
             >vs Smallpdf</a
           >
         </li>
         <li>
           <a
-            href="/vs/adobe-acrobat"
+            href={translatePath("/vs/adobe-acrobat")}
             class="text-body-sm text-body hover:text-ink transition-colors"
             >vs Adobe Acrobat</a
           >
         </li>
         <li>
           <a
-            href="/vs/sejda"
+            href={translatePath("/vs/sejda")}
             class="text-body-sm text-body hover:text-ink transition-colors"
             >vs Sejda</a
           >
@@ -126,47 +126,30 @@ const translatePath = useTranslatedPath(lang);
       <ul class="space-y-2">
         <li>
           <a
-            href="/hi/"
-            class="text-body-sm text-body hover:text-ink transition-colors flex items-center gap-1.5"
-            ><span class="w-1.5 h-1.5 rounded-full bg-cyan-deep"></span> Hinglish Home</a
-          >
-        </li>
-        <li>
-          <a
-            href="/hi/compress-pdf"
-            class="text-body-sm text-body hover:text-ink transition-colors flex items-center gap-1.5"
-            ><span class="w-1.5 h-1.5 rounded-full bg-cyan-deep"></span> PDF Compressor (HI)</a
-          >
-        </li>
-        <li>
-          <a
-            href="/hi/compress-pdf-for-upsc"
-            class="text-body-sm text-body hover:text-ink transition-colors"
-            >UPSC PDF (Hinglish)</a
-          >
-        </li>
-        <li>
-          <a
-            href="/hi/compress-pdf-for-nsp-scholarship"
-            class="text-body-sm text-body hover:text-ink transition-colors"
-            >NSP Scholarship (Hinglish)</a
-          >
-        </li>
-        <li>
-          <hr class="border-hairline/40 my-2" />
-        </li>
-        <li>
-          <a
-            href="/about"
+            href={translatePath("/about")}
             class="text-body-sm text-body hover:text-ink transition-colors"
             >{t("nav.about")}</a
           >
         </li>
         <li>
           <a
-            href="/contact"
+            href={translatePath("/contact")}
             class="text-body-sm text-body hover:text-ink transition-colors"
             >{t("nav.contact")}</a
+          >
+        </li>
+        <li>
+          <a
+            href={translatePath("/privacy")}
+            class="text-body-sm text-body hover:text-ink transition-colors"
+            >{t("footer.privacy")}</a
+          >
+        </li>
+        <li>
+          <a
+            href={translatePath("/terms")}
+            class="text-body-sm text-body hover:text-ink transition-colors"
+            >{t("footer.terms")}</a
           >
         </li>
       </ul>
@@ -182,35 +165,35 @@ const translatePath = useTranslatedPath(lang);
       <ul class="space-y-2">
         <li>
           <a
-            href="/compress-pdf-for-nsp-scholarship"
+            href={translatePath("/compress-pdf-for-nsp-scholarship")}
             class="text-body-sm text-body hover:text-ink transition-colors"
             >NSP Scholarship PDF</a
           >
         </li>
         <li>
           <a
-            href="/compress-pdf-for-josaa-jee-counseling"
+            href={translatePath("/compress-pdf-for-josaa-jee-counseling")}
             class="text-body-sm text-body hover:text-ink transition-colors"
             >JoSAA JEE Counseling</a
           >
         </li>
         <li>
           <a
-            href="/compress-pdf-for-upsc"
+            href={translatePath("/compress-pdf-for-upsc")}
             class="text-body-sm text-body hover:text-ink transition-colors"
             >UPSC PDF Tool</a
           >
         </li>
         <li>
           <a
-            href="/batch-compress-pdf"
+            href={translatePath("/batch-compress-pdf")}
             class="text-body-sm text-body hover:text-ink transition-colors"
             >Batch Compress PDFs</a
           >
         </li>
         <li>
           <a
-            href="/compress-pdf-for-resume"
+            href={translatePath("/compress-pdf-for-resume")}
             class="text-body-sm text-body hover:text-ink transition-colors"
             >Resume PDF Tool</a
           >
@@ -220,21 +203,21 @@ const translatePath = useTranslatedPath(lang);
         </li>
         <li>
           <a
-            href="/compress-pdf-to-200kb"
+            href={translatePath("/compress-pdf-to-200kb")}
             class="text-body-sm text-body hover:text-ink transition-colors"
             >Compress to 200 KB</a
           >
         </li>
         <li>
           <a
-            href="/compress-pdf-to-300kb"
+            href={translatePath("/compress-pdf-to-300kb")}
             class="text-body-sm text-body hover:text-ink transition-colors"
             >Compress to 300 KB</a
           >
         </li>
         <li>
           <a
-            href="/reduce-pdf-file-size"
+            href={translatePath("/reduce-pdf-file-size")}
             class="text-body-sm text-body hover:text-ink transition-colors"
             >Reduce PDF Size</a
           >
@@ -273,12 +256,12 @@ const translatePath = useTranslatedPath(lang);
     </span>
     <div class="flex gap-4">
       <a
-        href="/terms"
+        href={translatePath("/terms")}
         class="text-caption text-mute hover:text-ink transition-colors"
         >{t("footer.terms")}</a
       >
       <a
-        href="/privacy"
+        href={translatePath("/privacy")}
         class="text-caption text-mute hover:text-ink transition-colors"
         >{t("footer.privacy")}</a
       >

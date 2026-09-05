@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import { getLangFromUrl, useTranslatedPath } from "../i18n/utils";
 
 interface SpecItem {
   label: string;
@@ -59,15 +60,23 @@ const {
   lastVerified,
 } = Astro.props;
 
-const canonicalUrl = `https://zcompressor.com/${slug}`;
+const lang = getLangFromUrl(Astro.url);
+const isHi = lang === "hi";
+const translatePath = useTranslatedPath(lang);
+
+const canonicalUrl = isHi ? `https://zcompressor.com/hi/${slug}` : `https://zcompressor.com/${slug}`;
 const compressorLink = targetSizeKB
-  ? `/compress-pdf?target=${targetSizeKB}`
-  : "/compress-pdf";
+  ? translatePath(`/compress-pdf?target=${targetSizeKB}`)
+  : translatePath("/compress-pdf");
 const targetLabel = targetSizeKB
   ? targetSizeKB >= 1024
     ? `${(targetSizeKB / 1024).toFixed(0)} MB`
     : `${targetSizeKB} KB`
   : null;
+
+const displayEyebrow = eyebrowText === "Zero Server Uploads" && isHi
+  ? "Bina Kisi Server Upload Ke"
+  : eyebrowText;
 
 // Build FAQ structured data
 const faqSchema = {
@@ -129,7 +138,7 @@ const faqSchema = {
         </span>
         <span
           class="text-caption font-mono font-medium tracking-wider uppercase text-body"
-        >{eyebrowText}</span>
+        >{displayEyebrow}</span>
       </div>
 
       <!-- Headline -->
@@ -148,7 +157,7 @@ const faqSchema = {
           href={compressorLink}
           class="px-6 h-[48px] bg-primary text-on-primary text-button-lg rounded-pill hover:bg-black transition-all inline-flex items-center justify-center shadow-level-3 hover:scale-[1.02] duration-200"
         >
-          {targetLabel ? `Compress to ${targetLabel}` : "Start Compressing"}
+          {targetLabel ? (isHi ? `${targetLabel} me Compress karein` : `Compress to ${targetLabel}`) : (isHi ? "Compress Shuru Karein" : "Start Compressing")}
         </a>
       </div>
     </div>
@@ -159,7 +168,7 @@ const faqSchema = {
     {specs && specs.length > 0 && (
       <section class="mb-12">
         <h2 class="text-display-md text-ink font-semibold tracking-[-0.96px] mb-6">
-          {specsHeading || "Document requirements."}
+          {specsHeading || (isHi ? "Document upload limits aur size." : "Document requirements.")}
         </h2>
         <div class="border border-hairline rounded-lg overflow-hidden shadow-level-2 bg-canvas">
           <div class="overflow-x-auto">
@@ -167,10 +176,10 @@ const faqSchema = {
               <thead>
                 <tr>
                   <th class="bg-canvas-soft-2/50 dark:bg-canvas-soft-2 text-caption-mono font-mono text-mute uppercase px-4 py-3 text-left border-b border-hairline">
-                    Document
+                    {isHi ? "Document Type" : "Document"}
                   </th>
                   <th class="bg-canvas-soft-2/50 dark:bg-canvas-soft-2 text-caption-mono font-mono text-mute uppercase px-4 py-3 text-left border-b border-hairline">
-                    Format & Size
+                    {isHi ? "Required Format & Size" : "Format & Size"}
                   </th>
                 </tr>
               </thead>
@@ -190,7 +199,7 @@ const faqSchema = {
           </div>
         </div>
         <p class="text-caption text-mute mt-3 font-mono">
-          Last verified: {lastVerified}
+          {isHi ? "Aakhri baar verify kiya gaya" : "Last verified"}: {lastVerified}
         </p>
       </section>
     )}
@@ -220,7 +229,7 @@ const faqSchema = {
           </div>
           <div>
             <h3 class="text-display-sm text-ink font-semibold tracking-[-0.6px] mb-2">
-              Your files stay on your device.
+              {isHi ? "Aapke documents aapke device par hi safe rehte hain." : "Your files stay on your device."}
             </h3>
             <p class="text-body-md text-body leading-relaxed">
               {privacyNote}
@@ -233,7 +242,7 @@ const faqSchema = {
     <!-- FAQ Accordion Section -->
     <section class="border-t border-hairline pt-12 mb-12">
       <h2 class="text-display-md text-ink font-semibold tracking-[-0.96px] mb-8">
-        Frequently Asked Questions.
+        {isHi ? "Aksar Pooche Jaane Wale Sawal (FAQ)." : "Frequently Asked Questions."}
       </h2>
       <div class="space-y-4" id="seo-faq">
         {faq.map((item, index) => (
@@ -266,12 +275,12 @@ const faqSchema = {
     {crossLinks && crossLinks.length > 0 && (
       <section class="border-t border-hairline pt-12 mb-12">
         <h2 class="text-display-sm text-ink font-semibold tracking-[-0.6px] mb-6">
-          Related tools.
+          {isHi ? "Dusre Tools & Presets." : "Related tools."}
         </h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
           {crossLinks.map((link) => (
             <a
-              href={link.href}
+              href={translatePath(link.href)}
               class="group flex items-center justify-between p-4 rounded-lg bg-canvas border border-hairline shadow-level-2 hover:shadow-level-3 hover:border-hairline-strong transition-all duration-200"
             >
               <span class="text-body-sm-strong text-ink group-hover:text-primary transition-colors">
@@ -288,21 +297,21 @@ const faqSchema = {
     <section class="border-t border-hairline pt-8 text-center">
       <h2 class="text-display-sm text-ink font-semibold mb-6">
         {targetLabel
-          ? `Compress your PDF to ${targetLabel} now.`
-          : "Start compressing your PDFs."}
+          ? (isHi ? `Apna PDF abhi ${targetLabel} me compress karein.` : `Compress your PDF to ${targetLabel} now.`)
+          : (isHi ? "Apne PDFs ko compress karna shuru karein." : "Start compressing your PDFs.")}
       </h2>
       <div class="flex flex-wrap justify-center gap-4">
         <a
           href={compressorLink}
           class="px-6 h-[48px] bg-primary text-on-primary text-button-lg rounded-pill hover:bg-black transition-all inline-flex items-center justify-center shadow-level-3 hover:scale-[1.02] duration-200"
         >
-          Start Compressing
+          {isHi ? "Abhi Compress Karein" : "Start Compressing"}
         </a>
         <a
-          href="/compress-pdf"
+          href={translatePath("/compress-pdf")}
           class="px-6 h-[48px] bg-canvas text-ink border border-hairline text-button-lg rounded-pill hover:bg-canvas-soft transition-all inline-flex items-center justify-center shadow-level-2 hover:scale-[1.02] duration-200"
         >
-          General Compressor
+          {isHi ? "Sabhi Tools & Presets" : "General Compressor"}
         </a>
       </div>
     </section>

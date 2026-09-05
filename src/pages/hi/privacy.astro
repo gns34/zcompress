@@ -1,0 +1,136 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+---
+
+<Layout
+  title="Privacy Policy - Zcompressor | 100% Private & Safe"
+  description="Zcompressor ki Privacy Policy padhein. Janiye kaise Zcompressor bina kisi server upload ke aapke web browser me 100% locally aur securely documents ko process karta hai."
+  ogUrl="https://zcompressor.com/hi/privacy"
+>
+  <Header />
+
+  <main class="min-h-screen bg-canvas-soft text-ink py-16 px-6">
+    <div class="max-w-[800px] mx-auto">
+      <!-- Page Header -->
+      <div class="mb-12 border-b border-hairline pb-8">
+        <span
+          class="text-caption-mono font-mono text-link-deep dark:text-cyan-deep uppercase tracking-wider block mb-3"
+        >
+          Security & Privacy
+        </span>
+        <h1
+          class="text-display-lg md:text-display-xl text-ink font-semibold tracking-[-1.5px] md:tracking-[-2.4px] mb-4"
+        >
+          Privacy Policy.
+        </h1>
+        <p class="text-body-lg text-body">
+          Last updated: June 26, 2026. Zcompressor kyu 100% secure, zero-server-upload aur design se hi puri tarah private hai, yahan samjhein.
+        </p>
+      </div>
+
+      <!-- Main Content -->
+      <article class="space-y-10">
+        <section>
+          <h2
+            class="text-display-md text-ink font-semibold tracking-[-0.96px] mb-4"
+          >
+            1. 100% Local Processing.
+          </h2>
+          <p class="text-body-md text-body leading-relaxed mb-4">
+            Zcompressor ek "zero-trust" architecture par chalta hai. Aam online PDF compressor tools ki tarah, Zcompressor aapke documents ko kisi bhi remote server par upload <strong>nahi</strong> karta. Sabhi file optimization, rendering, image compression aur page reduction aapke local web browser ki memory me hi hote hain.
+          </p>
+          <p class="text-body-md text-body leading-relaxed">
+            Aapki files kabhi aapke computer ya mobile se bahar nahi jaati. Iska matlab hai ki aapke sensitive business papers, personal ID proofs, Aadhaar, marksheet ya bank statements kisi bhi data breach ya tracking se 100% safe hain.
+          </p>
+        </section>
+
+        <section>
+          <h2
+            class="text-display-md text-ink font-semibold tracking-[-0.96px] mb-4"
+          >
+            2. Hum Koi Personal Data Collect Nahi Karte.
+          </h2>
+          <p class="text-body-md text-body leading-relaxed mb-4">
+            Kyuki hamari service client-side chalti hai, hum ye cheezein collect ya store nahi karte:
+          </p>
+          <ul class="list-disc pl-6 space-y-2 text-body-md text-body mb-6">
+            <li>Aapki PDF files ya unke andar ka koi bhi text/photo.</li>
+            <li>Aapka naam, email address, phone number ya payment details.</li>
+            <li>User accounts ya passwords (yahan kisi registration ki zarurat nahi hoti).</li>
+          </ul>
+          <p class="text-body-md text-body leading-relaxed">
+            Zcompressor use karte waqt aap puri tarah anonymous rehte hain.
+          </p>
+        </section>
+
+        <section>
+          <h2
+            class="text-display-md text-ink font-semibold tracking-[-0.96px] mb-4"
+          >
+            3. Local Storage aur Theme Settings.
+          </h2>
+          <p class="text-body-md text-body leading-relaxed">
+            Hum aapke browser ke LocalStorage ka use sirf aapki pasandeeda theme (Dark Mode ya Light Mode) ko yaad rakhne ke liye karte hain. Ye data sirf aapke device par rehta hai aur kisi ko nahi bheja jaata.
+          </p>
+        </section>
+
+        <section>
+          <h2
+            class="text-display-md text-ink font-semibold tracking-[-0.96px] mb-4"
+          >
+            4. Open-Source Libraries aur CDNs.
+          </h2>
+          <p class="text-body-md text-body leading-relaxed mb-4">
+            Zcompressor safe, open-source standard libraries par kaam karta hai:
+          </p>
+          <ul class="list-disc pl-6 space-y-2 text-body-md text-body mb-6">
+            <li>
+              <strong>pdf-lib</strong>: PDF structure ko safely analyze aur re-encode karne ke liye.
+            </li>
+            <li>
+              <strong>pdf.js</strong>: Mozilla dwara banayi gayi library jo PDF pages ko image canvas me render karti hai.
+            </li>
+            <li>
+              <strong>jszip</strong>: Multiple compressed files ko ek hi ZIP archive me download karne ke liye.
+            </li>
+          </ul>
+          <p class="text-body-md text-body leading-relaxed">
+            Ye libraries public CDN (Cloudflare cdnjs / unpkg) se download hoti hain, jisse fastest loading speed milti hai.
+          </p>
+        </section>
+
+        <section>
+          <h2
+            class="text-display-md text-ink font-semibold tracking-[-0.96px] mb-4"
+          >
+            5. Policy me Badlav.
+          </h2>
+          <p class="text-body-md text-body leading-relaxed">
+            Agar hum kabhi is policy me koi sudhar karte hain, to updated date ke sath isi page par publish kiya jayega. Kyuki hum koi email collect nahi karte, isliye aap is page ko future me review kar sakte hain.
+          </p>
+        </section>
+
+        <section class="border-t border-hairline pt-8">
+          <h2
+            class="text-display-md text-ink font-semibold tracking-[-0.96px] mb-4"
+          >
+            Koi Sawal Hai?
+          </h2>
+          <p class="text-body-md text-body leading-relaxed mb-4">
+            Privacy ya data safety se judi koi baat poochna chahte hain to hamse sampark karein.
+          </p>
+          <a
+            href="/hi/contact"
+            class="inline-flex items-center justify-center px-4 py-2 border border-hairline rounded bg-canvas text-body-sm-strong text-ink hover:bg-canvas-soft-2/50 transition-colors shadow-level-2 focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none"
+          >
+            Hamse Sampark Karein
+          </a>
+        </section>
+      </article>
+    </div>
+  </main>
+
+  <Footer />
+</Layout>

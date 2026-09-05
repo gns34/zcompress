@@ -1,0 +1,116 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+---
+
+<Layout
+  title="Zcompressor vs Sejda - Unlimited Free Sejda Alternative | Compress PDF"
+  description="Zcompressor aur Sejda ka comparison. Sejda ke 3 tasks per day aur 200 pages limit ke mukable Zcompressor 100% free, unlimited aur private browser tool hai."
+  ogUrl="https://zcompressor.com/hi/vs/sejda"
+>
+  <!-- JSON-LD FAQ Schema in Hinglish -->
+  <script type="application/ld+json" is:inline>
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Sejda ke mukable Zcompressor ki usage limits kya hain?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "<p>Sejda free users ko ghante me sirf 3 tasks, 50MB size aur 200 pages ki limit deta hai. Zcompressor me koi task limit, page cap ya file size restriction nahi hai.</p>"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kya Sejda par file upload karni padti hai?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "<p>Haan, Sejda par files unke remote servers par upload hoti hain aur 2 ghante tak store rehti hain. Zcompressor me files 100% browser memory me process hoti hain aur kabhi bahar nahi jaati.</p>"
+          }
+        }
+      ]
+    }
+  </script>
+
+  <Header />
+
+  <main class="min-h-screen bg-canvas-soft text-ink py-16 px-6">
+    <div class="max-w-[800px] mx-auto">
+      <div class="mb-12 border-b border-hairline pb-8">
+        <span
+          class="text-caption-mono font-mono text-link-deep dark:text-cyan-deep uppercase tracking-wider block mb-3 animate-fade-in"
+        >
+          Product Comparison
+        </span>
+        <h1
+          class="text-display-lg md:text-display-xl text-ink font-semibold tracking-[-1.5px] md:tracking-[-2.4px] mb-4"
+        >
+          Zcompressor vs Sejda.
+        </h1>
+        <p class="text-body-lg text-body text-balance">
+          Sejda ke daily task aur page limits ke mukable Zcompressor ka unlimited, 100% free local client-side tool.
+        </p>
+      </div>
+
+      <!-- Feature Table -->
+      <section class="mb-12">
+        <h2 class="text-display-md text-ink font-semibold tracking-[-0.96px] mb-6">
+          Feature Breakdown.
+        </h2>
+        <div class="border border-hairline rounded-lg overflow-hidden shadow-level-2 bg-canvas">
+          <div class="overflow-x-auto">
+            <table class="w-full border-collapse">
+              <thead>
+                <tr>
+                  <th class="bg-canvas-soft-2/50 dark:bg-canvas-soft-2 text-caption-mono font-mono text-mute uppercase px-4 py-3 text-left border-b border-hairline">Feature</th>
+                  <th class="bg-canvas-soft-2/50 dark:bg-canvas-soft-2 text-caption-mono font-mono text-ink font-semibold uppercase px-4 py-3 text-left border-b border-hairline">Zcompressor</th>
+                  <th class="bg-canvas-soft-2/50 dark:bg-canvas-soft-2 text-caption-mono font-mono text-mute uppercase px-4 py-3 text-left border-b border-hairline">Sejda</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="text-body-sm-strong text-ink px-4 py-3.5 border-b border-hairline">Task Limit</td>
+                  <td class="text-body-sm text-success font-medium px-4 py-3.5 border-b border-hairline">Unlimited (Koi limit nahi)</td>
+                  <td class="text-body-sm text-body px-4 py-3.5 border-b border-hairline">3 tasks / hour free</td>
+                </tr>
+                <tr>
+                  <td class="text-body-sm-strong text-ink px-4 py-3.5 border-b border-hairline">Page Limit</td>
+                  <td class="text-body-sm text-success font-medium px-4 py-3.5 border-b border-hairline">No Page Limits</td>
+                  <td class="text-body-sm text-body px-4 py-3.5 border-b border-hairline">Max 200 pages</td>
+                </tr>
+                <tr>
+                  <td class="text-body-sm-strong text-ink px-4 py-3.5 border-b border-hairline">File Privacy</td>
+                  <td class="text-body-sm text-success font-medium px-4 py-3.5 border-b border-hairline">100% Private (No uploads)</td>
+                  <td class="text-body-sm text-body px-4 py-3.5 border-b border-hairline">Servers par 2 ghante store hoti hai</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="border-t border-hairline pt-8 text-center">
+        <h2 class="text-display-sm text-ink font-semibold mb-6">Unlimited PDF compression shuru karein.</h2>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a
+            href="/hi/compress-pdf"
+            class="px-6 h-[48px] bg-primary text-on-primary text-button-lg rounded-pill hover:bg-black transition-all inline-flex items-center justify-center shadow-level-3 hover:scale-[1.02] duration-200"
+          >
+            Compress Shuru Karein
+          </a>
+          <a
+            href="/hi/vs"
+            class="px-6 h-[48px] bg-canvas text-ink border border-hairline text-button-lg rounded-pill hover:bg-canvas-soft transition-all inline-flex items-center justify-center shadow-level-2 hover:scale-[1.02] duration-200"
+          >
+            Sabhi Comparisons Dekhein
+          </a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <Footer />
+</Layout>

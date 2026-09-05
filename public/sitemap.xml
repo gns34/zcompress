@@ -162,6 +162,7 @@
   </url>
 
   <!-- Hindi / Hinglish Localized Pages -->
+  <!-- Core & Main Pages (HI) -->
   <url>
     <loc>https://zcompressor.com/hi/</loc>
   </url>
@@ -169,9 +170,156 @@
     <loc>https://zcompressor.com/hi/compress-pdf</loc>
   </url>
   <url>
+    <loc>https://zcompressor.com/hi/about</loc>
+  </url>
+  <url>
+    <loc>https://zcompressor.com/hi/contact</loc>
+  </url>
+  <url>
+    <loc>https://zcompressor.com/hi/privacy</loc>
+  </url>
+  <url>
+    <loc>https://zcompressor.com/hi/terms</loc>
+  </url>
+
+  <!-- Competitor Comparison Pages (HI) -->
+  <url>
+    <loc>https://zcompressor.com/hi/vs</loc>
+  </url>
+  <url>
+    <loc>https://zcompressor.com/hi/vs/ilovepdf</loc>
+  </url>
+  <url>
+    <loc>https://zcompressor.com/hi/vs/smallpdf</loc>
+  </url>
+  <url>
+    <loc>https://zcompressor.com/hi/vs/adobe-acrobat</loc>
+  </url>
+  <url>
+    <loc>https://zcompressor.com/hi/vs/adobe-acrobat-compress</loc>
+  </url>
+  <url>
+    <loc>https://zcompressor.com/hi/vs/pdf2go</loc>
+  </url>
+  <url>
+    <loc>https://zcompressor.com/hi/vs/sejda</loc>
+  </url>
+  <url>
+    <loc>https://zcompressor.com/hi/vs/pdfcandy</loc>
+  </url>
+
+  <!-- Target Size Tools (HI) -->
+  <url>
+    <loc>https://zcompressor.com/hi/compress-pdf-to-100kb</loc>
+  </url>
+  <url>
+    <loc>https://zcompressor.com/hi/compress-pdf-to-200kb</loc>
+  </url>
+  <url>
+    <loc>https://zcompressor.com/hi/compress-pdf-to-300kb</loc>
+  </url>
+  <url>
+    <loc>https://zcompressor.com/hi/compress-pdf-to-500kb</loc>
+  </url>
+  <url>
+    <loc>https://zcompressor.com/hi/compress-pdf-to-1mb</loc>
+  </url>
+
+  <!-- Exam & Scholarship Document Compression Tools (HI) -->
+  <url>
+    <loc>https://zcompressor.com/hi/compress-pdf-for-upsc</loc>
+  </url>
+  <url>
+    <loc>https://zcompressor.com/hi/compress-pdf-for-gate</loc>
+  </url>
+  <url>
+    <loc>https://zcompressor.com/hi/compress-pdf-for-neet</loc>
+  </url>
+  <url>
+    <loc>https://zcompressor.com/hi/compress-pdf-for-ssc</loc>
+  </url>
+  <url>
+    <loc>https://zcompressor.com/hi/compress-pdf-for-sbi-ibps</loc>
+  </url>
+  <url>
     <loc>https://zcompressor.com/hi/compress-pdf-for-nsp-scholarship</loc>
   </url>
   <url>
-    <loc>https://zcompressor.com/hi/compress-pdf-for-upsc</loc>
+    <loc>https://zcompressor.com/hi/compress-pdf-for-mahadbt-scholarship</loc>
+  </url>
+  <url>
+    <loc>https://zcompressor.com/hi/compress-pdf-for-up-scholarship</loc>
+  </url>
+  <url>
+    <loc>https://zcompressor.com/hi/compress-pdf-for-bihar-scholarship</loc>
+  </url>
+  <url>
+    <loc>https://zcompressor.com/hi/compress-pdf-for-josaa-jee-counseling</loc>
+  </url>
+  <url>
+    <loc>https://zcompressor.com/hi/compress-pdf-for-neet-counseling</loc>
+  </url>
+  <url>
+    <loc>https://zcompressor.com/hi/compress-pdf-for-cuet-counseling</loc>
+  </url>
+  <url>
+    <loc>https://zcompressor.com/hi/compress-pdf-for-nda-cds</loc>
+  </url>
+  <url>
+    <loc>https://zcompressor.com/hi/compress-pdf-for-state-psc-exams</loc>
+  </url>
+
+  <!-- Generic Use-Case & Feature Tools (HI) -->
+  <url>
+    <loc>https://zcompressor.com/hi/compress-pdf-for-email</loc>
+  </url>
+  <url>
+    <loc>https://zcompressor.com/hi/compress-pdf-for-resume</loc>
+  </url>
+  <url>
+    <loc>https://zcompressor.com/hi/compress-pdf-on-mobile</loc>
+  </url>
+  <url>
+    <loc>https://zcompressor.com/hi/compress-pdf-for-whatsapp</loc>
+  </url>
+  <url>
+    <loc>https://zcompressor.com/hi/compress-pdf-without-losing-quality</loc>
+  </url>
+  <url>
+    <loc>https://zcompressor.com/hi/compress-scanned-pdf</loc>
+  </url>
+  <url>
+    <loc>https://zcompressor.com/hi/batch-compress-pdf</loc>
+  </url>
+  <url>
+    <loc>https://zcompressor.com/hi/reduce-pdf-file-size</loc>
+  </url>
+
+  <!-- Government & Tax Services (HI) -->
+  <url>
+    <loc>https://zcompressor.com/hi/compress-pdf-for-passport-seva</loc>
+  </url>
+  <url>
+    <loc>https://zcompressor.com/hi/compress-pdf-for-income-tax-efiling</loc>
+  </url>
+
+  <!-- Blog & Guides (HI) -->
+  <url>
+    <loc>https://zcompressor.com/hi/blog</loc>
+  </url>
+  <url>
+    <loc>https://zcompressor.com/hi/blog/why-is-my-pdf-still-too-large</loc>
+  </url>
+  <url>
+    <loc>https://zcompressor.com/hi/blog/kb-vs-kib-file-size-explained</loc>
+  </url>
+  <url>
+    <loc>https://zcompressor.com/hi/blog/how-to-scan-documents-for-government-portals</loc>
+  </url>
+  <url>
+    <loc>https://zcompressor.com/hi/blog/pdf-compression-lossy-vs-lossless</loc>
+  </url>
+  <url>
+    <loc>https://zcompressor.com/hi/blog/common-document-upload-rejection-reasons</loc>
   </url>
 </urlset>

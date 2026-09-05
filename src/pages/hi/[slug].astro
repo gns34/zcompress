@@ -1,0 +1,93 @@
+---
+import ExamPageLayout from "../../components/ExamPageLayout.astro";
+import { getCollection } from "astro:content";
+
+export async function getStaticPaths() {
+  // Slugs that already have dedicated static .astro files in src/pages/hi/
+  const DEDICATED_HI_SLUGS = new Set([
+    "compress-pdf-for-upsc",
+    "compress-pdf-for-nsp-scholarship",
+  ]);
+
+  const entries = await getCollection("examPages");
+  return entries
+    .filter((entry) => !DEDICATED_HI_SLUGS.has(entry.data.slug))
+    .map((entry) => ({
+      params: { slug: entry.data.slug },
+      props: { entry },
+    }));
+}
+
+const { entry } = Astro.props;
+const rawData = entry.data;
+
+// Localized Hinglish metadata mappings for high-intent search keywords
+const localizedTitles: Record<string, { title: string; metaDescription: string; heroHeadline?: string; heroDescription?: string }> = {
+  "compress-pdf-to-100kb": {
+    title: "PDF ko 100 KB me Compress karein — 100% Free & Safe Online Tool | Zcompressor",
+    metaDescription: "PDF file ka size 100 KB se kam karein bina kisi server upload ke. Direct browser me private, safe aur fast PDF compression tool.",
+    heroHeadline: "PDF file ka size 100 KB se kam karein.",
+    heroDescription: "Government job forms, portal uploads aur emails ke liye apni PDF ko strictly 100 KB ke andar compress karein. 100% browser me, bina kisi server par upload kiye.",
+  },
+  "compress-pdf-to-200kb": {
+    title: "PDF ko 200 KB me Compress karein — 100% Free & Safe Online Tool | Zcompressor",
+    metaDescription: "PDF file ka size 200 KB se kam karein. Scholarship forms, college admissions aur portal uploads ke liye bina quality khoye PDF compress karein.",
+    heroHeadline: "PDF file ka size 200 KB se kam karein.",
+    heroDescription: "NSP scholarship, university admissions aur state exam portals ke liye PDF ko 200 KB ke under compress karein. Fast aur 100% safe.",
+  },
+  "compress-pdf-to-300kb": {
+    title: "PDF ko 300 KB me Compress karein — 100% Free & Safe Online Tool | Zcompressor",
+    metaDescription: "PDF file ko 300 KB me resize karein. UPSC, SSC aur sarkari naukri portals ke standard requirements ke mutabiq browser me compress karein.",
+    heroHeadline: "PDF file ka size 300 KB se kam karein.",
+    heroDescription: "Sarkari naukri portals aur UPSC forms ke liye educational certificates aur photo ID PDF ko 300 KB ke under compress karein.",
+  },
+  "compress-pdf-to-500kb": {
+    title: "PDF ko 500 KB me Compress karein — 100% Free & Safe Online Tool | Zcompressor",
+    metaDescription: "Badi PDF files ko 500 KB me compress karein. Email attachment aur legal document submission ke liye bilkul safe aur free tool.",
+    heroHeadline: "PDF file ka size 500 KB se kam karein.",
+    heroDescription: "Multiple pages wali PDF, scan kiye gaye documents aur legal files ko 500 KB ke under compress karein bina text blur kiye.",
+  },
+  "compress-pdf-to-1mb": {
+    title: "PDF ko 1 MB me Compress karein — 100% Free & Safe Online Tool | Zcompressor",
+    metaDescription: "10 MB ya 20 MB ki heavy PDF files ko 1 MB ke under compress karein. High speed client-side compression bina watermark ke.",
+    heroHeadline: "PDF file ka size 1 MB se kam karein.",
+    heroDescription: "High-resolution scanned books, research papers aur heavy presentations ko 1 MB me compress karein. 100% private.",
+  },
+  "compress-pdf-for-gate": {
+    title: "GATE Application Form ke liye PDF Compress kare (10–300 KB) — Zcompressor",
+    metaDescription: "GATE GOAPS portal par Category Certificate, PwD Certificate aur Marksheet PDF 10 KB se 300 KB ke beech compress karein.",
+    heroHeadline: "GATE GOAPS Portal ke liye PDF Compress kare (10–300 KB).",
+    heroDescription: "IIT GATE application ke liye apne category certificates aur degree marksheets ko GOAPS upload specs ke mutabiq compress karein.",
+  },
+  "compress-pdf-for-neet": {
+    title: "NEET UG / PG ke liye PDF Compress kare (10–300 KB) — Zcompressor",
+    metaDescription: "NTA NEET application form ke liye 10th marksheet, category certificate aur citizenship proof PDF ko 10 KB se 300 KB ke beech compress karein.",
+    heroHeadline: "NTA NEET Form ke liye PDF Compress kare (10–300 KB).",
+    heroDescription: "NTA NEET portal par rejection se bachein. Apni marksheets aur certificates ko NTA requirements ke mutabiq compress karein.",
+  },
+  "compress-pdf-for-ssc": {
+    title: "SSC CGL / CHSL Form ke liye PDF Compress kare — Zcompressor",
+    metaDescription: "SSC portal par document verification aur upload ke liye PDF file size reduce karein. 100% safe aur private browser compression.",
+    heroHeadline: "Staff Selection Commission (SSC) Form ke liye PDF Compress kare.",
+    heroDescription: "SSC CGL, CHSL, MTS aur GD Constable form ke liye documents ka size kam karein bina server upload ke.",
+  },
+  "compress-pdf-for-sbi-ibps": {
+    title: "SBI PO / IBPS Clerk Form ke liye PDF Compress kare — Zcompressor",
+    metaDescription: "Banking exams (IBPS PO, Clerk, SBI) ke liye handwritten declaration aur certificates PDF size kam karein.",
+    heroHeadline: "SBI PO aur IBPS Banking Forms ke liye PDF Compress kare.",
+    heroDescription: "IBPS aur SBI online application portal ke upload guidelines ke hisaab se PDF size turant kam karein.",
+  },
+};
+
+const custom = localizedTitles[rawData.slug];
+
+const data = {
+  ...rawData,
+  title: custom?.title || `${rawData.title} (Hinglish) — Zcompressor`,
+  metaDescription: custom?.metaDescription || rawData.metaDescription,
+  heroHeadline: custom?.heroHeadline || rawData.heroHeadline,
+  heroDescription: custom?.heroDescription || rawData.heroDescription,
+};
+---
+
+<ExamPageLayout {...data} />

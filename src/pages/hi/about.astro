@@ -1,0 +1,147 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+---
+
+<Layout
+  title="Hamare Baare Me - Zcompressor | 100% Private PDF Compressor"
+  description="Zcompressor ki kahani aur technology. Janiye kyu hum bina kisi remote server upload ke 100% private aur client-side document processing me vishwas rakhte hain."
+  ogUrl="https://zcompressor.com/hi/about"
+>
+  <Header />
+
+  <main class="min-h-screen bg-canvas-soft text-ink py-16 px-6">
+    <div class="max-w-[800px] mx-auto">
+      <!-- Page Header -->
+      <div class="mb-12 border-b border-hairline pb-8">
+        <span
+          class="text-caption-mono font-mono text-link-deep dark:text-cyan-deep uppercase tracking-wider block mb-3"
+        >
+          Hamari Philosophy
+        </span>
+        <h1
+          class="text-display-lg md:text-display-xl text-ink font-semibold tracking-[-1.5px] md:tracking-[-2.4px] mb-4"
+        >
+          Zcompressor ke baare me.
+        </h1>
+        <p class="text-body-lg text-body">
+          Humne online tools me ek bahut badi security problem dekhi: aam taur par personal documents ko anjaan remote servers par upload karna padta hai. Isi problem ko solve karne ke liye Zcompressor banaya gaya.
+        </p>
+      </div>
+
+      <!-- Main Content -->
+      <article class="space-y-10">
+        <section>
+          <h2
+            class="text-display-md text-ink font-semibold tracking-[-0.96px] mb-4"
+          >
+            Internet par File Upload karne ka Khatra.
+          </h2>
+          <p class="text-body-md text-body leading-relaxed mb-4">
+            Zyadatar online PDF compressor tools aapse aapki file unke server par upload karwate hain. Chahe koi service dawa kare ki "1 ghante baad file delete ho jayegi", fir bhi aapke personal documents internet ke raste unke server tak jate hain aur unke storage me save hote hain.
+          </p>
+          <p class="text-body-md text-body leading-relaxed">
+            Students ke Aadhaar card, income certificates, marksheets, ya fir business contracts aur financial reports ko kisi teesre server par upload karna data privacy ke liye ek bada risk hai.
+          </p>
+        </section>
+
+        <!-- Feature Grid/List -->
+        <section
+          class="bg-canvas border border-hairline rounded-lg p-6 sm:p-8 shadow-level-3 space-y-6"
+        >
+          <h3 class="text-display-sm text-ink font-semibold tracking-[-0.6px]">
+            Zcompressor dusro se alag kaise hai?
+          </h3>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
+            <div class="space-y-2">
+              <h4 class="text-body-md-strong text-ink flex items-center gap-2">
+                <i class="fa-solid fa-shield-halved text-cyan-deep"></i> 100% Private Sandbox
+              </h4>
+              <p class="text-body-sm text-body">
+                Compression aapke device ke web browser me locally run hota hai. Files kabhi kisi cloud server ko nahi jaati.
+              </p>
+            </div>
+            <div class="space-y-2">
+              <h4 class="text-body-md-strong text-ink flex items-center gap-2">
+                <i class="fa-solid fa-bolt text-warning-deep"></i> Slow Upload se Chhutkara
+              </h4>
+              <p class="text-body-sm text-body">
+                Local compression me internet speed ka chakkar nahi hota. Heavy files bhi turant process hoti hain.
+              </p>
+            </div>
+            <div class="space-y-2">
+              <h4 class="text-body-md-strong text-ink flex items-center gap-2">
+                <i class="fa-solid fa-code text-link-deep"></i> Modern Web Standards
+              </h4>
+              <p class="text-body-sm text-body">
+                Browser threads, Canvas APIs aur WebAssembly pipelines use karke super-fast client-side optimization.
+              </p>
+            </div>
+            <div class="space-y-2">
+              <h4 class="text-body-md-strong text-ink flex items-center gap-2">
+                <i class="fa-solid fa-wand-magic-sparkles text-violet"></i> Hamesha Free
+              </h4>
+              <p class="text-body-sm text-body">
+                Koi subscription nahi, koi watermark nahi, koi sign-up nahi aur koi daily file limits nahi.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2
+            class="text-display-md text-ink font-semibold tracking-[-0.96px] mb-4"
+          >
+            Technology & Architecture.
+          </h2>
+          <p class="text-body-md text-body leading-relaxed mb-4">
+            Zcompressor modern web browser standard technologies ka use karta hai:
+          </p>
+          <ul class="list-disc pl-6 space-y-2 text-body-md text-body mb-6">
+            <li>
+              <strong>Astro & Tailwind CSS v4</strong>: Fast, static aur accessible UI architecture.
+            </li>
+            <li>
+              <strong>Mozilla PDF.js</strong>: Browser background threads me PDF pages ko render karta hai bina server call ke.
+            </li>
+            <li>
+              <strong>pdf-lib</strong>: PDF structure ko reconstruct aur image streams ko local memory me downsample karta hai.
+            </li>
+            <li>
+              <strong>JSZip</strong>: Multiple compressed files ko ek hi structured ZIP file me pack karta hai.
+            </li>
+          </ul>
+        </section>
+
+        <section class="border-t border-hairline pt-8">
+          <h2
+            class="text-display-md text-ink font-semibold tracking-[-0.96px] mb-4"
+          >
+            Hamara Mission.
+          </h2>
+          <p class="text-body-md text-body leading-relaxed mb-6">
+            Hamara manna hai ki basic utility tools ko aapke computer ya mobile par hi kaam karna chahiye. Hamara mission privacy-first, free aur fast tools deliver karna hai jo har user ke data aur rights ka samman karein.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a
+              href="/hi/compress-pdf"
+              class="px-5 h-[40px] bg-primary text-on-primary text-body-sm-strong rounded-pill hover:bg-black transition-colors inline-flex items-center justify-center shadow-level-2 focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none"
+            >
+              Compress Karna Shuru Karein
+            </a>
+            <a
+              href="/hi/contact"
+              class="px-5 h-[40px] bg-canvas text-ink border border-hairline text-body-sm-strong rounded-pill hover:bg-canvas-soft transition-colors inline-flex items-center justify-center shadow-level-1 focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none"
+            >
+              Hamse Sampark Karein
+            </a>
+          </div>
+        </section>
+      </article>
+    </div>
+  </main>
+
+  <Footer />
+</Layout>

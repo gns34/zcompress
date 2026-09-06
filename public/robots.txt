@@ -1,6 +1,6 @@
-
 User-agent: *
 Allow: /
 
-
 Sitemap: https://zcompressor.com/sitemap.xml
+Sitemap: https://zcompressor.com/sitemap-en.xml
+Sitemap: https://zcompressor.com/sitemap-hi.xml

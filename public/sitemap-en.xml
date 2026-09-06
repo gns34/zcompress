@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- ================================================================== -->
+  <!-- 1. Core & Main Pages (English)                                     -->
+  <!-- ================================================================== -->
+
+  <!-- Homepage -->
+  <url>
+    <loc>https://zcompressor.com/</loc>
+  </url>
+
+  <!-- Main Compressor Tool -->
+  <url>
+    <loc>https://zcompressor.com/compress-pdf</loc>
+  </url>
+
+  <!-- About Us -->
+  <url>
+    <loc>https://zcompressor.com/about</loc>
+  </url>
+
+  <!-- Contact Us -->
+  <url>
+    <loc>https://zcompressor.com/contact</loc>
+  </url>
+
+  <!-- Privacy Policy -->
+  <url>
+    <loc>https://zcompressor.com/privacy</loc>
+  </url>
+
+  <!-- Terms & Conditions -->
+  <url>
+    <loc>https://zcompressor.com/terms</loc>
+  </url>
+
+  <!-- ================================================================== -->
+  <!-- 2. Competitor Comparison Pages (English)                           -->
+  <!-- ================================================================== -->
+
+  <!-- Comparison Hub -->
+  <url>
+    <loc>https://zcompressor.com/vs</loc>
+  </url>
+
+  <!-- vs iLovePDF -->
+  <url>
+    <loc>https://zcompressor.com/vs/ilovepdf</loc>
+  </url>
+
+  <!-- vs Smallpdf -->
+  <url>
+    <loc>https://zcompressor.com/vs/smallpdf</loc>
+  </url>
+
+  <!-- vs Adobe Acrobat -->
+  <url>
+    <loc>https://zcompressor.com/vs/adobe-acrobat</loc>
+  </url>
+
+  <!-- vs Adobe Acrobat Compress -->
+  <url>
+    <loc>https://zcompressor.com/vs/adobe-acrobat-compress</loc>
+  </url>
+
+  <!-- vs PDF2Go -->
+  <url>
+    <loc>https://zcompressor.com/vs/pdf2go</loc>
+  </url>
+
+  <!-- vs Sejda -->
+  <url>
+    <loc>https://zcompressor.com/vs/sejda</loc>
+  </url>
+
+  <!-- vs PDF Candy -->
+  <url>
+    <loc>https://zcompressor.com/vs/pdfcandy</loc>
+  </url>
+
+  <!-- ================================================================== -->
+  <!-- 3. Target Size Tools (English)                                     -->
+  <!-- ================================================================== -->
+
+  <!-- 100 KB -->
+  <url>
+    <loc>https://zcompressor.com/compress-pdf-to-100kb</loc>
+  </url>
+
+  <!-- 200 KB -->
+  <url>
+    <loc>https://zcompressor.com/compress-pdf-to-200kb</loc>
+  </url>
+
+  <!-- 300 KB -->
+  <url>
+    <loc>https://zcompressor.com/compress-pdf-to-300kb</loc>
+  </url>
+
+  <!-- 500 KB -->
+  <url>
+    <loc>https://zcompressor.com/compress-pdf-to-500kb</loc>
+  </url>
+
+  <!-- 1 MB -->
+  <url>
+    <loc>https://zcompressor.com/compress-pdf-to-1mb</loc>
+  </url>
+
+  <!-- ================================================================== -->
+  <!-- 4. Exam & Scholarship Tools (English)                              -->
+  <!-- ================================================================== -->
+
+  <!-- UPSC -->
+  <url>
+    <loc>https://zcompressor.com/compress-pdf-for-upsc</loc>
+  </url>
+
+  <!-- GATE -->
+  <url>
+    <loc>https://zcompressor.com/compress-pdf-for-gate</loc>
+  </url>
+
+  <!-- NEET -->
+  <url>
+    <loc>https://zcompressor.com/compress-pdf-for-neet</loc>
+  </url>
+
+  <!-- SSC -->
+  <url>
+    <loc>https://zcompressor.com/compress-pdf-for-ssc</loc>
+  </url>
+
+  <!-- SBI / IBPS -->
+  <url>
+    <loc>https://zcompressor.com/compress-pdf-for-sbi-ibps</loc>
+  </url>
+
+  <!-- NSP Scholarship -->
+  <url>
+    <loc>https://zcompressor.com/compress-pdf-for-nsp-scholarship</loc>
+  </url>
+
+  <!-- MahaDBT Scholarship -->
+  <url>
+    <loc>https://zcompressor.com/compress-pdf-for-mahadbt-scholarship</loc>
+  </url>
+
+  <!-- UP Scholarship -->
+  <url>
+    <loc>https://zcompressor.com/compress-pdf-for-up-scholarship</loc>
+  </url>
+
+  <!-- Bihar Scholarship -->
+  <url>
+    <loc>https://zcompressor.com/compress-pdf-for-bihar-scholarship</loc>
+  </url>
+
+  <!-- JoSAA JEE Counseling -->
+  <url>
+    <loc>https://zcompressor.com/compress-pdf-for-josaa-jee-counseling</loc>
+  </url>
+
+  <!-- NEET Counseling -->
+  <url>
+    <loc>https://zcompressor.com/compress-pdf-for-neet-counseling</loc>
+  </url>
+
+  <!-- CUET Counseling -->
+  <url>
+    <loc>https://zcompressor.com/compress-pdf-for-cuet-counseling</loc>
+  </url>
+
+  <!-- NDA / CDS -->
+  <url>
+    <loc>https://zcompressor.com/compress-pdf-for-nda-cds</loc>
+  </url>
+
+  <!-- State PSC Exams -->
+  <url>
+    <loc>https://zcompressor.com/compress-pdf-for-state-psc-exams</loc>
+  </url>
+
+  <!-- ================================================================== -->
+  <!-- 5. Generic Use-Case & Feature Tools (English)                      -->
+  <!-- ================================================================== -->
+
+  <!-- For Email -->
+  <url>
+    <loc>https://zcompressor.com/compress-pdf-for-email</loc>
+  </url>
+
+  <!-- For Resume -->
+  <url>
+    <loc>https://zcompressor.com/compress-pdf-for-resume</loc>
+  </url>
+
+  <!-- On Mobile -->
+  <url>
+    <loc>https://zcompressor.com/compress-pdf-on-mobile</loc>
+  </url>
+
+  <!-- For WhatsApp -->
+  <url>
+    <loc>https://zcompressor.com/compress-pdf-for-whatsapp</loc>
+  </url>
+
+  <!-- Without Losing Quality -->
+  <url>
+    <loc>https://zcompressor.com/compress-pdf-without-losing-quality</loc>
+  </url>
+
+  <!-- Scanned PDF -->
+  <url>
+    <loc>https://zcompressor.com/compress-scanned-pdf</loc>
+  </url>
+
+  <!-- Batch Compress -->
+  <url>
+    <loc>https://zcompressor.com/batch-compress-pdf</loc>
+  </url>
+
+  <!-- Reduce PDF File Size -->
+  <url>
+    <loc>https://zcompressor.com/reduce-pdf-file-size</loc>
+  </url>
+
+  <!-- ================================================================== -->
+  <!-- 6. Government & Tax Services (English)                             -->
+  <!-- ================================================================== -->
+
+  <!-- Passport Seva -->
+  <url>
+    <loc>https://zcompressor.com/compress-pdf-for-passport-seva</loc>
+  </url>
+
+  <!-- Income Tax e-Filing -->
+  <url>
+    <loc>https://zcompressor.com/compress-pdf-for-income-tax-efiling</loc>
+  </url>
+
+  <!-- ================================================================== -->
+  <!-- 7. Blog Hub & Guides (English)                                     -->
+  <!-- ================================================================== -->
+
+  <!-- Blog Index -->
+  <url>
+    <loc>https://zcompressor.com/blog</loc>
+  </url>
+
+  <!-- Blog Article 1: Why is my PDF still too large -->
+  <url>
+    <loc>https://zcompressor.com/blog/why-is-my-pdf-still-too-large</loc>
+  </url>
+
+  <!-- Blog Article 2: KB vs KiB file size explained -->
+  <url>
+    <loc>https://zcompressor.com/blog/kb-vs-kib-file-size-explained</loc>
+  </url>
+
+  <!-- Blog Article 3: How to scan documents for government portals -->
+  <url>
+    <loc>https://zcompressor.com/blog/how-to-scan-documents-for-government-portals</loc>
+  </url>
+
+  <!-- Blog Article 4: PDF compression lossy vs lossless -->
+  <url>
+    <loc>https://zcompressor.com/blog/pdf-compression-lossy-vs-lossless</loc>
+  </url>
+
+  <!-- Blog Article 5: Common document upload rejection reasons -->
+  <url>
+    <loc>https://zcompressor.com/blog/common-document-upload-rejection-reasons</loc>
+  </url>
+
+</urlset>

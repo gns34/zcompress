@@ -1,0 +1,56 @@
+{
+  "slug": "how-to-combine-and-compress-multiple-certificates-into-one-pdf",
+  "title": "How to Combine & Compress Multiple Certificates into One PDF Under 500 KB",
+  "metaDescription": "Step-by-step guide to merging 10th marksheet, 12th marksheet, and category certificates into a single consolidated PDF under 500 KB or 1 MB for JoSAA, NEET, and counseling portals.",
+  "publishedDate": "November 2026",
+  "readTime": "5 min",
+  "author": "Zcompressor Engineering",
+  "heroHeadline": "How to combine & compress multiple certificates into one PDF under 500 KB.",
+  "heroDescription": "Counseling portals for JoSAA, NEET, and state universities require all academic marksheets and reservation certificates in a single consolidated PDF. Here is how to keep the combined file under 500 KB.",
+  "eyebrowText": "Counseling & Admissions",
+  "sections": [
+    {
+      "heading": "1. Why counseling portals reject separate file uploads.",
+      "body": [
+        "Major national admission platforms—such as JoSAA (JEE Advanced/Main seat allocation), MCC (NEET counseling), and CSAB—provide only a single document upload slot for category, PwD, or educational verification.",
+        "Attempting to upload multiple files or submitting a compressed zip folder will result in automated document upload rejection. All individual pages must be sequentially combined into one valid PDF document."
+      ]
+    },
+    {
+      "heading": "2. The file size explosion problem when merging PDFs.",
+      "body": [
+        "A common trap during admission deadlines: a student scans their Class 10 marksheet (800 KB), Class 12 marksheet (900 KB), and Caste certificate (750 KB). Merging these 3 files produces a single PDF of 2.45 MB.",
+        "However, JoSAA and MCC counseling portals strictly cap category certificate uploads between 50 KB and 300 KB, or general documents at 500 KB. The merged file is rejected immediately for exceeding portal limits."
+      ]
+    },
+    {
+      "heading": "3. The optimal 3-step workflow for multi-page document packages.",
+      "body": [
+        "Step 1: Standardize input scans. Re-scan or convert each page to 150 DPI grayscale. Removing color from marksheet borders and watermarks instantly cuts 60% of raw byte overhead.",
+        "Step 2: Merge the pages in the mandatory portal sequence: 1. Identification / Admit card, 2. Secondary marksheet, 3. Senior secondary marksheet, 4. Category/Income/Domicile certificate.",
+        "Step 3: Run the combined PDF through Zcompressor targeting 300 KB or 500 KB. Zcompressor shares font dictionaries across pages and normalizes image streams, producing a compact file that easily passes portal checks."
+      ]
+    },
+    {
+      "heading": "4. Verify page orientation and readability before submission.",
+      "body": [
+        "Ensure all pages inside the combined document are oriented in upright portrait mode. Uploading inverted or landscape certificate scans can delay verification officer sign-off during tight 10–12 day counseling rounds.",
+        "Confirm that seals, issuing authority signatures, and serial numbers on every page remain legible at 100% zoom."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is the maximum file size for JoSAA category certificate PDF upload?",
+      "a": "JoSAA requires category and PwD certificates in PDF format between 50 KB and 300 KB. General document upload slots typically allow up to 500 KB to 1 MB."
+    },
+    {
+      "q": "Can I merge colored photos and black-and-white certificates in the same PDF?",
+      "a": "Yes. Zcompressor handles multi-page PDFs with mixed color depths, optimizing each page individually to meet your target KB limit."
+    }
+  ],
+  "relatedArticles": [
+    { "href": "/blog/how-to-scan-documents-for-government-portals", "title": "How to Scan Documents for Government Portals" },
+    { "href": "/blog/common-document-upload-rejection-reasons", "title": "Common Document Upload Rejection Reasons" }
+  ]
+}

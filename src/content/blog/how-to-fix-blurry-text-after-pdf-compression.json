@@ -1,0 +1,55 @@
+{
+  "slug": "how-to-fix-blurry-text-after-pdf-compression",
+  "title": "Why Does My PDF Look Blurry After Compression? 4 Ways to Fix It",
+  "metaDescription": "Discover why PDF text and official seals turn fuzzy or pixelated after file compression. Learn how to preserve crisp text and sharp stamps while hitting strict 200KB or 300KB limits.",
+  "publishedDate": "November 2026",
+  "readTime": "5 min",
+  "author": "Zcompressor Engineering",
+  "heroHeadline": "Why does my PDF look blurry after compression? (And how to fix it).",
+  "heroDescription": "When reducing PDF file size for government portals, aggressive compressors often smudge official seals, signatures, and Roll Numbers. Here is how to keep text razor-sharp.",
+  "eyebrowText": "Quality & Legibility",
+  "sections": [
+    {
+      "heading": "1. Vector fonts vs downsampled raster images.",
+      "body": [
+        "A PDF file contains two distinct types of visual elements: vector objects (fonts, lines, geometric curves) and raster bitmap images (photos, scanned sheets). True vector fonts never blur when compressed because they scale mathematically.",
+        "However, if you scan a paper marksheet using a smartphone camera, the entire page becomes a single flat raster image. When a compressor forces that image under a 200 KB or 300 KB threshold, it downsamples pixels and increases JPEG compression artifacts, causing fine text lines to blur."
+      ]
+    },
+    {
+      "heading": "2. Never drop below 150 DPI for text certificates.",
+      "body": [
+        "The standard for screen viewing is 72 DPI, but 72 DPI is disastrous for official certificates containing miniature registrar seals, Hindi/English bilingual text, or QR codes.",
+        "For government applications (UPSC, JoSAA, SSC, State PSCs), always preserve a minimum resolution of 150 DPI. At 150 DPI, text remains crisp and easily readable under 100% zoom while still fitting comfortably under strict size caps."
+      ]
+    },
+    {
+      "heading": "3. Use intelligent quantization instead of blind pixel reduction.",
+      "body": [
+        "Crude compressors shrink PDFs simply by halving image dimensions (e.g., cutting a 2000px height certificate to 800px). This destroys tabular marks columns and Roll Number digits.",
+        "Zcompressor uses adaptive DCT (Discrete Cosine Transform) quantization. It reduces background color noise and whitespace bits first while maintaining high-frequency edge contrast on dark typography and rubber stamps."
+      ]
+    },
+    {
+      "heading": "4. Verify legibility at 100% zoom before portal submission.",
+      "body": [
+        "Always preview your compressed PDF at 100% scale in your PDF viewer before hitting submit on any portal. Check whether your father's name, roll number, and issuing authority seal are clearly identifiable.",
+        "If the document is illegible, re-scan in grayscale or monochrome rather than trying to compress a blurry full-color scan."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "Can government portals reject an application if a certificate PDF is blurry?",
+      "a": "Yes. Scrutiny officers and automated document checkers routinely reject applications if candidate name, birth date, or official seals cannot be verified."
+    },
+    {
+      "q": "What should I do if my marksheet is already blurry before compression?",
+      "a": "Wipe your smartphone camera lens, ensure bright indirect daylight, lay the document flat without glare, and re-scan using 150–200 DPI grayscale mode."
+    }
+  ],
+  "relatedArticles": [
+    { "href": "/blog/how-to-scan-documents-for-government-portals", "title": "How to Scan Documents for Government Portals" },
+    { "href": "/blog/common-document-upload-rejection-reasons", "title": "Common Document Upload Rejection Reasons" }
+  ]
+}

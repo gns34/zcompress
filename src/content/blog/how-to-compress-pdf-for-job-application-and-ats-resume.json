@@ -1,0 +1,54 @@
+{
+  "slug": "how-to-compress-pdf-for-job-application-and-ats-resume",
+  "title": "How to Compress a PDF Resume Under 500 KB or 1 MB for Job Applications & ATS",
+  "metaDescription": "Fix resume upload errors on Workday, Taleo, and job portals. Learn how to compress your CV under 500 KB or 1 MB while preserving ATS text readability and formatting.",
+  "publishedDate": "November 2026",
+  "readTime": "5 min",
+  "author": "Zcompressor Engineering",
+  "heroHeadline": "How to compress a PDF resume under 500 KB or 1 MB for job portals & ATS.",
+  "heroDescription": "Modern applicant tracking systems (ATS) and corporate career portals reject oversized CVs. Here is how to reduce your PDF resume file size without breaking formatting or text parsing.",
+  "eyebrowText": "Career & Resumes",
+  "sections": [
+    {
+      "heading": "1. Why modern ATS job portals enforce strict 500 KB or 1 MB limits.",
+      "body": [
+        "Major enterprise Applicant Tracking Systems—such as Workday, Taleo, Greenhouse, Lever, and iCIMS—process thousands of job applications daily. To prevent database bloat and ensure fast indexing, these portals commonly cap resume attachments at 500 KB, 1 MB, or 2 MB.",
+        "Exceeding this upload cap prevents application submission, generating frustrating server timeout errors or generic 'File upload failed' warnings."
+      ]
+    },
+    {
+      "heading": "2. Why Canva, Figma, and InDesign resumes output huge PDF files.",
+      "body": [
+        "Modern job seekers frequently design visually striking resumes using graphic design platforms like Canva, Figma, or Adobe InDesign. However, these tools often export bloated files filled with embedded vector icons, uncompressed headshot portraits, and duplicate font subsets.",
+        "A single-page Canva resume can easily balloon to 4 MB to 8 MB. Standard compression tools that convert PDFs into flat images ruin the resume by destroying the underlying text stream."
+      ]
+    },
+    {
+      "heading": "3. The golden rule: Never flatten text layers into pure images.",
+      "body": [
+        "Applicant Tracking Systems use automated text parsers to extract your candidate name, email address, work experience, education history, and technical skill keywords.",
+        "If you compress your resume using a crude tool that flattens your document into a raster JPEG image, the ATS scanner will see an empty document with zero selectable text, automatically scoring your profile at 0% match. Zcompressor preserves all native text layers and font encodings while compressing background images and structural metadata."
+      ]
+    },
+    {
+      "heading": "4. Step-by-step optimization for job applications.",
+      "body": [
+        "1. Downsample your professional headshot: Ensure profile photos are scaled to 300x300 pixels before placing them in your design template. 2. Limit custom decorative fonts: Stick to universal clean fonts or embed only used characters. 3. Run the exported PDF through Zcompressor targeting 500 KB. 4. Open the compressed PDF and highlight the text with your cursor to confirm full selectability before uploading."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "Does compressing a PDF resume affect ATS keyword scanning?",
+      "a": "Not with Zcompressor. Zcompressor optimizes image streams and strips redundant metadata while preserving 100% of the live vector text and ATS-readable characters."
+    },
+    {
+      "q": "What is the best file size for emailing a CV or resume?",
+      "a": "Under 500 KB is the sweet spot. It attaches instantly, downloads quickly on mobile devices, and avoids corporate email gateway attachment filters."
+    }
+  ],
+  "relatedArticles": [
+    { "href": "/blog/why-is-my-pdf-still-too-large", "title": "Why Is My PDF Still Too Large After Compression?" },
+    { "href": "/blog/kb-vs-kib-file-size-explained", "title": "KB vs KiB File Size Limits Explained" }
+  ]
+}

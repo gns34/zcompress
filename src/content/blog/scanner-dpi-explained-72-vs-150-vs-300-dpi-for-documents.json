@@ -1,0 +1,55 @@
+{
+  "slug": "scanner-dpi-explained-72-vs-150-vs-300-dpi-for-documents",
+  "title": "Scanner DPI Explained: 72 vs 150 vs 200 vs 300 DPI for PDF Documents",
+  "metaDescription": "Understand scanner DPI settings for online applications. Learn why 300 DPI creates rejected 10MB files and why 150–200 DPI is the universal sweet spot for government portals.",
+  "publishedDate": "November 2026",
+  "readTime": "5 min",
+  "author": "Zcompressor Engineering",
+  "heroHeadline": "Scanner DPI explained: 72 vs 150 vs 200 vs 300 DPI for document uploads.",
+  "heroDescription": "Choosing the wrong DPI on your scanner or mobile scanning app will either produce an oversized file rejected by portal limits or an illegible blurry document. Here is how to pick the right resolution.",
+  "eyebrowText": "Technical Deep Dive",
+  "sections": [
+    {
+      "heading": "1. What does DPI actually mean in document scanning?",
+      "body": [
+        "DPI stands for 'Dots Per Inch'. It measures the spatial dot density of an image when scanned or printed. A higher DPI captures more micro-detail per square inch of paper, but increases the pixel dimensions and total byte count exponentially.",
+        "Doubling your DPI from 150 to 300 does not simply double the file size—it quadruples (4x) the total pixel area and memory footprint."
+      ]
+    },
+    {
+      "heading": "2. Why 300 DPI and 600 DPI are unsuitable for portal uploads.",
+      "body": [
+        "Commercial print shops and desktop scanner defaults are commonly preset to 300 DPI or 600 DPI because commercial printers require high ink density. However, web application portals (such as UPSC, SSC, NSP, JoSAA, and SBI) are built for screen verification, not offset printing.",
+        "Scanning an A4 marksheet at 300 DPI in color creates a raw file between 8 MB and 15 MB. Even aggressive compression struggles to shrink this file under a 200 KB or 300 KB limit without inducing severe visual artifacts."
+      ]
+    },
+    {
+      "heading": "3. The risk of 72 DPI (Web screen resolution).",
+      "body": [
+        "On the other end of the spectrum, 72 DPI or 96 DPI is the standard resolution for web browser graphics. When applied to document scans, however, 72 DPI lacks sufficient dot density to resolve fine typography.",
+        "Small 8pt footnotes, marksheet serial numbers, barcode stripes, and circular rubber stamps become jagged and unreadable at 72 DPI, frequently leading to manual verification rejection."
+      ]
+    },
+    {
+      "heading": "4. The 150 DPI to 200 DPI sweet spot for government and job portals.",
+      "body": [
+        "150 DPI to 200 DPI is the industry-recognized ideal resolution for electronic document submission. At 200 DPI, an A4 page produces approximately 1654 x 2338 pixels—offering sharp clarity for seals, signatures, and Roll Numbers while producing a lightweight raw file of just 600 KB to 1.2 MB.",
+        "Running a 200 DPI scan through Zcompressor easily compresses it under 150 KB with zero noticeable loss in quality."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "What DPI should I select in Adobe Scan or CamScanner for certificate uploads?",
+      "a": "Select 'Medium' or 150–200 DPI in your mobile scanner app settings, and choose Grayscale or Document mode rather than Photo mode."
+    },
+    {
+      "q": "Is 150 DPI clear enough for official seal verification?",
+      "a": "Yes. 150 DPI provides over 2.2 million pixels for an A4 page, which is more than enough resolution to verify official seals, embossed stamps, and signatures."
+    }
+  ],
+  "relatedArticles": [
+    { "href": "/blog/how-to-scan-documents-for-government-portals", "title": "How to Scan Documents for Government Portals" },
+    { "href": "/blog/kb-vs-kib-file-size-explained", "title": "KB vs KiB File Size Limits Explained" }
+  ]
+}
